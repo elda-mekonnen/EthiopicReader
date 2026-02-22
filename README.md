@@ -34,6 +34,30 @@ npx expo start
 
 Scan the QR code with the Expo Go app on your phone to open it. You can also press `w` to open it in a web browser.
 
+## Local Admin Server
+
+A browser-based editor for updating the liturgical JSON data files without touching code.
+
+### Run the admin server
+
+```bash
+node admin-server.js
+```
+
+Then open **http://localhost:3001** in your browser. No npm install needed — uses only Node.js built-ins.
+
+### What you can do
+
+- **Edit** prayer block text in any language (Ge'ez, Amharic, English, Transliteration), block type, and speaker role
+- **Add** new sections and blocks
+- **Delete** sections and blocks
+- **Reorder** by dragging blocks up/down within a section, or drag a block onto a different section to move it there
+- **Save to Disk** writes changes directly back to the JSON files in `data/`
+
+All 17 data files are available: `kidan.json`, `serate-kidase.json`, and all 14 anaphoras under `anaphoras/`.
+
+> Changes take effect in the app on next reload — no rebuild required since the data is read from JSON at runtime.
+
 ## Project Structure
 
 ```
@@ -63,6 +87,8 @@ EthiopicReader/
 │   ├── serate-kidase.ts         # Serate Kidase liturgical text
 │   └── anaphoras/               # 14 anaphora data files
 ├── constants/                   # Colors, language labels
+├── admin-server.js              # Local admin HTTP server (node admin-server.js)
+├── admin-ui.html                # Admin UI served by the server
 ├── app.json                     # Expo config
 ├── tsconfig.json
 └── package.json

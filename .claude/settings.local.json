@@ -8,7 +8,8 @@
       "Bash(ls:*)",
       "Bash(wc:*)",
       "Bash(grep:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(node -e:*)"
     ]
   }
 }

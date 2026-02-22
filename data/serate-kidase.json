@@ -15,54 +15,6 @@
       },
       "blocks": [
         {
-          "id": "serate-preparatory-service-001",
-          "type": "prayer",
-          "speaker": "deacon",
-          "geez": "ኩሉ ዘኢያፈቅሮ ለእግዚእነ ወአምላክነ ወመድኃኒነ ኢየሱስ ክርስቶስ ወዘኢየአምን ልደቶ እማርያም እምቅድስት ድንግል፣ ጌታችን መድኃኒታችንን ኢየሱስ ክርስቶስን የማይወደው የመንፈስ ቅዱስ ማደርያ በሁለት ወገን ድንግል ከምትሆን፣",
-          "english": "kwi’lu ze’ee’yafeqiro le’egzi’ene we’amlakine we’medihanine Iyesus Kristos lideto e’Mariyam em’qidist dingil፣ Everyone that loves not our Lord and   Saviour Iyesus Christ, and believes not in his birth፤"
-        },
-        {
-          "id": "serate-preparatory-service-002",
-          "type": "prayer",
-          "speaker": "deacon",
-          "geez": "በክልኤ ታቦተ መንፈስ ቅዱስ፣ እስከ ምጽአቱ ሐዳስ በከመ ይቤ ጳውሎስ ውጉዘ ለይኩን፡፡",
-          "amharic": "ከቅድስት ማርያም መወለዱንም የማያምን ሰው ሁሉ፣  እንግዳ እስከሚሆን ምጽአቱ ድረስ ጳውሎስ እንደ ተናገረ የተለየ ይሁን።",
-          "english": "be’kil’e tabote menfes qidus፣ eske mitsi’a’tu hadas bekeme yibe Pawilos wiguze le’yikun፤ From the Holy Mary of twofold Virginity, the ark of the Holy Spirit, until his coming again, let him be sent out as St. Paul said፤"
-        },
-        {
-          "id": "serate-preparatory-service-003",
-          "type": "prayer",
-          "speaker": "deacon",
-          "geez": "በረከተ አብ ወፍተ ወልድ ወሀብተ መንፈስ ቅዱስ ዘወረደ ላዕለ ሐዋርያት በጽርሐ ጽዮን ቅድስት፣",
-          "amharic": "ቅድስት በምትሆን በጽርሐ ጽዮን በሐዋርያት ላይ የወረደው የአብ በረከት የወልድም ፍቅር የመንፈስ ቅዱስም ሀብት።",
-          "english": "The Blessing of the Father and love of the Son and the gift of the Holy Spirit",
-          "transliteration": "Ab wewold wemenfes kidus kulo gize yi’izeni wezelfeni wele’aleme alem"
-        },
-        {
-          "id": "serate-preparatory-service-004",
-          "type": "prayer",
-          "speaker": "deacon",
-          "geez": "ከማሁ ይረድ ወይትመከዐብ ላዕሌየ ወላዕለ ኲልክሙ፤",
-          "amharic": "በሁላችሁም ላይ ይውረድ ዕጽፍ ድርብም ይሁን።",
-          "english": "kemahu y’red weyitmeke’ab la’e’leye we’la’ele kwi’li’kimu፤ who come down upon the apostles in the upper place of Holy Zion, in like sort come down and be multiplied upon me and all of you."
-        },
-        {
-          "id": "serate-preparatory-service-005",
-          "type": "prayer",
-          "speaker": "deacon",
-          "geez": "፣ዘእመልእክተ ጴጥሮስ ረድኡ ወሐዋርያሁ ለእግዚእነ ኢየሱስ ክርስቶስ፡፡",
-          "amharic": "ጌታችን መድኃኒታችንን ኢየሱስ ክርስቶስን የማይወደው የመንፈስ ቅዱስ ማደርያ በሁለት ወገን ድንግል ከምትሆን፣",
-          "english": "kwi’lu ze’e’meli’ekite Petros redi’u we’hawariyahu le’egzi’ene Iyesus Kristos፤ The Word from the Epistle of St.Peter disciple and apostle of our Lord Iyesus Christ."
-        },
-        {
-          "id": "serate-preparatory-service-006",
-          "type": "prayer",
-          "speaker": "deacon",
-          "geez": "ጸሎቱ ወበረከቱ የሀሉ ምስለ ኲልነ ሕዝበ ክርስቲያን ለዓለመ ዓለም፡፡",
-          "amharic": "ጌታችን መድኃኒታችንን ኢየሱስ ክርስቶስን የማይወደው የመንፈስ ቅዱስ ማደርያ በሁለት ወገን ድንግል ከምትሆን፣",
-          "english": "kwi’lu tselotu we’bereketu yehalu mi’sile kwu’li’ne hizibe kristiyan le’aleme alem፤ May his prayer and blessing be with us all forever, Amen."
-        },
-        {
           "id": "serate-preparatory-service-007",
           "type": "response",
           "speaker": "congregation",
@@ -86,7 +38,7 @@
           "speaker": "congregation",
           "geez": "ሃሌ ሉያ! እመቦ ብእሲ እምእመናን ዘቦአ ቤተ ክርስቲያን፤",
           "amharic": "ሃሌ ሉያ! በቅዳሴ ጊዜ ከምዕመናን ወገን ወደ ቤተ ክርስቲያን የገባ ሰው ቢኖር፣",
-          "english": "Hallelujah! If there be anyone of the faithful that hath entered the church at the time of mass and",
+          "english": "Hallelujah! If there be anyone of the faithful that has entered the church at the time of mass and",
           "transliteration": "Halléluya! imebo bi'isee im'imenan zebo'a béte kiristeeyan"
         },
         {
@@ -95,7 +47,7 @@
           "speaker": "congregation",
           "geez": "በጊዜ ቅዳሴ ወኢሰምዐ መጻሕፍተ ቅዱሳተ ወኢተዐገሠ እስከ ይፌጽሙ ጸሎተ ቅዳሴ",
           "amharic": "ቅዱሳተ መጻሕፍትን ሳይሰማ፣ የቅዳሴው ጸሎት እስኪፈጸም ባይታገሥ፣",
-          "english": "and hath not heard the holy Scriptures, and hath not waited until they finish the prayer of the Mass, and hath not",
+          "english": "and has not heard the holy Scriptures, and hath not waited until they finish the prayer of the Mass, and hath not",
           "transliteration": "Begeezé qidase we’i’sem’a metsa’hifte qidusate we'eete'agese iske yifetsimu tselote qidasé"
         },
         {
@@ -111,7 +63,8 @@
           "type": "response",
           "geez": "ቅድመ ንጉሥ ሰማያዊ፤ ንጉሠ ሥጋ ወመንፈስ፤ ከመዝ መሐሩነ ሐዋርያት በአብጥሊሶሙ።",
           "amharic": "ፈጣሪ በሚሆን በሰማያዊ ንጉሥ ፊት መቆምንም አቃሏልና። ሐዋርያት በሲኖዶሳቸው እንዲህ ብለው አስተምረውናል።",
-          "english": "Qidme nigus semayawee nigus siga wemenfes kemez meharune Stand Before the heavenly King, the King of Body and Spirit. This the Apostles have taught us in their canons."
+          "english": "Stand Before the heavenly King, the King of Body and Spirit. This the Apostles have taught us in their canons.",
+          "transliteration": "Qidme nigus semayawee nigus siga wemenfes kemez meharune "
         },
         {
           "id": "serate-preparatory-service-014",
@@ -128,7 +81,8 @@
           "speaker": "congregation",
           "geez": "ኅብስት ዘወረደ እምሰማያት ወሀቤ ሕይወት ለኵሉ ዓለም።",
           "amharic": "የተሠወረ መና ያለብሽ፣ ንጹሕ የወርቅ መሶብ አንቺ ነሽ።",
-          "english": "Hibu'i hibist zewerede imsemayat wehabé hiywet lekwulu alem. the bread which came down from heaven giving life unto all the world."
+          "english": "Hibu'i hibist zewerede imsemayat wehabé hiywet lekwulu alem. ",
+          "transliteration": "the bread which came down from heaven giving life unto all the world."
         },
         {
           "id": "serate-preparatory-service-016",
@@ -160,10 +114,10 @@
         {
           "id": "serate-preparatory-service-019",
           "type": "prayer",
-          "speaker": "deacon",
-          "geez": "ስብሐት ወክብር ይደሉ ለሥሉስ ቅዱስ አብ ወወልድ ወመንፈስ ቅዱስ ዕሩይ ኵሉ ጊዜ ይእዜኒ ወዘልፈኒ ወለዓለመ ዓለም አሜን።",
-          "amharic": "ጸልዩ አበውየ ወአኀውየ ላዕሌየ ወላዕለ ዝንቱ መሥዋዕት። ልዩ ሦስት ለሚሆኑ ሁልጊዜም ለተካከሉ ለአብ ለወልድ ለመንፈስ ቅዱስ ክብር ምስጋና ይገባል። ዛሬም ዘወትርም ለዘላላሙ አሜንአባቶቼና ወንድሞቼ በእኔ ላይ በመሥዋዕቱም ላይ ጸልዩ።",
-          "english": "Glory and honor are due to the Holy Trinity, the Father and the Son and the Holy Spirit, always coequal, both now and ever and world without end. Amen. My fathers an my brothers, pray for me and for this sacrifice."
+          "speaker": "priest",
+          "geez": "ስብሐት ወክብር ይደሉ ለሥሉስ ቅዱስ አብ ወወልድ ወመንፈስ ቅዱስ ዕሩይ ኵሉ ጊዜ ይእዜኒ ወዘልፈኒ ወለዓለመ ዓለም አሜን። ጸልዩ አበውየ ወአኀውየ ላዕሌየ ወላዕለ ዝንቱ መሥዋዕት። ",
+          "amharic": "ልዩ ሦስት ለሚሆኑ ሁልጊዜም ለተካከሉ ለአብ ለወልድ ለመንፈስ ቅዱስ ክብር ምስጋና ይገባል። ዛሬም ዘወትርም ለዘላላሙ አሜንአባቶቼና ወንድሞቼ በእኔ ላይ በመሥዋዕቱም ላይ ጸልዩ።",
+          "english": "Glory and honor are due to the Holy Trinity, the Father and the Son and the Holy Spirit, always coequal, both now and ever and world without end. Amen. My fathers and my brothers, pray for me and for this sacrifice."
         },
         {
           "id": "serate-preparatory-service-020",
@@ -177,10 +131,10 @@
           "id": "serate-preparatory-service-021",
           "type": "response",
           "speaker": "congregation",
-          "geez": "አቡነ ዘበሰማያት ይትቀደስ ስምከ ትምጻእ መንግሥትከ",
-          "amharic": "አባታችን ሆይ! በሰማይ የምትኖር፣ ስምህ ይቀደስ፣ መንገሥትህ ትምጣ፣ ወይኩን ፈቃድከ በከመ በሰማይ ከማሁ በምድር። ሲሳየነ ዘለለ ዕለትነ ሀበነ ዮም። ፈቃድህ በሰማይ እንደ ሆነ እንዲሁም በምድር ይሁን! የዕለት እንጀራችንን ስጠን ዛሬ፣ ኅድግ ለነ አበሳነ ወጌጋየነ ከመ ንሕነኒ ንኅድግ ለዘአበሰ ለነ። በደላችንን ይቅር በለን፣ እኛም የበደሉንን ይቅር እንደምንል፣ ኢታብአነ እግዚኦ ውስተ መንሱት አላ አድኅነነ ወባልሐነ እምኵሉ እኩይ አቤቱ ወደ ፈተና አታግባን፣ ከክፉ ሁሉ አድነን እንጂ፣ እስመ ዚኣከ ይእቲ መንግሥት ኃይል ወስብሐት ለዓለመ ዓለም። መንግሥት ያንተ ናትና። ኃይል፣ ምስጋና ለዘለዓለም በእውነት።",
-          "english": "Abune zebesemayat yitqedes simike timtsa'i mengistike Our father who art in heaven, hallowed be thy name, Thy kingdom come weyikun feqadike bekeme besemay kemahu medir. Seesayene zelele'iletine habene yom. Thy will be done on earth as it is in heaven; give us this day our daily bread, Hidig lene abesane wegégayene keme nihinenee nihidig leze'abese lene. and forgive us our trespasses as we forgive them that trespass against us, and lead us not into temptation but deliver us and rescue us from all evil; for Thine is the kingdom, the power and the glory for ever and ever.",
-          "transliteration": "eetabi'ane egzi’o weste mensut ala adihinene webalihane imkwulu iku’y isme zee'ake yi'itee mengist hayl wesibihat le'alem alem."
+          "geez": "አቡነ ዘበሰማያት ይትቀደስ ስምከ ትምጻእ መንግሥትከ ወይኩን ፈቃድከ በከመ በሰማይ ከማሁ በምድር። ሲሳየነ ዘለለ ዕለትነ ሀበነ ዮም።  ኅድግ ለነ አበሳነ ወጌጋየነ ከመ ንሕነኒ ንኅድግ ለዘአበሰ ለነ። ኢታብአነ እግዚኦ ውስተ መንሱት አላ አድኅነነ ወባልሐነ እምኵሉ እኩይ እስመ ዚኣከ ይእቲ መንግሥት ኃይል ወስብሐት ለዓለመ ዓለም።",
+          "amharic": "አባታችን ሆይ! በሰማይ የምትኖር፣ ስምህ ይቀደስ፣ መንገሥትህ ትምጣ፣ ፈቃድህ በሰማይ እንደ ሆነ እንዲሁም በምድር ይሁን! የዕለት እንጀራችንን ስጠን ዛሬ፣በደላችንን ይቅር በለን፣ እኛም የበደሉንን ይቅር እንደምንል፣  አቤቱ ወደ ፈተና አታግባን፣ ከክፉ ሁሉ አድነን እንጂ፣  መንግሥት ያንተ ናትና። ኃይል፣ ምስጋና ለዘለዓለም በእውነት።",
+          "english": "Our father who art in heaven, hallowed be thy name, Thy kingdom come  Thy will be done on earth as it is in heaven; give us this day our daily bread, and forgive us our trespasses as we forgive them that trespass against us, and lead us not into temptation but deliver us and rescue us from all evil; for Thine is the kingdom, the power and the glory for ever and ever.",
+          "transliteration": "Abune zebesemayat yitqedes simike timtsa'i mengistike weyikun feqadike bekeme besemay kemahu medir. Seesayene zelele'iletine habene yom.  Hidig lene abesane wegégayene keme nihinenee nihidig leze'abese lene.\neetabi'ane egzi’o weste mensut ala adihinene webalihane imkwulu iku’y isme zee'ake yi'itee mengist hayl wesibihat le'alem alem. "
         },
         {
           "id": "serate-preparatory-service-026",
@@ -190,6 +144,15 @@
           "amharic": "እመቤታችን ቅድስት ድንግል ማርያም ሆይ በመልአኩ በቅዱስ ገብረኤል ሰላምታ ሰላም እልሻለሁ ድንግል በኅሊናኪ ወድንግል በሥጋኪ። እመ እግዚአብሔር ጸባዖት ሰላም ለኪ በሃሳብሽ ድንግል ነሽ በሥጋሽም ድንግል ነሽ። የአሸናፊ የእግዚአብሔር እናት ሆይ ሰላምታ ላንቺ ይገባል። ቡርክት አንቲ እምአንስት ወቡሩክ ፍሬ ከርሥኪ። ከሴቶች ሁሉ ተለይተሽ አንቺ የትባረክሽ ነሽ የማኅፀንሽም ፍሬ የተባረከ ነው። ተፈሥሒ ፍሥሕት ኦ ምልእተ ጸጋ እግዚአብሔር ምስሌኪ። ጸጋን የተመላሽ ሆይ ደስ ይበልሽ እግዚአብሔር ከአንቺ ጋር ነውና ሰአሊ ወጸልዪ ኀበ ፍቁር ወልድኪ ኢየሱስ ክርስቶስ ከተወደደው ልጅሽ ከጌታችን ከመድኃኒታችን ከኢየሱስ ክርስቶስ ዘንድ ይቅርታን ለምኝልን ከመ ይሥረይ ለነ ኃጣውኢነ። ኃጢአታችንን ያስተሠርይልን ዘንድ ለዘለዓለሙ አሜን። አሐዱ አብ ቅዱስ፤ አሐዱ ወልድ ቅዱስ፤ አሐዱ ውእቱ መንፈስ ቅዱስ። አንዱ ቅዱስ አብ ነው፤ አንዱ ቅዱስ ወልድ ነው፤ አንዱ ቅዱስ መንፈስ ቅዱስ ነው።",
           "english": "O Holy Virgin Mary, in the peace of the Angel Gabriel, peace be unto Thee. Thou art virgin in spirit as well as in body. O Thou Mother of Perfect God peace be unto Thee. Blessed art Thou among women and blessed is the Fruit of Thy womb. Rejoice O Thou who art full of grace the Lord is with Thee. seali wetseliye habe fiqur weldike eyesus kristos Ask and pray for us to Thy beloved Son, Jesus Christ that He may have mercy upon our souls and forgive us our sins. Amen. One is the Holy Father, one is the Holy Son, one is the Holy Spirit.",
           "transliteration": "Beselame qidus gebriel mel’ak o egzi’etiye Mariyam selam leki dingil behilinaki wedingil besigaki eme egziabiheir tseba’ot selam leki burikt anti em’a’nist weburuk fire kersike tefesihi fisiht o meli’i’te tsega egziabihear misle’ki keme y’sre’y lene hatawi’ine Ahadu Ab Qidus, Ahadu Weld Qidus, Ahadu wi'itu Menfes Qidus."
+        },
+        {
+          "id": "serate-kidase-mlydtmr6uhy",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "",
+          "transliteration": ""
         },
         {
           "id": "serate-preparatory-service-033",

@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kidase Admin</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0a;
+      --surface: #111111;
+      --surface2: #161616;
+      --border: #222222;
+      --text: #e0e0e0;
+      --muted: #555555;
+      --accent: #C9A84C;
+      --accent-dim: #1a160a;
+      --danger: #f87171;
+      --success: #4ade80;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 13px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ── Header ────────────────────────────────────── */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      height: 44px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+      flex-shrink: 0;
+    }
+    header h1 { font-size: 15px; font-weight: 600; color: var(--accent); letter-spacing: 0.4px; }
+    #status { font-size: 12px; color: var(--muted); }
+    #status.dirty { color: var(--accent); }
+    #status.ok { color: var(--success); }
+
+    /* ── Layout ────────────────────────────────────── */
+    .layout { display: flex; flex: 1; overflow: hidden; }
+
+    .panel {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--border);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .panel-files    { width: 190px; }
+    .panel-sections { width: 220px; }
+    .panel-blocks   { width: 240px; }
+    .panel-editor   { flex: 1; flex-shrink: 1; display: flex; flex-direction: column; border-right: none; }
+
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      height: 36px;
+      border-bottom: 1px solid var(--border);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      background: var(--surface);
+      flex-shrink: 0;
+    }
+
+    .panel-body { flex: 1; overflow-y: auto; }
+    .panel-body::-webkit-scrollbar { width: 3px; }
+    .panel-body::-webkit-scrollbar-thumb { background: var(--border); }
+
+    /* ── File items ─────────────────────────────────── */
+    .file-item {
+      padding: 7px 12px;
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 11px;
+      border-left: 2px solid transparent;
+      word-break: break-all;
+      line-height: 1.4;
+    }
+    .file-item:hover { background: var(--surface2); color: var(--text); }
+    .file-item.active { color: var(--accent); border-left-color: var(--accent); background: var(--accent-dim); }
+
+    /* ── List items (sections / blocks) ─────────────── */
+    .list-item {
+      display: flex;
+      align-items: center;
+      padding: 7px 8px 7px 12px;
+      cursor: pointer;
+      border-left: 2px solid transparent;
+      gap: 4px;
+    }
+    .list-item:hover { background: var(--surface2); }
+    .list-item:hover .actions { opacity: 1; }
+    .list-item.active { border-left-color: var(--accent); background: var(--accent-dim); }
+
+    .item-body { flex: 1; min-width: 0; }
+    .item-title { font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .item-meta { font-size: 10px; color: var(--muted); margin-top: 2px; display: flex; gap: 4px; flex-wrap: wrap; }
+
+    .actions { display: flex; gap: 1px; opacity: 0; flex-shrink: 0; }
+    .icon-btn {
+      width: 22px; height: 22px;
+      display: flex; align-items: center; justify-content: center;
+      border: none; background: transparent; color: var(--muted);
+      cursor: pointer; border-radius: 3px; font-size: 11px;
+    }
+    .icon-btn:hover { background: var(--border); color: var(--text); }
+    .icon-btn.del:hover { color: var(--danger); }
+
+    /* ── Drag and drop ───────────────────────────────── */
+    .list-item[draggable="true"] { cursor: grab; }
+    .list-item[draggable="true"]:active { cursor: grabbing; }
+    .list-item.dragging { opacity: 0.3; }
+    .list-item.drag-above { border-top: 2px solid var(--accent) !important; }
+    .list-item.drag-below { border-bottom: 2px solid var(--accent) !important; }
+    .drag-section-target { background: var(--accent-dim) !important; border-left-color: var(--accent) !important; }
+
+    /* ── Add button ─────────────────────────────────── */
+    .add-btn {
+      display: none;
+      align-items: center; gap: 6px;
+      width: 100%; padding: 9px 12px;
+      border: none; background: transparent;
+      color: var(--muted); cursor: pointer; font-size: 12px;
+      border-top: 1px solid var(--border); text-align: left;
+    }
+    .add-btn:hover { color: var(--accent); background: var(--accent-dim); }
+    .add-btn.visible { display: flex; }
+
+    /* ── Badges ─────────────────────────────────────── */
+    .badge {
+      display: inline-block; padding: 1px 5px; border-radius: 9px;
+      font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;
+    }
+    .b-priest  { background: #1a160a; color: #C9A84C; }
+    .b-deacon  { background: #0d1420; color: #7B9FC4; }
+    .b-congregation { background: #1a1a1a; color: #bbb; }
+    .b-all     { background: #1a1a1a; color: #999; }
+    .b-type    { background: #181818; color: #777; }
+
+    /* ── Editor panel ───────────────────────────────── */
+    #editor-scroll { flex: 1; overflow-y: auto; }
+    .editor-inner { padding: 20px; max-width: 680px; }
+    .editor-placeholder {
+      display: flex; align-items: center; justify-content: center;
+      height: 100%; color: var(--muted); font-size: 13px;
+    }
+    .editor-title {
+      font-size: 14px; font-weight: 600; margin-bottom: 18px;
+      padding-bottom: 12px; border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Form fields ─────────────────────────────────── */
+    .field { margin-bottom: 14px; }
+    .field-row { display: flex; gap: 12px; }
+    .field-row .field { flex: 1; }
+    label.fl {
+      display: block; font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.7px; color: var(--muted); margin-bottom: 5px;
+    }
+    input[type="text"], select, textarea {
+      width: 100%; background: var(--surface); border: 1px solid var(--border);
+      color: var(--text); border-radius: 4px; padding: 7px 10px;
+      font-size: 13px; font-family: inherit; outline: none;
+    }
+    input[type="text"]:focus, select:focus, textarea:focus { border-color: var(--accent); }
+    textarea {
+      resize: vertical; min-height: 72px;
+      font-family: 'Courier New', monospace; line-height: 1.7; font-size: 13px;
+    }
+    select {
+      cursor: pointer; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23555'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 9px center; padding-right: 26px;
+    }
+    select:disabled { opacity: 0.4; cursor: default; }
+
+    /* ── Save bar ────────────────────────────────────── */
+    #save-bar {
+      display: none; align-items: center; gap: 12px;
+      padding: 8px 18px; border-top: 1px solid var(--border);
+      background: var(--surface); flex-shrink: 0;
+    }
+    #save-bar.visible { display: flex; }
+    .btn {
+      padding: 6px 16px; border-radius: 4px; border: none;
+      font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .btn-save { background: var(--accent); color: #000; }
+    .btn-save:hover { opacity: 0.88; }
+    #save-hint { font-size: 11px; color: var(--muted); }
+
+    /* ── Toast ───────────────────────────────────────── */
+    #toast {
+      position: fixed; bottom: 18px; right: 18px;
+      padding: 9px 16px; border-radius: 5px; font-size: 12px; font-weight: 600;
+      opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 99;
+    }
+    #toast.ok  { background: var(--success); color: #000; opacity: 1; }
+    #toast.err { background: var(--danger);  color: #000; opacity: 1; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ቅዳሴ Admin</h1>
+  <span id="status">Select a file to begin</span>
+</header>
+
+<div class="layout">
+
+  <!-- Column 1: Files -->
+  <div class="panel panel-files">
+    <div class="panel-head">Files</div>
+    <div class="panel-body" id="file-list"></div>
+  </div>
+
+  <!-- Column 2: Sections / Entries -->
+  <div class="panel panel-sections">
+    <div class="panel-head"><span id="sec-label">Sections</span></div>
+    <div class="panel-body" id="sections-list"></div>
+    <button class="add-btn" id="add-sec-btn"></button>
+  </div>
+
+  <!-- Column 3: Blocks -->
+  <div class="panel panel-blocks">
+    <div class="panel-head">Blocks</div>
+    <div class="panel-body" id="blocks-list"></div>
+    <button class="add-btn" id="add-block-btn" onclick="addBlock()">+ Add Block</button>
+  </div>
+
+  <!-- Column 4: Editor -->
+  <div class="panel panel-editor">
+    <div id="editor-scroll">
+      <div id="editor-panel" class="editor-placeholder">← Select a file to start editing</div>
+    </div>
+    <div id="save-bar">
+      <button class="btn btn-save" onclick="saveFile()">Save to Disk</button>
+      <span id="save-hint"></span>
+    </div>
+  </div>
+
+</div>
+
+<div id="toast"></div>
+
+<script>
+// ── State ──────────────────────────────────────────────────────────────────────
+let files = [];
+let currentFile = null;
+let fileData = null;   // mutable JS object mirroring the JSON
+let dirty = false;
+let selSection = null; // selected section or array-entry index
+let selBlock = null;   // selected block index
+const drag = { fromSection: null, fromBlock: null };
+
+// ── Helpers ────────────────────────────────────────────────────────────────────
+function isArray(d)      { return Array.isArray(d); }
+function isLiturgical(d) { return d && !Array.isArray(d) && Array.isArray(d.sections); }
+
+function esc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function uid(prefix) {
+  return (prefix || 'item') + '-' + Date.now().toString(36) + Math.random().toString(36).slice(2,5);
+}
+
+function toast(msg, type) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className = type === 'err' ? 'err' : 'ok';
+  clearTimeout(el._t);
+  el._t = setTimeout(() => { el.className = ''; }, 2600);
+}
+
+function markDirty() {
+  dirty = true;
+  updateStatus();
+}
+
+function updateStatus() {
+  const el = document.getElementById('status');
+  const hint = document.getElementById('save-hint');
+  if (!currentFile) { el.textContent = 'Select a file to begin'; el.className = ''; return; }
+  if (dirty) {
+    el.textContent = '● Unsaved changes — ' + currentFile;
+    el.className = 'dirty';
+    if (hint) hint.textContent = 'Unsaved changes';
+  } else {
+    el.textContent = '✓ ' + currentFile;
+    el.className = 'ok';
+    if (hint) hint.textContent = '';
+  }
+}
+
+// ── API ────────────────────────────────────────────────────────────────────────
+async function apiFetch(method, path, body) {
+  const opts = { method, headers: {} };
+  if (body !== undefined) {
+    opts.headers['Content-Type'] = 'application/json';
+    opts.body = JSON.stringify(body);
+  }
+  const res = await fetch(path, opts);
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+// ── Boot ───────────────────────────────────────────────────────────────────────
+async function init() {
+  files = await apiFetch('GET', '/api/files');
+  renderFiles();
+}
+
+// ── File List ──────────────────────────────────────────────────────────────────
+function renderFiles() {
+  document.getElementById('file-list').innerHTML = files.map(f =>
+    '<div class="file-item' + (f === currentFile ? ' active' : '') + '" onclick="selectFile(\'' + esc(f) + '\')">' + esc(f) + '</div>'
+  ).join('');
+}
+
+async function selectFile(path) {
+  if (dirty && currentFile) {
+    if (!confirm('Discard unsaved changes to ' + currentFile + '?')) return;
+  }
+  currentFile = path;
+  selSection = null;
+  selBlock = null;
+  dirty = false;
+  fileData = await apiFetch('GET', '/api/file?path=' + encodeURIComponent(path));
+  renderFiles();
+  renderSections();
+  renderBlocks();
+  renderEditor();
+  document.getElementById('save-bar').className = 'visible';
+  updateStatus();
+}
+
+// ── Save ───────────────────────────────────────────────────────────────────────
+async function saveFile() {
+  try {
+    await apiFetch('PUT', '/api/file?path=' + encodeURIComponent(currentFile), fileData);
+    dirty = false;
+    updateStatus();
+    toast('Saved!', 'ok');
+  } catch (e) {
+    toast('Save failed: ' + e.message, 'err');
+  }
+}
+
+// ── Sections / Entries ─────────────────────────────────────────────────────────
+function renderSections() {
+  const list = document.getElementById('sections-list');
+  const addBtn = document.getElementById('add-sec-btn');
+  const label = document.getElementById('sec-label');
+
+  if (!fileData) { list.innerHTML = ''; addBtn.className = 'add-btn'; return; }
+
+  if (isArray(fileData)) {
+    label.textContent = 'Entries';
+    addBtn.textContent = '+ Add Entry';
+    addBtn.onclick = addMetaEntry;
+    addBtn.className = 'add-btn visible';
+    list.innerHTML = fileData.map((item, i) => {
+      const title = (item.name && (item.name.english || item.name.geez)) || item.id || ('Entry ' + (i + 1));
+      return sectionRow(i, esc(title), esc(item.id || ''));
+    }).join('');
+    return;
+  }
+
+  if (isLiturgical(fileData)) {
+    label.textContent = 'Sections';
+    addBtn.textContent = '+ Add Section';
+    addBtn.onclick = addSection;
+    addBtn.className = 'add-btn visible';
+    list.innerHTML = fileData.sections.map((sec, i) => {
+      const title = (sec.title && (sec.title.english || sec.title.geez)) || sec.id || 'Section ' + (i + 1);
+      const count = (sec.blocks || []).length;
+      return sectionRow(i, esc(title), count + ' block' + (count !== 1 ? 's' : ''));
+    }).join('');
+    return;
+  }
+
+  label.textContent = 'Sections';
+  addBtn.className = 'add-btn';
+  list.innerHTML = '<div style="padding:12px;color:var(--muted);font-size:11px">Unrecognised format</div>';
+}
+
+function sectionRow(i, title, meta) {
+  const active = selSection === i ? ' active' : '';
+  return '<div class="list-item' + active + '" onclick="selectSection(' + i + ')" ' +
+    'ondragover="secDragOver(event,' + i + ')" ' +
+    'ondragleave="secDragLeave(event)" ' +
+    'ondrop="secDrop(event,' + i + ')">' +
+    '<div class="item-body">' +
+      '<div class="item-title">' + title + '</div>' +
+      '<div class="item-meta">' + meta + '</div>' +
+    '</div>' +
+    '<div class="actions">' +
+      '<button class="icon-btn" onclick="event.stopPropagation();moveSection(' + i + ',-1)" title="Up">↑</button>' +
+      '<button class="icon-btn" onclick="event.stopPropagation();moveSection(' + i + ',1)"  title="Down">↓</button>' +
+      '<button class="icon-btn del" onclick="event.stopPropagation();deleteSection(' + i + ')" title="Delete">✕</button>' +
+    '</div>' +
+  '</div>';
+}
+
+function selectSection(idx) {
+  selSection = idx;
+  selBlock = null;
+  renderSections();
+  renderBlocks();
+  renderEditor();
+}
+
+function addSection() {
+  if (!isLiturgical(fileData)) return;
+  fileData.sections.push({ id: uid('section'), title: { english: 'New Section', geez: '', amharic: '' }, blocks: [] });
+  selSection = fileData.sections.length - 1;
+  selBlock = null;
+  markDirty();
+  renderSections();
+  renderBlocks();
+  renderEditor();
+}
+
+function addMetaEntry() {
+  if (!isArray(fileData)) return;
+  fileData.push({ id: uid('entry'), name: { english: 'New Entry', geez: '', amharic: '' } });
+  selSection = fileData.length - 1;
+  markDirty();
+  renderSections();
+  renderEditor();
+}
+
+function deleteSection(idx) {
+  if (!confirm('Delete this item? This cannot be undone.')) return;
+  const arr = isArray(fileData) ? fileData : fileData.sections;
+  arr.splice(idx, 1);
+  if (selSection === idx) { selSection = null; selBlock = null; }
+  else if (selSection > idx) selSection--;
+  markDirty();
+  renderSections();
+  renderBlocks();
+  renderEditor();
+}
+
+function moveSection(idx, dir) {
+  const arr = isArray(fileData) ? fileData : fileData.sections;
+  const next = idx + dir;
+  if (next < 0 || next >= arr.length) return;
+  [arr[idx], arr[next]] = [arr[next], arr[idx]];
+  if (selSection === idx) selSection = next;
+  else if (selSection === next) selSection = idx;
+  markDirty();
+  renderSections();
+}
+
+// ── Blocks ─────────────────────────────────────────────────────────────────────
+function renderBlocks() {
+  const list = document.getElementById('blocks-list');
+  const addBtn = document.getElementById('add-block-btn');
+
+  if (selSection === null || !isLiturgical(fileData)) {
+    list.innerHTML = '';
+    addBtn.className = 'add-btn';
+    return;
+  }
+  const section = fileData.sections[selSection];
+  if (!section) { list.innerHTML = ''; addBtn.className = 'add-btn'; return; }
+
+  const blocks = section.blocks || [];
+  addBtn.className = 'add-btn visible';
+
+  list.innerHTML = blocks.map((b, i) => {
+    const preview = (b.english || b.geez || b.amharic || '—').slice(0, 45);
+    const active = selBlock === i ? ' active' : '';
+    const speakerBadge = b.speaker ? '<span class="badge b-' + b.speaker + '">' + b.speaker + '</span>' : '';
+    return '<div class="list-item' + active + '" draggable="true" ' +
+      'ondragstart="blockDragStart(event,' + i + ')" ' +
+      'ondragover="blockDragOver(event,' + i + ')" ' +
+      'ondragleave="blockDragLeave(event)" ' +
+      'ondrop="blockDrop(event,' + i + ')" ' +
+      'ondragend="blockDragEnd()" ' +
+      'onclick="selectBlock(' + i + ')">' +
+      '<div class="item-body">' +
+        '<div class="item-title">' + esc(preview) + (preview.length >= 45 ? '…' : '') + '</div>' +
+        '<div class="item-meta">' +
+          '<span class="badge b-type">' + esc(b.type || '?') + '</span>' +
+          speakerBadge +
+        '</div>' +
+      '</div>' +
+      '<div class="actions">' +
+        '<button class="icon-btn" onclick="event.stopPropagation();moveBlock(' + i + ',-1)" title="Up">↑</button>' +
+        '<button class="icon-btn" onclick="event.stopPropagation();moveBlock(' + i + ',1)"  title="Down">↓</button>' +
+        '<button class="icon-btn del" onclick="event.stopPropagation();deleteBlock(' + i + ')" title="Delete">✕</button>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+
+function selectBlock(idx) {
+  selBlock = idx;
+  renderBlocks();
+  renderEditor();
+}
+
+function addBlock() {
+  if (selSection === null || !isLiturgical(fileData)) return;
+  const section = fileData.sections[selSection];
+  if (!section.blocks) section.blocks = [];
+  section.blocks.push({
+    id: uid(fileData.id || 'block'),
+    type: 'prayer',
+    speaker: 'priest',
+    geez: '', amharic: '', english: '', transliteration: ''
+  });
+  selBlock = section.blocks.length - 1;
+  markDirty();
+  renderBlocks();
+  renderEditor();
+}
+
+function deleteBlock(idx) {
+  if (!confirm('Delete this block?')) return;
+  const blocks = fileData.sections[selSection].blocks;
+  blocks.splice(idx, 1);
+  if (selBlock === idx) selBlock = null;
+  else if (selBlock > idx) selBlock--;
+  markDirty();
+  renderBlocks();
+  renderEditor();
+}
+
+function moveBlock(idx, dir) {
+  const blocks = fileData.sections[selSection].blocks;
+  const next = idx + dir;
+  if (next < 0 || next >= blocks.length) return;
+  [blocks[idx], blocks[next]] = [blocks[next], blocks[idx]];
+  if (selBlock === idx) selBlock = next;
+  else if (selBlock === next) selBlock = idx;
+  markDirty();
+  renderBlocks();
+}
+
+// ── Editor ─────────────────────────────────────────────────────────────────────
+function renderEditor() {
+  const panel = document.getElementById('editor-panel');
+
+  if (!fileData) {
+    panel.className = 'editor-placeholder';
+    panel.innerHTML = '← Select a file to start editing';
+    return;
+  }
+
+  panel.className = '';
+
+  // ── Array file (anaphoras.json): edit metadata entry ──
+  if (isArray(fileData)) {
+    if (selSection === null) {
+      panel.innerHTML = '<div class="editor-placeholder">← Select an entry</div>';
+      return;
+    }
+    const entry = fileData[selSection];
+    panel.innerHTML = '<div class="editor-inner">' +
+      '<div class="editor-title">Edit Entry</div>' +
+      textField('ID', entry.id, 'setMeta("id",this.value)') +
+      textField('Name — English', (entry.name || {}).english, 'setMetaName("english",this.value)') +
+      textField("Name — Ge\u02bcez", (entry.name || {}).geez, 'setMetaName("geez",this.value)') +
+      textField('Name — Amharic', (entry.name || {}).amharic, 'setMetaName("amharic",this.value)') +
+      textField('Saint (optional)', entry.saint, 'setMeta("saint",this.value)') +
+    '</div>';
+    return;
+  }
+
+  // ── Liturgical file ───────────────────────────────────
+  if (isLiturgical(fileData)) {
+
+    // Nothing selected — show file root fields
+    if (selSection === null) {
+      const d = fileData;
+      panel.innerHTML = '<div class="editor-inner">' +
+        '<div class="editor-title">File Properties</div>' +
+        textField('ID', d.id, 'setRoot("id",this.value)') +
+        textField('Title — English', (d.title || {}).english, 'setRootTitle("english",this.value)') +
+        textField("Title — Ge\u02bcez",  (d.title || {}).geez,    'setRootTitle("geez",this.value)') +
+        textField('Title — Amharic', (d.title || {}).amharic, 'setRootTitle("amharic",this.value)') +
+      '</div>';
+      return;
+    }
+
+    const section = fileData.sections[selSection];
+
+    // Section selected, no block — show section fields
+    if (selBlock === null) {
+      panel.innerHTML = '<div class="editor-inner">' +
+        '<div class="editor-title">Edit Section</div>' +
+        textField('ID', section.id, 'setSection("id",this.value)') +
+        textField('Title — English', (section.title || {}).english, 'setSecTitle("english",this.value)') +
+        textField("Title — Ge\u02bcez",  (section.title || {}).geez,    'setSecTitle("geez",this.value)') +
+        textField('Title — Amharic', (section.title || {}).amharic, 'setSecTitle("amharic",this.value)') +
+      '</div>';
+      return;
+    }
+
+    // Block selected — show full block editor
+    const block = section.blocks[selBlock];
+    const isInstr = block.type === 'heading' || block.type === 'rubric';
+
+    const typeOpts = ['prayer','response','heading','rubric'].map(t =>
+      '<option value="' + t + '"' + (block.type === t ? ' selected' : '') + '>' + t + '</option>'
+    ).join('');
+    const speakerOpts = '<option value="">— none —</option>' +
+      ['priest','deacon','congregation','all'].map(s =>
+        '<option value="' + s + '"' + (block.speaker === s ? ' selected' : '') + '>' + s + '</option>'
+      ).join('');
+
+    panel.innerHTML = '<div class="editor-inner">' +
+      '<div class="editor-title">Edit Block</div>' +
+      textField('ID', block.id, 'setBlock("id",this.value)') +
+      '<div class="field-row">' +
+        '<div class="field">' +
+          '<label class="fl">Type</label>' +
+          '<select onchange="setBlock(\'type\',this.value);renderEditor();renderBlocks()">' + typeOpts + '</select>' +
+        '</div>' +
+        '<div class="field">' +
+          '<label class="fl">Speaker</label>' +
+          '<select onchange="setBlock(\'speaker\',this.value);renderBlocks()"' + (isInstr ? ' disabled' : '') + '>' + speakerOpts + '</select>' +
+        '</div>' +
+      '</div>' +
+      textArea("Ge\u02bcez", block.geez, 'setBlock("geez",this.value)') +
+      textArea('Amharic', block.amharic, 'setBlock("amharic",this.value)') +
+      textArea('English', block.english, 'setBlock("english",this.value)') +
+      textArea('Transliteration', block.transliteration, 'setBlock("transliteration",this.value)') +
+    '</div>';
+    return;
+  }
+
+  panel.innerHTML = '<div class="editor-placeholder">Unsupported file format</div>';
+}
+
+// ── Update helpers (called inline from editor form) ────────────────────────────
+function setBlock(key, val)      { fileData.sections[selSection].blocks[selBlock][key] = val; markDirty(); }
+function setSection(key, val)    { fileData.sections[selSection][key] = val; markDirty(); renderSections(); }
+function setSecTitle(lang, val)  { const s = fileData.sections[selSection]; if (!s.title) s.title = {}; s.title[lang] = val; markDirty(); renderSections(); }
+function setRoot(key, val)       { fileData[key] = val; markDirty(); }
+function setRootTitle(lang, val) { if (!fileData.title) fileData.title = {}; fileData.title[lang] = val; markDirty(); }
+function setMeta(key, val)       { fileData[selSection][key] = val; markDirty(); renderSections(); }
+function setMetaName(lang, val)  { const e = fileData[selSection]; if (!e.name) e.name = {}; e.name[lang] = val; markDirty(); renderSections(); }
+
+// ── Form field builders ────────────────────────────────────────────────────────
+function textField(label, value, onchange) {
+  return '<div class="field">' +
+    '<label class="fl">' + label + '</label>' +
+    '<input type="text" value="' + esc(value) + '" oninput=\'' + onchange + '\'>' +
+  '</div>';
+}
+
+function textArea(label, value, onchange) {
+  return '<div class="field">' +
+    '<label class="fl">' + label + '</label>' +
+    '<textarea oninput=\'' + onchange + '\'>' + esc(value) + '</textarea>' +
+  '</div>';
+}
+
+// ── Drag and drop ──────────────────────────────────────────────────────────────
+function blockDragStart(e, idx) {
+  drag.fromSection = selSection;
+  drag.fromBlock = idx;
+  e.dataTransfer.effectAllowed = 'move';
+  // Delay adding class so ghost image still shows the full item
+  setTimeout(() => {
+    const el = document.querySelector('#blocks-list .list-item:nth-child(' + (idx + 1) + ')');
+    if (el) el.classList.add('dragging');
+  }, 0);
+}
+
+function blockDragOver(e, idx) {
+  if (drag.fromBlock === null) return;
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
+  document.querySelectorAll('#blocks-list .list-item').forEach(el =>
+    el.classList.remove('drag-above', 'drag-below')
+  );
+  const rect = e.currentTarget.getBoundingClientRect();
+  e.currentTarget.classList.add(e.clientY < rect.top + rect.height / 2 ? 'drag-above' : 'drag-below');
+}
+
+function blockDragLeave(e) {
+  if (!e.currentTarget.contains(e.relatedTarget)) {
+    e.currentTarget.classList.remove('drag-above', 'drag-below');
+  }
+}
+
+function blockDrop(e, toIdx) {
+  e.preventDefault();
+  if (drag.fromBlock === null) return;
+  const fromIdx = drag.fromBlock;
+  const fromSec = drag.fromSection;
+
+  const rect = e.currentTarget.getBoundingClientRect();
+  let insertIdx = e.clientY < rect.top + rect.height / 2 ? toIdx : toIdx + 1;
+
+  if (fromSec === selSection) {
+    // Reorder within the same section
+    const blocks = fileData.sections[selSection].blocks;
+    const [block] = blocks.splice(fromIdx, 1);
+    if (insertIdx > fromIdx) insertIdx--;
+    blocks.splice(insertIdx, 0, block);
+    selBlock = insertIdx;
+  } else {
+    // Move from a different section into the current one
+    const fromBlocks = fileData.sections[fromSec].blocks;
+    const toBlocks = fileData.sections[selSection].blocks;
+    const [block] = fromBlocks.splice(fromIdx, 1);
+    toBlocks.splice(insertIdx, 0, block);
+    selBlock = insertIdx;
+  }
+
+  drag.fromSection = null;
+  drag.fromBlock = null;
+  markDirty();
+  renderSections();
+  renderBlocks();
+  renderEditor();
+}
+
+function blockDragEnd() {
+  drag.fromSection = null;
+  drag.fromBlock = null;
+  document.querySelectorAll('.list-item').forEach(el =>
+    el.classList.remove('dragging', 'drag-above', 'drag-below', 'drag-section-target')
+  );
+}
+
+// Drop onto a section row — moves the block to the end of that section
+function secDragOver(e, secIdx) {
+  if (drag.fromBlock === null) return;
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
+  document.querySelectorAll('#sections-list .list-item').forEach(el =>
+    el.classList.remove('drag-section-target')
+  );
+  e.currentTarget.classList.add('drag-section-target');
+}
+
+function secDragLeave(e) {
+  if (!e.currentTarget.contains(e.relatedTarget)) {
+    e.currentTarget.classList.remove('drag-section-target');
+  }
+}
+
+function secDrop(e, toSecIdx) {
+  e.preventDefault();
+  if (drag.fromBlock === null) return;
+  const fromIdx = drag.fromBlock;
+  const fromSec = drag.fromSection;
+
+  document.querySelectorAll('.list-item').forEach(el => el.classList.remove('drag-section-target'));
+
+  if (fromSec === toSecIdx) { drag.fromSection = null; drag.fromBlock = null; return; }
+
+  const fromBlocks = fileData.sections[fromSec].blocks;
+  if (!fileData.sections[toSecIdx].blocks) fileData.sections[toSecIdx].blocks = [];
+  const toBlocks = fileData.sections[toSecIdx].blocks;
+
+  const [block] = fromBlocks.splice(fromIdx, 1);
+  toBlocks.push(block);
+
+  selSection = toSecIdx;
+  selBlock = toBlocks.length - 1;
+  drag.fromSection = null;
+  drag.fromBlock = null;
+
+  markDirty();
+  renderSections();
+  renderBlocks();
+  renderEditor();
+}
+
+// ── Warn before leaving with unsaved changes ───────────────────────────────────
+window.addEventListener('beforeunload', e => {
+  if (dirty) { e.preventDefault(); e.returnValue = ''; }
+});
+
+// ── Start ──────────────────────────────────────────────────────────────────────
+init();
+</script>
+</body>
+</html>
