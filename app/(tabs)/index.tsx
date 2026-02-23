@@ -10,9 +10,17 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import Animated, {
+  FadeInUp,
+  FadeOutUp,
+  useSharedValue,
+  useAnimatedStyle,
+  withTiming,
+} from 'react-native-reanimated';
 import { Colors } from '@/constants/colors';
 import { Fonts } from '@/constants/fonts';
 import { contentColumn } from '@/constants/layout';
+import { hapticLight } from '@/utils/haptics';
 import CrossIcon from '@/components/CrossIcon';
 
 const QIDASE_SUBSECTIONS = [
@@ -41,6 +49,11 @@ const QIDASE_SUBSECTIONS = [
 
 export default function HomeScreen() {
   const [qidaseOpen, setQidaseOpen] = useState(true);
+  const chevronRotation = useSharedValue(90); // 90deg = open (pointing down via rotation)
+
+  const chevronStyle = useAnimatedStyle(() => ({
+    transform: [{ rotateZ: `${chevronRotation.value}deg` }],
+  }));
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
@@ -85,7 +98,11 @@ export default function HomeScreen() {
         <TouchableOpacity
           style={styles.parentItem}
           activeOpacity={0.7}
-          onPress={() => setQidaseOpen(!qidaseOpen)}
+          onPress={() => {
+            hapticLight();
+            chevronRotation.value = withTiming(qidaseOpen ? 0 : 90, { duration: 200 });
+            setQidaseOpen(!qidaseOpen);
+          }}
         >
           <View style={styles.parentIcon}>
             <CrossIcon size={20} color="#E8DCC8" />
@@ -95,32 +112,38 @@ export default function HomeScreen() {
             <Text style={styles.parentGeez}>ቅዳሴ</Text>
             <Text style={styles.parentDesc}>Holy Liturgy</Text>
           </View>
-          <Ionicons
-            name={qidaseOpen ? 'chevron-down' : 'chevron-forward'}
-            size={18}
-            color={Colors.textDim}
-          />
+          <Animated.View style={chevronStyle}>
+            <Ionicons name="chevron-forward" size={18} color={Colors.textDim} />
+          </Animated.View>
         </TouchableOpacity>
 
         {/* Subsections */}
         {qidaseOpen &&
-          QIDASE_SUBSECTIONS.map((section) => (
-            <TouchableOpacity
+          QIDASE_SUBSECTIONS.map((section, i) => (
+            <Animated.View
               key={section.id}
-              style={styles.subItem}
-              activeOpacity={0.7}
-              onPress={() => router.push(section.route)}
+              entering={FadeInUp.duration(200).delay(i * 50)}
+              exiting={FadeOutUp.duration(150)}
             >
-              <View style={styles.subIcon}>
-                <CrossIcon size={14} color="#FFF8F0" />
-              </View>
-              <View style={styles.subText}>
-                <Text style={styles.subTitle}>{section.title}</Text>
-                <Text style={styles.subGeez}>{section.geez}</Text>
-                <Text style={styles.subDesc}>{section.description}</Text>
-              </View>
-              <Ionicons name="chevron-forward" size={16} color={Colors.textDim} />
-            </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.subItem}
+                activeOpacity={0.7}
+                onPress={() => {
+                  hapticLight();
+                  router.push(section.route);
+                }}
+              >
+                <View style={styles.subIcon}>
+                  <CrossIcon size={14} color="#FFF8F0" />
+                </View>
+                <View style={styles.subText}>
+                  <Text style={styles.subTitle}>{section.title}</Text>
+                  <Text style={styles.subGeez}>{section.geez}</Text>
+                  <Text style={styles.subDesc}>{section.description}</Text>
+                </View>
+                <Ionicons name="chevron-forward" size={16} color={Colors.textDim} />
+              </TouchableOpacity>
+            </Animated.View>
           ))}
       </ScrollView>
     </SafeAreaView>

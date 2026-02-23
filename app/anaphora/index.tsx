@@ -1,9 +1,12 @@
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@/constants/colors';
 import { Fonts } from '@/constants/fonts';
 import { contentColumn } from '@/constants/layout';
+import CrossIcon from '@/components/CrossIcon';
+import { hapticLight } from '@/utils/haptics';
 import { AnaphoraMetadata } from '@/data/types';
 
 const ANAPHORAS: AnaphoraMetadata[] = require('@/data/anaphoras/anaphoras.json');
@@ -14,34 +17,32 @@ export default function AnaphoraListScreen() {
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <View style={contentColumn.wrapper}>
           <View style={styles.header}>
-            <Text style={styles.decorativeCross}>✦</Text>
+            <CrossIcon size={18} color={Colors.accent} />
             <Text style={styles.titleGeez}>ፍሬ ቅዳሴ</Text>
             <Text style={styles.titleEnglish}>FERE KIDASE</Text>
             <Text style={styles.subtitle}>Select an anaphora to read</Text>
           </View>
 
-          {ANAPHORAS.map((anaphora, index) => (
+          {ANAPHORAS.map((anaphora) => (
             <TouchableOpacity
               key={anaphora.id}
               style={styles.card}
-              activeOpacity={0.8}
-              onPress={() => router.push(`/anaphora/${anaphora.id}`)}
+              activeOpacity={0.7}
+              onPress={() => {
+                hapticLight();
+                router.push(`/anaphora/${anaphora.id}`);
+              }}
             >
-              <View style={styles.cardInnerBorder}>
-                <View style={styles.cardContent}>
-                  {/* Gold seal badge */}
-                  <View style={styles.sealBadge}>
-                    <Text style={styles.sealNumber}>{index + 1}</Text>
-                  </View>
-                  <View style={styles.cardText}>
-                    {anaphora.name.geez && (
-                      <Text style={styles.cardGeez}>{anaphora.name.geez}</Text>
-                    )}
-                    <Text style={styles.cardTitle}>{anaphora.name.english}</Text>
-                  </View>
-                  <Text style={styles.arrow}>›</Text>
-                </View>
+              <View style={styles.iconBadge}>
+                <CrossIcon size={14} color="#FFF8F0" />
               </View>
+              <View style={styles.cardText}>
+                {anaphora.name.geez && (
+                  <Text style={styles.cardGeez}>{anaphora.name.geez}</Text>
+                )}
+                <Text style={styles.cardTitle}>{anaphora.name.english}</Text>
+              </View>
+              <Ionicons name="chevron-forward" size={16} color={Colors.textDim} />
             </TouchableOpacity>
           ))}
 
@@ -54,18 +55,13 @@ export default function AnaphoraListScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: Colors.background },
-  scroll: { paddingHorizontal: 24, paddingTop: 8 },
+  scroll: { paddingHorizontal: 20, paddingTop: 8 },
 
   /* ── Header ── */
   header: {
     alignItems: 'center',
     paddingVertical: 20,
     marginBottom: 24,
-  },
-  decorativeCross: {
-    fontSize: 20,
-    color: Colors.accent,
-    marginBottom: 10,
   },
   titleGeez: {
     fontFamily: Fonts.serifExtraBold,
@@ -88,68 +84,40 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
 
-  /* ── Manuscript cards ── */
+  /* ── Cards (matching home subsection style) ── */
   card: {
-    backgroundColor: Colors.surface,
-    borderRadius: 4,
-    marginBottom: 12,
-    borderWidth: 2,
-    borderColor: Colors.frameOuter,
-    overflow: 'hidden',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.06,
-    shadowRadius: 4,
-    elevation: 2,
-  },
-  cardInnerBorder: {
-    margin: 4,
-    borderWidth: 1,
-    borderColor: Colors.frameInner,
-    borderRadius: 2,
-  },
-  cardContent: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 18,
-    paddingHorizontal: 16,
-    gap: 14,
+    backgroundColor: Colors.surface,
+    borderRadius: 12,
+    padding: 12,
+    marginBottom: 6,
+    gap: 12,
+    borderWidth: 1,
+    borderColor: Colors.borderSubtle,
   },
-  sealBadge: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: Colors.goldSeal,
-    borderWidth: 2,
-    borderColor: Colors.goldSealBorder,
+  iconBadge: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: Colors.blue,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  sealNumber: {
-    fontFamily: Fonts.serifBold,
-    color: Colors.textOnColor,
-    fontSize: 15,
-    fontWeight: '700',
   },
   cardText: {
     flex: 1,
   },
   cardGeez: {
-    fontFamily: Fonts.bodyBold,
+    fontFamily: Fonts.serifBold,
     color: Colors.text,
     fontSize: 16,
-    fontWeight: '700',
-    marginBottom: 2,
+    marginBottom: 1,
   },
   cardTitle: {
-    fontFamily: Fonts.bodyRegular,
-    color: Colors.textMuted,
-    fontSize: 13,
-  },
-  arrow: {
-    color: Colors.accent,
-    fontSize: 24,
-    fontWeight: '300',
+    fontFamily: Fonts.bodyItalic,
+    color: Colors.textDim,
+    fontSize: 12,
+    fontStyle: 'italic',
   },
 
   bottomPadding: { height: 40 },

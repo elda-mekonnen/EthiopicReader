@@ -5,6 +5,7 @@ import { Colors, presentationSpeakerColors } from '@/constants/colors';
 import { Fonts } from '@/constants/fonts';
 import { useLanguage } from '@/context/LanguageContext';
 import { useFontSize, FONT_SIZE_MIN, FONT_SIZE_MAX } from '@/context/FontSizeContext';
+import { hapticSelection } from '@/utils/haptics';
 import { PrayerBlock, LiturgicalSection } from '@/data/types';
 import { getLanguageEntries } from '@/utils/language';
 import SectionDrawer from '@/components/SectionDrawer';
@@ -71,6 +72,7 @@ export default function PresentationView({ blocks, sections, onExit, startBlockI
   }, []);
 
   const advance = useCallback(() => {
+    hapticSelection();
     if (isScrollable && !isAtBottom) {
       scrollRef.current?.scrollTo({ y: scrollY + viewportHeight * 0.85, animated: true });
     } else if (!isLast) {
@@ -79,6 +81,7 @@ export default function PresentationView({ blocks, sections, onExit, startBlockI
   }, [isScrollable, isAtBottom, isLast, scrollY, viewportHeight, index, goToBlock]);
 
   const back = useCallback(() => {
+    hapticSelection();
     if (isScrollable && !isAtTop) {
       scrollRef.current?.scrollTo({ y: Math.max(0, scrollY - viewportHeight * 0.85), animated: true });
     } else if (!isFirst) {

@@ -8,6 +8,7 @@ import { contentColumn } from '@/constants/layout';
 import { ALL_LANGUAGES, LANGUAGE_LABELS } from '@/constants/languages';
 import { useLanguage } from '@/context/LanguageContext';
 import { useFontSize, FONT_SIZE_MIN, FONT_SIZE_MAX } from '@/context/FontSizeContext';
+import { hapticLight } from '@/utils/haptics';
 import { Language } from '@/data/types';
 
 export default function SettingsScreen() {
@@ -32,7 +33,10 @@ export default function SettingsScreen() {
                   <TouchableOpacity
                     key={lang}
                     style={[styles.pill, active && styles.pillActive, disabled && styles.pillDisabled]}
-                    onPress={() => toggleLanguage(lang)}
+                    onPress={() => {
+                      hapticLight();
+                      toggleLanguage(lang);
+                    }}
                     activeOpacity={disabled ? 1 : 0.7}
                   >
                     <Text style={[styles.pillText, active && styles.pillTextActive, disabled && styles.pillTextDisabled]}>
@@ -53,7 +57,10 @@ export default function SettingsScreen() {
                 <TouchableOpacity
                   key={lang}
                   style={[styles.pill, primaryLanguage === lang && styles.pillActive]}
-                  onPress={() => setPrimaryLanguage(lang)}
+                  onPress={() => {
+                    hapticLight();
+                    setPrimaryLanguage(lang);
+                  }}
                   activeOpacity={0.7}
                 >
                   <Text style={[styles.pillText, primaryLanguage === lang && styles.pillTextActive]}>

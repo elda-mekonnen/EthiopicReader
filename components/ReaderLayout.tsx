@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import {
   View,
   Text,
@@ -6,15 +6,18 @@ import {
   StyleSheet,
   TouchableOpacity,
   Platform,
-  PanResponder,
 } from 'react-native';
 import { useNavigation } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import * as ScreenOrientation from 'expo-screen-orientation';
+import Animated, { FadeIn } from 'react-native-reanimated';
+import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import { Colors } from '@/constants/colors';
 import { Fonts } from '@/constants/fonts';
 import { contentColumn } from '@/constants/layout';
 import { useFontSize } from '@/context/FontSizeContext';
+import { hapticMedium } from '@/utils/haptics';
+import CrossIcon from '@/components/CrossIcon';
 import PrayerBlock from '@/components/PrayerBlock';
 import PresentationView from '@/components/PresentationView';
 import SectionDrawer from '@/components/SectionDrawer';
@@ -40,16 +43,17 @@ export default function ReaderLayout({
   const scrollViewRef = useRef<ScrollView>(null);
   const sectionOffsets = useRef<number[]>([]);
 
-  /* Swipe left to open section drawer (mobile) */
-  const swipe = useRef(
-    PanResponder.create({
-      onMoveShouldSetPanResponderCapture: (_, { dx, dy }) =>
-        Platform.OS !== 'web' && dx < -20 && Math.abs(dx) > Math.abs(dy) * 2,
-      onPanResponderRelease: (_, { dx }) => {
-        if (dx < -50) setDrawerVisible(true);
-      },
-    }),
-  ).current;
+  /* Swipe left from right edge to open section drawer */
+  const openDrawer = useCallback(() => setDrawerVisible(true), []);
+  const edgeSwipe = Gesture.Pan()
+    .activeOffsetX(-20)
+    .failOffsetY([-15, 15])
+    .onEnd((e) => {
+      if (e.translationX < -50 || e.velocityX < -500) {
+        openDrawer();
+      }
+    })
+    .runOnJS(true);
 
   const allBlocks: PrayerBlockType[] = sections.flatMap((sec) => sec.blocks);
 
@@ -114,8 +118,16 @@ export default function ReaderLayout({
   }
 
   return (
-    <View style={styles.container} {...swipe.panHandlers}>
+    <View style={styles.container}>
       <StatusBar style="dark" />
+
+      {/* Invisible right-edge swipe zone to open drawer */}
+      {Platform.OS !== 'web' && (
+        <GestureDetector gesture={edgeSwipe}>
+          <Animated.View style={styles.edgeSwipeZone} />
+        </GestureDetector>
+      )}
+
       <ScrollView
         ref={scrollViewRef}
         contentContainerStyle={styles.scroll}
@@ -124,7 +136,7 @@ export default function ReaderLayout({
         <View style={contentColumn.wrapper}>
           {/* Title block */}
           <View style={styles.titleBlock}>
-            <Text style={styles.decorativeCross}>{'\u2726'}</Text>
+            <CrossIcon size={18} color={Colors.accent} />
             {title.geez && (
               <Text style={[styles.titleGeez, { fontSize: scale(geezTitleSize) }]}>
                 {title.geez}
@@ -164,13 +176,21 @@ export default function ReaderLayout({
         </View>
       </ScrollView>
 
-      <TouchableOpacity
+      <Animated.View
+        entering={FadeIn.duration(350).delay(300).springify().damping(18)}
         style={styles.presentationBtn}
-        onPress={() => setPresentationMode(true)}
-        activeOpacity={0.8}
       >
-        <Text style={styles.presentationBtnText}>Present</Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            hapticMedium();
+            setPresentationMode(true);
+          }}
+          activeOpacity={0.8}
+          style={styles.presentationBtnInner}
+        >
+          <Text style={styles.presentationBtnText}>Present</Text>
+        </TouchableOpacity>
+      </Animated.View>
 
       <SectionDrawer
         sections={sections}
@@ -193,8 +213,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   decorativeCross: {
-    fontSize: 20,
-    color: Colors.accent,
     marginBottom: 10,
   },
   titleGeez: {
@@ -249,6 +267,15 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
   },
 
+  edgeSwipeZone: {
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    bottom: 0,
+    width: 24,
+    zIndex: 5,
+  },
+
   bottomPadding: { height: 100 },
 
   /* ── Floating present button ── */
@@ -256,6 +283,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 28,
     right: 28,
+  },
+  presentationBtnInner: {
     backgroundColor: Colors.burgundy,
     borderRadius: 24,
     paddingHorizontal: 20,

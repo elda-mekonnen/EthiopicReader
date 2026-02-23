@@ -27,6 +27,10 @@ export const Colors = {
   congregation: '#2C1810',        // dark brown for congregation
   rubric: '#8B7355',              // warm muted for rubric/instructions
 
+  // Blue accent (anaphora list)
+  blue: '#4A6D8C',                // muted liturgical blue
+  blueDim: '#EDF2F6',             // light blue tint background
+
   // Decorative
   goldSeal: '#B5945B',            // gold seal background
   goldSealBorder: '#9A7D4A',      // darker gold border for seal
