@@ -107,6 +107,7 @@
     .list-item:hover { background: var(--surface2); }
     .list-item:hover .actions { opacity: 1; }
     .list-item.active { border-left-color: var(--accent); background: var(--accent-dim); }
+    .list-item.multi-sel { border-left-color: rgba(201,168,76,0.45); background: rgba(201,168,76,0.06); }
 
     .item-body { flex: 1; min-width: 0; }
     .item-title { font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -266,8 +267,9 @@ let currentFile = null;
 let fileData = null;   // mutable JS object mirroring the JSON
 let dirty = false;
 let selSection = null; // selected section or array-entry index
-let selBlock = null;   // selected block index
-const drag = { fromSection: null, fromBlock: null };
+let selBlock = null;   // block shown in editor (primary selection)
+let selBlocks = new Set(); // all selected block indices (for multi-drag)
+const drag = { fromSection: null, fromBlock: null, fromSectionReorder: null, draggedBlocks: null };
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 function isArray(d)      { return Array.isArray(d); }
@@ -342,6 +344,7 @@ async function selectFile(path) {
   currentFile = path;
   selSection = null;
   selBlock = null;
+  selBlocks = new Set();
   dirty = false;
   fileData = await apiFetch('GET', '/api/file?path=' + encodeURIComponent(path));
   renderFiles();
@@ -404,15 +407,19 @@ function renderSections() {
 
 function sectionRow(i, title, meta) {
   const active = selSection === i ? ' active' : '';
-  return '<div class="list-item' + active + '" onclick="selectSection(' + i + ')" ' +
+  return '<div class="list-item' + active + '" draggable="true" ' +
+    'ondragstart="secReorderDragStart(event,' + i + ')" ' +
     'ondragover="secDragOver(event,' + i + ')" ' +
     'ondragleave="secDragLeave(event)" ' +
-    'ondrop="secDrop(event,' + i + ')">' +
+    'ondrop="secDrop(event,' + i + ')" ' +
+    'ondragend="secDragEnd()" ' +
+    'onclick="selectSection(' + i + ')">' +
     '<div class="item-body">' +
       '<div class="item-title">' + title + '</div>' +
       '<div class="item-meta">' + meta + '</div>' +
     '</div>' +
     '<div class="actions">' +
+      '<button class="icon-btn" onclick="event.stopPropagation();duplicateSection(' + i + ')" title="Duplicate">⎘</button>' +
       '<button class="icon-btn" onclick="event.stopPropagation();moveSection(' + i + ',-1)" title="Up">↑</button>' +
       '<button class="icon-btn" onclick="event.stopPropagation();moveSection(' + i + ',1)"  title="Down">↓</button>' +
       '<button class="icon-btn del" onclick="event.stopPropagation();deleteSection(' + i + ')" title="Delete">✕</button>' +
@@ -423,6 +430,7 @@ function sectionRow(i, title, meta) {
 function selectSection(idx) {
   selSection = idx;
   selBlock = null;
+  selBlocks = new Set();
   renderSections();
   renderBlocks();
   renderEditor();
@@ -471,6 +479,20 @@ function moveSection(idx, dir) {
   renderSections();
 }
 
+function duplicateSection(idx) {
+  if (!isLiturgical(fileData)) return;
+  const copy = JSON.parse(JSON.stringify(fileData.sections[idx]));
+  copy.id = uid('section');
+  if (copy.blocks) copy.blocks = copy.blocks.map(b => Object.assign({}, b, { id: uid(fileData.id || 'block') }));
+  fileData.sections.splice(idx + 1, 0, copy);
+  selSection = idx + 1;
+  selBlock = null;
+  markDirty();
+  renderSections();
+  renderBlocks();
+  renderEditor();
+}
+
 // ── Blocks ─────────────────────────────────────────────────────────────────────
 function renderBlocks() {
   const list = document.getElementById('blocks-list');
@@ -489,15 +511,15 @@ function renderBlocks() {
 
   list.innerHTML = blocks.map((b, i) => {
     const preview = (b.english || b.geez || b.amharic || '—').slice(0, 45);
-    const active = selBlock === i ? ' active' : '';
+    const cls = selBlock === i ? ' active' : (selBlocks.has(i) ? ' multi-sel' : '');
     const speakerBadge = b.speaker ? '<span class="badge b-' + b.speaker + '">' + b.speaker + '</span>' : '';
-    return '<div class="list-item' + active + '" draggable="true" ' +
+    return '<div class="list-item' + cls + '" draggable="true" ' +
       'ondragstart="blockDragStart(event,' + i + ')" ' +
       'ondragover="blockDragOver(event,' + i + ')" ' +
       'ondragleave="blockDragLeave(event)" ' +
       'ondrop="blockDrop(event,' + i + ')" ' +
       'ondragend="blockDragEnd()" ' +
-      'onclick="selectBlock(' + i + ')">' +
+      'onclick="selectBlock(' + i + ',event)">' +
       '<div class="item-body">' +
         '<div class="item-title">' + esc(preview) + (preview.length >= 45 ? '…' : '') + '</div>' +
         '<div class="item-meta">' +
@@ -506,6 +528,7 @@ function renderBlocks() {
         '</div>' +
       '</div>' +
       '<div class="actions">' +
+        '<button class="icon-btn" onclick="event.stopPropagation();duplicateBlock(' + i + ')" title="Duplicate">⎘</button>' +
         '<button class="icon-btn" onclick="event.stopPropagation();moveBlock(' + i + ',-1)" title="Up">↑</button>' +
         '<button class="icon-btn" onclick="event.stopPropagation();moveBlock(' + i + ',1)"  title="Down">↓</button>' +
         '<button class="icon-btn del" onclick="event.stopPropagation();deleteBlock(' + i + ')" title="Delete">✕</button>' +
@@ -514,8 +537,27 @@ function renderBlocks() {
   }).join('');
 }
 
-function selectBlock(idx) {
-  selBlock = idx;
+function selectBlock(idx, e) {
+  if (e && (e.metaKey || e.ctrlKey)) {
+    // Ctrl/Cmd+click: toggle
+    if (selBlocks.has(idx)) {
+      selBlocks.delete(idx);
+      if (selBlock === idx) selBlock = selBlocks.size > 0 ? Math.max(...selBlocks) : null;
+    } else {
+      selBlocks.add(idx);
+      selBlock = idx;
+    }
+  } else if (e && e.shiftKey && selBlock !== null) {
+    // Shift+click: range select
+    const lo = Math.min(selBlock, idx);
+    const hi = Math.max(selBlock, idx);
+    for (let k = lo; k <= hi; k++) selBlocks.add(k);
+    selBlock = idx;
+  } else {
+    // Plain click: single select
+    selBlocks = new Set([idx]);
+    selBlock = idx;
+  }
   renderBlocks();
   renderEditor();
 }
@@ -530,7 +572,9 @@ function addBlock() {
     speaker: 'priest',
     geez: '', amharic: '', english: '', transliteration: ''
   });
-  selBlock = section.blocks.length - 1;
+  const newIdx = section.blocks.length - 1;
+  selBlock = newIdx;
+  selBlocks = new Set([newIdx]);
   markDirty();
   renderBlocks();
   renderEditor();
@@ -540,8 +584,30 @@ function deleteBlock(idx) {
   if (!confirm('Delete this block?')) return;
   const blocks = fileData.sections[selSection].blocks;
   blocks.splice(idx, 1);
-  if (selBlock === idx) selBlock = null;
-  else if (selBlock > idx) selBlock--;
+  const newSel = new Set();
+  for (const i of selBlocks) {
+    if (i === idx) continue;
+    newSel.add(i > idx ? i - 1 : i);
+  }
+  selBlocks = newSel;
+  if (selBlock === idx) selBlock = selBlocks.size > 0 ? Math.min(...selBlocks) : null;
+  else if (selBlock !== null && selBlock > idx) selBlock--;
+  markDirty();
+  renderBlocks();
+  renderEditor();
+}
+
+function duplicateBlock(idx) {
+  const blocks = fileData.sections[selSection].blocks;
+  const copy = JSON.parse(JSON.stringify(blocks[idx]));
+  copy.id = uid(fileData.id || 'block');
+  blocks.splice(idx + 1, 0, copy);
+  // Shift indices above idx up by 1
+  const newSel = new Set();
+  for (const i of selBlocks) newSel.add(i > idx ? i + 1 : i);
+  newSel.add(idx + 1);
+  selBlocks = newSel;
+  selBlock = idx + 1;
   markDirty();
   renderBlocks();
   renderEditor();
@@ -552,6 +618,13 @@ function moveBlock(idx, dir) {
   const next = idx + dir;
   if (next < 0 || next >= blocks.length) return;
   [blocks[idx], blocks[next]] = [blocks[next], blocks[idx]];
+  const newSel = new Set();
+  for (const i of selBlocks) {
+    if (i === idx) newSel.add(next);
+    else if (i === next) newSel.add(idx);
+    else newSel.add(i);
+  }
+  selBlocks = newSel;
   if (selBlock === idx) selBlock = next;
   else if (selBlock === next) selBlock = idx;
   markDirty();
@@ -680,13 +753,22 @@ function textArea(label, value, onchange) {
 
 // ── Drag and drop ──────────────────────────────────────────────────────────────
 function blockDragStart(e, idx) {
+  // If dragging a block that isn't selected, make it the only selection
+  if (!selBlocks.has(idx)) {
+    selBlocks = new Set([idx]);
+    selBlock = idx;
+    renderBlocks();
+  }
   drag.fromSection = selSection;
   drag.fromBlock = idx;
+  drag.draggedBlocks = new Set(selBlocks); // snapshot at drag start
   e.dataTransfer.effectAllowed = 'move';
-  // Delay adding class so ghost image still shows the full item
+  if (selBlocks.size > 1) e.dataTransfer.setData('text/plain', selBlocks.size + ' blocks');
   setTimeout(() => {
-    const el = document.querySelector('#blocks-list .list-item:nth-child(' + (idx + 1) + ')');
-    if (el) el.classList.add('dragging');
+    selBlocks.forEach(i => {
+      const el = document.querySelector('#blocks-list .list-item:nth-child(' + (i + 1) + ')');
+      if (el) el.classList.add('dragging');
+    });
   }, 0);
 }
 
@@ -710,8 +792,8 @@ function blockDragLeave(e) {
 function blockDrop(e, toIdx) {
   e.preventDefault();
   if (drag.fromBlock === null) return;
-  const fromIdx = drag.fromBlock;
   const fromSec = drag.fromSection;
+  const dragged = drag.draggedBlocks || new Set([drag.fromBlock]);
 
   const rect = e.currentTarget.getBoundingClientRect();
   let insertIdx = e.clientY < rect.top + rect.height / 2 ? toIdx : toIdx + 1;
@@ -719,21 +801,33 @@ function blockDrop(e, toIdx) {
   if (fromSec === selSection) {
     // Reorder within the same section
     const blocks = fileData.sections[selSection].blocks;
-    const [block] = blocks.splice(fromIdx, 1);
-    if (insertIdx > fromIdx) insertIdx--;
-    blocks.splice(insertIdx, 0, block);
+    const sortedIndices = [...dragged].sort((a, b) => a - b);
+    // Don't insert inside the selection itself
+    if (sortedIndices.includes(toIdx)) { drag.fromSection = null; drag.fromBlock = null; drag.draggedBlocks = null; return; }
+    const movedBlocks = sortedIndices.map(i => blocks[i]);
+    // Remove in reverse order
+    for (let i = sortedIndices.length - 1; i >= 0; i--) {
+      if (sortedIndices[i] < insertIdx) insertIdx--;
+      blocks.splice(sortedIndices[i], 1);
+    }
+    blocks.splice(insertIdx, 0, ...movedBlocks);
+    selBlocks = new Set(movedBlocks.map((_, i) => insertIdx + i));
     selBlock = insertIdx;
   } else {
     // Move from a different section into the current one
     const fromBlocks = fileData.sections[fromSec].blocks;
     const toBlocks = fileData.sections[selSection].blocks;
-    const [block] = fromBlocks.splice(fromIdx, 1);
-    toBlocks.splice(insertIdx, 0, block);
+    const sortedIndices = [...dragged].sort((a, b) => a - b);
+    const movedBlocks = sortedIndices.map(i => fromBlocks[i]);
+    for (let i = sortedIndices.length - 1; i >= 0; i--) fromBlocks.splice(sortedIndices[i], 1);
+    toBlocks.splice(insertIdx, 0, ...movedBlocks);
+    selBlocks = new Set(movedBlocks.map((_, i) => insertIdx + i));
     selBlock = insertIdx;
   }
 
   drag.fromSection = null;
   drag.fromBlock = null;
+  drag.draggedBlocks = null;
   markDirty();
   renderSections();
   renderBlocks();
@@ -743,54 +837,104 @@ function blockDrop(e, toIdx) {
 function blockDragEnd() {
   drag.fromSection = null;
   drag.fromBlock = null;
+  drag.draggedBlocks = null;
   document.querySelectorAll('.list-item').forEach(el =>
     el.classList.remove('dragging', 'drag-above', 'drag-below', 'drag-section-target')
   );
 }
 
-// Drop onto a section row — moves the block to the end of that section
+// Section drag — reorder sections
+function secReorderDragStart(e, idx) {
+  if (drag.fromBlock !== null) return;
+  drag.fromSectionReorder = idx;
+  e.dataTransfer.effectAllowed = 'move';
+  setTimeout(() => {
+    const el = document.querySelector('#sections-list .list-item:nth-child(' + (idx + 1) + ')');
+    if (el) el.classList.add('dragging');
+  }, 0);
+}
+
+function secDragEnd() {
+  drag.fromSectionReorder = null;
+  document.querySelectorAll('#sections-list .list-item').forEach(el =>
+    el.classList.remove('dragging', 'drag-above', 'drag-below', 'drag-section-target')
+  );
+}
+
+// Handles both: block dropped onto section, and section reorder
 function secDragOver(e, secIdx) {
-  if (drag.fromBlock === null) return;
+  if (drag.fromBlock === null && drag.fromSectionReorder === null) return;
   e.preventDefault();
   e.dataTransfer.dropEffect = 'move';
   document.querySelectorAll('#sections-list .list-item').forEach(el =>
-    el.classList.remove('drag-section-target')
+    el.classList.remove('drag-section-target', 'drag-above', 'drag-below')
   );
-  e.currentTarget.classList.add('drag-section-target');
+  if (drag.fromBlock !== null) {
+    e.currentTarget.classList.add('drag-section-target');
+  } else {
+    const rect = e.currentTarget.getBoundingClientRect();
+    e.currentTarget.classList.add(e.clientY < rect.top + rect.height / 2 ? 'drag-above' : 'drag-below');
+  }
 }
 
 function secDragLeave(e) {
   if (!e.currentTarget.contains(e.relatedTarget)) {
-    e.currentTarget.classList.remove('drag-section-target');
+    e.currentTarget.classList.remove('drag-section-target', 'drag-above', 'drag-below');
   }
 }
 
 function secDrop(e, toSecIdx) {
   e.preventDefault();
-  if (drag.fromBlock === null) return;
-  const fromIdx = drag.fromBlock;
-  const fromSec = drag.fromSection;
+  document.querySelectorAll('.list-item').forEach(el =>
+    el.classList.remove('drag-section-target', 'drag-above', 'drag-below')
+  );
 
-  document.querySelectorAll('.list-item').forEach(el => el.classList.remove('drag-section-target'));
+  if (drag.fromBlock !== null) {
+    // Drop block(s) onto section — move all to end of that section
+    const fromSec = drag.fromSection;
+    const dragged = drag.draggedBlocks || new Set([drag.fromBlock]);
+    if (fromSec === toSecIdx) { drag.fromSection = null; drag.fromBlock = null; drag.draggedBlocks = null; return; }
+    const fromBlocks = fileData.sections[fromSec].blocks;
+    if (!fileData.sections[toSecIdx].blocks) fileData.sections[toSecIdx].blocks = [];
+    const toBlocks = fileData.sections[toSecIdx].blocks;
+    const sortedIndices = [...dragged].sort((a, b) => a - b);
+    const movedBlocks = sortedIndices.map(i => fromBlocks[i]);
+    for (let i = sortedIndices.length - 1; i >= 0; i--) fromBlocks.splice(sortedIndices[i], 1);
+    const insertAt = toBlocks.length;
+    toBlocks.push(...movedBlocks);
+    selSection = toSecIdx;
+    selBlocks = new Set(movedBlocks.map((_, i) => insertAt + i));
+    selBlock = insertAt;
+    drag.fromSection = null;
+    drag.fromBlock = null;
+    drag.draggedBlocks = null;
+    markDirty();
+    renderSections();
+    renderBlocks();
+    renderEditor();
+    return;
+  }
 
-  if (fromSec === toSecIdx) { drag.fromSection = null; drag.fromBlock = null; return; }
-
-  const fromBlocks = fileData.sections[fromSec].blocks;
-  if (!fileData.sections[toSecIdx].blocks) fileData.sections[toSecIdx].blocks = [];
-  const toBlocks = fileData.sections[toSecIdx].blocks;
-
-  const [block] = fromBlocks.splice(fromIdx, 1);
-  toBlocks.push(block);
-
-  selSection = toSecIdx;
-  selBlock = toBlocks.length - 1;
-  drag.fromSection = null;
-  drag.fromBlock = null;
-
-  markDirty();
-  renderSections();
-  renderBlocks();
-  renderEditor();
+  if (drag.fromSectionReorder !== null) {
+    // Reorder sections
+    const fromIdx = drag.fromSectionReorder;
+    drag.fromSectionReorder = null;
+    if (fromIdx === toSecIdx) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    let insertIdx = e.clientY < rect.top + rect.height / 2 ? toSecIdx : toSecIdx + 1;
+    const sections = fileData.sections;
+    const [section] = sections.splice(fromIdx, 1);
+    if (insertIdx > fromIdx) insertIdx--;
+    sections.splice(insertIdx, 0, section);
+    if (selSection === fromIdx) selSection = insertIdx;
+    else if (selSection !== null) {
+      if (fromIdx < selSection && insertIdx >= selSection) selSection--;
+      else if (fromIdx > selSection && insertIdx <= selSection) selSection++;
+    }
+    markDirty();
+    renderSections();
+    renderBlocks();
+  }
 }
 
 // ── Warn before leaving with unsaved changes ───────────────────────────────────
