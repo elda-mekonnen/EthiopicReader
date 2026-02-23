@@ -424,24 +424,24 @@
       ]
     },
     {
-      "id": "serate-preparatory-service",
+      "id": "section-mlz13l5d2en",
       "title": {
-        "english": "Preparatory Service",
-        "geez": "ሥርዓተ ቅዳሴ",
-        "amharic": "ሥርዓተ ቅዳሴ"
+        "english": "Stand up for prayer",
+        "geez": "",
+        "amharic": ""
       },
       "blocks": [
         {
-          "id": "serate-preparatory-service-051",
-          "type": "response",
-          "speaker": "congregation",
+          "id": "serate-kidase-mlz13l5d559",
+          "type": "prayer",
+          "speaker": "deacon",
           "geez": "ተንሥኡ ለጸሎት",
           "amharic": "ለጸሎት ተነሡ። ",
           "english": "Stand up for prayer. ",
-          "transliteration": "Tensi'u letselot"
+          "transliteration": "Tensi'u letselot "
         },
         {
-          "id": "serate-kidase-mlyywbt59n6",
+          "id": "serate-kidase-mlz13l5dzjb",
           "type": "response",
           "speaker": "congregation",
           "geez": "እግዚኦ ተሣሃለነ። ",
@@ -450,23 +450,33 @@
           "transliteration": "Igzee'o tesahalene."
         },
         {
-          "id": "serate-preparatory-service-052",
-          "type": "response",
-          "speaker": "congregation",
+          "id": "serate-kidase-mlz13l5dp48",
+          "type": "prayer",
+          "speaker": "priest",
           "geez": "ሰላም ለኵልክሙ።",
           "amharic": "ሰላም ለሁላችሁም። ",
           "english": "Peace be unto you all. ",
           "transliteration": "Selam lekwulikimu. "
         },
         {
-          "id": "serate-kidase-mlyyxipddj3",
+          "id": "serate-kidase-mlz13l5dttl",
           "type": "response",
           "speaker": "congregation",
           "geez": "ምስለ መንፈስከ። ",
           "amharic": "ከመንፈስህ ጋራ።",
           "english": "And with Thy spirit.",
           "transliteration": "Misle menfesike."
-        },
+        }
+      ]
+    },
+    {
+      "id": "section-mlz1428d87a",
+      "title": {
+        "english": "The prayer of Oblation",
+        "geez": "",
+        "amharic": ""
+      },
+      "blocks": [
         {
           "id": "serate-preparatory-service-053",
           "type": "rubric",
@@ -507,18 +517,28 @@
           "speaker": "priest",
           "geez": "ሁሉን የምትገዛ አምላካችን እግዚአብሔር ሆይ! እንለምንሃለን እንማልድሃለንም ከሁሉ በላይ በምትሆን ባንዲት ቅድስት ቤተ ክርስቲያን ውስጥ መባ ስለሚያገቡ ሰዎች። መሥዋዕቱ፣ መጀመሪያውን፣ ካሥር አንዱን፣ የመታሰቢያ ምስጋናውን፣ ብዙውንና ጥቂቱን የተሰወረውንና የተገለጸውን ይሰጡም ዘንድ ሊወዱ የሚሰጡት ከሌላቸው ላይ ፈቃዳቸውን ተቀብለህ ለሁሉም የበረከት ዋጋን ስጥ፤ ዕድል ፈንታ ትሆን ዘንድ። በአንድ ልጅህ በርሱ ያለ ክብር ጽንዕ ላንተ ይገባል ከርሱ ጋራ ከመንፈስ ቅዱስም ጋራ ዛሬም ዘወትርም ለዘላለሙ በእውነት።",
           "english": "Lord our God who art almighty, we pray Thee and beseech Thee for them that bring an oblation within the one holy universal church, a sacrifice, first-fruits, tithes, a thank offering, a memorial, whether much or little, in secret or openly, and for those who wish to give and have not wherewith to give. Thy acceptance of their ready mind grant Thou unto every one: let the recompense of blessing be a portion to all of them: through Thy only begotten Son, through whom to Thee with Him and with the Holy Spirit be glory and dominion, both now and ever and world without end. Amen."
-        },
+        }
+      ]
+    },
+    {
+      "id": "section-mlz14ws0p4x",
+      "title": {
+        "english": "Stand up for prayer",
+        "geez": "",
+        "amharic": ""
+      },
+      "blocks": [
         {
-          "id": "serate-preparatory-service-061",
+          "id": "serate-kidase-mlz14ws0atk",
           "type": "prayer",
-          "speaker": "priest",
+          "speaker": "deacon",
           "geez": "ተንሥኡ ለጸሎት",
           "amharic": "ለጸሎት ተነሡ። ",
-          "english": "Stand up for prayer.",
-          "transliteration": "Tensi'u letselot"
+          "english": "Stand up for prayer. ",
+          "transliteration": "Tensi'u letselot "
         },
         {
-          "id": "serate-kidase-mlyz8r05vxf",
+          "id": "serate-kidase-mlz14ws094a",
           "type": "response",
           "speaker": "congregation",
           "geez": "እግዚኦ ተሣሃለነ። ",
@@ -527,23 +547,33 @@
           "transliteration": "Igzee'o tesahalene."
         },
         {
-          "id": "serate-preparatory-service-062",
+          "id": "serate-kidase-mlz14ws0ky6",
           "type": "prayer",
           "speaker": "priest",
           "geez": "ሰላም ለኵልክሙ።",
-          "amharic": "ሰላም ለሁላችሁም። ምስለ መንፈስከ። ከመንፈስህ ጋራ።",
-          "english": "Peace be unto you all. And with Thy spirit.",
-          "transliteration": "Selam lekwulikimu. Misle menfesike."
+          "amharic": "ሰላም ለሁላችሁም። ",
+          "english": "Peace be unto you all. ",
+          "transliteration": "Selam lekwulikimu. "
         },
         {
-          "id": "serate-kidase-mlyza0potu5",
+          "id": "serate-kidase-mlz14ws0k2c",
           "type": "response",
           "speaker": "congregation",
           "geez": "ምስለ መንፈስከ። ",
           "amharic": "ከመንፈስህ ጋራ።",
           "english": "And with Thy spirit.",
           "transliteration": "Misle menfesike."
-        },
+        }
+      ]
+    },
+    {
+      "id": "section-mlz15oalt7m",
+      "title": {
+        "english": "The Prayer of Oblation",
+        "geez": "",
+        "amharic": ""
+      },
+      "blocks": [
         {
           "id": "serate-preparatory-service-063",
           "type": "rubric",
@@ -580,7 +610,17 @@
           "geez": "አምላካችን ክርስቶስ የሁላችን ንጉሥ አንተ ነህ። ከፍ ያለ ምስጋናህንና ክብርን ስግደትንም ላንተ እንልካለን። ቸር ከሚሆን ከሰማያዊ አባትህ ጋራ ካንተ ጋራ ከሚተካከል ከማሕየዊ መንፈስ ቅዱስም ጋራ ዛሬም ዘወትርም ለዘላለሙ፤ አሜን።",
           "english": "Thou art the King of us all, Christ our God, and to Thee we send up high praise and glory and worship, with Thy good heavenly Father and the Holy Spirit, the life giver, who is coequal with Thee, both now and ever and world without end. Amen.",
           "speaker": "priest"
-        },
+        }
+      ]
+    },
+    {
+      "id": "section-mlz193rnxm4",
+      "title": {
+        "english": "The absolution of the Son",
+        "geez": "",
+        "amharic": ""
+      },
+      "blocks": [
         {
           "id": "serate-preparatory-service-067",
           "type": "prayer",
@@ -626,26 +666,74 @@
           "speaker": "congregation",
           "geez": "አሜን ኪርያላይሶን እግዚኦ ተሣሃለነ።",
           "english": "Amen Kyreeyalyson Lord have mercy on us",
-          "transliteration": "Amen Kyreeyalyson Igzio tesahalene."
-        },
+          "transliteration": "Amen Kyreeyalyson Igzio tesahalene.",
+          "amharic": "አሜን ኪርያላይሶን እግዚኦ ተሣሃለነ።"
+        }
+      ]
+    },
+    {
+      "id": "section-mlz1bkmat55",
+      "title": {
+        "english": "Stand up for prayer",
+        "geez": "",
+        "amharic": ""
+      },
+      "blocks": [
         {
-          "id": "serate-preparatory-service-072",
-          "type": "response",
-          "speaker": "congregation",
+          "id": "serate-kidase-mlz1bkmagf1",
+          "type": "prayer",
+          "speaker": "deacon",
           "geez": "ተንሥኡ ለጸሎት",
-          "amharic": "ለጸሎት ተነሡ። እግዚኦ ተሣሃለነ። አቤቱ ይቅር በለን።",
-          "english": "Stand up for prayer. Lord have mercy upon us.",
-          "transliteration": "Tensi'u letselot Igzee'o tesahalene."
+          "amharic": "ለጸሎት ተነሡ። ",
+          "english": "Stand up for prayer. ",
+          "transliteration": "Tensi'u letselot "
         },
         {
-          "id": "serate-preparatory-service-073",
+          "id": "serate-kidase-mlz1bkmaqcq",
           "type": "response",
           "speaker": "congregation",
-          "geez": "ሰላም ለኵልክሙ።",
-          "amharic": "ሰላም ለሁላችሁም። ምስለ መንፈስከ። ከመንፈስህ ጋራ።",
-          "english": "Peace be unto you all. And with Thy spirit.",
-          "transliteration": "Selam lekwulikimu. Misle menfesike."
+          "geez": "እግዚኦ ተሣሃለነ። ",
+          "amharic": "አቤቱ ይቅር በለን።",
+          "english": "Lord have mercy upon us.",
+          "transliteration": "Igzee'o tesahalene."
         },
+        {
+          "id": "serate-kidase-mlz1bkmaql4",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "ሰላም ለኵልክሙ።",
+          "amharic": "ሰላም ለሁላችሁም። ",
+          "english": "Peace be unto you all. ",
+          "transliteration": "Selam lekwulikimu. "
+        },
+        {
+          "id": "serate-kidase-mlz1bkmarnc",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "ምስለ መንፈስከ። ",
+          "amharic": "ከመንፈስህ ጋራ።",
+          "english": "And with Thy spirit.",
+          "transliteration": "Misle menfesike."
+        }
+      ]
+    },
+    {
+      "id": "section-mlz1bxg863h",
+      "title": {
+        "english": "New Section",
+        "geez": "",
+        "amharic": ""
+      },
+      "blocks": []
+    },
+    {
+      "id": "serate-preparatory-service",
+      "title": {
+        "english": "Preparatory Service",
+        "geez": "ሥርዓተ ቅዳሴ",
+        "amharic": "ሥርዓተ ቅዳሴ"
+      },
+      "blocks": [
         {
           "id": "serate-preparatory-service-074",
           "type": "prayer",
