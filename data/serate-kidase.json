@@ -973,12 +973,11 @@
       ]
     },
     {
-      "id": "serate-readings",
+      "id": "section-mlzayz4uz48",
       "title": {
-        "english": "Readings",
-        "geez": "ምንባባት",
-        "amharic": "ምንባባት",
-        "transliteration": ""
+        "english": "1st Reading - Paul's Letter",
+        "geez": "",
+        "amharic": ""
       },
       "blocks": [
         {
@@ -1005,30 +1004,69 @@
           "amharic": "ስለእና ለምንልን፣ ጸልይልን። ስለቅዱስ ስሙ ብሎ በቸርነቱ በይቅርታው ብዛት ሰውነታችንን ያድነን ዘንድ።",
           "english": "that He may save our souls in the multitude of His mercies and in His pity for His holy name's sake.",
           "transliteration": "Wetselee be'intee'ane yadihin nefsatene bebiziha sahilu wemihretu be'inte simu qidus."
-        },
+        }
+      ]
+    },
+    {
+      "id": "section-mlzb1066tz1",
+      "title": {
+        "english": "Stand up for prayer",
+        "geez": "",
+        "amharic": "",
+        "transliteration": "Tensi'u"
+      },
+      "blocks": [
         {
-          "id": "serate-readings-095",
-          "type": "response",
-          "speaker": "congregation",
+          "id": "serate-kidase-mlzb10665wx",
+          "type": "prayer",
+          "speaker": "deacon",
           "geez": "ተንሥኡ ለጸሎት",
-          "amharic": "ለጸሎት ተነሡ። እግዚኦ ተሣሃለነ። አቤቱ ይቅር በለን።",
-          "english": "Stand up for prayer. Lord have mercy upon us.",
-          "transliteration": "Tensi'u letselot Igzee'o tesahalene."
+          "amharic": "ለጸሎት ተነሡ። ",
+          "english": "Stand up for prayer. ",
+          "transliteration": "Tensi'u letselot "
         },
         {
-          "id": "serate-readings-096",
+          "id": "serate-kidase-mlzb1066jha",
           "type": "response",
           "speaker": "congregation",
-          "geez": "ሰላም ለኵልክሙ።",
-          "amharic": "ሰላም ለሁላችሁም። ምስለ መንፈስከ። ከመንፈስህ ጋራ።",
-          "english": "Peace be unto you all. And with Thy spirit.",
-          "transliteration": "Selam lekwulikimu. Misle menfesike."
+          "geez": "እግዚኦ ተሣሃለነ። ",
+          "amharic": "አቤቱ ይቅር በለን።",
+          "english": "Lord have mercy upon us.",
+          "transliteration": "Igzee'o tesahalene."
         },
+        {
+          "id": "serate-kidase-mlzb10660iu",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "ሰላም ለኵልክሙ።",
+          "amharic": "ሰላም ለሁላችሁም። ",
+          "english": "Peace be unto you all. ",
+          "transliteration": "Selam lekwulikimu. "
+        },
+        {
+          "id": "serate-kidase-mlzb1066ewd",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "ምስለ መንፈስከ። ",
+          "amharic": "ከመንፈስህ ጋራ።",
+          "english": "And with Thy spirit.",
+          "transliteration": "Misle menfesike."
+        }
+      ]
+    },
+    {
+      "id": "section-mlzb1826gg9",
+      "title": {
+        "english": "2nd Reading - Catholic Eplistle",
+        "geez": "",
+        "amharic": ""
+      },
+      "blocks": [
         {
           "id": "serate-readings-097",
           "type": "heading",
-          "geez": "2ኛ ምንባብ",
-          "amharic": "ራዕይ ዮሐንስ",
+          "geez": "",
+          "amharic": "2ኛ ምንባብ - ራዕይ ዮሐንስ",
           "english": "2nd Reading: Revelation Ch. 12 : 1 - 12",
           "transliteration": ""
         },
@@ -1043,35 +1081,75 @@
         },
         {
           "id": "serate-readings-099",
-          "type": "rubric",
+          "type": "response",
           "geez": "ኅሩያን አርዳኢከ ናዝዘነ በሣህልከ በእንተ ቅዱስ ስምከ።",
           "amharic": "ስለተመረጡ ክቡራን ደቀመዛሙርትህ፤ ሰለቅዱስ ስምህም ብለህ በይቅርታህ አረጋጋን።",
           "english": "comfort us in Thy mercy, for Thy holy name's sake.",
-          "transliteration": "hiruyan arda'eeke nazizene besahilike be'inteqidus simike."
-        },
+          "transliteration": "hiruyan arda'eeke nazizene besahilike be'inteqidus simike.",
+          "speaker": "congregation"
+        }
+      ]
+    },
+    {
+      "id": "section-mlzb462ilma",
+      "title": {
+        "english": "Stand up for prayer",
+        "geez": "",
+        "amharic": "",
+        "transliteration": "Tensi'u"
+      },
+      "blocks": [
         {
-          "id": "serate-readings-100",
-          "type": "response",
-          "speaker": "congregation",
+          "id": "serate-kidase-mlzb462ietl",
+          "type": "prayer",
+          "speaker": "deacon",
           "geez": "ተንሥኡ ለጸሎት",
-          "amharic": "ለጸሎት ተነሡ። እግዚኦ ተሣሃለነ። አቤቱ ይቅር በለን።",
-          "english": "Stand up for prayer. Lord have mercy upon us.",
-          "transliteration": "Tensi'u letselot Igzee'o tesahalene."
+          "amharic": "ለጸሎት ተነሡ። ",
+          "english": "Stand up for prayer. ",
+          "transliteration": "Tensi'u letselot "
         },
         {
-          "id": "serate-readings-101",
+          "id": "serate-kidase-mlzb462izex",
           "type": "response",
           "speaker": "congregation",
-          "geez": "ሰላም ለኵልክሙ።",
-          "amharic": "ሰላም ለሁላችሁም። ምስለ መንፈስከ። ከመንፈስህ ጋራ።",
-          "english": "Peace be unto you all. And with Thy spirit.",
-          "transliteration": "Selam lekwulikimu. Misle menfesike."
+          "geez": "እግዚኦ ተሣሃለነ። ",
+          "amharic": "አቤቱ ይቅር በለን።",
+          "english": "Lord have mercy upon us.",
+          "transliteration": "Igzee'o tesahalene."
         },
+        {
+          "id": "serate-kidase-mlzb462idic",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "ሰላም ለኵልክሙ።",
+          "amharic": "ሰላም ለሁላችሁም። ",
+          "english": "Peace be unto you all. ",
+          "transliteration": "Selam lekwulikimu. "
+        },
+        {
+          "id": "serate-kidase-mlzb462iur7",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "ምስለ መንፈስከ። ",
+          "amharic": "ከመንፈስህ ጋራ።",
+          "english": "And with Thy spirit.",
+          "transliteration": "Misle menfesike."
+        }
+      ]
+    },
+    {
+      "id": "section-mlzb3kih0qq",
+      "title": {
+        "english": "3rd Reading - Acts of the Apostles",
+        "geez": "",
+        "amharic": ""
+      },
+      "blocks": [
         {
           "id": "serate-readings-102",
           "type": "heading",
-          "geez": "3ኛ ምንባብ፡",
-          "amharic": "የሐዋርያት ሥራ",
+          "geez": "",
+          "amharic": "3ኛ ምንባብ፡ - የሐዋርያት ሥራ",
           "english": "3rd Reading: Acts of the Apostles Ch. 7 : 23 - 29",
           "transliteration": ""
         },
@@ -1099,25 +1177,65 @@
           "amharic": "ሁሉን የምታውቅ መንፈስ ቅዱስ ሆይ! ቅዱስ፣ ቅዱስ፣ ቅዱስ አንተ ነህ።",
           "english": "Holy Holy Holy art Thou, Holy Spirit who knowst all things.",
           "transliteration": "Qidus qidus qidus ante Menfes Qidus zete'amir kwulo."
-        },
+        }
+      ]
+    },
+    {
+      "id": "section-mlzb5ho6t3v",
+      "title": {
+        "english": "Stand up for prayer",
+        "geez": "",
+        "amharic": "",
+        "transliteration": "Tensi'u"
+      },
+      "blocks": [
         {
-          "id": "serate-readings-106",
-          "type": "response",
-          "speaker": "congregation",
+          "id": "serate-kidase-mlzb5ho6ra7",
+          "type": "prayer",
+          "speaker": "deacon",
           "geez": "ተንሥኡ ለጸሎት",
-          "amharic": "ለጸሎት ተነሡ። እግዚኦ ተሣሃለነ። አቤቱ ይቅር በለን።",
-          "english": "Stand up for prayer. Lord have mercy upon us.",
-          "transliteration": "Tensi'u letselot Igzee'o tesahalene."
+          "amharic": "ለጸሎት ተነሡ። ",
+          "english": "Stand up for prayer. ",
+          "transliteration": "Tensi'u letselot "
         },
         {
-          "id": "serate-readings-107",
+          "id": "serate-kidase-mlzb5ho6xfj",
           "type": "response",
           "speaker": "congregation",
-          "geez": "ሰላም ለኵልክሙ።",
-          "amharic": "ሰላም ለሁላችሁም። ምስለ መንፈስከ። ከመንፈስህ ጋራ።",
-          "english": "Peace be unto you all. And with Thy spirit.",
-          "transliteration": "Selam lekwulikimu. Misle menfesike."
+          "geez": "እግዚኦ ተሣሃለነ። ",
+          "amharic": "አቤቱ ይቅር በለን።",
+          "english": "Lord have mercy upon us.",
+          "transliteration": "Igzee'o tesahalene."
         },
+        {
+          "id": "serate-kidase-mlzb5ho66px",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "ሰላም ለኵልክሙ።",
+          "amharic": "ሰላም ለሁላችሁም። ",
+          "english": "Peace be unto you all. ",
+          "transliteration": "Selam lekwulikimu. "
+        },
+        {
+          "id": "serate-kidase-mlzb5ho6uhe",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "ምስለ መንፈስከ። ",
+          "amharic": "ከመንፈስህ ጋራ።",
+          "english": "And with Thy spirit.",
+          "transliteration": "Misle menfesike."
+        }
+      ]
+    },
+    {
+      "id": "serate-readings",
+      "title": {
+        "english": "Readings",
+        "geez": "ምንባባት",
+        "amharic": "ምንባባት",
+        "transliteration": ""
+      },
+      "blocks": [
         {
           "id": "serate-readings-108",
           "type": "response",
