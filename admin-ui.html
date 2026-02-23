@@ -687,6 +687,7 @@ function renderEditor() {
         textField('Title — English', (section.title || {}).english, 'setSecTitle("english",this.value)') +
         textField("Title — Ge\u02bcez",  (section.title || {}).geez,    'setSecTitle("geez",this.value)') +
         textField('Title — Amharic', (section.title || {}).amharic, 'setSecTitle("amharic",this.value)') +
+        textField('Title — Transliteration', (section.title || {}).transliteration, 'setSecTitle("transliteration",this.value)') +
       '</div>';
       return;
     }
