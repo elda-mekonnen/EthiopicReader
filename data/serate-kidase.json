@@ -1228,12 +1228,11 @@
       ]
     },
     {
-      "id": "serate-readings",
+      "id": "section-mlzd1z55ekl",
       "title": {
-        "english": "Readings",
-        "geez": "ምንባባት",
-        "amharic": "ምንባባት",
-        "transliteration": ""
+        "english": "Pray for the...",
+        "geez": "",
+        "amharic": ""
       },
       "blocks": [
         {
@@ -1244,87 +1243,179 @@
           "amharic": "አሜን ኪርያላይሶን እግዚኦ ተሣሃለነ።",
           "english": "Pray for …,",
           "transliteration": "Amen Kyreeyalyson Igzio tesahalene."
-        },
+        }
+      ]
+    },
+    {
+      "id": "section-mlzd1v3b6qx",
+      "title": {
+        "english": "Rejoice",
+        "geez": "",
+        "amharic": "",
+        "transliteration": "Tefesihee"
+      },
+      "blocks": [
         {
           "id": "serate-readings-109",
-          "type": "response",
-          "speaker": "congregation",
-          "geez": "ደኅንነትን የምንለምንሽ ክብርን የተመላሽ ሆይ ደስ ይበልሽ።",
-          "amharic": "ደስ ይበልሽ።",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "ደኅንነትን የምንለምንሽ ክብርን የተመላሽ ሆይ ደስ ይበልሽ። ደስ ይበልሽ።",
           "english": "Rejoice, O thou of whom we ask healing, O holy, full of honor, Des yibelish. Rejoice.",
           "transliteration": ""
         },
         {
-          "id": "serate-readings-110",
+          "id": "serate-kidase-mlzd50prd0q",
           "type": "response",
           "speaker": "congregation",
-          "geez": "ሁልጊዜ ድንግል የምትሆኝ አምላክን የወለድሽ የክርስቶስ እናት ሆይ ኃጢአታችንን ያስተሠርይልን ዘንድ ወደ ልጅሽ ወደ ወዳጅሽ ወደ ላይ ጸሎታችንን አሳርጊ።",
-          "amharic": "አሜን።",
-          "english": "Ever-virgin, parent of God, mother of Christ, offer up our prayer on high to thy beloved Son that He may forgive us our sin. Amen.",
+          "geez": "",
+          "amharic": "ደስ ይበልሽ።",
+          "english": "Rejoice.",
+          "transliteration": "Des yibelish. "
+        },
+        {
+          "id": "serate-readings-110",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "ሁልጊዜ ድንግል የምትሆኝ አምላክን የወለድሽ የክርስቶስ እናት ሆይ ኃጢአታችንን ያስተሠርይልን ዘንድ ወደ ልጅሽ ወደ ወዳጅሽ ወደ ላይ ጸሎታችንን አሳርጊ።",
+          "english": "Ever-virgin, parent of God, mother of Christ, offer up our prayer on high to thy beloved Son that He may forgive us our sin. ",
           "transliteration": ""
+        },
+        {
+          "id": "serate-kidase-mlzd61k715q",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "አሜን።",
+          "amharic": "አሜን።",
+          "english": "Amen.",
+          "transliteration": "Amen."
         },
         {
           "id": "serate-readings-111",
-          "type": "response",
-          "speaker": "congregation",
+          "type": "prayer",
+          "speaker": "priest",
           "geez": "በእውነት የጽድቅ ብርሃን የሚሆን አምላካችንን ክርስቶስን የወለድሽልን (ንጽሕት) ሆይ ደስ ይበልሽ።",
-          "amharic": "ደስ ይበልሽ።",
-          "english": "Rejoice, O thou who didst bear for us the very light of righteousness, even Christ our God: Des yibelish. Rejoice.",
+          "amharic": "",
+          "english": "Rejoice, O thou who didst bear for us the very light of righteousness, even Christ our God: ",
           "transliteration": ""
         },
         {
-          "id": "serate-readings-112",
+          "id": "serate-kidase-mlzd6u4dx25",
           "type": "response",
           "speaker": "congregation",
-          "geez": "ንጽሕት ድንግል ሆይ ለነፍሳችን ይቅርታን ያደርግልን ዘንድ ኃጢአታችንንም ያስተሠርይልን ዘንድ ወደ ጌታችን ለምኝልን።",
+          "geez": "ደስ ይበልሽ።",
+          "amharic": "ደስ ይበልሽ።",
+          "english": "Rejoice.",
+          "transliteration": "Des yibelish. "
+        },
+        {
+          "id": "serate-readings-112",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "ንጽሕት ድንግል ሆይ ለነፍሳችን ይቅርታን ያደርግልን ዘንድ ኃጢአታችንንም ያስተሠርይልን ዘንድ ወደ ጌታችን ለምኝልን።",
+          "english": "O Virgin pure, plead for us unto our Lord that He may have mercy upon our souls and forgive us our sins.",
+          "transliteration": ""
+        },
+        {
+          "id": "serate-kidase-mlzd7zagxjv",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "ለምኝልን።",
           "amharic": "ለምኝልን።",
-          "english": "O Virgin pure, plead for us unto our Lord that He may have mercy upon our souls and forgive us our sins. Plead for us",
+          "english": "Plead for us",
+          "transliteration": "lemignilin"
+        },
+        {
+          "id": "serate-kidase-mlzd9h11l3x",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "በእውነት ለሰው ወገን አማላጅ የምትሆኝ አምላክን የወለድሽ ንጽሕት ቅድስት ድንግል ማርያም ሆይ ደስ ይበልሽ።",
+          "english": "Rejoice, O Virgin Mary, parent of God, holy and pure, very pleader for the race of mankind; ",
           "transliteration": ""
         },
         {
           "id": "serate-readings-113",
           "type": "response",
           "speaker": "congregation",
-          "geez": "በእውነት ለሰው ወገን አማላጅ የምትሆኝ አምላክን የወለድሽ ንጽሕት ቅድስት ድንግል ማርያም ሆይ ደስ ይበልሽ።",
+          "geez": "",
           "amharic": "ደስ ይበልሽ።",
-          "english": "Rejoice, O Virgin Mary, parent of God, holy and pure, very pleader for the race of mankind; Des yibelish. Rejoice.",
-          "transliteration": ""
+          "english": "Rejoice.",
+          "transliteration": "Des yibelish. "
         },
         {
           "id": "serate-readings-114",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "የኃጢአታችንን ሥርየት ይሰጠን ዘንድ በልጅሽ በክርስቶስ ፊት ለምኝልን።",
+          "amharic": "",
+          "english": "Plead for us before Christ thy Son, that He may vouchsafe us remission of our sins. ",
+          "transliteration": ""
+        },
+        {
+          "id": "serate-kidase-mlzdavtrqbx",
           "type": "response",
           "speaker": "congregation",
-          "geez": "የኃጢአታችንን ሥርየት ይሰጠን ዘንድ በልጅሽ በክርስቶስ ፊት ለምኝልን።",
+          "geez": "",
           "amharic": "ለምኝልን።",
-          "english": "Plead for us before Christ thy Son, that He may vouchsafe us remission of our sins. Plead for us",
-          "transliteration": ""
+          "english": "Plead for us",
+          "transliteration": "lemigni'ln"
         },
         {
           "id": "serate-readings-115",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "በእውነት ንግሥት የምትሆኝ ንጽሕት ድንግል ሆይ ደስ ይበልሽ።",
+          "amharic": "",
+          "english": "Rejoice, O Virgin pure, very Queen;",
+          "transliteration": ""
+        },
+        {
+          "id": "serate-kidase-mlzderd2wnv",
           "type": "response",
           "speaker": "congregation",
-          "geez": "በእውነት ንግሥት የምትሆኝ ንጽሕት ድንግል ሆይ ደስ ይበልሽ።",
+          "geez": "",
           "amharic": "ደስ ይበልሽ።",
-          "english": "Rejoice, O Virgin pure, very Queen; Des yibelish. Rejoice.",
-          "transliteration": ""
+          "english": "Rejoice.",
+          "transliteration": "Des yibelish."
         },
         {
           "id": "serate-readings-116",
-          "type": "response",
-          "speaker": "congregation",
-          "geez": "የባሕርያችን መመኪያ ሆይ ደስ ይበልሽ።",
-          "amharic": "ደስ ይበልሽ።",
-          "english": "Rejoice, O pride of our kind; Des yibelish. Rejoice.",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "የባሕርያችን መመኪያ ሆይ ደስ ይበልሽ። ",
+          "amharic": "",
+          "english": "Rejoice, O pride of our kind;",
           "transliteration": ""
         },
         {
-          "id": "serate-readings-117",
+          "id": "serate-kidase-mlzdg24ed4v",
           "type": "response",
           "speaker": "congregation",
-          "geez": "አምላካችንን አማኑኤልን የወለድሽልን ሆይ ደስ ይበልሽ።",
+          "geez": "",
           "amharic": "ደስ ይበልሽ።",
-          "english": "Rejoice, O thou that barest for us Emmanuel our God. Des yibelish. Rejoice.",
+          "english": "Rejoice.",
+          "transliteration": "Des yibelish. "
+        },
+        {
+          "id": "serate-readings-117",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "አምላካችንን አማኑኤልን የወለድሽልን ሆይ ደስ ይበልሽ።",
+          "amharic": "",
+          "english": "Rejoice, O thou that barest for us Emmanuel our God.",
           "transliteration": ""
+        },
+        {
+          "id": "serate-kidase-mlzdj8pwd6y",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "ደስ ይበልሽ።",
+          "english": "Rejoice.",
+          "transliteration": "Des yibelish. "
         },
         {
           "id": "serate-readings-118",
@@ -1341,7 +1432,18 @@
           "geez": "አሜን።",
           "english": "Amen.",
           "transliteration": ""
-        },
+        }
+      ]
+    },
+    {
+      "id": "section-mlzd22i32gd",
+      "title": {
+        "english": "This is the time of blessing",
+        "geez": "ዝውእቱ ጊዜ ባርኮት ",
+        "amharic": "ይህ የማመስገን ጊዜ ነው፣ ",
+        "transliteration": "Ziwi'itu geezé barkot "
+      },
+      "blocks": [
         {
           "id": "serate-readings-120",
           "type": "prayer",
@@ -1434,35 +1536,50 @@
         },
         {
           "id": "serate-readings-130",
-          "type": "rubric",
-          "geez": "በሕብረት፦ ሱራፌል ይሰግዱ ሎቱ ወኪሩቤል ይሴብሕዎ ይጸርሑ እንዘ ይብሉ።",
+          "type": "response",
+          "geez": "ሱራፌል ይሰግዱ ሎቱ ወኪሩቤል ይሴብሕዎ ይጸርሑ እንዘ ይብሉ።",
           "amharic": "ሱራፌል ይሰግዱለታል። ኪሩቤልም ያመሰግኑታል። እንዲህ እያሉ፣ ይዘምራሉ",
-          "english": "Together:- Surafel yisegidulotu wekeerubél yisébihwo yiÍerhu inze yiblu. The seraphim worship Him, and cherubim praise Him and cry saying:",
-          "transliteration": ""
+          "english": "The seraphim worship Him, and cherubim praise Him and cry saying:",
+          "transliteration": "Surafel yisegidulotu wekeerubél yisébihwo yiÍerhu inze yiblu.",
+          "speaker": "all"
         },
         {
           "id": "serate-readings-131",
-          "type": "rubric",
-          "geez": "በሕብረት፦ ቅዱስ፣ ቅዱስ፣ ቅዱስ እግዚአብሔር በኀበ አእላፍ ወክቡር በውስተ ረበዋት።",
+          "type": "response",
+          "geez": "ቅዱስ፣ ቅዱስ፣ ቅዱስ እግዚአብሔር በኀበ አእላፍ ወክቡር በውስተ ረበዋት።",
           "amharic": "እግዚአብሔር በአእላፍ መላእክት ዘንድ ቅዱስ፣ ቅዱስ፣ ቅዱስ ነው። በአለቆችም ዘንድ ክቡር ነው።",
           "english": "Holy Holy Holy is the Lord among the thousands and honored among the tens of thousands.",
-          "transliteration": "Together:- Qidus qidus qidus Igzee'abihér behabe a'ilaf wekibur bewiste rebewat."
+          "transliteration": "Qidus qidus qidus Igzee'abihér behabe a'ilaf wekibur bewiste rebewat.",
+          "speaker": "all"
         },
         {
           "id": "serate-readings-132",
-          "type": "rubric",
-          "geez": "በሕብረት፦ አንተ ውእቱ ዕጣን ኦ መድኃኒነ እስመ መጻእከ ወአድኃንከነ ተሣሃለነ።",
+          "type": "response",
+          "geez": "አንተ ውእቱ ዕጣን ኦ መድኃኒነ እስመ መጻእከ ወአድኃንከነ ተሣሃለነ።",
           "amharic": "መድኃኒታችን ሆይ! ዕጣን አንተ ነህ፤ መጥተህ አድነኸናልና። ይቅር በለን።",
           "english": "Thou art the incense, O our savior, for Thou didst come and save us. Have mercy upon us.",
-          "transliteration": "Together:- Ante wi'itu iTan o medhaneene isme meÍa'ike we'adhankene tesahalene."
-        },
+          "transliteration": "Ante wi'itu iTan o medhaneene isme meÍa'ike we'adhankene tesahalene.",
+          "speaker": "all"
+        }
+      ]
+    },
+    {
+      "id": "section-mlzd22c8ako",
+      "title": {
+        "english": "Trisagion (Holy Holy Holy)",
+        "geez": "ቅዱስ ቅዱስ ቅዱስ",
+        "amharic": "ቅዱስ ቅዱስ ቅዱስ",
+        "transliteration": "Qidus Qidus Qidus"
+      },
+      "blocks": [
         {
           "id": "serate-readings-133",
           "type": "prayer",
           "speaker": "priest",
           "geez": "ቅዱስ።",
           "english": "Holy",
-          "transliteration": "Qidus"
+          "transliteration": "Qidus",
+          "amharic": "ቅዱስ።"
         },
         {
           "id": "serate-readings-134",
@@ -1497,8 +1614,8 @@
           "speaker": "congregation",
           "geez": "ዐርገ በስብሐት ውስተ ሰማያት ወነበረ በየማነ አቡሁ",
           "amharic": "በክብር በምስጋና ወደ ሰማይ የወጣ፣ በአባቱ ቀኝ የተቀመጠ፣",
-          "english": "Arge besibihat wiste semayat wenebere beyemane abuhu Ascend into heaven in glory, sit at the right hand of thy Father and",
-          "transliteration": ""
+          "english": "Arge besibihat wiste semayat wenebere beyemane abuhu ",
+          "transliteration": "Ascend into heaven in glory, sit at the right hand of thy Father and"
         },
         {
           "id": "serate-readings-138",
@@ -1538,21 +1655,39 @@
         },
         {
           "id": "serate-readings-142",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "ጸጋ ዘእግዚአብሔር የሀሉ ምስሌክሙ።",
+          "amharic": "የእግዚአብሔር ጸጋ ከእናንተ ጋር ይሁን።",
+          "english": "The grace of God be with you. ",
+          "transliteration": "Tsega ze'Igzee'abihér yehalu misle’kimu."
+        },
+        {
+          "id": "serate-kidase-mlzdxxg1urw",
           "type": "response",
           "speaker": "congregation",
-          "geez": "ጸጋ ዘእግዚአብሔር የሀሉ ምስሌክሙ።",
-          "amharic": "የእግዚአብሔር ጸጋ ከእናንተ ጋር ይሁን። ምስለ መንፈስከ። ከመንፈስህ ጋራ።",
-          "english": "The grace of God be with you. And with Thy spirit.",
-          "transliteration": "Tsega ze'Igzee'abihér yehalu misle’kimu. Misle menfesike."
+          "geez": "ምስለ መንፈስከ።",
+          "amharic": "ከመንፈስህ ጋራ።",
+          "english": "And with Thy spirit.",
+          "transliteration": "Misle menfesike."
         },
         {
           "id": "serate-readings-143",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "ንሰብሖ ለአምላክነ።",
+          "amharic": "ለእግዚአብሔር ምስጋና ይሁን።",
+          "english": "Let us glorify our God ",
+          "transliteration": "Nisebiho le'amlakine. "
+        },
+        {
+          "id": "serate-kidase-mlzdw5mu1u0",
           "type": "response",
           "speaker": "congregation",
-          "geez": "ንሰብሖ ለአምላክነ።",
-          "amharic": "ለእግዚአብሔር ምስጋና ይሁን። ርቱዕ ይደሉ። እውነት ነው ይገባል።",
-          "english": "Nisebiho le'amlakine. Let us glorify our God Ritu'i yidelu. It is right, it is just.",
-          "transliteration": ""
+          "geez": "ርቱዕ ይደሉ።",
+          "amharic": "እውነት ነው ይገባል።",
+          "english": "It is right, it is just.",
+          "transliteration": "Ritu'i yidelu."
         },
         {
           "id": "serate-readings-144",
@@ -1560,8 +1695,8 @@
           "speaker": "priest",
           "geez": "አጽንዑ ሕሊና ልብክሙ።",
           "amharic": "የልባችሁን አሳብ አጽኑ።",
-          "english": "Atsni'u hileena libikimu. Strengthen the thought of your heart,",
-          "transliteration": ""
+          "english": "Strengthen the thought of your heart,",
+          "transliteration": "Atsni'u hileena libikimu. "
         },
         {
           "id": "serate-readings-145",
@@ -1583,49 +1718,97 @@
         },
         {
           "id": "serate-readings-147",
+          "type": "rubric",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "ካህኑ የኪዳን ጸሎት “እግዚአብሔር አብ …” የሚለውን በንባብ ሲያሰማ፤",
+          "english": "As the priest starts to read the “O God theFather...” Prayer of the Covenant ",
+          "transliteration": ""
+        },
+        {
+          "id": "serate-kidase-mlze1sog31c",
           "type": "response",
           "speaker": "congregation",
-          "geez": "ካህኑ የኪዳን ጸሎት “እግዚአብሔር አብ …” የሚለውን በንባብ ሲያሰማ፤",
-          "amharic": "ኪያከ ንሴብሕ እግዚኦ። አቤቱ አንተን እናመሰግንሃለን።",
-          "english": "As the priest starts to read the “O God theFather...” Prayer of the Covenant Oh we thank Thee.",
+          "geez": "ኪያከ ንሴብሕ እግዚኦ።",
+          "amharic": "አቤቱ አንተን እናመሰግንሃለን።",
+          "english": "Oh we thank Thee.",
           "transliteration": "keeyake nisébih igzee'o"
         },
         {
           "id": "serate-readings-148",
+          "type": "rubric",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "ካህኑ የኪዳን ጸሎት “እግዚኦ ኢየሱስ ክርስቶስ …” በንባብ ሲያሰማ፤",
+          "english": "As the priest starts to read the ”O Lord, Jesus Christ ” Prayer of the Covenant ",
+          "transliteration": ""
+        },
+        {
+          "id": "serate-kidase-mlze380ra2v",
           "type": "response",
           "speaker": "congregation",
-          "geez": "ካህኑ የኪዳን ጸሎት “እግዚኦ ኢየሱስ ክርስቶስ …” በንባብ ሲያሰማ፤",
-          "amharic": "ኪያከ ንዌድስ እግዚኦ። አቤቱ አንተን እናወድስሃለን።",
-          "english": "As the priest starts to read the ”O Lord, Jesus Christ ” Prayer of the Covenant Oh Lord, we praise Thee.",
+          "geez": "ኪያከ ንዌድስ እግዚኦ።",
+          "amharic": "አቤቱ አንተን እናወድስሃለን።",
+          "english": "Oh Lord, we praise Thee.",
           "transliteration": "keeyake niwédis igzee'o"
         },
         {
           "id": "serate-readings-149",
-          "type": "response",
+          "type": "rubric",
           "speaker": "congregation",
           "geez": "ካህኑ የኪዳን ጸሎት “ንሤልስ ለከ ዘንተ ቅዱስ …” አሰምቶ እንዳበቃ",
-          "amharic": "አሜን። በእውነት።",
-          "english": "After the priest finishes reading the “Thrice over...” Prayer of the Covenant” Amen",
+          "amharic": "",
+          "english": "After the priest finishes reading the “Thrice over...” Prayer of the Covenant”",
           "transliteration": ""
         },
         {
-          "id": "serate-readings-150",
+          "id": "serate-kidase-mlze4f3mhua",
           "type": "response",
           "speaker": "congregation",
-          "geez": "አቡነ ዘበሰማያት ይትቀደስ ስምከ ትምጻእ መንግሥትከ",
-          "amharic": "አባታችን ሆይ! በሰማይ የምትኖር፣ ስምህ ይቀደስ፣ መንገሥትህ ትምጣ፣ ወይኩን ፈቃድከ በከመ በሰማይ ከማሁ በምድር። ሲሳየነ ዘለለ ዕለትነ ሀበነ ዮም። ፈቃድህ በሰማይ እንደ ሆነ እንዲሁም በምድር ይሁን! የዕለት እንጀራችንን ስጠን ዛሬ፣ ኅድግ ለነ አበሳነ ወጌጋየነ ከመ ንሕነኒ ንኅድግ ለዘአበሰ ለነ። በደላችንን ይቅር በለን፣ እኛም የበደሉንን ይቅር እንደምንል፣ ኢታብአነ እግዚኦ ውስተ መንሱት አላ አድኅነነ ወባልሐነ እምኵሉ እኩይ አቤቱ ወደ ፈተና አታግባን፣ ከክፉ ሁሉ አድነን እንጂ፣ እስመ ዚኣከ ይእቲ መንግሥት ኃይል ወስብሐት ለዓለመ ዓለም። መንግሥት ያንተ ናትና። ኃይል፣ ምስጋና ለዘለዓለም በእውነት።",
-          "english": "Abune zebesemayat yitqedes simike timtsa'i mengistike Our father who art in heaven, hallowed be thy name, Thy kingdom come weyikun feqadike bekeme besemay kemahu medir. Seesayene zelele'iletine habene yom. Thy will be done on earth as it is in heaven; give us this day our daily bread, Hidig lene abesane wegégayene keme nihinenee nihidig leze'abese lene. and forgive us our trespasses as we forgive them that trespass against us, and lead us not into temptation but deliver us and rescue us from all evil; for Thine is the kingdom, the power and the glory for ever and ever.",
-          "transliteration": "eetabi'ane egzi’o weste mensut ala adihinene webalihane imkwulu iku’y isme zee'ake yi'itee mengist hayl wesibihat le'alem alem."
+          "geez": "በእውነት።",
+          "amharic": "አሜን። ",
+          "english": "Amen",
+          "transliteration": "Amen"
+        }
+      ]
+    },
+    {
+      "id": "section-mlze5dy9jhw",
+      "title": {
+        "english": "Our Father",
+        "geez": "አቡነ ዘበሰማያት",
+        "amharic": "አባታችን ሆይ",
+        "transliteration": ""
+      },
+      "blocks": [
+        {
+          "id": "serate-kidase-mlze5dy90ox",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "አቡነ ዘበሰማያት ይትቀደስ ስምከ ትምጻእ መንግሥትከ ወይኩን ፈቃድከ በከመ በሰማይ ከማሁ በምድር። ሲሳየነ ዘለለ ዕለትነ ሀበነ ዮም።  ኅድግ ለነ አበሳነ ወጌጋየነ ከመ ንሕነኒ ንኅድግ ለዘአበሰ ለነ። ኢታብአነ እግዚኦ ውስተ መንሱት አላ አድኅነነ ወባልሐነ እምኵሉ እኩይ እስመ ዚኣከ ይእቲ መንግሥት ኃይል ወስብሐት ለዓለመ ዓለም።",
+          "amharic": "አባታችን ሆይ! በሰማይ የምትኖር፣ ስምህ ይቀደስ፣ መንገሥትህ ትምጣ፣ ፈቃድህ በሰማይ እንደ ሆነ እንዲሁም በምድር ይሁን! የዕለት እንጀራችንን ስጠን ዛሬ፣በደላችንን ይቅር በለን፣ እኛም የበደሉንን ይቅር እንደምንል፣  አቤቱ ወደ ፈተና አታግባን፣ ከክፉ ሁሉ አድነን እንጂ፣  መንግሥት ያንተ ናትና። ኃይል፣ ምስጋና ለዘለዓለም በእውነት።",
+          "english": "Our father who art in heaven, hallowed be thy name, Thy kingdom come  Thy will be done on earth as it is in heaven; give us this day our daily bread, and forgive us our trespasses as we forgive them that trespass against us, and lead us not into temptation but deliver us and rescue us from all evil; for Thine is the kingdom, the power and the glory for ever and ever.",
+          "transliteration": "Abune zebesemayat yitqedes simike timtsa'i mengistike weyikun feqadike bekeme besemay kemahu medir. Seesayene zelele'iletine habene yom.  Hidig lene abesane wegégayene keme nihinenee nihidig leze'abese lene.\neetabi'ane egzi’o weste mensut ala adihinene webalihane imkwulu iku’y isme zee'ake yi'itee mengist hayl wesibihat le'alem alem. "
         },
         {
-          "id": "serate-readings-155",
+          "id": "serate-kidase-mlze5dya2mk",
           "type": "response",
           "speaker": "congregation",
-          "geez": "በሰላመ ቅዱስ ገብርኤል መልአክ ኦ እግዝእትየ ማርያም ሰላም ለኪ",
-          "amharic": "እመቤታችን ቅድስት ድንግል ማርያም ሆይ በመልአኩ በቅዱስ ገብረኤል ሰላምታ ሰላም እልሻለሁ ድንግል በኅሊናኪ ወድንግል በሥጋኪ። እመ እግዚአብሔር ጸባዖት ሰላም ለኪ በሃሳብሽ ድንግል ነሽ በሥጋሽም ድንግል ነሽ። የአሸናፊ የእግዚአብሔር እናት ሆይ ሰላምታ ላንቺ ይገባል። ቡርክት አንቲ እምአንስት ወቡሩክ ፍሬ ከርሥኪ። ከሴቶች ሁሉ ተለይተሽ አንቺ የትባረክሽ ነሽ የማኅፀንሽም ፍሬ የተባረከ ነው። ተፈሥሒ ፍሥሕት ኦ ምልእተ ጸጋ እግዚአብሔር ምስሌኪ። ጸጋን የተመላሽ ሆይ ደስ ይበልሽ እግዚአብሔር ከአንቺ ጋር ነውና ሰአሊ ወጸልዪ ኀበ ፍቁር ወልድኪ ኢየሱስ ክርስቶስ ከተወደደው ልጅሽ ከጌታችን ከመድኃኒታችን ከኢየሱስ ክርስቶስ ዘንድ ይቅርታን ለምኝልን ከመ ይሥረይ ለነ ኃጣውኢነ። ኃጢአታችንን ያስተሠርይልን ዘንድ ለዘለዓለሙ አሜን። ኦ ሥሉስ ቅዱስ መሐረነ፤ ኦ ሥሉስ ቅዱስ መሐከነ፤ ኦ ሥሉስ ቅዱስ ተሣሃለነ። ልዩ ሦስት ሆይ ማረን፤ ልዩ ሦስት ሆይ ራራልን፤ ልዩ ሦስት ሆይ ይቅር በለን።",
-          "english": "O Holy Virgin Mary, in the peace of the Angel Gabriel, peace be unto Thee. Thou art virgin in spirit as well as in body. O Thou Mother of Perfect God peace be unto Thee. Blessed art Thou among women and blessed is the Fruit of Thy womb. Rejoice O Thou who art full of grace the Lord is with Thee. seali wetseliye habe fiqur weldike eyesus kristos Ask and pray for us to Thy beloved Son, Jesus Christ that He may have mercy upon our souls and forgive us our sins. Amen. O Holy Trinity, pity us, O Holy Trinity, spare us, O Holy Trinity, have mercy upon us.",
-          "transliteration": "Beselame qidus gebriel mel’ak o egzi’etiye Mariyam selam leki dingil behilinaki wedingil besigaki eme egziabiheir tseba’ot selam leki burikt anti em’a’nist weburuk fire kersike tefesihi fisiht o meli’i’te tsega egziabihear misle’ki keme y’sre’y lene hatawi’ine O silus qidus meharene, O silus qidus mehakene, o silus qidus tesahalene."
-        },
+          "geez": "በሰላመ ቅዱስ ገብርኤል መልአክ ኦ እግዝእትየ ማርያም ሰላም ለኪ እመ እግዚአብሔር ጸባዖት ሰላም ለኪ ቡርክት አንቲ እምአንስት ወቡሩክ ፍሬ ከርሥኪ። ተፈሥሒ ፍሥሕት ኦ ምልእተ ጸጋ እግዚአብሔር ምስሌኪ። ሰአሊ ወጸልዪ ኀበ ፍቁር ወልድኪ ኢየሱስ ክርስቶስ ከመ ይሥረይ ለነ ኃጣውኢነ።",
+          "amharic": "እመቤታችን ቅድስት ድንግል ማርያም ሆይ በመልአኩ በቅዱስ ገብረኤል ሰላምታ ሰላም እልሻለሁ ድንግል በኅሊናኪ ወድንግል በሥጋኪ።  በሃሳብሽ ድንግል ነሽ በሥጋሽም ድንግል ነሽ። የአሸናፊ የእግዚአብሔር እናት ሆይ ሰላምታ ላንቺ ይገባል። ከሴቶች ሁሉ ተለይተሽ አንቺ የትባረክሽ ነሽ የማኅፀንሽም ፍሬ የተባረከ ነው። ጸጋን የተመላሽ ሆይ ደስ ይበልሽ እግዚአብሔር ከአንቺ ጋር ነውና ከተወደደው ልጅሽ ከጌታችን ከመድኃኒታችን ከኢየሱስ ክርስቶስ ዘንድ ይቅርታን ለምኝልን ኃጢአታችንን ያስተሠርይልን ዘንድ ለዘለዓለሙ አሜን። ",
+          "english": "O Holy Virgin Mary, in the peace of the Angel Gabriel, peace be unto Thee. Thou art virgin in spirit as well as in body. O Thou Mother of Perfect God peace be unto Thee. Blessed art Thou among women and blessed is the Fruit of Thy womb. Rejoice O Thou who art full of grace the Lord is with Thee. Ask and pray for us to Thy beloved Son, Jesus Christ that He may have mercy upon our souls and forgive us our sins. Amen. ",
+          "transliteration": "Beselame qidus gebriel mel’ak o egzi’etiye Mariyam selam leki dingil behilinaki wedingil besigaki eme egziabiheir tseba’ot selam leki burikt anti em’a’nist weburuk fire kersike tefesihi fisiht o meli’i’te tsega egziabihear misle’ki seali wetseliye habe fiqur weldike eyesus kristos keme y’sre’y lene hatawi’ine "
+        }
+      ]
+    },
+    {
+      "id": "section-mlzd227fb8l",
+      "title": {
+        "english": "Rejoice",
+        "geez": "",
+        "amharic": ""
+      },
+      "blocks": [
         {
           "id": "serate-readings-162",
           "type": "prayer",
@@ -1650,8 +1833,8 @@
           "speaker": "priest",
           "geez": "ተንብሊ ወሰአሊ ኀበ ፍቁር ወልድ።",
           "amharic": "ወደ ተወደደ ልጅሽ ለምኝልን አማልጅንም።",
-          "english": "tenbilee wese'alee habe fiqur weld. Intercede and pray to thy beloved Son;",
-          "transliteration": ""
+          "english": "Intercede and pray to thy beloved Son;",
+          "transliteration": "tenbilee wese'alee habe fiqur weld."
         },
         {
           "id": "serate-readings-165",
@@ -1659,8 +1842,8 @@
           "speaker": "congregation",
           "geez": "ከመ ይሥረይ ለነ ኃጣውኢነ።",
           "amharic": "ኃጢአታችንን ያስተሠርይልን ዝንድ።",
-          "english": "Keme yisrey lene hataweene. That he may forgive us our sins.",
-          "transliteration": ""
+          "english": "That he may forgive us our sins.",
+          "transliteration": "Keme yisrey lene hataweene. "
         },
         {
           "id": "serate-readings-166",
@@ -1679,25 +1862,64 @@
           "amharic": "ሁልጊዜ ክብር ምስጋና ይገባቸዋል ዛሬም ዘወትርም ለዘላለሙ አሜን።",
           "english": "at all times, both now and ever and world without end. Amen.",
           "transliteration": "kwulo geezé yi'izénee wezelfenee wele'alem alem amen."
-        },
+        }
+      ]
+    },
+    {
+      "id": "section-mlzeaqngmbx",
+      "title": {
+        "english": "Stand up for prayer",
+        "geez": "",
+        "amharic": "",
+        "transliteration": "Tensi'u"
+      },
+      "blocks": [
         {
-          "id": "serate-readings-168",
-          "type": "response",
-          "speaker": "congregation",
+          "id": "serate-kidase-mlzeaqngp0q",
+          "type": "prayer",
+          "speaker": "deacon",
           "geez": "ተንሥኡ ለጸሎት",
-          "amharic": "ለጸሎት ተነሡ። እግዚኦ ተሣሃለነ። አቤቱ ይቅር በለን።",
-          "english": "Stand up for prayer. Lord have mercy upon us.",
-          "transliteration": "Tensi'u letselot Igzee'o tesahalene."
+          "amharic": "ለጸሎት ተነሡ። ",
+          "english": "Stand up for prayer. ",
+          "transliteration": "Tensi'u letselot "
         },
         {
-          "id": "serate-readings-169",
+          "id": "serate-kidase-mlzeaqngrip",
           "type": "response",
           "speaker": "congregation",
-          "geez": "ሰላም ለኵልክሙ።",
-          "amharic": "ሰላም ለሁላችሁም። ምስለ መንፈስከ። ከመንፈስህ ጋራ።",
-          "english": "Peace be unto you all. And with Thy spirit.",
-          "transliteration": "Selam lekwulikimu. Misle menfesike."
+          "geez": "እግዚኦ ተሣሃለነ። ",
+          "amharic": "አቤቱ ይቅር በለን።",
+          "english": "Lord have mercy upon us.",
+          "transliteration": "Igzee'o tesahalene."
         },
+        {
+          "id": "serate-kidase-mlzeaqngxwy",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "ሰላም ለኵልክሙ።",
+          "amharic": "ሰላም ለሁላችሁም። ",
+          "english": "Peace be unto you all. ",
+          "transliteration": "Selam lekwulikimu. "
+        },
+        {
+          "id": "serate-kidase-mlzeaqngwla",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "ምስለ መንፈስከ። ",
+          "amharic": "ከመንፈስህ ጋራ።",
+          "english": "And with Thy spirit.",
+          "transliteration": "Misle menfesike."
+        }
+      ]
+    },
+    {
+      "id": "section-mlzd21uxq84",
+      "title": {
+        "english": "Prayer of the Gospel",
+        "geez": "",
+        "amharic": ""
+      },
+      "blocks": [
         {
           "id": "serate-readings-170",
           "type": "prayer",
@@ -1752,13 +1974,25 @@
           "id": "serate-readings-176",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "አቤቱ አምላካችን እግዚአብሔር ሆይ ከእኛ አስቀድመው የሞቱትን አሳርፋቸው የታመሙትንም ፈጥነህ አድናቸው።",
-          "english": "O Lord our God, give rest to them that have fallen asleep before us, heal speedily them that are sick, for Thou art the life of us all, the hope of us",
-          "transliteration": ""
-        },
+          "geez": "አቤቱ አምላካችን እግዚአብሔር ሆይ ከእኛ አስቀድመው የሞቱትን አሳርፋቸው የታመሙትንም ፈጥነህ አድናቸው። የሁላችን ሕይወት የሁላችንም ተስፋ የሁላችንም አዳኝ የሁላችንም አስነሽ አንተ ነህና። ላንተ ምስጋና እስከ አርያም ድረስ እንልካለን።",
+          "english": "O Lord our God, give rest to them that have fallen asleep before us, heal speedily them that are sick, for Thou art the life of us all, the hope of us all, the deliverer of us all and the raiser of us all, and to Thee we lift up thanksgiving unto the highest heaven, world without end.",
+          "transliteration": "",
+          "amharic": ""
+        }
+      ]
+    },
+    {
+      "id": "serate-readings",
+      "title": {
+        "english": "Gospel Readings",
+        "geez": "ምንባባት",
+        "amharic": "ምንባባት",
+        "transliteration": ""
+      },
+      "blocks": [
         {
           "id": "serate-readings-177",
-          "type": "heading",
+          "type": "rubric",
           "geez": "መዝሙር 102(103) : 14-15",
           "amharic": "ተዘከር እግዚኦ ከመ መሬት ንሕነ። ወሰብእሰ ከመ ሣዕር መዋዕሊሁ። ወከመ ጽጌ ገዳም ከማሁ ይፈሪ።",
           "english": "Psalm 102(103) : 14b-15",
@@ -1766,11 +2000,12 @@
         },
         {
           "id": "serate-readings-178",
-          "type": "heading",
-          "geez": "አቤቱ፤ እኛ ዐፈር እንደ ሆንን ዐስብ።",
-          "amharic": "ሰውስ ዘመኑ እንደ ሣር ነው። እንደ ዱ",
-          "english": "Psalm 102(103) : 14b-15 Remember, O Lord, that we are dust. As for man, his days are as grass; As a flower of the field, so shall he flourish.",
-          "transliteration": ""
+          "type": "prayer",
+          "geez": "ተዘከር እግዚኦ ከመ መሬት ንሕነ። \nወሰብእሰ ከመ ሣዕር መዋዕሊሁ። \nወከመ ጽጌ ገዳም ከማሁ ይፈሪ።\n",
+          "amharic": "አቤቱ፤ እኛ ዐፈር እንደ ሆንን ዐስብ።\nሰውስ ዘመኑ እንደ ሣር ነው። \nእንደ ዱ",
+          "english": "Remember, O Lord, that we are dust. \nAs for man, his days are as grass; \nAs a flower of the field, so shall he flourish.",
+          "transliteration": "",
+          "speaker": "deacon"
         },
         {
           "id": "serate-readings-179",
@@ -1797,7 +2032,7 @@
           "geez": "ወንጌል ቅዱስ ዘዜነወ ማቴዎስ ቃለ ወልድ እግዚአብሔር።",
           "amharic": "ክቡር የሚሆን ይህ ወንጌል ማቴዎስ የትናገረው የእግዚአብሔር ልጅ ቃል ነው።",
           "english": "The Holy Gospel which Matthew proclaimed, the Word of the Son of God.",
-          "transliteration": "wengèl qidus zezènewe     Matewos qale weld igzee’abihèr."
+          "transliteration": "wengèl qidus zezènewe Matewos qale weld igzee’abihèr."
         },
         {
           "id": "serate-readings-182",
@@ -1823,24 +2058,13 @@
           "speaker": "congregation",
           "geez": "ንሥኡ መዝሙረ ወሀቡ ከበሮ። መዝሙር ሐዋዝ ዘምስለ መሰንቆ።",
           "amharic": "መዝሙር በሉ፤ ከበሮም ያዙ፤ መዝሙር ከበገና ጋራ የተስማማ ነው።",
-          "english": "nisi’i mezmure wehabu kebero. Mezmur hawaz zemisle mesenqo. Take a psalm, and bring hither the timbrel, the pleasant harp with the psaltery.",
-          "transliteration": ""
-        }
-      ]
-    },
-    {
-      "id": "serate-daily-gospel",
-      "title": {
-        "english": "Daily Gospel",
-        "geez": "የዕለቱ ወንጌል",
-        "amharic": "የዕለቱ ወንጌል",
-        "transliteration": ""
-      },
-      "blocks": [
+          "english": "Take a psalm, and bring hither the timbrel, the pleasant harp with the psaltery.",
+          "transliteration": "nisi’u mezmure wehabu kebero. Mezmur hawaz zemisle mesenqo. "
+        },
         {
           "id": "serate-daily-gospel-185",
           "type": "heading",
-          "geez": "የዕለቱ ወንጌል",
+          "geez": "",
           "amharic": "ቅዱስ ሉቃስ 12 ፡ 16 – 31",
           "english": "Reading from The Gospel St. Luke Ch. 12 : 16 - 31",
           "transliteration": ""
@@ -1871,11 +2095,22 @@
           "amharic": "ስለዚህ እናመሰግንሃለን፤ ወዳንተም እንዲህ እያልን እንጠራለን፡ አቤቱ ኢየሱስ ክርስቶስ፡ ቡሩክ አንተ ነህ፤ ሰው ሆነህ አድነህናልና።",
           "english": "For this cause we glorify Thee and cry unto Thee saying, Blessed art Thou, Lord Jesus Christ, for Thou didst come and save us.",
           "transliteration": "be inte zintu nisébihake weniserih habéke inze nibl buruk ante igzee'o Eeyesus Kiristos isme mesa'ike we'adhankene."
-        },
+        }
+      ]
+    },
+    {
+      "id": "section-mlzeyosbhnu",
+      "title": {
+        "english": "Go forth Cathecumens",
+        "geez": "",
+        "amharic": "",
+        "transliteration": "Tsa'u"
+      },
+      "blocks": [
         {
           "id": "serate-daily-gospel-189",
-          "type": "response",
-          "speaker": "congregation",
+          "type": "prayer",
+          "speaker": "deacon",
           "geez": "ፃኡ ንኡሰ ክርስቲያን።",
           "amharic": "የክርስቲያን ታናናሾች በሰላም ሂዱ። ተንሥኡ ለጸሎት ፖለጸሎት ተነሡ። እግዚኦ ተሣሃለነ። አቤቱ ይቅር በለን። ሰላም ለኵልክሙ። ሰላም ለሁላችሁም። ምስለ መንፈስከ። ከመንፈስህ ጋራ። ጸልዩ በእንተ ሰላመ ቤተ ክርስቲያን አሐቲ ቅድስት ጉባኤ እንተ ሐዋርያት ርትዕት በኀበ እግዚአብሔር ሐዋርያት ለሰበሰቡዋት በእግዚአብሔር ዘንድ ስለቀናች ክብርት ስለምትሆን አንዲት ቤተ ክርስቲያን ስላም ጸልዩ። ኪርያላይሶን። ጸልዩ በእንተ ርእሰ ሊቃነ ጳጳሳት አባ ማትያስ እግዚእነ ርእሰ ሊቃነ ጳጳሳት ብፁዕ ስለሚሆን ስለ ሊቀ ጳጳሳቱ ስለ አባ ማትያስ የደገኛዩቱ አገር ኢትዮጵያ ፓትርያርክ የሊቃነ",
           "english": "Tsasu ni'use kiristeeyan. Go forth, ye catechumens. Stand up for prayer. Lord have mercy upon us. Peace be unto you all. And with Thy spirit. Pray for the peace of the one holy apostolic church orthodox in the Lord. Pray for the Patriarch Abba Matthias lord chief of the bishops of the great country",
@@ -1924,6 +2159,16 @@
           "transliteration": ""
         }
       ]
+    },
+    {
+      "id": "serate-daily-gospel",
+      "title": {
+        "english": "Daily Gospel",
+        "geez": "የዕለቱ ወንጌል",
+        "amharic": "የዕለቱ ወንጌል",
+        "transliteration": ""
+      },
+      "blocks": []
     }
   ]
 }
