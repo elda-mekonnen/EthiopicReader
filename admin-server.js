@@ -132,7 +132,7 @@ const server = http.createServer(async (req, res) => {
 server.listen(PORT, '127.0.0.1', () => {
   const line = '─'.repeat(40);
   console.log('\n  ' + line);
-  console.log('  ቅዳሴ  Kidase Admin Server');
+  console.log('  ቅዳሴ  Qidase Admin Server');
   console.log('  ' + line);
   console.log('  URL:  http://localhost:' + PORT);
   console.log('  Data: ' + DATA_DIR);

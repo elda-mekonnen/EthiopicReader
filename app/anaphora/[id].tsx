@@ -8,10 +8,13 @@ import {
   TouchableOpacity,
   TextInput,
   Platform,
+  PanResponder,
 } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { Colors } from '@/constants/colors';
+import { Fonts } from '@/constants/fonts';
+import { contentColumn } from '@/constants/layout';
 import { useFontSize } from '@/context/FontSizeContext';
 import PrayerBlock from '@/components/PrayerBlock';
 import PresentationView from '@/components/PresentationView';
@@ -50,6 +53,17 @@ export default function AnaphoraReaderScreen() {
   const scrollViewRef = useRef<ScrollView>(null);
   const sectionOffsets = useRef<number[]>([]);
   const blockOffsets = useRef<Record<string, number>>({});
+
+  /* Swipe left to open section drawer (mobile) */
+  const swipe = useRef(
+    PanResponder.create({
+      onMoveShouldSetPanResponderCapture: (_, { dx, dy }) =>
+        Platform.OS !== 'web' && dx < -20 && Math.abs(dx) > Math.abs(dy) * 2,
+      onPanResponderRelease: (_, { dx }) => {
+        if (dx < -50) setDrawerVisible(true);
+      },
+    }),
+  ).current;
 
   const loader = ANAPHORA_MAP[id];
   const data: Anaphora | null = loader ? loader() : null;
@@ -106,22 +120,13 @@ export default function AnaphoraReaderScreen() {
       navigation.setOptions({
         title: data.name.english,
         headerRight: () => (
-          <View style={{ flexDirection: 'row', gap: 16, marginRight: 16 }}>
-            <TouchableOpacity
-              onPress={() => {
-                setSearchVisible((v) => !v);
-                setSearchQuery('');
-                setCurrentResultIdx(0);
-                setPresentationStartBlockId(undefined);
-              }}
-              hitSlop={8}
-            >
-              <Ionicons name="search-outline" size={22} color={Colors.accent} />
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => setDrawerVisible(true)} hitSlop={8}>
-              <Text style={{ color: Colors.accent, fontSize: 22 }}>☰</Text>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity
+            onPress={() => setDrawerVisible(true)}
+            style={{ marginRight: 16 }}
+            hitSlop={8}
+          >
+            <Text style={{ color: Colors.burgundy, fontSize: 22 }}>☰</Text>
+          </TouchableOpacity>
         ),
       });
     }
@@ -182,51 +187,52 @@ export default function AnaphoraReaderScreen() {
   }
 
   return (
-    <View style={styles.container}>
-      <StatusBar style="light" />
-
+    <View style={styles.container} {...swipe.panHandlers}>
+      <StatusBar style="dark" />
       <ScrollView
         ref={scrollViewRef}
         contentContainerStyle={styles.scroll}
         showsVerticalScrollIndicator={false}
       >
-        <View style={styles.titleBlock}>
-          {data.name.geez && (
-            <Text style={[styles.titleGeez, { fontSize: scale(26) }]}>{data.name.geez}</Text>
-          )}
-          <Text style={[styles.titleEnglish, { fontSize: scale(13) }]}>
-            {data.name.english.toUpperCase()}
-          </Text>
-        </View>
-
-        {data.sections.map((sec, secIdx) => (
-          <View
-            key={sec.id}
-            onLayout={(e) => {
-              sectionOffsets.current[secIdx] = e.nativeEvent.layout.y;
-            }}
-          >
-            <View style={styles.sectionHeading}>
-              <Text style={[styles.sectionTitle, { fontSize: scale(11) }]}>
-                {sec.title.english.toUpperCase()}
-              </Text>
+        <View style={contentColumn.wrapper}>
+          {/* Title block */}
+          <View style={styles.titleBlock}>
+            <Text style={styles.decorativeCross}>✦</Text>
+            {data.name.geez && (
+              <Text style={[styles.titleGeez, { fontSize: scale(32) }]}>{data.name.geez}</Text>
+            )}
+            <Text style={[styles.titleEnglish, { fontSize: scale(13) }]}>
+              {data.name.english.toUpperCase()}
+            </Text>
+            <View style={styles.titleDivider}>
+              <View style={styles.titleDividerFade} />
+              <View style={styles.titleDividerLine} />
+              <View style={styles.titleDividerFade} />
             </View>
-            {sec.blocks.map((block) => (
-              <View
-                key={block.id}
-                style={currentResultBlockId === block.id && styles.highlightedBlock}
-                onLayout={(e) => {
-                  blockOffsets.current[block.id] =
-                    (sectionOffsets.current[secIdx] ?? 0) + e.nativeEvent.layout.y;
-                }}
-              >
-                <PrayerBlock block={block} />
-              </View>
-            ))}
           </View>
-        ))}
 
-        <View style={styles.bottomPadding} />
+          {data.sections.map((sec, index) => (
+            <View
+              key={sec.id}
+              onLayout={(e) => {
+                sectionOffsets.current[index] = e.nativeEvent.layout.y;
+              }}
+            >
+              <View style={styles.sectionHeading}>
+                <View style={styles.sectionHeadingInner}>
+                  <Text style={[styles.sectionTitle, { fontSize: scale(11) }]}>
+                    {sec.title.english.toUpperCase()}
+                  </Text>
+                </View>
+              </View>
+              {sec.blocks.map((block) => (
+                <PrayerBlock key={block.id} block={block} />
+              ))}
+            </View>
+          ))}
+
+          <View style={styles.bottomPadding} />
+        </View>
       </ScrollView>
 
       {/* Floating search overlay */}
@@ -285,7 +291,7 @@ export default function AnaphoraReaderScreen() {
         onPress={() => setPresentationMode(true)}
         activeOpacity={0.8}
       >
-        <Text style={styles.presentationBtnText}>⛶ Present</Text>
+        <Text style={styles.presentationBtnText}>Present</Text>
       </TouchableOpacity>
 
       <SectionDrawer
@@ -299,69 +305,108 @@ export default function AnaphoraReaderScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: Colors.background, overflow: 'hidden' },
-  scroll: { padding: 20, paddingTop: 16 },
+  container: { flex: 1, backgroundColor: Colors.background },
+  scroll: { paddingHorizontal: 20, paddingTop: 16 },
+
+  /* ── Title area ── */
   titleBlock: {
-    marginBottom: 28,
+    marginBottom: 32,
     paddingBottom: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: Colors.border,
     alignItems: 'center',
   },
-  titleGeez: {
+  decorativeCross: {
+    fontSize: 20,
     color: Colors.accent,
-    fontWeight: '800',
-    letterSpacing: 2,
-    marginBottom: 6,
+    marginBottom: 10,
+  },
+  titleGeez: {
+    fontFamily: Fonts.serifExtraBold,
+    color: Colors.burgundy,
+    letterSpacing: 3,
+    marginBottom: 8,
+    textAlign: 'center',
   },
   titleEnglish: {
+    fontFamily: Fonts.bodyMedium,
     color: Colors.textMuted,
-    letterSpacing: 3,
-    fontWeight: '600',
+    letterSpacing: 6,
   },
+  titleDivider: {
+    flexDirection: 'row',
+    marginTop: 18,
+    width: '35%',
+    maxWidth: 160,
+    alignItems: 'center',
+  },
+  titleDividerLine: {
+    flex: 1,
+    height: 2,
+    backgroundColor: Colors.accent,
+    borderRadius: 1,
+  },
+  titleDividerFade: {
+    width: 16,
+    height: 2,
+    backgroundColor: Colors.accent,
+    opacity: 0.25,
+    borderRadius: 1,
+  },
+
+  /* ── Section headings ── */
   sectionHeading: {
-    marginTop: 24,
-    marginBottom: 4,
-    paddingBottom: 8,
-    borderBottomWidth: 1,
-    borderBottomColor: Colors.border,
+    marginTop: 32,
+    marginBottom: 10,
+    alignItems: 'center',
+  },
+  sectionHeadingInner: {
+    backgroundColor: Colors.burgundy,
+    borderRadius: 16,
+    paddingHorizontal: 18,
+    paddingVertical: 5,
   },
   sectionTitle: {
-    color: Colors.accent,
+    color: '#FFFFFF',
+    fontFamily: Fonts.bodyMedium,
     fontWeight: '700',
     letterSpacing: 2,
   },
-  highlightedBlock: {
-    backgroundColor: Colors.accentDim,
-    borderRadius: 8,
-    borderWidth: 1,
-    borderColor: Colors.accent,
-    marginHorizontal: -4,
-    paddingHorizontal: 4,
-  },
+
+  /* ── Error ── */
   errorContainer: {
     flex: 1,
     backgroundColor: Colors.background,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  errorText: { color: Colors.textMuted, fontSize: 16 },
+  errorText: {
+    fontFamily: Fonts.bodyRegular,
+    color: Colors.textMuted,
+    fontSize: 16,
+  },
+
   bottomPadding: { height: 100 },
+
+  /* ── Floating present button ── */
   presentationBtn: {
     position: 'absolute',
     bottom: 28,
     right: 28,
-    backgroundColor: Colors.surface,
-    borderWidth: 1,
-    borderColor: Colors.border,
+    backgroundColor: Colors.burgundy,
     borderRadius: 24,
-    paddingHorizontal: 18,
+    paddingHorizontal: 20,
     paddingVertical: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.15,
+    shadowRadius: 6,
+    elevation: 4,
   },
   presentationBtnText: {
-    color: Colors.accent,
+    color: '#FFFFFF',
+    fontFamily: Fonts.bodyMedium,
     fontWeight: '700',
     fontSize: 13,
+    letterSpacing: 0.5,
   },
   searchOverlay: {
     position: 'absolute',

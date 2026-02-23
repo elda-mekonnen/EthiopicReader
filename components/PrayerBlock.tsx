@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 import { Colors } from '@/constants/colors';
+import { Fonts } from '@/constants/fonts';
 import { useLanguage } from '@/context/LanguageContext';
 import { useFontSize } from '@/context/FontSizeContext';
 import { PrayerBlock as PrayerBlockType, Language } from '@/data/types';
@@ -8,7 +9,7 @@ import { LANGUAGE_LABELS } from '@/constants/languages';
 const SPEAKER_COLORS: Record<string, string> = {
   priest: Colors.priest,
   deacon: Colors.deacon,
-  congregation: Colors.text,
+  congregation: Colors.congregation,
   all: Colors.text,
 };
 
@@ -23,9 +24,11 @@ export default function PrayerBlock({ block }: Props) {
   if (block.type === 'heading') {
     return (
       <View style={styles.headingContainer}>
-        <Text style={[styles.heading, { fontSize: scale(13) }]}>
-          {block.english ?? block.geez ?? block.amharic ?? ''}
-        </Text>
+        <View style={styles.headingBadge}>
+          <Text style={[styles.heading, { fontSize: scale(12) }]}>
+            {block.english ?? block.geez ?? block.amharic ?? ''}
+          </Text>
+        </View>
       </View>
     );
   }
@@ -55,12 +58,19 @@ export default function PrayerBlock({ block }: Props) {
 
   if (langEntries.length === 0) return null;
 
+  const isResponse = block.type === 'response';
+  const isCongregation = block.speaker === 'congregation' || block.speaker === 'all';
+
   const showLabels = false;
 
   return (
-    <View style={[styles.blockContainer, block.type === 'response' && styles.responseContainer]}>
+    <View style={[
+      styles.blockContainer,
+      isResponse && styles.responseContainer,
+      isCongregation && styles.congregationContainer,
+    ]}>
       {block.speaker && (
-        <Text style={[styles.speakerLabel, { color: speakerColor, fontSize: scale(10) }]}>
+        <Text style={[styles.speakerLabel, { color: speakerColor, fontSize: scale(9) }]}>
           {block.speaker.toUpperCase()}
         </Text>
       )}
@@ -77,9 +87,10 @@ export default function PrayerBlock({ block }: Props) {
                 styles.prayerText,
                 {
                   fontSize: scale(lang === 'geez' || lang === 'amharic' ? 18 : 16),
-                  lineHeight: scale(lang === 'geez' || lang === 'amharic' ? 18 : 16) * 1.5,
+                  lineHeight: scale(lang === 'geez' || lang === 'amharic' ? 18 : 16) * 1.6,
                 },
-                { color: speakerColor },
+                (lang === 'geez' || lang === 'amharic') && styles.geezText,
+                lang === 'english' && styles.englishText,
                 lang === 'transliteration' && styles.transliterationText,
               ]}
             >
@@ -93,53 +104,82 @@ export default function PrayerBlock({ block }: Props) {
 }
 
 const styles = StyleSheet.create({
+  /* ── Heading (section title badge) ── */
   headingContainer: {
-    marginTop: 28,
-    marginBottom: 8,
-    paddingBottom: 8,
-    borderBottomWidth: 1,
-    borderBottomColor: Colors.border,
+    marginTop: 36,
+    marginBottom: 14,
+    alignItems: 'center',
+  },
+  headingBadge: {
+    backgroundColor: Colors.burgundy,
+    borderRadius: 20,
+    paddingHorizontal: 20,
+    paddingVertical: 6,
+    alignSelf: 'center',
   },
   heading: {
-    color: Colors.accent,
+    color: '#FFFFFF',
+    fontFamily: Fonts.bodyMedium,
     fontWeight: '700',
-    letterSpacing: 2,
+    letterSpacing: 1.5,
     textTransform: 'uppercase',
   },
+
+  /* ── Rubric (instructions) ── */
   rubricContainer: {
-    marginVertical: 8,
-    paddingLeft: 12,
+    marginVertical: 10,
+    paddingLeft: 16,
     borderLeftWidth: 2,
     borderLeftColor: Colors.border,
   },
   rubric: {
     color: Colors.rubric,
+    fontFamily: Fonts.bodyItalic,
     fontStyle: 'italic',
-    lineHeight: 20,
+    lineHeight: 22,
   },
+
+  /* ── Prayer / Response blocks ── */
   blockContainer: {
-    marginVertical: 10,
-    paddingVertical: 10,
+    marginTop: 6,
+    marginBottom: 14,
+    paddingVertical: 12,
+    paddingHorizontal: 4,
     borderBottomWidth: 1,
     borderBottomColor: Colors.borderSubtle,
   },
   responseContainer: {
-    paddingLeft: 16,
-    borderLeftWidth: 2,
+    paddingLeft: 24,
+    borderLeftWidth: 6,
     borderLeftColor: Colors.accent,
     borderBottomWidth: 0,
     marginLeft: 8,
-    marginBottom: 4,
+    marginBottom: 18,
+    backgroundColor: Colors.accentDim,
+    borderRadius: 2,
   },
+  congregationContainer: {
+    paddingLeft: 24,
+    borderLeftWidth: 6,
+    borderLeftColor: Colors.accent,
+    backgroundColor: Colors.accentDim,
+    borderRadius: 2,
+    marginBottom: 20,
+  },
+
+  /* ── Speaker label ── */
   speakerLabel: {
-    fontWeight: '700',
-    letterSpacing: 1.5,
-    marginBottom: 6,
-    opacity: 0.7,
+    fontWeight: '800',
+    letterSpacing: 3.5,
+    marginBottom: 8,
+    textTransform: 'uppercase',
+    fontSize: 9,
   },
+
+  /* ── Multi-column layout ── */
   columnsRow: {
     flexDirection: 'row',
-    gap: 12,
+    gap: 16,
   },
   langColumn: {
     flex: 1,
@@ -155,10 +195,22 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     marginBottom: 3,
   },
+
+  /* ── Text styles by language ── */
   prayerText: {
+    color: Colors.text,
+    fontFamily: Fonts.bodyRegular,
+  },
+  geezText: {
+    fontWeight: '700',
+    color: Colors.text,
+  },
+  englishText: {
+    fontFamily: Fonts.bodyRegular,
     color: Colors.text,
   },
   transliterationText: {
+    fontFamily: Fonts.bodyItalic,
     fontStyle: 'italic',
     color: Colors.textMuted,
   },

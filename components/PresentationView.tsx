@@ -2,17 +2,28 @@ import { useState, useRef, useCallback, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Platform, NativeSyntheticEvent, NativeScrollEvent, LayoutChangeEvent } from 'react-native';
 import Slider from '@react-native-community/slider';
 import { Colors } from '@/constants/colors';
+import { Fonts } from '@/constants/fonts';
 import { useLanguage } from '@/context/LanguageContext';
 import { useFontSize, FONT_SIZE_MIN, FONT_SIZE_MAX } from '@/context/FontSizeContext';
 import { PrayerBlock, Language, LiturgicalSection } from '@/data/types';
 import { LANGUAGE_LABELS } from '@/constants/languages';
 import SectionDrawer from '@/components/SectionDrawer';
 
+// Presentation mode stays dark for projector/screen use
+const PRES = {
+  bg: Colors.presentationBg,
+  surface: Colors.presentationSurface,
+  border: Colors.presentationBorder,
+  text: Colors.presentationText,
+  textMuted: Colors.presentationTextMuted,
+  textDim: Colors.presentationTextDim,
+};
+
 const SPEAKER_COLORS: Record<string, string> = {
-  priest: Colors.priest,
-  deacon: Colors.deacon,
-  congregation: Colors.text,
-  all: Colors.text,
+  priest: Colors.accent,
+  deacon: '#7B9FC4',
+  congregation: PRES.text,
+  all: PRES.text,
 };
 
 interface Props {
@@ -46,9 +57,12 @@ export default function PresentationView({ blocks, sections, onExit, startBlockI
   const isAtBottom = scrollY >= contentHeight - viewportHeight - 2;
   const isAtTop = scrollY <= 2;
 
-  // Skip empty blocks (no text in any active language)
+  // Skip empty blocks and headings (headings are section markers, not useful as slides)
   const visibleBlocks = blocks.filter((b) => {
-    if (b.type === 'rubric' || b.type === 'heading') return true;
+    if (b.type === 'heading') return false;
+    if (b.type === 'rubric') {
+      return !!(b.english || b.geez || b.amharic || b.transliteration);
+    }
     return activeLanguages.some((lang) => !!b[lang]);
   });
 
@@ -114,7 +128,7 @@ export default function PresentationView({ blocks, sections, onExit, startBlockI
   if (!current) return null;
 
   const speakerColor =
-    current.speaker ? (SPEAKER_COLORS[current.speaker] ?? Colors.text) : Colors.text;
+    current.speaker ? (SPEAKER_COLORS[current.speaker] ?? PRES.text) : PRES.text;
 
   const isRubricOrHeading = current.type === 'rubric' || current.type === 'heading';
 
@@ -207,7 +221,7 @@ export default function PresentationView({ blocks, sections, onExit, startBlockI
             onValueChange={setMultiplier}
             step={0.05}
             minimumTrackTintColor={Colors.accent}
-            maximumTrackTintColor={Colors.border}
+            maximumTrackTintColor={PRES.border}
             thumbTintColor={Colors.accent}
           />
           <Text style={styles.fontBarLabelLarge}>A</Text>
@@ -221,11 +235,11 @@ export default function PresentationView({ blocks, sections, onExit, startBlockI
         </TouchableOpacity>
         {sections && sections.length > 0 && (
           <TouchableOpacity style={styles.topBtn} onPress={() => setDrawerVisible(true)}>
-            <Text style={styles.topBtnText}>☰</Text>
+            <Text style={styles.topBtnText}>{'\u2630'}</Text>
           </TouchableOpacity>
         )}
         <TouchableOpacity style={styles.topBtn} onPress={onExit}>
-          <Text style={styles.topBtnText}>✕</Text>
+          <Text style={styles.topBtnText}>{'\u2715'}</Text>
         </TouchableOpacity>
       </View>
 
@@ -244,7 +258,7 @@ export default function PresentationView({ blocks, sections, onExit, startBlockI
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000000',
+    backgroundColor: PRES.bg,
   },
   tapBack: {
     position: 'absolute',
@@ -279,7 +293,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     height: 40,
-    backgroundColor: 'rgba(0,0,0,0.6)',
+    backgroundColor: `rgba(10,10,10,0.6)`,
     zIndex: 2,
   },
   fadeBottom: {
@@ -288,11 +302,12 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     height: 40,
-    backgroundColor: 'rgba(0,0,0,0.6)',
+    backgroundColor: `rgba(10,10,10,0.6)`,
     zIndex: 2,
   },
   rubricText: {
-    color: Colors.rubric,
+    color: PRES.textMuted,
+    fontFamily: Fonts.bodyItalic,
     fontStyle: 'italic',
     textAlign: 'center',
     lineHeight: 28,
@@ -303,19 +318,18 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   columnsRow: {
-    flexDirection: 'row',
-    gap: 24,
+    flexDirection: 'column',
+    gap: 20,
     width: '100%',
   },
   langColumn: {
-    flex: 1,
+    width: '100%',
   },
   langColumnFull: {
-    flex: undefined,
     width: '100%',
   },
   langLabel: {
-    color: Colors.textDim,
+    color: PRES.textDim,
     fontWeight: '600',
     letterSpacing: 1.5,
     textTransform: 'uppercase',
@@ -325,8 +339,9 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   transliteration: {
+    fontFamily: Fonts.bodyItalic,
     fontStyle: 'italic',
-    color: Colors.textMuted,
+    color: PRES.textMuted,
   },
   fontBar: {
     position: 'absolute',
@@ -335,21 +350,21 @@ const styles = StyleSheet.create({
     width: 220,
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: Colors.surface,
+    backgroundColor: PRES.surface,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: Colors.border,
+    borderColor: PRES.border,
     paddingHorizontal: 12,
     paddingVertical: 8,
     zIndex: 6,
   },
   fontBarLabel: {
-    color: Colors.textMuted,
+    color: PRES.textMuted,
     fontSize: 12,
     fontWeight: '600',
   },
   fontBarLabelLarge: {
-    color: Colors.textMuted,
+    color: PRES.textMuted,
     fontSize: 22,
     fontWeight: '600',
   },
@@ -367,7 +382,7 @@ const styles = StyleSheet.create({
     zIndex: 5,
   },
   topBtn: {
-    backgroundColor: Colors.accentDim,
+    backgroundColor: 'rgba(181, 148, 91, 0.15)',
     borderWidth: 1,
     borderColor: Colors.accent,
     borderRadius: 20,

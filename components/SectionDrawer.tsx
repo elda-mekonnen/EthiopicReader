@@ -10,6 +10,7 @@ import {
   Pressable,
 } from 'react-native';
 import { Colors } from '@/constants/colors';
+import { Fonts } from '@/constants/fonts';
 import { LiturgicalSection } from '@/data/types';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -20,7 +21,7 @@ interface Props {
   onSelect: (index: number) => void;
 }
 
-const DRAWER_WIDTH = 260;
+const DRAWER_WIDTH = 280;
 
 export default function SectionDrawer({ sections, visible, onClose, onSelect }: Props) {
   const slideAnim = useRef(new Animated.Value(DRAWER_WIDTH)).current;
@@ -45,7 +46,7 @@ export default function SectionDrawer({ sections, visible, onClose, onSelect }: 
       firstPrayer.english ??
       firstPrayer.geez ??
       '';
-    return text.length > 80 ? text.slice(0, 80) + '…' : text;
+    return text.length > 80 ? text.slice(0, 80) + '\u2026' : text;
   }
 
   return (
@@ -58,7 +59,7 @@ export default function SectionDrawer({ sections, visible, onClose, onSelect }: 
         <View style={styles.drawerHeader}>
           <Text style={styles.drawerTitle}>SECTIONS</Text>
           <TouchableOpacity onPress={onClose} hitSlop={12}>
-            <Text style={styles.closeBtn}>✕</Text>
+            <Text style={styles.closeBtn}>{'\u2715'}</Text>
           </TouchableOpacity>
         </View>
         <ScrollView showsVerticalScrollIndicator={false}>
@@ -89,7 +90,7 @@ export default function SectionDrawer({ sections, visible, onClose, onSelect }: 
 const styles = StyleSheet.create({
   backdrop: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(0,0,0,0.55)',
+    backgroundColor: 'rgba(44, 24, 16, 0.3)',
     zIndex: 10,
   },
   drawer: {
@@ -102,19 +103,24 @@ const styles = StyleSheet.create({
     borderLeftWidth: 1,
     borderLeftColor: Colors.border,
     zIndex: 11,
+    shadowColor: '#000',
+    shadowOffset: { width: -2, height: 0 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 6,
   },
   drawerHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: 16,
+    paddingHorizontal: 18,
     paddingTop: 20,
     paddingBottom: 14,
     borderBottomWidth: 1,
     borderBottomColor: Colors.border,
   },
   drawerTitle: {
-    color: Colors.textDim,
+    color: Colors.burgundy,
     fontSize: 11,
     fontWeight: '700',
     letterSpacing: 2,
@@ -124,19 +130,20 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   item: {
-    paddingHorizontal: 16,
+    paddingHorizontal: 18,
     paddingVertical: 14,
     borderBottomWidth: 1,
     borderBottomColor: Colors.borderSubtle,
   },
   itemTitle: {
-    color: Colors.accent,
-    fontSize: 13,
-    fontWeight: '700',
-    letterSpacing: 0.5,
+    fontFamily: Fonts.serifBold,
+    color: Colors.burgundy,
+    fontSize: 14,
+    letterSpacing: 0.3,
     marginBottom: 5,
   },
   snippet: {
+    fontFamily: Fonts.bodyRegular,
     color: Colors.textMuted,
     fontSize: 12,
     lineHeight: 18,

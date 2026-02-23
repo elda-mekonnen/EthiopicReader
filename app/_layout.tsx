@@ -7,11 +7,32 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { LanguageProvider } from '@/context/LanguageContext';
 import { FontSizeProvider } from '@/context/FontSizeContext';
 import { Colors } from '@/constants/colors';
+import {
+  PlayfairDisplay_400Regular,
+  PlayfairDisplay_400Regular_Italic,
+  PlayfairDisplay_700Bold,
+  PlayfairDisplay_800ExtraBold,
+} from '@expo-google-fonts/playfair-display';
+import {
+  EBGaramond_400Regular,
+  EBGaramond_400Regular_Italic,
+  EBGaramond_500Medium,
+  EBGaramond_700Bold,
+} from '@expo-google-fonts/eb-garamond';
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const [loaded] = useFonts({});
+  const [loaded] = useFonts({
+    PlayfairDisplay_400Regular,
+    PlayfairDisplay_400Regular_Italic,
+    PlayfairDisplay_700Bold,
+    PlayfairDisplay_800ExtraBold,
+    EBGaramond_400Regular,
+    EBGaramond_400Regular_Italic,
+    EBGaramond_500Medium,
+    EBGaramond_700Bold,
+  });
 
   useEffect(() => {
     if (loaded) {
@@ -28,7 +49,7 @@ export default function RootLayout() {
           <Stack
             screenOptions={{
               headerStyle: { backgroundColor: Colors.background },
-              headerTintColor: Colors.accent,
+              headerTintColor: Colors.burgundy,
               headerTitleStyle: { fontWeight: '700', color: Colors.text },
               contentStyle: { backgroundColor: Colors.background },
             }}
@@ -40,7 +61,7 @@ export default function RootLayout() {
             />
             <Stack.Screen
               name="anaphora/index"
-              options={{ title: 'Fere Kidase', headerBackTitle: 'Back' }}
+              options={{ title: 'Fere Qidase', headerBackTitle: 'Back' }}
             />
             <Stack.Screen
               name="anaphora/[id]"
@@ -48,7 +69,7 @@ export default function RootLayout() {
             />
             <Stack.Screen name="+not-found" />
           </Stack>
-          <StatusBar style="light" />
+          <StatusBar style="dark" />
         </FontSizeProvider>
       </LanguageProvider>
     </SafeAreaProvider>
