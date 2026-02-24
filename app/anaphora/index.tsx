@@ -1,42 +1,60 @@
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, useWindowDimensions } from 'react-native';
+import HoverableOpacity from '@/components/HoverableOpacity';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { Colors } from '@/constants/colors';
+import { Fonts } from '@/constants/fonts';
+import { contentColumn, CONTENT_MAX_WIDTH } from '@/constants/layout';
+import CrossIcon from '@/components/CrossIcon';
+import { hapticLight } from '@/utils/haptics';
 import { AnaphoraMetadata } from '@/data/types';
 
 const ANAPHORAS: AnaphoraMetadata[] = require('@/data/anaphoras/anaphoras.json');
 
+const GAP = 10;
+
 export default function AnaphoraListScreen() {
+  const { width } = useWindowDimensions();
+  const containerWidth = Math.min(width - 40, CONTENT_MAX_WIDTH);
+  const columns = containerWidth >= 380 ? 3 : 2;
+  const cardWidth = Math.min((containerWidth - GAP * (columns - 1)) / columns, 180);
+
   return (
     <SafeAreaView style={styles.container} edges={['bottom']}>
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
-        <View style={styles.header}>
-          <Text style={styles.titleGeez}>ፍሬ ቅዳሴ</Text>
-          <Text style={styles.titleEnglish}>FERE KIDASE</Text>
-          <Text style={styles.subtitle}>Select an anaphora to read</Text>
+        <View style={contentColumn.wrapper}>
+          <View style={styles.header}>
+            <CrossIcon size={18} color={Colors.accent} />
+            <Text style={styles.titleGeez}>ፍሬ ቅዳሴ</Text>
+            <Text style={styles.titleEnglish}>FERE QIDASE</Text>
+            <Text style={styles.subtitle}>Select an anaphora to read</Text>
+          </View>
+
+          <View style={styles.grid}>
+            {ANAPHORAS.map((anaphora) => (
+              <HoverableOpacity
+                key={anaphora.id}
+                style={[styles.card, { width: cardWidth }]}
+                hoverStyle={styles.cardHover}
+                activeOpacity={0.7}
+                onPress={() => {
+                  hapticLight();
+                  router.push(`/anaphora/${anaphora.id}`);
+                }}
+              >
+                <View style={styles.iconBadge}>
+                  <CrossIcon size={17} color="#FFF8F0" />
+                </View>
+                {anaphora.name.geez && (
+                  <Text style={styles.cardGeez} numberOfLines={2}>{anaphora.name.geez}</Text>
+                )}
+                <Text style={styles.cardTitle} numberOfLines={2}>{anaphora.name.english}</Text>
+              </HoverableOpacity>
+            ))}
+          </View>
+
+          <View style={styles.bottomPadding} />
         </View>
-
-        {ANAPHORAS.map((anaphora, index) => (
-          <TouchableOpacity
-            key={anaphora.id}
-            style={styles.card}
-            activeOpacity={0.75}
-            onPress={() => router.push(`/anaphora/${anaphora.id}`)}
-          >
-            <View style={styles.indexBadge}>
-              <Text style={styles.indexText}>{index + 1}</Text>
-            </View>
-            <View style={styles.cardText}>
-              {anaphora.name.geez && (
-                <Text style={styles.cardGeez}>{anaphora.name.geez}</Text>
-              )}
-              <Text style={styles.cardTitle}>{anaphora.name.english}</Text>
-            </View>
-            <Text style={styles.arrow}>›</Text>
-          </TouchableOpacity>
-        ))}
-
-        <View style={styles.bottomPadding} />
       </ScrollView>
     </SafeAreaView>
   );
@@ -44,74 +62,80 @@ export default function AnaphoraListScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: Colors.background },
-  scroll: { padding: 20, paddingTop: 8 },
+  scroll: { paddingHorizontal: 20, paddingTop: 8 },
+
+  /* ── Header ── */
   header: {
+    alignItems: 'center',
     paddingVertical: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: Colors.border,
-    marginBottom: 20,
+    marginBottom: 24,
   },
   titleGeez: {
-    color: Colors.accent,
-    fontSize: 36,
-    fontWeight: '800',
-    letterSpacing: 2,
+    fontFamily: Fonts.serifExtraBold,
+    color: Colors.burgundy,
+    fontSize: 44,
+    letterSpacing: 3,
   },
   titleEnglish: {
+    fontFamily: Fonts.bodyMedium,
     color: Colors.textMuted,
     fontSize: 12,
-    letterSpacing: 3,
-    fontWeight: '700',
-    marginTop: 4,
-    marginBottom: 8,
+    letterSpacing: 5,
+    marginTop: 6,
+    marginBottom: 10,
   },
   subtitle: {
+    fontFamily: Fonts.bodyItalic,
     color: Colors.textDim,
     fontSize: 14,
+    fontStyle: 'italic',
   },
-  card: {
+
+  /* ── Grid ── */
+  grid: {
     flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: Colors.surface,
-    borderRadius: 12,
-    marginBottom: 10,
-    borderWidth: 1,
-    borderColor: Colors.border,
-    padding: 14,
-    gap: 12,
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    gap: GAP,
   },
-  indexBadge: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
-    backgroundColor: Colors.accentDim,
+
+  /* ── Cards ── */
+  card: {
+    alignItems: 'center',
+    backgroundColor: Colors.surfaceElevated,
+    borderRadius: 12,
+    paddingVertical: 16,
+    paddingHorizontal: 8,
     borderWidth: 1,
+    borderColor: 'transparent',
+  },
+  cardHover: {
+    backgroundColor: Colors.surface,
     borderColor: Colors.accent,
+  },
+  iconBadge: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: Colors.blue,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  indexText: {
-    color: Colors.accent,
-    fontSize: 13,
-    fontWeight: '700',
-  },
-  cardText: {
-    flex: 1,
+    marginBottom: 10,
   },
   cardGeez: {
+    fontFamily: Fonts.serifBold,
     color: Colors.text,
-    fontSize: 16,
-    fontWeight: '700',
+    fontSize: 14,
+    textAlign: 'center',
     marginBottom: 2,
   },
   cardTitle: {
-    color: Colors.textMuted,
-    fontSize: 13,
-  },
-  arrow: {
+    fontFamily: Fonts.bodyItalic,
     color: Colors.textDim,
-    fontSize: 24,
-    fontWeight: '300',
+    fontSize: 11,
+    fontStyle: 'italic',
+    textAlign: 'center',
   },
+
   bottomPadding: { height: 40 },
 });

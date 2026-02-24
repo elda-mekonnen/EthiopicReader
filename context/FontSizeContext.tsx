@@ -3,7 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const FONT_SIZE_MIN = 0.6;
 export const FONT_SIZE_MAX = 2.5;
-export const FONT_SIZE_DEFAULT = 1;
+const FONT_SIZE_DEFAULT = 1;
 
 interface FontSizeContextValue {
   multiplier: number;
@@ -17,7 +17,7 @@ const FontSizeContext = createContext<FontSizeContextValue>({
   scale: (s) => s,
 });
 
-const STORAGE_KEY = 'kidase_fontsize_multiplier';
+const STORAGE_KEY = 'qidase_fontsize_multiplier';
 
 export function FontSizeProvider({ children }: { children: React.ReactNode }) {
   const [multiplier, setMultiplierState] = useState(FONT_SIZE_DEFAULT);
