@@ -7,15 +7,1828 @@
   },
   "sections": [
     {
-      "id": "saint-dioscorus-placeholder",
+      "id": "saint-dioscorus-opening",
       "title": {
-        "english": "Coming Soon"
+        "english": "Opening"
       },
       "blocks": [
         {
-          "id": "saint-dioscorus-placeholder-1",
+          "id": "di-op-1",
           "type": "rubric",
-          "english": "[Placeholder — contribute the full text via a Pull Request on GitHub]"
+          "geez": "",
+          "amharic": "",
+          "english": "The Anaphora of St. Dioscorus, may his prayer and blessing be with our (head of state: King, Queen, President . . .), unto the ages of ages. Amen.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-op-2",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "The Lord be with all of you.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-op-3",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "And with your spirit.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-op-4",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Give ye thanks unto our God.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-op-5",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "It is right, it is just.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-op-6",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Lift up your hearts.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-op-7",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "We have lifted them up unto the Lord our God.",
+          "transliteration": ""
+        }
+      ]
+    },
+    {
+      "id": "saint-dioscorus-preface",
+      "title": {
+        "english": "Preface"
+      },
+      "blocks": [
+        {
+          "id": "di-pr-1",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "From before the world and ever after, God is in His Trinity, God is in His divinity, and God is in His kingdom.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pr-2",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Before the dawn and the morning, before day and night, and before the creation of the angels, God was in His kingdom.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pr-3",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Before the heavens were stretched out, before the face of the earth appeared, and before the green plants were produced, God was in His kingdom.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pr-4",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Before the sun, the moon, the stars, and before the motion of lights, God was in His kingdom.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pr-5",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Before the moving beasts, the flying birds, and before the beasts of the sea, God was in His kingdom.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pr-6",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Before He created Adam after His image and likeness and before Adam transgressed His commandment, God was in His kingdom.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pr-7",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Glory be to the Father, the Son, and the Holy Spirit, both now and ever and unto the ages of ages.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-int-1",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "በአንተ ብፁዕ ወቅዱስ አባ ማትያስ፣ ወብፁዕ ሊቀ ጳጳስነ አባ ጴጥሮስ፣",
+          "amharic": "ብፁዕ ቅዱስ ስለሚሆን ስለ ርእሰ ሊቃነ ጳጳሳት ስለ አባ ማትያስ ብፁዕም ስለሚሆን ስለ አባ ጴጥሮስ በጸሎታቸውና",
+          "english": "For the sake of the blessed and holy Patriarch Abba and the blessed Archbishop Abba, while they yet give Thee thanks in their prayer and their supplications: Stephen the first martyr, Zacharias the priest and John the Baptist.",
+          "transliteration": "Beinte bitsu'i weqidus Abba Matyas webitsu'i leeqe papasine Abba Petros"
+        },
+        {
+          "id": "ap-int-2",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "እንዘ የአኵቱከ በጸሎቶሙ ወበስእለቶሙ እስጢፋኖስ ቀዳሜ ሰማዕት፣ ዘካርያስ ካህን ወዮሐንስ መጥምቅ",
+          "amharic": "በልመናቸው ሲያመስግኑህ የሰማዕታት መጀመሪያ እስጢፋኖስ። ካህን ዘካርያስና መጥምቁ ዩሐንስ",
+          "english": "And for the sake of all the saints and martyrs who have gone to their rest in faith: Matthew and Mark, Luke, and John, the four Evangelists; Mary the mother of God, Simon Peter and Andrew, James and John, Philip and Bartholomew, Thomas and Matthew, Thaddaeus and Nathanael, James the son of Alphaeus and Matthias, the twelve Apostles; and James the Apostle, brother of the Lord, Bishop of Jerusalem: Paul, Timothy, Silas, and Barnabas; Titus, Philemon, and Clement, the seventy-two disciples, the five hundred brethren, the three hundred and eighteen Orthodox; may the prayers of them all come unto us and visit us together with them.",
+          "transliteration": "inze ye'akwutuke betselotomu webes'iletomu Isteefanos qedame sema'it. Zekarias kahin weyohanis metmiq."
+        },
+        {
+          "id": "ap-int-3",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "And remember Thou the peace of the universal apostolic church, which was made by Christ through His precious blood.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-int-4",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "Remember, Thou, all the patriarchs, archbishops, bishops, priests, and deacons who keep straight the way of the true word.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-int-5r",
+          "type": "rubric",
+          "english": "The assistant priest shall say the Prayer of Benediction of St. Basil."
+        },
+        {
+          "id": "ap-int-5",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "O holy Trinity, Father, Son, and Holy Spirit, bless Thy people, beloved Christians, with heavenly and earthly blessings.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-int-6",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "And send upon us the grace of the Holy Spirit, and keep the doors of Thy holy church open unto us in mercy and in faith; and perfect unto us the faith of Thy holy Trinity unto our last breath.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-int-7",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "O my Lord Jesus Christ, visit the sick of Thy people; heal them; and guide our fathers and our brethren who have journeyed, becoming strangers: bring them back to their dwelling places in peace and in health.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-int-8",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Bless the airs of heaven, and the rains and the fruits of the earth of this year, in accordance with Thy grace, and make joy and gladness prevail perpetually on the face of the earth.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-int-9",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "And confirm for us Thy peace. Turn the hearts of mighty kings to deal kindly with us always.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-int-10",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Grant peace to the scholars of the church, who are continually gathered in Thy holy church; to all, to each by their several names, in the presence of powerful rulers, O our God, increase Thy peace.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-int-11",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Rest the souls of our ancestors, both our brothers and sisters who have fallen asleep and gained their rest in the right faith.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-int-12",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "And bless those who give gifts of incense, bread and wine, ointment and oil, decorations and reading books, and vessels for the sanctuary, that Christ our God may give them their reward in the heavenly Jerusalem.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-int-13",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "And all of them that are assembled with us to entreat for mercy, Christ our God have mercy upon them: and all them that give alms before Thine awful and terrifying throne, receive.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-int-14",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "And comfort every straitened soul, they who are in chains, and they who are in exile or captivity.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-int-15",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "And them that are held in bitter servitude, our God, deliver them in Thy mercy. And all of them that have entrusted it to us to remember them in our supplications to Thee O our Master Jesus Christ, remember them in Thy heavenly kingdom, and remember me, thy sinful servant.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-int-16",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "ኦ እግዚኦ አድኅን ሕዝበከ ወባርክ ርስተከ",
+          "amharic": "አቤቱ ሕዝብህን አድን ርስትህንም ባርክ።",
+          "english": "O Lord, save thy people and bless Thine inheritance, feed them and lift them up for ever.",
+          "transliteration": "O igzio adihin hizibike webarik risteke"
+        },
+        {
+          "id": "di-pr-10",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "Lord, pity and have mercy upon the patriarchs, archbishops, bishops, priests, deacons and all the Christian people.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pr-11",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Let heaven hear, the earth listen; and the foundations of the earth be afraid.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pr-12",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "Ye that are sitting, stand up.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pr-13",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "The Lord came down through the will of His Father, sojourned in Mary and was born while she was a pure virgin.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pr-14",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "Look to the east.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pr-15",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "He was laid in the manger of the cattle, received the presents of His kingdom, and wept as infants do, asking for food from the breasts of His mother.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pr-16",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "He walked openly and appeared like a man, grew little by little and was baptized in Jordan at the age of thirty.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pr-17",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "Let us give heed.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pr-18",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "He stayed in the wilderness as a fasting man, was tempted by the Devil and He degraded the rulers of darkness through the power of His divinity.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pr-19",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "Answer me.",
+          "transliteration": ""
+        }
+      ]
+    },
+    {
+      "id": "saint-dioscorus-sanctus",
+      "title": {
+        "english": "Sanctus"
+      },
+      "blocks": [
+        {
+          "id": "di-san-1",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Holy, holy, holy, perfect Lord of hosts, heaven and earth are full of the holiness of Thy glory.",
+          "transliteration": ""
+        }
+      ]
+    },
+    {
+      "id": "saint-dioscorus-post-sanctus",
+      "title": {
+        "english": "Post-Sanctus"
+      },
+      "blocks": [
+        {
+          "id": "di-ps-1",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Holy, holy, holy God in His Trinity; being a king, He showed His humility like a servant.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-ps-2",
+          "type": "rubric",
+          "geez": "",
+          "amharic": "",
+          "english": "At this time he shall offer incense.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-psn-2",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Remember us all in Thy kingdom; remember us, Lord, Master, in Thy kingdom; remember us, Lord, in Thy kingdom, as Thou remembered the thief on the right hand when Thou was on the tree of the holy cross.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-ps-4",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "He who created man stretched forth His hands for suffering to set free Adam from the yoke of sin.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-ps-5",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "Priests, raise up your hands.",
+          "transliteration": ""
+        }
+      ]
+    },
+    {
+      "id": "saint-dioscorus-institution",
+      "title": {
+        "english": "Institution"
+      },
+      "blocks": [
+        {
+          "id": "di-inst-1",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "In the same night in which they betrayed Him, He took bread in His holy, blessed and spotless hands.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-inst-2",
+          "type": "rubric",
+          "geez": "",
+          "amharic": "",
+          "english": "At this time he shall raise the Host.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-inst-3",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "We believe that this is He, truly we believe.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-inst-4",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "He looked up to heaven towards Thee, His Father, gave thanks, blessed and broke (+ three times).",
+          "transliteration": ""
+        },
+        {
+          "id": "di-inst-5",
+          "type": "rubric",
+          "geez": "",
+          "amharic": "",
+          "english": "At this time he shall indent the Host lightly with his thumb in five places without separation.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-inst-6",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "And He gave to His holy disciples and His pure apostles and said unto them: Take, eat, this (pointing) bread is My body which will be broken for you for the remission of sin.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-inst-7",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Amen. Amen. Amen. We believe and confess, we glorify Thee, O our Lord and our God; that this is He we truly believe.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-inst-8",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Again. He mixed water with wine, gave thanks, blessed, hallowed (+ three times) and gave it to His holy disciples and His pure apostles and said unto them: Take, drink, this (pointing) cup is My blood which will be shed for you as a propitiation for many.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-inst-9",
+          "type": "rubric",
+          "geez": "",
+          "amharic": "",
+          "english": "He shall then move the cup with his right hand in the sign of the cross.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-inst-10",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Amen. Amen. Amen.",
+          "transliteration": ""
+        }
+      ]
+    },
+    {
+      "id": "saint-dioscorus-anamnesis",
+      "title": {
+        "english": "Anamnesis"
+      },
+      "blocks": [
+        {
+          "id": "di-an-1",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "The Jews took hold of Him and made Him stand in the court, Him before Whom the hosts of angels stand in fear and trembling.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-an-2",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "They crucified Him on the tree, nailed Him with nails, beat Him on the head with sticks, pierced His side with a spear, to Him Who gave drink to the Israelites from a rock, they gave to drink gall mixed with myrrh in His thirst.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-an-3",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "The immortal died, died to destroy death, died to quicken the dead as He had promised them with the word of covenant.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-an-4",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "We proclaim Thy death, Lord, and Thy holy resurrection; we believe Thine ascension and Thy second advent. We glorify Thee and confess Thee, we offer our prayer unto Thee and supplicate Thee, O our Lord and our God.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-an-5",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "They took Him down from the tree, wrapped Him in linen cloths, and buried Him in a new grave.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-an-6",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "He rose from the dead on the third day, and entered where His disciples were gathered and appeared to them in the upper room of Zion, and when He ascended unto heaven on the fortieth day He ordered them saying, \"Wait for the promise of the Father.\"",
+          "transliteration": ""
+        }
+      ]
+    },
+    {
+      "id": "saint-dioscorus-epiclesis",
+      "title": {
+        "english": "Epiclesis"
+      },
+      "blocks": [
+        {
+          "id": "di-ep-1",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "On the fiftieth day, He sent to them the Holy Spirit in the likeness of fire, and they spoke in the languages of all countries; so also, as Thou did with them, send the Holy Spirit over this (pointing) bread and this (pointing) cup to make them the body and blood of our Lord and Saviour Jesus Christ, unto the ages of ages. (+ once over the Bread, once over the Cup, and once more over Both) as Thou said, \"He that eats My flesh, and drinks My blood, dwells in Me, and I in him.\"",
+          "transliteration": ""
+        },
+        {
+          "id": "di-ep-2",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Amen. Lord pity us, Lord spare us, Lord have mercy upon us.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-ep-3",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "With all the heart let us beseech the Lord our God to grant unto us the good communion of the Holy Spirit.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-ep-4",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "As it was, is, and shall be unto generations of generations and endless ages.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-ep-5",
+          "type": "rubric",
+          "geez": "",
+          "amharic": "",
+          "english": "At this time he shall dip his finger into the Blood and sign the Body.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-ep-6",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Grant it together unto all Thy people that it may be unto them for life and for purification from sin, unto endless ages.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-ep-7",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Grant us to be united through Thy Holy Spirit, and heal us by this oblation that we may live in Thee for ever.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-ep-8",
+          "type": "rubric",
+          "geez": "",
+          "amharic": "",
+          "english": "The people shall repeat his words.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-ep-9",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Blessed be the name of the Lord, and blessed be He that comes in the name of the Lord, and let the name of His glory be blessed. So be it. So be it. So be it blessed.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-ep-10",
+          "type": "rubric",
+          "geez": "",
+          "amharic": "",
+          "english": "The people shall repeat his words.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-ep-11",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Send the grace of the Holy Spirit upon us.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-ep-12",
+          "type": "rubric",
+          "geez": "",
+          "amharic": "",
+          "english": "The people shall repeat his words.",
+          "transliteration": ""
+        }
+      ]
+    },
+    {
+      "id": "saint-dioscorus-fraction",
+      "title": {
+        "english": "Fraction"
+      },
+      "blocks": [
+        {
+          "id": "di-fr-1",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "Arise for prayer.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-fr-2",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Lord have mercy upon us.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-fr-3",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Peace be unto all of you.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-fr-4",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "And with your spirit.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-fr-5",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "The Prayer of Fraction. Where is the country of wisdom, where is its abode . . . (Anaphora of St. Epiphanius, #76-95)",
+          "transliteration": ""
+        },
+        {
+          "id": "di-fr-6",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "According to Thy mercy, our God, and not according to our sins. (to be repeated thrice)\n\nThe hosts of the angels of the Saviour of the world stand before the Saviour of the world and encircle the Saviour of the world, even the body and blood of the Saviour of the world.\n\nLet us draw near the face of the Saviour of the world. In the faith which is of Him let us submit ourselves to Christ.",
+          "transliteration": ""
+        }
+      ]
+    },
+    {
+      "id": "saint-dioscorus-pre-communion",
+      "title": {
+        "english": "Pre-Communion"
+      },
+      "blocks": [
+        {
+          "id": "di-pc-1",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "Open ye the gates, princes.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pc-2",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "Ye who are standing, bow your heads.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pc-3",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Let the Lamb come so that we may see Him with our eyes, immolate Him with our hands and rejoice in Him. May His body be joined with this bread, and may His blood be poured into this cup.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pc-4",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Let none of us think when he eats of this (pointing) bread that he eats mere flesh without blood and Spirit. Let none of us think when he drinks of this (pointing) cup that he drinks mere blood without body and Spirit, but one is the body, blood and Spirit as His divinity became one with His humanity unto the ages of ages.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pc-5",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "Worship the Lord with fear.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pc-6",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Before Thee, Lord, do we worship and Thee do we glorify.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pen-1",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "Worship the Lord with fear.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pen-2",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Before Thee, Lord, we worship, and Thee do we glorify.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pen-3",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "O Lord God, the Father almighty, Thou it is Who heals the wounds of our soul, body, and spirit,",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pen-4",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "because Thou has said, by the mouth of Thine only-begotten Son, our Lord, God, and Saviour Jesus Christ, that which He said to our father Peter, you are a rock, and upon this rock I will build My holy church, and the gates of hell shall not prevail against it; and unto you do I give the keys of the Kingdom of heaven; what you shall have bound on earth shall be bound in heaven, and what you shall have loosed on earth shall be loosed in heaven.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pen-5",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Let all Thy servants and Thy handmaids, according to their several names, be absolved and set free out of the mouth of the Holy Spirit, and out of the mouth of me also, Thy sinful and guilty servant, whether they have wrought wittingly or unwittingly.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pen-6",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Keep them, Lord, and defend them, thy servants, my fathers, brothers and sisters.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pen-7",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "And also loose me, thy humble and sinful servant.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pen-8",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Both absolve them and set them free: out of the mouth of the holy Trinity: the Father, Son, and Holy Spirit, and out of the mouth of me Thy sinful and unrighteous servant.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pen-9",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "O propitious, merciful and lover of man, Lord our God, that takes away the sin of the world, accept the penitence of Thy servants and Thy handmaids, and shine upon them with the light of everlasting life, and forgive them, Lord, all their sins; for Thou art good and the lover of man.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pen-10",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "O Lord our God, merciful, slow to anger, plenteous in mercy and righteous, forgive me my sins,",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pen-11",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "and deliver all thy servants and handmaids from all transgression and curse. If we have transgressed against Thee, Lord, whether in our word, deed, or thought, release, remit, pardon and have mercy, for Thou art good and the lover of man, Lord our God.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pen-12",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "O Lord, absolve us and set us free, and absolve all Thy people, and absolve me Thy sinful servant.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-rem-1r",
+          "type": "rubric",
+          "english": "Then he shall turn his face towards the people, bless them three times, make mention of them that are with him and say also:"
+        },
+        {
+          "id": "ap-rem-1",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Remember, Lord, the honourable father, our Patriarch Abba and the blessed Archbishop Abba. Our God, keep them for us for many years and length of days in righteousness and peace.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-rem-2",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Remember, Lord, all our civil authorities, and loose them from all the chains of sin which they have committed wittingly or unwittingly, quickly subdue their adversaries and enemies under their feet.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-rem-3",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Remember, Lord, the patriarchs, archbishops, bishops, priests and deacons, anagnosts and singers, virgins and monks, widows and orphans, men and women, aged and children; and all Christian people that are standing in this holy church; strengthen them in the faith of Christ.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-rem-4r",
+          "type": "rubric",
+          "english": "At this moment he shall mention those that have lately been laid to rest."
+        },
+        {
+          "id": "ap-rem-4",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Remember, Lord, all our fathers, brothers and sisters that are asleep and resting in the orthodox faith, and lay their souls in the bosom of Abraham, Isaac and Jacob.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-rem-5",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "And as for us, deliver us from every transgression and curse and from all wickedness and from all rebellion and from all false swearing and from all anathemas and from all perjury and from mingling with heretics and gentiles in error and defilement.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-rem-6",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Grant us, Lord, wisdom, power, reason, understanding and knowledge, that we may depart and flee for evermore from all works of Satan, the tempter.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-rem-7",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Grant us, Lord, to do Thy will and good pleasure at all times, and write our names in the book of life in the kingdom of heaven with all saints and martyrs, through Jesus Christ our Lord, through whom to Thee with Him and the Holy Spirit be glory and dominion, both now and ever and unto the ages of ages. Amen.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pc-8",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "Give heed.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pc-9",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Holy things for the holy.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pc-10",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "One is the holy Father, one is the holy Son, one is the Holy Spirit.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pc-11",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "The Lord be with all of you.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pc-12",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "And with your spirit.",
+          "transliteration": ""
+        }
+      ]
+    },
+    {
+      "id": "saint-dioscorus-communion",
+      "title": {
+        "english": "Communion"
+      },
+      "blocks": [
+        {
+          "id": "di-com-1",
+          "type": "rubric",
+          "geez": "",
+          "amharic": "",
+          "english": "At this time the priest shall lift up the whole Host with his hand and say:",
+          "transliteration": ""
+        },
+        {
+          "id": "di-com-2",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Lord, have compassion upon us, O Christ. (three times in a loud chant and fifteen times in a low chant)",
+          "transliteration": ""
+        },
+        {
+          "id": "di-com-3",
+          "type": "rubric",
+          "geez": "",
+          "amharic": "",
+          "english": "The people shall repeat his words. Then the priest shall repeat them three times and the people twice.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-com-4",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "Ye that are penitent, bow your heads.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-prec-8r",
+          "type": "rubric",
+          "english": "The priest shall turn toward the people and say:"
+        },
+        {
+          "id": "ap-prec-8",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Lord our God, look upon Thy people that are penitent, and according to Thy great mercy, have mercy upon them, and according to the multitude of Thy compassion blot out their iniquity, cover them and keep them from all evil.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-prec-9",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "And redeem their souls in peace, forgive their former works, join them with Thy holy church, through the grace and compassion of Thine only-begotten Son our Lord, God, and Saviour Jesus Christ, through Whom to Thee with Him and with the Holy Spirit be glory and dominion, both now and ever and unto the ages of ages. Amen.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-prec-10",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "Arise for prayer.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-prec-11",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Lord have mercy upon us.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-prec-12",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "እግዚአብሔር ምስለ ኵልክሙ።",
+          "amharic": "እግዚአብሔር ከሁላችሁ ጋር ይሁን።",
+          "english": "Peace be unto all of you.",
+          "transliteration": "Igzee'abihér misle kwulikimu."
+        },
+        {
+          "id": "ap-prec-13",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "ምስለ መንፈስከ።",
+          "amharic": "ከመንፈስህ ጋራ።",
+          "english": "And with your spirit.",
+          "transliteration": "Misle menfesike."
+        },
+        {
+          "id": "ap-prec-14",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "This is the true holy body of our Lord, God, and Saviour Jesus Christ, that is given for life, salvation, remission of sin unto them that receive of it in faith.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-prec-14r",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Amen.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-prec-15",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "This is the true precious blood of our Lord, God, and Saviour Jesus Christ, which is given for life, salvation, and remission of sins into those who drink of it in faith.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-prec-15r",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Amen.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-prec-16",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "For this is the body and blood of Emmanuel our very God.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-prec-16r",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Amen.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-prec-17",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "I believe, I believe, I believe and I confess, unto my last breath, that this is the body and blood of our Lord, God, and Saviour Jesus Christ, which He took from the Lady of us all, the holy Mary of twofold virginity, and made it one with His godhead without mixture or confusion, without division or alteration; and He verily confessed with a good testimony in the days of Pontius Pilate, and this body He gave up for our sakes and for the life of us all.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-prec-17r",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Amen.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-prec-18",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "I believe, I believe, I believe and I confess that His godhead was not separated from His manhood, not for an hour nor for the twinkling of an eye, but He gave it up for our sakes for life, salvation, and remission of sin unto them that partake of it in faith.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-prec-18r",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Amen.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-prec-19",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "I believe, I believe, I believe and I confess that this is the body and blood of our Lord, God, and Saviour Jesus Christ, and that to Him are rightly due honour and glory and adoration with His kind heavenly Father and the Holy Spirit, the life-giver, both now and ever and unto the ages of ages. Amen.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-com-1r",
+          "type": "rubric",
+          "english": "Then the priest shall take in his hand the asbadikon which bears the sign of the cross, dip it into the chalice into the blood, and with it make the sign of the cross on the Body. Then, with the Body, he shall make the sign of the cross over the Blood and say:"
+        },
+        {
+          "id": "ap-com-1",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Blessed be God, almighty Father, our God. And blessed be the only-begotten Son, our Lord and Saviour Jesus Christ. And blessed be the Holy Spirit the Paraclete, the comforter and cleanser of us all.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-com-1b",
+          "type": "rubric",
+          "english": "Then the assistant deacon shall offer water to the priests and deacons to wash their hands, signifying that they should be holy in their souls."
+        },
+        {
+          "id": "ap-com-2",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Lord my God, behold the sacrifice of Thy Son's body, which pleases Thee. Through it blot out all my sins because Thine only-begotten Son died for me.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-com-3",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "And behold the pure blood of Thy Messiah, which was shed for me upon Calvary, cries aloud in my stead. Grant that the testimony of this blood may be unto the forgiveness of me Thy servant.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-com-4",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "And accept my prayers for its sake, because thy beloved accepted the spear and the nails for my sake, and suffered to please Thee. But after I was saved, Satan returned to my heart and pierced me through with his darts. Grant me, Lord, Thy mercy, because he is a powerful accuser.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-com-5",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "And by the provision of sin he slew me. Avenge me of the audacious one who is not satisfied with my being led astray from my life.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-com-6",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Thou, Lord, my King, God, Saviour bind up the wounds of soul and body of me Thy servant.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-com-7r",
+          "type": "rubric",
+          "english": "Before receiving the Holy Communion, all communicants shall say:"
+        },
+        {
+          "id": "ap-com-7",
+          "type": "prayer",
+          "speaker": "all",
+          "geez": "",
+          "amharic": "",
+          "english": "O my Lord Jesus Christ, it in no wise befits Thee to enter under the roof of my polluted house, for I have provoked Thee to wrath, for I have done evil in Thy sight, and through the transgression of Thy commandment have polluted my soul and body which Thou created after Thine image and likeness, yet in me dwells no good thing.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-com-8",
+          "type": "prayer",
+          "speaker": "all",
+          "geez": "",
+          "amharic": "",
+          "english": "But for the sake of Thy plan, and Thine incarnation for my salvation, for the sake of thy precious cross and Thy life-giving death, for the sake of Thy resurrection on the third day, I pray thee and beseech Thee, O my Lord, that Thou would purge me from all guilt and curse, and from all sin and defilement.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-com-9",
+          "type": "prayer",
+          "speaker": "all",
+          "geez": "",
+          "amharic": "",
+          "english": "And when I have received Thy holy mystery, let it not be unto me for judgement nor for condemnation, but have compassion upon me and have mercy upon me; and through it grant me remission of my sin and life for my soul, O life of the world, through the petition of our Lady, the holy Mary His mother of twofold virginity, and of John the Baptist, and through the prayer of all the holy angels, all the martyrs, and righteous who have fought for the good, unto ages of ages. Amen.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-com-9r",
+          "type": "rubric",
+          "english": "The priest shall come out of the sanctuary and distribute the Holy Communion to the faithful in order. Then the men, then the women. But the babies who have already been baptized shall receive before the other faithful."
+        },
+        {
+          "id": "ap-com-10r",
+          "type": "rubric",
+          "english": "While receiving the Holy Communion, the priest shall say to himself:"
+        },
+        {
+          "id": "ap-com-10",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "O my Lord Jesus Christ, let not this Thy mystery be iniquity in me, rather let it be for the purifying of my soul and my body.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-com-11r",
+          "type": "rubric",
+          "english": "The celebrant receives of the Host first, next he shall give it to the assistant priest, who gives him the Blood; the assistant priest shall himself receive of the Blood. The celebrant shall give the priests of the Body, the assistant priest shall give them of the Blood."
+        },
+        {
+          "id": "ap-com-12r",
+          "type": "rubric",
+          "english": "While offering the Holy Qurban at the time of the Anaphora of the Apostles, the priest shall say:"
+        },
+        {
+          "id": "ap-com-12",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "The bread of life which came down from heaven, the holy body of Christ.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-com-12b",
+          "type": "response",
+          "speaker": "all",
+          "geez": "",
+          "amharic": "",
+          "english": "Amen.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-com-13",
+          "type": "prayer",
+          "speaker": "all",
+          "geez": "",
+          "amharic": "",
+          "english": "Holy, holy, holy Trinity ineffable, grant me to receive this body and His blood for life and not for condemnation. Grant me to bring forth fruit that shall be well-pleasing unto Thee, to the end that I may appear in Thy glory, and live unto Thee, doing Thy will.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-com-14",
+          "type": "prayer",
+          "speaker": "all",
+          "geez": "",
+          "amharic": "",
+          "english": "In faith I call upon Thee, Father, and call upon Thy Kingdom: hallowed, Lord, be Thy name upon us, for mighty art Thou, praised and glorious, and to Thee be glory, unto endless ages.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-com-15r",
+          "type": "rubric",
+          "english": "Then he shall consume what he has received. While chewing he shall put his hand on his mouth. He shall chew in fear and trembling without making any sound till he finishes. Then he shall say:"
+        },
+        {
+          "id": "ap-com-15",
+          "type": "prayer",
+          "speaker": "all",
+          "geez": "",
+          "amharic": "",
+          "english": "Fill my mouth with praise, my heart with joy, and my soul with gladness, fill me who have received of this divine mystery, O Thou Who became man for the salvation of man.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-com-16r",
+          "type": "rubric",
+          "english": "When the assistant priest gives the blood he shall say:"
+        },
+        {
+          "id": "ap-com-16",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "This is the cup of life that came down from heaven; this is the precious blood of Christ.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-com-17",
+          "type": "response",
+          "speaker": "all",
+          "geez": "",
+          "amharic": "",
+          "english": "Amen and amen.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pcom-1r",
+          "type": "rubric",
+          "english": "The Prayer of Basil. When the blood is in his mouth he shall say in his heart:"
+        },
+        {
+          "id": "ap-pcom-1",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "O my Lord and my God Jesus Christ, behold I have received Thy holy Body and Thy precious Blood. May they be for the remission of my sins and the blotting out of my trespasses.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pcom-2",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "O only-begotten Son and lover of man, fill my mouth with Thy praise that I may praise Thy glory, for Thou art He Who once became man and declared Himself through His incarnation in order to save me for ever. Thou has redeemed me for ever for the sake of Thy holy Name.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pcom-3",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Glory be to Thee, O my Lord and my God Jesus Christ, Who has granted me Thy Body and Thy Blood at the hand of Thy servant. I glorify thee and pray thee that I may be in the midst of Thy flock, and that accepting me, Thou will number me with Thy sheep.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pcom-4",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "And now remember not my trespasses. I give thanks for Thy grace which has been granted unto me, and for Thy help which has been with me.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pcom-5r",
+          "type": "rubric",
+          "english": "When the deacon receives the cup he shall say:"
+        },
+        {
+          "id": "ap-pcom-5",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "I will take the cup of life, and call upon the name of the Lord. Pray ye for us and for all Christians who ask us to mention them. Praise ye and sing in the peace and love of Jesus Christ.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pcom-6r",
+          "type": "rubric",
+          "english": "And then the clergy shall chant Psalm 150. They shall chant one by one or two by two according to their number, without ceasing."
+        },
+        {
+          "id": "ap-pcom-7r",
+          "type": "rubric",
+          "english": "The priest shall say as he goes out:"
+        },
+        {
+          "id": "ap-pcom-7",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Those whom Thou has called, Lord, and hallowed, make happy with Thy call, confirm with Thy power, keep with Thy love, join in Thine everlasting kingdom through Christ, through Whom to Thee with Him and with the Holy Spirit be glory and dominion, both now and ever and unto the ages of ages. Amen.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pcom-8r",
+          "type": "rubric",
+          "english": "When the priest goes out he shall bless over the Paten once. Then he shall offer the Body to the people, and the deacon shall offer the Blood."
+        },
+        {
+          "id": "ap-pcom-9",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "O eternal God, light of life, Thou has given, Lord, unto us Thy servants strength and protection, during the present days and nights, keeping all in peace. Bless them on this present day, and on those to come hereafter, through our Lord Jesus Christ, through Whom to Thee with Him and with the Holy Spirit be glory and dominion, both now and ever and unto the ages of ages. Amen.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pcom-10",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "We thank God that we have partaken of His holy things; we pray and trust that which we have received may be healing for the life of the soul while we glorify the Lord our God.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pcom-11",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "My mouth shall speak the praise of the Lord, and let all flesh bless His holy Name for ever and ever.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-pcom-12",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Our Father who art in heaven, lead us, Lord, that we may not enter into temptation.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-thk-1",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "We have received of the holy body and the precious blood of Christ.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-thk-2",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "My mouth shall speak the praise of the Lord, and let all flesh bless His holy name for ever and ever.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-thk-3",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Our Father who art in heaven, lead us, Lord, that we may not enter into temptation.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-thk-4",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "And let us give thanks unto Him that makes us ready to communicate in the precious and holy mystery.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-thk-5",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "My mouth shall speak the praise of the Lord, and let all flesh bless His holy name for ever and ever.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-thk-6",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Our Father who art in heaven, lead us, Lord, that we may not enter into temptation.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-thk-7r",
+          "type": "rubric",
+          "english": "The priest shall sing in Izl:"
+        },
+        {
+          "id": "ap-thk-7",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "I will extol Thee, my King and my God, and I will bless Thy name for ever and ever.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-thk-8",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Our Father who art in heaven, lead us, Lord, that we may not enter into temptation.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-thk-9",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Every day will I bless Thee, and I will praise Thy name for ever and ever.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-thk-10",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Our Father who art in heaven, lead us, Lord, that we may not enter into temptation.",
+          "transliteration": ""
+        },
+        {
+          "id": "ap-thk-11",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "My mouth shall speak the praise of the Lord, and let all flesh bless His holy name for ever and ever.",
+          "transliteration": ""
+        }
+      ]
+    },
+    {
+      "id": "saint-dioscorus-post-communion",
+      "title": {
+        "english": "Post-Communion"
+      },
+      "blocks": [
+        {
+          "id": "di-pcom-1",
+          "type": "rubric",
+          "geez": "",
+          "amharic": "",
+          "english": "After receiving the Holy Communion.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pcom-2",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Pilot of the Soul: Again we supplicate the almighty God, Father of our Lord and Saviour Jesus Christ, because He neither disdained nor refused our supplication, nor did He remove His mercy from us, because the Lord our God is merciful.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pcom-3",
+          "type": "prayer",
+          "speaker": "deacon",
+          "geez": "",
+          "amharic": "",
+          "english": "Pray ye.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pcom-4",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Yea Lord, Thou art the God of all.\nYea Lord, Thou art the King of all.\nYea Lord, Thou art the Almighty.\nYea Lord, Thou art the Governor of all.\nYea Lord, Thou art the Saviour of all.\nYea Lord, Thou art the Judge of all.\nYea Lord, Thou art the Life-giver of all.\nYea Lord, Thou art the Keeper of all.\nYea Lord, Thou art the Nourisher of all.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pcom-5",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "As Thou did join the body of Thy Son with our body, and Thou did mix the blood of Thy Messiah with our blood, so put Thy fear in our heart and the beauty of Thy worship in our mind.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pcom-6",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "We, who are carnal, mind the things of the flesh and do the works of the flesh and walk in the way of the flesh. But do Thou teach us the work of the Spirit, make us understand the law of the Spirit, and lead us to the way of the Spirit.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pcom-7",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Because if Thou pity us, we sinners, then Thou will be called compassionate. Thou pities the righteous because of their works and does recompense them according to their righteousness.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pcom-8",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Remember not against us former iniquities: let Thy tender mercies, O God, speedily precede us.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pcom-9",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Towards Thee we cry, towards Thee we weep, Thee we entreat, unto endless ages.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-pcom-10",
+          "type": "response",
+          "speaker": "congregation",
+          "geez": "",
+          "amharic": "",
+          "english": "Amen.",
+          "transliteration": ""
+        }
+      ]
+    },
+    {
+      "id": "saint-dioscorus-dismissal",
+      "title": {
+        "english": "Dismissal"
+      },
+      "blocks": [
+        {
+          "id": "di-dis-1",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "The Laying on of the Hand. O eternal God, light of life unquenchable, look upon Thy servants and handmaids and plant in their hearts the fear of Thy name, in order that they may bear fruit in blessing; and count them with those to whom have been given Thy body and blood.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-dis-2",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "And let Thy hand rest upon them who have bowed their heads before Thee, Thy people, men and women, aged and children, virgins and monks, widows and orphans.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-dis-3",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "And join us also with them, protect, help, confirm, and strengthen us with the strength of Thine archangels; from all evil works keep us apart and in all good works unite us.",
+          "transliteration": ""
+        },
+        {
+          "id": "di-dis-4",
+          "type": "prayer",
+          "speaker": "priest",
+          "geez": "",
+          "amharic": "",
+          "english": "Through Thine only-begotten Son, through Whom to Thee with Him and with the Holy Spirit be glory and dominion, both now and ever and unto the ages of ages. Amen.",
+          "transliteration": ""
         }
       ]
     }
