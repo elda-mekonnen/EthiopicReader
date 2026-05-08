@@ -64,7 +64,6 @@
       flex-shrink: 0;
       position: relative;
     }
-    .panel-files    { width: 190px; min-width: 120px; }
     .panel-sections { width: 220px; min-width: 150px; }
     .panel-blocks   { width: 240px; min-width: 180px; }
     .panel-editor   { flex: 1; flex-shrink: 1; display: flex; flex-direction: column; border-right: none; }
@@ -128,18 +127,23 @@
     .panel-body::-webkit-scrollbar { width: 3px; }
     .panel-body::-webkit-scrollbar-thumb { background: var(--border); }
 
-    /* ── File items ─────────────────────────────────── */
-    .file-item {
-      padding: 7px 12px;
+    /* ── Liturgy picker ─────────────────────────────── */
+    #liturgy-select {
+      height: 30px;
+      min-width: 220px;
+      font-size: 13px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 4px;
+      padding: 0 28px 0 10px;
       cursor: pointer;
-      color: var(--muted);
-      font-size: 11px;
-      border-left: 2px solid transparent;
-      word-break: break-all;
-      line-height: 1.4;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23555'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 9px center;
     }
-    .file-item:hover { background: var(--surface2); color: var(--text); }
-    .file-item.active { color: var(--accent); border-left-color: var(--accent); background: var(--accent-dim); }
+    #liturgy-select:focus { outline: none; border-color: var(--accent); }
 
     /* ── List items (sections / blocks) ─────────────── */
     .list-item {
@@ -214,7 +218,15 @@
 
     /* ── Editor panel ───────────────────────────────── */
     #editor-scroll { flex: 1; overflow-y: auto; }
-    .editor-inner { padding: 20px; max-width: 680px; }
+    .editor-inner { padding: 20px; }
+
+    /* ── Language grid (side-by-side text areas) ─────── */
+    .lang-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 20px;
+    }
+    .lang-grid textarea { min-height: 110px; }
     .editor-placeholder {
       display: flex; align-items: center; justify-content: center;
       height: 100%; color: var(--muted); font-size: 13px;
@@ -339,29 +351,27 @@
     }
     #toast.ok  { background: var(--success); color: #000; opacity: 1; }
     #toast.err { background: var(--danger);  color: #000; opacity: 1; }
+
   </style>
 </head>
 <body>
 
 <header>
   <h1>ቅዳሴ Admin</h1>
+  <select id="liturgy-select" onchange="selectLiturgyFromDropdown()">
+    <option value="">Select a liturgy…</option>
+  </select>
   <div class="header-right">
     <button id="common-blocks-btn" class="btn btn-ghost" onclick="openCommonBlocks()" title="Search and insert blocks or sections from the corpus" style="display:none">Search &amp; insert</button>
-    <span id="status">Select a file to begin</span>
+    <span id="status"></span>
   </div>
 </header>
 
 <div class="layout">
 
   <div class="sidebar-container" id="sidebar">
-    <!-- Column 1: Files -->
-    <div class="panel panel-files" id="panel-files">
-      <div class="panel-head">Files</div>
-      <div class="panel-body" id="file-list"></div>
-      <div class="resize-handle" data-panel="files"></div>
-    </div>
 
-    <!-- Column 2: Sections / Entries -->
+    <!-- Column 1: Sections / Entries -->
     <div class="panel panel-sections" id="panel-sections">
       <div class="panel-head"><span id="sec-label">Sections</span></div>
       <div class="panel-body" id="sections-list"></div>
@@ -383,7 +393,7 @@
   <!-- Column 4: Editor -->
   <div class="panel panel-editor">
     <div id="editor-scroll">
-      <div id="editor-panel" class="editor-placeholder">← Select a file to start editing</div>
+      <div id="editor-panel" class="editor-placeholder">Select a liturgy above to start editing</div>
     </div>
     <div id="save-bar">
       <button class="btn btn-save" onclick="saveFile()">Save to Disk</button>
@@ -394,6 +404,7 @@
 </div>
 
 <div id="toast"></div>
+
 
 <!-- Search & Insert modal -->
 <div class="modal-backdrop" id="common-blocks-modal" onclick="if(event.target===this)closeCommonBlocks()">
@@ -531,7 +542,7 @@ document.addEventListener('mouseup', () => {
 
 // Restore widths and collapsed state on load
 window.addEventListener('DOMContentLoaded', () => {
-  ['files', 'sections', 'blocks'].forEach(name => {
+  ['sections', 'blocks'].forEach(name => {
     const w = localStorage.getItem('panelWidth-panel-' + name);
     if (w) document.getElementById('panel-' + name).style.width = w + 'px';
   });
@@ -567,7 +578,7 @@ function markDirty() {
 function updateStatus() {
   const el = document.getElementById('status');
   const hint = document.getElementById('save-hint');
-  if (!currentFile) { el.textContent = 'Select a file to begin'; el.className = ''; return; }
+  if (!currentFile) { el.textContent = ''; el.className = ''; return; }
   if (dirty) {
     el.textContent = '● Unsaved changes — ' + currentFile;
     el.className = 'dirty';
@@ -613,7 +624,7 @@ async function init() {
     }
   }
   applyModeToUI();
-  renderFiles();
+  loadAnaphoraDropdown();
   refreshLint();
   loadCommonBlocks();
 }
@@ -673,13 +684,46 @@ function isSeasonalsFile() {
   return currentFile && currentFile.includes('seasonals.json');
 }
 
-// ── File List ──────────────────────────────────────────────────────────────────
-function renderFiles() {
-  document.getElementById('file-list').innerHTML = files.map(f => {
-    const errs = lintMap[f] || 0;
-    const badge = errs ? ' <span class="badge b-over" title="' + errs + ' block(s) over ' + HARD_LIMIT + ' chars">' + errs + '</span>' : '';
-    return '<div class="file-item' + (f === currentFile ? ' active' : '') + '" onclick="selectFile(\'' + esc(f) + '\')">' + esc(f) + badge + '</div>';
-  }).join('');
+// ── File List (no-op — replaced by header dropdown) ───────────────────────────
+function renderFiles() {}
+
+// ── Liturgy dropdown ──────────────────────────────────────────────────────────
+async function loadAnaphoraDropdown() {
+  const sel = document.getElementById('liturgy-select');
+
+  // ── Main liturgies ──
+  const grpMain = document.createElement('optgroup');
+  grpMain.label = 'Liturgies';
+  for (const [path, label] of [['qidan.json', 'Qidan'], ['serate-qidase.json', 'Serate Qidase']]) {
+    const opt = document.createElement('option');
+    opt.value = path;
+    opt.textContent = label;
+    grpMain.appendChild(opt);
+  }
+  sel.appendChild(grpMain);
+
+  // ── Anaphoras ──
+  try {
+    const anaphoras = STATIC_MODE
+      ? await fetchJson('data/anaphoras/anaphoras.json')
+      : await apiFetch('GET', '/api/file?path=anaphoras/anaphoras.json');
+    const grpAna = document.createElement('optgroup');
+    grpAna.label = 'Anaphoras';
+    for (const a of anaphoras) {
+      const opt = document.createElement('option');
+      opt.value = 'anaphoras/' + a.id + '.json';
+      opt.textContent = (a.name && a.name.english) || a.id;
+      grpAna.appendChild(opt);
+    }
+    sel.appendChild(grpAna);
+  } catch (e) {
+    toast('Failed to load anaphoras list: ' + e.message, 'err');
+  }
+}
+
+function selectLiturgyFromDropdown() {
+  const sel = document.getElementById('liturgy-select');
+  if (sel.value) selectFile(sel.value);
 }
 
 async function selectFile(path) {
@@ -687,6 +731,8 @@ async function selectFile(path) {
     if (!confirm('Discard unsaved changes to ' + currentFile + '?')) return;
   }
   currentFile = path;
+  const sel = document.getElementById('liturgy-select');
+  if (sel) sel.value = path;
   selSection = null;
   selBlock = null;
   selBlocks = new Set();
@@ -1301,7 +1347,7 @@ function renderEditor() {
 
   if (!fileData) {
     panel.className = 'editor-placeholder';
-    panel.innerHTML = '← Select a file to start editing';
+    panel.innerHTML = 'Select a liturgy above to start editing';
     return;
   }
 
@@ -1379,13 +1425,13 @@ function renderEditor() {
         '<label><input type="checkbox"' + optionalChecked + ' onchange="setBlock(\'optional\',this.checked)"> ' +
         'Skip if no matching override found</label></div>';
     } else {
-      // Regular blocks show language text areas; setBlockText re-renders blocks + sections
-      // so the OVER badges in both columns stay live.
-      contentFields =
-        textArea("Ge\u02bcez", block.geez, 'setBlockText("geez",this.value)') +
-        textArea('Amharic', block.amharic, 'setBlockText("amharic",this.value)') +
+      // Regular blocks show language text areas side-by-side for easy comparison.
+      contentFields = '<div class="lang-grid">' +
         textArea('English', block.english, 'setBlockText("english",this.value)') +
-        textArea('Transliteration', block.transliteration, 'setBlockText("transliteration",this.value)');
+        textArea('Amharic', block.amharic, 'setBlockText("amharic",this.value)') +
+        textArea("Ge\u02bcez", block.geez, 'setBlockText("geez",this.value)') +
+        textArea('Transliteration', block.transliteration, 'setBlockText("transliteration",this.value)') +
+        '</div>';
     }
 
     // Conditions UI for blocks with conditions (in seasonals files)
