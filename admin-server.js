@@ -88,6 +88,33 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
+  // GET /api/lint — count blocks per file with any language field over HARD_LIMIT chars.
+  // Mirrors data/scripts/lint_block_length.py.
+  if (pathname === '/api/lint' && method === 'GET') {
+    const HARD = 400;
+    const LANGS = ['geez', 'amharic', 'english', 'transliteration'];
+    const SKIP = new Set(['heading', 'rubric', 'placeholder']);
+    const result = {};
+    for (const rel of walkDir(DATA_DIR)) {
+      try {
+        const data = JSON.parse(fs.readFileSync(path.join(DATA_DIR, rel), 'utf8'));
+        if (!data || typeof data !== 'object' || !Array.isArray(data.sections)) continue;
+        let errors = 0;
+        for (const sec of data.sections) {
+          for (const b of (sec.blocks || [])) {
+            if (SKIP.has(b.type)) continue;
+            for (const l of LANGS) {
+              if ((b[l] || '').length > HARD) { errors++; break; }
+            }
+          }
+        }
+        if (errors > 0) result[rel] = errors;
+      } catch (e) { /* skip unreadable / non-JSON files */ }
+    }
+    json(res, 200, result);
+    return;
+  }
+
   // GET /api/file?path=... — read a JSON file
   if (pathname === '/api/file' && method === 'GET') {
     const abs = safeDataPath(parsed.query.path);

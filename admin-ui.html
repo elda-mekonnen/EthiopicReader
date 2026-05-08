@@ -204,6 +204,7 @@
     .b-section { background: #1a160a; color: #C9A84C; }
     .b-blocks  { background: #0d1420; color: #7B9FC4; }
     .b-placeholder { background: #1a1510; color: #9B885C; }
+    .b-over    { background: #2a0e0e; color: var(--danger); }
     
     .condition-summary {
       font-size: 9px;
@@ -228,9 +229,16 @@
     .field-row { display: flex; gap: 12px; }
     .field-row .field { flex: 1; }
     label.fl {
-      display: block; font-size: 10px; font-weight: 700;
+      display: flex; justify-content: space-between; align-items: baseline;
+      font-size: 10px; font-weight: 700;
       text-transform: uppercase; letter-spacing: 0.7px; color: var(--muted); margin-bottom: 5px;
     }
+    .char-count {
+      font-size: 10px; font-weight: 500; color: var(--muted);
+      text-transform: none; letter-spacing: 0;
+    }
+    .char-count.warn  { color: var(--accent); }
+    .char-count.error { color: var(--danger); }
     input[type="text"], select, textarea {
       width: 100%; background: var(--surface); border: 1px solid var(--border);
       color: var(--text); border-radius: 4px; padding: 7px 10px;
@@ -325,8 +333,45 @@
 <div id="toast"></div>
 
 <script>
+// ── Block-length thresholds (match data/scripts/lint_block_length.py) ─────────
+// Each language field on a prayer block should fit on one screen in presentation mode.
+const SOFT_LIMIT = 250;
+const HARD_LIMIT = 400;
+
+function lenClass(n) {
+  if (n > HARD_LIMIT) return 'error';
+  if (n > SOFT_LIMIT) return 'warn';
+  return '';
+}
+
+function maxBlockLen(b) {
+  return Math.max(
+    (b.geez || '').length,
+    (b.amharic || '').length,
+    (b.english || '').length,
+    (b.transliteration || '').length
+  );
+}
+
+function updateCharCount(id, n) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.textContent = n + ' / ' + SOFT_LIMIT;
+  el.className = 'char-count ' + lenClass(n);
+}
+
+function sectionErrors(sec) {
+  let n = 0;
+  for (const b of (sec.blocks || [])) {
+    if (b.type === 'heading' || b.type === 'rubric' || b.type === 'placeholder') continue;
+    if (maxBlockLen(b) > HARD_LIMIT) n++;
+  }
+  return n;
+}
+
 // ── State ──────────────────────────────────────────────────────────────────────
 let files = [];
+let lintMap = {}; // { 'anaphoras/foo.json': errorBlockCount }
 let currentFile = null;
 let fileData = null;   // mutable JS object mirroring the JSON
 let dirty = false;
@@ -457,6 +502,13 @@ async function apiFetch(method, path, body) {
 async function init() {
   files = await apiFetch('GET', '/api/files');
   renderFiles();
+  refreshLint();
+}
+
+async function refreshLint() {
+  try { lintMap = await apiFetch('GET', '/api/lint'); }
+  catch (e) { lintMap = {}; }
+  renderFiles();
 }
 
 // ── Helper: Check if file is seasonals ───────────────────────────────────────
@@ -466,9 +518,11 @@ function isSeasonalsFile() {
 
 // ── File List ──────────────────────────────────────────────────────────────────
 function renderFiles() {
-  document.getElementById('file-list').innerHTML = files.map(f =>
-    '<div class="file-item' + (f === currentFile ? ' active' : '') + '" onclick="selectFile(\'' + esc(f) + '\')">' + esc(f) + '</div>'
-  ).join('');
+  document.getElementById('file-list').innerHTML = files.map(f => {
+    const errs = lintMap[f] || 0;
+    const badge = errs ? ' <span class="badge b-over" title="' + errs + ' block(s) over ' + HARD_LIMIT + ' chars">' + errs + '</span>' : '';
+    return '<div class="file-item' + (f === currentFile ? ' active' : '') + '" onclick="selectFile(\'' + esc(f) + '\')">' + esc(f) + badge + '</div>';
+  }).join('');
 }
 
 async function selectFile(path) {
@@ -496,6 +550,7 @@ async function saveFile() {
     dirty = false;
     updateStatus();
     toast('Saved!', 'ok');
+    refreshLint();
   } catch (e) {
     toast('Save failed: ' + e.message, 'err');
   }
@@ -529,7 +584,9 @@ function renderSections() {
     list.innerHTML = fileData.sections.map((sec, i) => {
       const title = (sec.title && (sec.title.english || sec.title.geez)) || sec.id || 'Section ' + (i + 1);
       const count = (sec.blocks || []).length;
-      return sectionRow(i, esc(title), count + ' block' + (count !== 1 ? 's' : ''));
+      const errs = sectionErrors(sec);
+      const errBadge = errs ? ' <span class="badge b-over" title="' + errs + ' block(s) over ' + HARD_LIMIT + ' chars">' + errs + '</span>' : '';
+      return sectionRow(i, esc(title), count + ' block' + (count !== 1 ? 's' : '') + errBadge);
     }).join('');
     return;
   }
@@ -657,6 +714,13 @@ function renderBlocks() {
     
     // Optional badge for placeholder blocks
     const optionalBadge = (b.type === 'placeholder' && b.optional) ? '<span class="badge" style="background:#4a4034;color:#9B885C;">optional</span>' : '';
+
+    // Over-limit badge: any language field above HARD_LIMIT chars (skip non-text block types)
+    let overBadge = '';
+    if (b.type !== 'placeholder' && b.type !== 'heading') {
+      const n = maxBlockLen(b);
+      if (n > HARD_LIMIT) overBadge = '<span class="badge b-over" title="' + n + ' chars (max ' + HARD_LIMIT + ')">' + n + '</span>';
+    }
     
     // Show conditions summary for seasonals files
     let conditionsBadge = '';
@@ -687,6 +751,7 @@ function renderBlocks() {
           optionalBadge +
           speakerBadge +
           conditionsBadge +
+          overBadge +
         '</div>' +
       '</div>' +
       '<div class="actions">' +
@@ -877,12 +942,13 @@ function renderEditor() {
         '<label><input type="checkbox"' + optionalChecked + ' onchange="setBlock(\'optional\',this.checked)"> ' +
         'Skip if no matching override found</label></div>';
     } else {
-      // Regular blocks show language text areas
-      contentFields = 
-        textArea("Ge\u02bcez", block.geez, 'setBlock("geez",this.value)') +
-        textArea('Amharic', block.amharic, 'setBlock("amharic",this.value)') +
-        textArea('English', block.english, 'setBlock("english",this.value)') +
-        textArea('Transliteration', block.transliteration, 'setBlock("transliteration",this.value)');
+      // Regular blocks show language text areas; setBlockText re-renders blocks + sections
+      // so the OVER badges in both columns stay live.
+      contentFields =
+        textArea("Ge\u02bcez", block.geez, 'setBlockText("geez",this.value)') +
+        textArea('Amharic', block.amharic, 'setBlockText("amharic",this.value)') +
+        textArea('English', block.english, 'setBlockText("english",this.value)') +
+        textArea('Transliteration', block.transliteration, 'setBlockText("transliteration",this.value)');
     }
 
     // Conditions UI for blocks with conditions (in seasonals files)
@@ -931,6 +997,12 @@ function renderEditor() {
 
 // ── Update helpers (called inline from editor form) ────────────────────────────
 function setBlock(key, val)      { fileData.sections[selSection].blocks[selBlock][key] = val; markDirty(); }
+function setBlockText(key, val)  {
+  fileData.sections[selSection].blocks[selBlock][key] = val;
+  markDirty();
+  renderBlocks();
+  renderSections();
+}
 function setSection(key, val)    { fileData.sections[selSection][key] = val; markDirty(); renderSections(); }
 function setSecTitle(lang, val)  { const s = fileData.sections[selSection]; if (!s.title) s.title = {}; s.title[lang] = val; markDirty(); renderSections(); }
 function setRoot(key, val)       { fileData[key] = val; markDirty(); }
@@ -962,9 +1034,14 @@ function textField(label, value, onchange) {
 }
 
 function textArea(label, value, onchange) {
+  const id = 'cc-' + Math.random().toString(36).slice(2, 9);
+  const len = (value || '').length;
+  const klass = lenClass(len);
+  const count = '<span id="' + id + '" class="char-count ' + klass + '">' + len + ' / ' + SOFT_LIMIT + '</span>';
+  const handler = onchange + ';updateCharCount("' + id + '",this.value.length)';
   return '<div class="field">' +
-    '<label class="fl">' + label + '</label>' +
-    '<textarea oninput=\'' + onchange + '\'>' + esc(value) + '</textarea>' +
+    '<label class="fl">' + label + count + '</label>' +
+    '<textarea oninput=\'' + handler + '\'>' + esc(value) + '</textarea>' +
   '</div>';
 }
 

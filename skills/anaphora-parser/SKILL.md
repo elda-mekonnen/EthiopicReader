@@ -129,6 +129,8 @@ Example: `ap-op-1` (Apostles, Opening, block 1), `lo-san-3` (Lord, Sanctus, bloc
 
 **Preserve existing content:** If the target JSON already has blocks with Ge'ez/Amharic/transliteration text, copy them over exactly — do not overwrite with empty strings.
 
+**Block length:** Keep each language field **≤ 250 characters** (hard limit 400). Long prayers (Lord's Prayer, Creed, long intercessions) must be split into multiple blocks at sentence/clause boundaries — suffix IDs `<base>a`, `<base>b`, … and keep `speaker` and `type` consistent across parts. After writing, run `python3 data/scripts/lint_block_length.py` and resolve any errors before committing.
+
 **Section structure:**
 ```json
 {
@@ -164,6 +166,7 @@ Example: `ap-op-1` (Apostles, Opening, block 1), `lo-san-3` (Lord, Sanctus, bloc
 ## Verification
 
 - Count total blocks written vs. total numbered paragraphs in the PDF — they should be close (rubrics add extra blocks beyond paragraph count)
+- Run `python3 data/scripts/lint_block_length.py` — must exit 0 (no blocks over 400 chars)
 - Run `npx expo start` and navigate to the anaphora in the app to verify it renders correctly
 - Check that existing Ge'ez/Amharic content was not accidentally overwritten
 
