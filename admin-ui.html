@@ -64,7 +64,6 @@
       flex-shrink: 0;
       position: relative;
     }
-    .panel-files    { width: 190px; min-width: 120px; }
     .panel-sections { width: 220px; min-width: 150px; }
     .panel-blocks   { width: 240px; min-width: 180px; }
     .panel-editor   { flex: 1; flex-shrink: 1; display: flex; flex-direction: column; border-right: none; }
@@ -128,18 +127,23 @@
     .panel-body::-webkit-scrollbar { width: 3px; }
     .panel-body::-webkit-scrollbar-thumb { background: var(--border); }
 
-    /* ── File items ─────────────────────────────────── */
-    .file-item {
-      padding: 7px 12px;
+    /* ── Liturgy picker ─────────────────────────────── */
+    #liturgy-select {
+      height: 30px;
+      width: 200px;
+      font-size: 13px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 4px;
+      padding: 0 28px 0 10px;
       cursor: pointer;
-      color: var(--muted);
-      font-size: 11px;
-      border-left: 2px solid transparent;
-      word-break: break-all;
-      line-height: 1.4;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23555'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 9px center;
     }
-    .file-item:hover { background: var(--surface2); color: var(--text); }
-    .file-item.active { color: var(--accent); border-left-color: var(--accent); background: var(--accent-dim); }
+    #liturgy-select:focus { outline: none; border-color: var(--accent); }
 
     /* ── List items (sections / blocks) ─────────────── */
     .list-item {
@@ -204,6 +208,7 @@
     .b-section { background: #1a160a; color: #C9A84C; }
     .b-blocks  { background: #0d1420; color: #7B9FC4; }
     .b-placeholder { background: #1a1510; color: #9B885C; }
+    .b-over    { background: #2a0e0e; color: var(--danger); }
     
     .condition-summary {
       font-size: 9px;
@@ -213,7 +218,15 @@
 
     /* ── Editor panel ───────────────────────────────── */
     #editor-scroll { flex: 1; overflow-y: auto; }
-    .editor-inner { padding: 20px; max-width: 680px; }
+    .editor-inner { padding: 20px; }
+
+    /* ── Language grid (side-by-side text areas) ─────── */
+    .lang-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 20px;
+    }
+    .lang-grid textarea { min-height: 110px; }
     .editor-placeholder {
       display: flex; align-items: center; justify-content: center;
       height: 100%; color: var(--muted); font-size: 13px;
@@ -228,9 +241,16 @@
     .field-row { display: flex; gap: 12px; }
     .field-row .field { flex: 1; }
     label.fl {
-      display: block; font-size: 10px; font-weight: 700;
+      display: flex; justify-content: space-between; align-items: baseline;
+      font-size: 10px; font-weight: 700;
       text-transform: uppercase; letter-spacing: 0.7px; color: var(--muted); margin-bottom: 5px;
     }
+    .char-count {
+      font-size: 10px; font-weight: 500; color: var(--muted);
+      text-transform: none; letter-spacing: 0;
+    }
+    .char-count.warn  { color: var(--accent); }
+    .char-count.error { color: var(--danger); }
     input[type="text"], select, textarea {
       width: 100%; background: var(--surface); border: 1px solid var(--border);
       color: var(--text); border-radius: 4px; padding: 7px 10px;
@@ -262,6 +282,66 @@
     .btn-save { background: var(--accent); color: #000; }
     .btn-save:hover { opacity: 0.88; }
     #save-hint { font-size: 11px; color: var(--muted); }
+
+    /* ── Header right side ───────────────────────────── */
+    .header-right { display: flex; align-items: center; gap: 12px; }
+    .btn-ghost {
+      padding: 5px 11px; border-radius: 4px;
+      background: var(--surface2); border: 1px solid var(--border);
+      color: var(--text); font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ── Search & Insert modal ───────────────────────── */
+    .modal-backdrop {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.7);
+      display: none; align-items: center; justify-content: center; z-index: 100;
+    }
+    .modal-backdrop.visible { display: flex; }
+    .modal {
+      width: min(720px, 92vw); max-height: 80vh; display: flex; flex-direction: column;
+      background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6); overflow: hidden;
+    }
+    .modal-head {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 16px; border-bottom: 1px solid var(--border);
+    }
+    .modal-head h2 { font-size: 14px; font-weight: 600; color: var(--accent); }
+    .modal-close { background: none; border: none; color: var(--muted); font-size: 20px; cursor: pointer; }
+    .modal-close:hover { color: var(--text); }
+    .modal-tabs { display: flex; border-bottom: 1px solid var(--border); }
+    .modal-tab {
+      flex: 1; padding: 8px 12px; font-size: 12px; font-weight: 600; background: none; border: none;
+      border-bottom: 2px solid transparent; color: var(--muted); cursor: pointer; transition: color 0.15s;
+    }
+    .modal-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+    .modal-tab:hover:not(.active) { color: var(--text); }
+    .modal-search { padding: 10px 16px; border-bottom: 1px solid var(--border); }
+    .modal-search input { width: 100%; box-sizing: border-box; }
+    .modal-list { flex: 1; overflow-y: auto; padding: 8px 0; }
+    .common-row {
+      padding: 10px 16px; border-bottom: 1px solid var(--border); cursor: pointer;
+      display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: start;
+    }
+    .common-row:hover { background: var(--surface2); }
+    .common-row .meta { display: flex; flex-direction: column; gap: 4px; align-items: flex-start; min-width: 80px; }
+    .common-row .chip {
+      font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+      padding: 2px 6px; border-radius: 3px; background: var(--surface2); color: var(--muted); border: 1px solid var(--border);
+    }
+    .common-row .text { font-size: 12px; line-height: 1.5; color: var(--text); overflow: hidden; }
+    .common-row .text .geez { color: var(--accent); margin-bottom: 2px; }
+    .common-row .text .english { color: var(--text); }
+    .common-row .count { font-size: 11px; color: var(--muted); white-space: nowrap; }
+    .section-row {
+      padding: 10px 16px; border-bottom: 1px solid var(--border); cursor: pointer;
+    }
+    .section-row:hover { background: var(--surface2); }
+    .section-row .sec-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
+    .section-row .sec-meta { font-size: 11px; color: var(--muted); }
+    .modal-empty { padding: 30px; text-align: center; color: var(--muted); font-size: 12px; }
+    .modal-hint { padding: 10px 16px 4px; font-size: 11px; color: var(--muted); }
 
     /* ── Toast ───────────────────────────────────────── */
     #toast {
@@ -352,20 +432,20 @@
 
 <header>
   <h1>ቅዳሴ Admin</h1>
-  <span id="status">Select a file to begin</span>
+  <select id="liturgy-select" onchange="selectLiturgyFromDropdown()">
+    <option value="">Select a liturgy…</option>
+  </select>
+  <div class="header-right">
+    <button id="common-blocks-btn" class="btn btn-ghost" onclick="openCommonBlocks()" title="Search and insert blocks or sections from the corpus" style="display:none">Search &amp; insert</button>
+    <span id="status"></span>
+  </div>
 </header>
 
 <div class="layout">
 
   <div class="sidebar-container" id="sidebar">
-    <!-- Column 1: Files -->
-    <div class="panel panel-files" id="panel-files">
-      <div class="panel-head">Files</div>
-      <div class="panel-body" id="file-list"></div>
-      <div class="resize-handle" data-panel="files"></div>
-    </div>
 
-    <!-- Column 2: Sections / Entries -->
+    <!-- Column 1: Sections / Entries -->
     <div class="panel panel-sections" id="panel-sections">
       <div class="panel-head"><span id="sec-label">Sections</span></div>
       <div class="panel-body" id="sections-list"></div>
@@ -387,7 +467,7 @@
   <!-- Column 4: Editor -->
   <div class="panel panel-editor">
     <div id="editor-scroll">
-      <div id="editor-panel" class="editor-placeholder">← Select a file to start editing</div>
+      <div id="editor-panel" class="editor-placeholder">Select a liturgy above to start editing</div>
     </div>
     <div id="save-bar">
       <button class="btn btn-save" onclick="saveFile()">Save to Disk</button>
@@ -436,8 +516,45 @@
 </div>
 
 <script>
+// ── Block-length thresholds (match data/scripts/lint_block_length.py) ─────────
+// Each language field on a prayer block should fit on one screen in presentation mode.
+const SOFT_LIMIT = 250;
+const HARD_LIMIT = 400;
+
+function lenClass(n) {
+  if (n > HARD_LIMIT) return 'error';
+  if (n > SOFT_LIMIT) return 'warn';
+  return '';
+}
+
+function maxBlockLen(b) {
+  return Math.max(
+    (b.geez || '').length,
+    (b.amharic || '').length,
+    (b.english || '').length,
+    (b.transliteration || '').length
+  );
+}
+
+function updateCharCount(id, n) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.textContent = n + ' / ' + SOFT_LIMIT;
+  el.className = 'char-count ' + lenClass(n);
+}
+
+function sectionErrors(sec) {
+  let n = 0;
+  for (const b of (sec.blocks || [])) {
+    if (b.type === 'heading' || b.type === 'rubric' || b.type === 'placeholder') continue;
+    if (maxBlockLen(b) > HARD_LIMIT) n++;
+  }
+  return n;
+}
+
 // ── State ──────────────────────────────────────────────────────────────────────
 let files = [];
+let lintMap = {}; // { 'anaphoras/foo.json': errorBlockCount }
 let currentFile = null;
 let fileData = null;   // mutable JS object mirroring the JSON
 let dirty = false;
@@ -445,6 +562,18 @@ let selSection = null; // selected section or array-entry index
 let selBlock = null;   // block shown in editor (primary selection)
 let selBlocks = new Set(); // all selected block indices (for multi-drag)
 const drag = { fromSection: null, fromBlock: null, fromSectionReorder: null, draggedBlocks: null };
+
+// Static mode: no Node server, files come from data/manifest.json + relative fetches,
+// and "save" becomes a browser download. Detected at boot.
+let STATIC_MODE = false;
+let commonBlocks = [];
+
+// Search & Insert modal state
+let searchTab = 'blocks';        // 'blocks' | 'sections'
+let allFilesCache = null;        // null = not loaded; {path: data} = loaded
+let allFilesLoading = false;
+let allBlocksIndex = [];         // [{block, file, secTitle}, ...]
+let allSectionsIndex = [];       // [{section, file, secTitle}, ...]
 
 // ── Sidebar Collapse & Resize ──────────────────────────────────────────────────
 let sidebarCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
@@ -504,7 +633,7 @@ document.addEventListener('mouseup', () => {
 
 // Restore widths and collapsed state on load
 window.addEventListener('DOMContentLoaded', () => {
-  ['files', 'sections', 'blocks'].forEach(name => {
+  ['sections', 'blocks'].forEach(name => {
     const w = localStorage.getItem('panelWidth-panel-' + name);
     if (w) document.getElementById('panel-' + name).style.width = w + 'px';
   });
@@ -540,7 +669,7 @@ function markDirty() {
 function updateStatus() {
   const el = document.getElementById('status');
   const hint = document.getElementById('save-hint');
-  if (!currentFile) { el.textContent = 'Select a file to begin'; el.className = ''; return; }
+  if (!currentFile) { el.textContent = ''; el.className = ''; return; }
   if (dirty) {
     el.textContent = '● Unsaved changes — ' + currentFile;
     el.className = 'dirty';
@@ -564,9 +693,80 @@ async function apiFetch(method, path, body) {
   return res.json();
 }
 
+async function fetchJson(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error('Failed to fetch ' + path + ' (' + res.status + ')');
+  return res.json();
+}
+
 // ── Boot ───────────────────────────────────────────────────────────────────────
 async function init() {
-  files = await apiFetch('GET', '/api/files');
+  // Probe the dynamic API. If absent, fall back to static manifest.
+  try {
+    files = await apiFetch('GET', '/api/files');
+    STATIC_MODE = false;
+  } catch (e) {
+    STATIC_MODE = true;
+    try {
+      files = await fetchJson('data/manifest.json');
+    } catch (e2) {
+      toast('Failed to load manifest: ' + e2.message, 'err');
+      files = [];
+    }
+  }
+  applyModeToUI();
+  loadAnaphoraDropdown();
+  refreshLint();
+  loadCommonBlocks();
+}
+
+function applyModeToUI() {
+  const btn = document.querySelector('#save-bar .btn-save');
+  if (btn) btn.textContent = STATIC_MODE ? 'Download JSON' : 'Save to Disk';
+}
+
+async function loadCommonBlocks() {
+  try {
+    commonBlocks = STATIC_MODE
+      ? await fetchJson('data/common-blocks.json')
+      : await apiFetch('GET', '/api/file?path=common-blocks.json');
+  } catch (e) {
+    commonBlocks = [];
+  }
+  // Show the button now that files are loaded — modal works even without common blocks
+  const btn = document.getElementById('common-blocks-btn');
+  if (btn) btn.style.display = '';
+}
+
+function computeFileLint(data) {
+  if (!data || !Array.isArray(data.sections)) return 0;
+  const SKIP = new Set(['heading', 'rubric', 'placeholder']);
+  let errors = 0;
+  for (const sec of data.sections) {
+    for (const b of (sec.blocks || [])) {
+      if (SKIP.has(b.type)) continue;
+      if (maxBlockLen(b) > HARD_LIMIT) errors++;
+    }
+  }
+  return errors;
+}
+
+async function refreshLint() {
+  if (STATIC_MODE) {
+    // In static mode we can't fetch all files at once; lint is computed per-file
+    // as files are opened (see updateCurrentFileLint).
+    return;
+  }
+  try { lintMap = await apiFetch('GET', '/api/lint'); }
+  catch (e) { lintMap = {}; }
+  renderFiles();
+}
+
+function updateCurrentFileLint() {
+  if (!currentFile) return;
+  const errs = computeFileLint(fileData);
+  if (errs > 0) lintMap[currentFile] = errs;
+  else delete lintMap[currentFile];
   renderFiles();
   
   // Preload all files into cache for template browsing (async, non-blocking)
@@ -574,6 +774,9 @@ async function init() {
 }
 
 async function preloadFilesCache() {
+  // Skip preloading in static mode (files aren't available via API)
+  if (STATIC_MODE) return;
+  
   for (const filePath of files) {
     // Skip if already cached
     if (localStorage.getItem('fileCache_' + filePath)) continue;
@@ -599,11 +802,50 @@ function isSeasonalsFile() {
   return currentFile && currentFile.includes('seasonals.json');
 }
 
-// ── File List ──────────────────────────────────────────────────────────────────
-function renderFiles() {
-  document.getElementById('file-list').innerHTML = files.map(f =>
-    '<div class="file-item' + (f === currentFile ? ' active' : '') + '" onclick="selectFile(\'' + esc(f) + '\')">' + esc(f) + '</div>'
-  ).join('');
+// ── File List (no-op — replaced by header dropdown) ───────────────────────────
+function renderFiles() {}
+
+// ── Liturgy dropdown ──────────────────────────────────────────────────────────
+async function loadAnaphoraDropdown() {
+  const sel = document.getElementById('liturgy-select');
+
+  // ── Main liturgies ──
+  const grpMain = document.createElement('optgroup');
+  grpMain.label = 'Liturgies';
+  for (const [path, label] of [
+    ['qidan.json', 'Qidan'], 
+    ['serate-qidase.json', 'Serate Qidase'],
+    ['seasonals.json', 'Seasonal Variations']
+  ]) {
+    const opt = document.createElement('option');
+    opt.value = path;
+    opt.textContent = label;
+    grpMain.appendChild(opt);
+  }
+  sel.appendChild(grpMain);
+
+  // ── Anaphoras ──
+  try {
+    const anaphoras = STATIC_MODE
+      ? await fetchJson('data/anaphoras/anaphoras.json')
+      : await apiFetch('GET', '/api/file?path=anaphoras/anaphoras.json');
+    const grpAna = document.createElement('optgroup');
+    grpAna.label = 'Anaphoras';
+    for (const a of anaphoras) {
+      const opt = document.createElement('option');
+      opt.value = 'anaphoras/' + a.id + '.json';
+      opt.textContent = (a.name && a.name.english) || a.id;
+      grpAna.appendChild(opt);
+    }
+    sel.appendChild(grpAna);
+  } catch (e) {
+    toast('Failed to load anaphoras list: ' + e.message, 'err');
+  }
+}
+
+function selectLiturgyFromDropdown() {
+  const sel = document.getElementById('liturgy-select');
+  if (sel.value) selectFile(sel.value);
 }
 
 async function selectFile(path) {
@@ -611,11 +853,19 @@ async function selectFile(path) {
     if (!confirm('Discard unsaved changes to ' + currentFile + '?')) return;
   }
   currentFile = path;
+  const sel = document.getElementById('liturgy-select');
+  if (sel) sel.value = path;
   selSection = null;
   selBlock = null;
   selBlocks = new Set();
   dirty = false;
-  fileData = await apiFetch('GET', '/api/file?path=' + encodeURIComponent(path));
+  
+  // Load file (static or from server)
+  if (STATIC_MODE) {
+    fileData = await fetchJson('data/' + path);
+  } else {
+    fileData = await apiFetch('GET', '/api/file?path=' + encodeURIComponent(path));
+  }
   
   // Cache file data for template browsing (skip if quota exceeded)
   try {
@@ -628,6 +878,7 @@ async function selectFile(path) {
   }
   
   renderFiles();
+  updateCurrentFileLint();
   renderSections();
   renderBlocks();
   renderEditor();
@@ -637,6 +888,10 @@ async function selectFile(path) {
 
 // ── Save ───────────────────────────────────────────────────────────────────────
 async function saveFile() {
+  if (STATIC_MODE) {
+    downloadCurrentFile();
+    return;
+  }
   try {
     await apiFetch('PUT', '/api/file?path=' + encodeURIComponent(currentFile), fileData);
     dirty = false;
@@ -653,9 +908,27 @@ async function saveFile() {
     
     updateStatus();
     toast('Saved!', 'ok');
+    refreshLint();
   } catch (e) {
     toast('Save failed: ' + e.message, 'err');
   }
+}
+
+function downloadCurrentFile() {
+  if (!currentFile || !fileData) return;
+  const json = JSON.stringify(fileData, null, 2) + '\n';
+  const blob = new Blob([json], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = currentFile.split('/').pop();
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  dirty = false;
+  updateStatus();
+  toast('Downloaded ' + a.download + ' — email it to the maintainer', 'ok');
 }
 
 // ── Sections / Entries ─────────────────────────────────────────────────────────
@@ -686,7 +959,9 @@ function renderSections() {
     list.innerHTML = fileData.sections.map((sec, i) => {
       const title = (sec.title && (sec.title.english || sec.title.geez)) || sec.id || 'Section ' + (i + 1);
       const count = (sec.blocks || []).length;
-      return sectionRow(i, esc(title), count + ' block' + (count !== 1 ? 's' : ''));
+      const errs = sectionErrors(sec);
+      const errBadge = errs ? ' <span class="badge b-over" title="' + errs + ' block(s) over ' + HARD_LIMIT + ' chars">' + errs + '</span>' : '';
+      return sectionRow(i, esc(title), count + ' block' + (count !== 1 ? 's' : '') + errBadge);
     }).join('');
     return;
   }
@@ -822,6 +1097,13 @@ function renderBlocks() {
     
     // Optional badge for placeholder blocks
     const optionalBadge = (b.type === 'placeholder' && b.optional) ? '<span class="badge" style="background:#4a4034;color:#9B885C;">optional</span>' : '';
+
+    // Over-limit badge: any language field above HARD_LIMIT chars (skip non-text block types)
+    let overBadge = '';
+    if (b.type !== 'placeholder' && b.type !== 'heading') {
+      const n = maxBlockLen(b);
+      if (n > HARD_LIMIT) overBadge = '<span class="badge b-over" title="' + n + ' chars (max ' + HARD_LIMIT + ')">' + n + '</span>';
+    }
     
     // Show conditions summary for seasonals files
     let conditionsBadge = '';
@@ -852,6 +1134,7 @@ function renderBlocks() {
           optionalBadge +
           speakerBadge +
           conditionsBadge +
+          overBadge +
         '</div>' +
       '</div>' +
       '<div class="actions">' +
@@ -912,6 +1195,261 @@ function addBlankBlock() {
   renderEditor();
   hideBlockModal();
 }
+
+// ── Common blocks (recurring text editors can insert with one click) ──────────
+function openCommonBlocks() {
+  if (!isLiturgical(fileData)) {
+    toast('Open a liturgical file with sections first', 'err');
+    return;
+  }
+  document.getElementById('common-blocks-modal').classList.add('visible');
+  document.getElementById('common-blocks-search').value = '';
+  switchSearchTab('blocks');
+  setTimeout(() => document.getElementById('common-blocks-search').focus(), 0);
+}
+
+function closeCommonBlocks() {
+  document.getElementById('common-blocks-modal').classList.remove('visible');
+}
+
+function switchSearchTab(tab) {
+  searchTab = tab;
+  document.getElementById('tab-blocks').className = 'modal-tab' + (tab === 'blocks' ? ' active' : '');
+  document.getElementById('tab-sections').className = 'modal-tab' + (tab === 'sections' ? ' active' : '');
+  renderSearchResults();
+}
+
+// ── Corpus lazy-loader ────────────────────────────────────────────────────────
+function buildSearchIndex() {
+  allBlocksIndex = [];
+  allSectionsIndex = [];
+  for (const [file, data] of Object.entries(allFilesCache)) {
+    if (!data || !Array.isArray(data.sections)) continue;
+    for (const section of data.sections) {
+      const secTitle = (section.title && (section.title.english || section.title.geez || section.title.amharic)) || section.id || '';
+      allSectionsIndex.push({ section, file, secTitle });
+      for (const block of (section.blocks || [])) {
+        allBlocksIndex.push({ block, file, secTitle });
+      }
+    }
+  }
+}
+
+async function loadAllFilesForSearch() {
+  if (allFilesCache !== null) return true;
+  if (allFilesLoading) return false;
+  allFilesLoading = true;
+  allFilesCache = {};
+  // Seed with whatever is already in memory
+  if (currentFile && fileData) allFilesCache[currentFile] = fileData;
+  for (const f of files) {
+    if (allFilesCache[f]) continue;
+    try {
+      allFilesCache[f] = STATIC_MODE
+        ? await fetchJson('data/' + f)
+        : await apiFetch('GET', '/api/file?path=' + encodeURIComponent(f));
+    } catch (e) { /* skip unreadable files */ }
+  }
+  buildSearchIndex();
+  allFilesLoading = false;
+  return true;
+}
+
+// ── Main search renderer ──────────────────────────────────────────────────────
+function renderSearchResults() {
+  if (searchTab === 'sections') {
+    renderSectionResults();
+  } else {
+    renderBlockResults();
+  }
+}
+
+function renderBlockResults() {
+  const q = (document.getElementById('common-blocks-search').value || '').trim().toLowerCase();
+  const list = document.getElementById('common-blocks-list');
+
+  // No query → show common blocks immediately (already loaded, no corpus needed)
+  if (!q) {
+    if (!commonBlocks.length) {
+      list.innerHTML = '<div class="modal-empty">No common blocks loaded</div>';
+      return;
+    }
+    list.innerHTML = '<div class="modal-hint">Common blocks (appear 3+ times across all files). Type to search all blocks.</div>' +
+      commonBlocks.map((entry, origIdx) => blockRowHtml(entry.block, origIdx, entry.count + '×')).join('');
+    return;
+  }
+
+  // Query present → search full corpus
+  if (allFilesLoading) {
+    list.innerHTML = '<div class="modal-empty">Loading corpus…</div>';
+    return;
+  }
+  if (allFilesCache === null) {
+    list.innerHTML = '<div class="modal-empty">Loading corpus…</div>';
+    loadAllFilesForSearch().then(done => { if (done) renderBlockResults(); });
+    return;
+  }
+
+  const matches = allBlocksIndex.filter(({ block: b }) =>
+    (b.english || '').toLowerCase().includes(q)
+    || (b.geez || '').toLowerCase().includes(q)
+    || (b.amharic || '').toLowerCase().includes(q)
+    || (b.transliteration || '').toLowerCase().includes(q)
+    || (b.type || '').toLowerCase().includes(q)
+    || (b.speaker || '').toLowerCase().includes(q)
+  );
+
+  if (!matches.length) {
+    list.innerHTML = '<div class="modal-empty">No matches</div>';
+    return;
+  }
+
+  // Show up to 200 results to avoid DOM thrash
+  const shown = matches.slice(0, 200);
+  list.innerHTML = shown.map(({ block: b, file, secTitle }, i) => {
+    const meta = esc(file.split('/').pop().replace('.json','')) + (secTitle ? ' · ' + esc(secTitle) : '');
+    return blockRowHtml(b, i, meta, shown);
+  }).join('') + (matches.length > 200 ? '<div class="modal-hint">+ ' + (matches.length - 200) + ' more — refine your search</div>' : '');
+}
+
+function blockRowHtml(b, idx, rightLabel, sourceArray) {
+  const chips = [
+    '<span class="chip">' + esc(b.type || 'prayer') + '</span>',
+    b.speaker ? '<span class="chip">' + esc(b.speaker) + '</span>' : ''
+  ].join('');
+  const text = [
+    b.geez   ? '<div class="geez">'    + esc(b.geez)    + '</div>' : '',
+    b.english ? '<div class="english">' + esc(b.english) + '</div>' : '',
+    (!b.geez && !b.english && b.amharic) ? '<div>' + esc(b.amharic) + '</div>' : ''
+  ].join('');
+  // If sourceArray is provided, onclick uses the array index into allBlocksIndex (search results)
+  // otherwise idx is an index into commonBlocks
+  const handler = sourceArray
+    ? 'insertSearchBlock(' + idx + ')'
+    : 'insertCommonBlock(' + idx + ')';
+  return '<div class="common-row" onclick="' + handler + '">' +
+    '<div class="meta">' + chips + '</div>' +
+    '<div class="text">' + text + '</div>' +
+    '<div class="count">' + rightLabel + '</div>' +
+  '</div>';
+}
+
+function renderSectionResults() {
+  const q = (document.getElementById('common-blocks-search').value || '').trim().toLowerCase();
+  const list = document.getElementById('common-blocks-list');
+
+  if (allFilesLoading) {
+    list.innerHTML = '<div class="modal-empty">Loading corpus…</div>';
+    return;
+  }
+  if (allFilesCache === null) {
+    list.innerHTML = '<div class="modal-empty">Loading corpus…</div>';
+    loadAllFilesForSearch().then(done => { if (done) renderSectionResults(); });
+    return;
+  }
+
+  const src = q
+    ? allSectionsIndex.filter(({ secTitle, file }) =>
+        secTitle.toLowerCase().includes(q) || file.toLowerCase().includes(q))
+    : allSectionsIndex;
+
+  if (!src.length) {
+    list.innerHTML = '<div class="modal-empty">No matches</div>';
+    return;
+  }
+
+  list.innerHTML = src.slice(0, 300).map(({ section, file, secTitle }, i) => {
+    const blockCount = (section.blocks || []).length;
+    return '<div class="section-row" onclick="insertSearchSection(' + i + ')">' +
+      '<div class="sec-title">' + esc(secTitle || section.id || '(unnamed)') + '</div>' +
+      '<div class="sec-meta">' + esc(file.split('/').pop().replace('.json','')) + ' · ' + blockCount + ' block' + (blockCount !== 1 ? 's' : '') + '</div>' +
+    '</div>';
+  }).join('') + (src.length > 300 ? '<div class="modal-hint">+ ' + (src.length - 300) + ' more — refine your search</div>' : '');
+}
+
+// ── Insertion helpers ─────────────────────────────────────────────────────────
+function insertCommonBlock(idx) {
+  const entry = commonBlocks[idx];
+  if (!entry) return;
+  _insertBlock(entry.block);
+  toast('Inserted block', 'ok');
+}
+
+function insertSearchBlock(idx) {
+  const q = (document.getElementById('common-blocks-search').value || '').trim().toLowerCase();
+  const matches = allBlocksIndex.filter(({ block: b }) =>
+    (b.english || '').toLowerCase().includes(q)
+    || (b.geez || '').toLowerCase().includes(q)
+    || (b.amharic || '').toLowerCase().includes(q)
+    || (b.transliteration || '').toLowerCase().includes(q)
+    || (b.type || '').toLowerCase().includes(q)
+    || (b.speaker || '').toLowerCase().includes(q)
+  );
+  const entry = matches[idx];
+  if (!entry) return;
+  _insertBlock(entry.block);
+  toast('Inserted block', 'ok');
+}
+
+function _insertBlock(blockTemplate) {
+  if (selSection === null || !isLiturgical(fileData)) {
+    toast('Select a section first', 'err');
+    return;
+  }
+  const section = fileData.sections[selSection];
+  if (!section.blocks) section.blocks = [];
+  const newBlock = JSON.parse(JSON.stringify(blockTemplate));
+  newBlock.id = uid(fileData.id || 'block');
+  if (newBlock.geez == null)            newBlock.geez = '';
+  if (newBlock.amharic == null)         newBlock.amharic = '';
+  if (newBlock.english == null)         newBlock.english = '';
+  if (newBlock.transliteration == null) newBlock.transliteration = '';
+  const insertAt = (selBlock != null && selBlock >= 0 && selBlock < section.blocks.length)
+    ? selBlock + 1 : section.blocks.length;
+  section.blocks.splice(insertAt, 0, newBlock);
+  selBlock = insertAt;
+  selBlocks = new Set([insertAt]);
+  markDirty();
+  renderBlocks();
+  renderEditor();
+  closeCommonBlocks();
+}
+
+function insertSearchSection(idx) {
+  if (!isLiturgical(fileData)) { toast('Open a liturgical file first', 'err'); return; }
+  const q = (document.getElementById('common-blocks-search').value || '').trim().toLowerCase();
+  const src = q
+    ? allSectionsIndex.filter(({ secTitle, file }) =>
+        secTitle.toLowerCase().includes(q) || file.toLowerCase().includes(q))
+    : allSectionsIndex;
+  const entry = src[idx];
+  if (!entry) return;
+  // Deep-copy with fresh IDs
+  const newSection = JSON.parse(JSON.stringify(entry.section));
+  newSection.id = uid('sec');
+  for (const b of (newSection.blocks || [])) {
+    b.id = uid(fileData.id || 'block');
+  }
+  const insertAt = (selSection != null && selSection >= 0 && selSection < fileData.sections.length)
+    ? selSection + 1 : fileData.sections.length;
+  fileData.sections.splice(insertAt, 0, newSection);
+  selSection = insertAt;
+  selBlock = null;
+  selBlocks = new Set();
+  markDirty();
+  renderSections();
+  renderBlocks();
+  renderEditor();
+  closeCommonBlocks();
+  toast('Inserted section (' + (newSection.blocks || []).length + ' blocks)', 'ok');
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const modal = document.getElementById('common-blocks-modal');
+    if (modal && modal.classList.contains('visible')) closeCommonBlocks();
+  }
+});
 
 function deleteBlock(idx) {
   if (!confirm('Delete this block?')) return;
@@ -1141,7 +1679,7 @@ function renderEditor() {
 
   if (!fileData) {
     panel.className = 'editor-placeholder';
-    panel.innerHTML = '← Select a file to start editing';
+    panel.innerHTML = 'Select a liturgy above to start editing';
     return;
   }
 
@@ -1234,12 +1772,13 @@ function renderEditor() {
         'Reading blocks are placeholders for dynamic Bible readings. The app will display an expandable reading card here with the actual scripture text based on the selected reading slot.' +
         '</div>';
     } else {
-      // Regular blocks show language text areas
-      contentFields = 
-        textArea("Ge\u02bcez", block.geez, 'setBlock("geez",this.value)') +
-        textArea('Amharic', block.amharic, 'setBlock("amharic",this.value)') +
-        textArea('English', block.english, 'setBlock("english",this.value)') +
-        textArea('Transliteration', block.transliteration, 'setBlock("transliteration",this.value)');
+      // Regular blocks show language text areas side-by-side for easy comparison.
+      contentFields = '<div class="lang-grid">' +
+        textArea('English', block.english, 'setBlockText("english",this.value)') +
+        textArea('Amharic', block.amharic, 'setBlockText("amharic",this.value)') +
+        textArea("Ge\u02bcez", block.geez, 'setBlockText("geez",this.value)') +
+        textArea('Transliteration', block.transliteration, 'setBlockText("transliteration",this.value)') +
+        '</div>';
     }
 
     // Conditions UI for blocks with conditions (in seasonals files)
@@ -1290,6 +1829,13 @@ function renderEditor() {
 
 // ── Update helpers (called inline from editor form) ────────────────────────────
 function setBlock(key, val)      { fileData.sections[selSection].blocks[selBlock][key] = val; markDirty(); }
+function setBlockText(key, val)  {
+  fileData.sections[selSection].blocks[selBlock][key] = val;
+  markDirty();
+  renderBlocks();
+  renderSections();
+  updateCurrentFileLint();
+}
 function setSection(key, val)    { fileData.sections[selSection][key] = val; markDirty(); renderSections(); }
 function setSecTitle(lang, val)  { const s = fileData.sections[selSection]; if (!s.title) s.title = {}; s.title[lang] = val; markDirty(); renderSections(); }
 function setRoot(key, val)       { fileData[key] = val; markDirty(); }
@@ -1321,9 +1867,14 @@ function textField(label, value, onchange) {
 }
 
 function textArea(label, value, onchange) {
+  const id = 'cc-' + Math.random().toString(36).slice(2, 9);
+  const len = (value || '').length;
+  const klass = lenClass(len);
+  const count = '<span id="' + id + '" class="char-count ' + klass + '">' + len + ' / ' + SOFT_LIMIT + '</span>';
+  const handler = onchange + ';updateCharCount("' + id + '",this.value.length)';
   return '<div class="field">' +
-    '<label class="fl">' + label + '</label>' +
-    '<textarea oninput=\'' + onchange + '\'>' + esc(value) + '</textarea>' +
+    '<label class="fl">' + label + count + '</label>' +
+    '<textarea oninput=\'' + handler + '\'>' + esc(value) + '</textarea>' +
   '</div>';
 }
 

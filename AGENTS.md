@@ -7,6 +7,18 @@ Uses the [Agent Skills](https://agentskills.io) format. All skills are local in 
 
 - [anaphora-parser](skills/anaphora-parser/SKILL.md) — Parse Ethiopian Orthodox anaphoras from PDF into structured JSON for the Qidase Reader
 
+## Block length
+
+Each language field on a prayer block (`geez`, `amharic`, `english`, `transliteration`) should be **≤ 250 characters** so it renders on one screen in presentation mode at default font size. **Hard limit: 400 characters.** When source text is longer (Lord's Prayer, Creed, long intercessions), split it into multiple blocks at sentence/clause boundaries — suffix IDs (`ap-int-2a`, `ap-int-2b`, …) and keep `speaker` and `type` consistent across the parts.
+
+Run after edits:
+
+```bash
+python3 data/scripts/lint_block_length.py
+```
+
+Exit code 1 if any block exceeds the hard limit.
+
 ## Frontend Design
 
 - [frontend-design](skills/frontend-design/SKILL.md) — Distinctive, production-grade frontend interfaces that avoid generic AI aesthetics

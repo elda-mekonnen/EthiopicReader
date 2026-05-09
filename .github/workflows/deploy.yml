@@ -39,6 +39,22 @@ jobs:
       - name: Disable Jekyll
         run: touch dist/.nojekyll
 
+      - name: Build admin tool (manifest + common blocks)
+        run: node scripts/build-admin-manifest.js
+
+      - name: Stage admin tool into dist/admin
+        run: |
+          mkdir -p dist/admin/data
+          cp admin-ui.html dist/admin/index.html
+          # Copy every data file the admin tool may load. Excludes scripts/ and data_csv/
+          # (already filtered by the manifest builder). Use rsync to preserve subdirs.
+          rsync -a --exclude='scripts' --exclude='data_csv' data/ dist/admin/data/
+
+      - name: Encrypt admin tool with staticrypt
+        env:
+          STATICRYPT_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+        run: npx staticrypt dist/admin/index.html -d dist/admin --template-title "EthiopicReader Admin" --template-color-primary "#C9A84C" --template-color-secondary "#0a0a0a" --remember 15 --config false
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
