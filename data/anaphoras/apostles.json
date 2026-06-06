@@ -19,9 +19,9 @@
           "id": "ap-op-1",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "አኮቴተ ቁርባን ዘአበዊነ ሐዋርያት በረከተ ጸሎቶሙ የሀሉ ምስለ ርዕሰ ሊቃነ ጳጳሳቲነ አባ ማትያስ ወምስለ ሊቀ ጳጳስነ አባ ጴጥሮስ ወምስለ ኵልነ ሕዝበ ክርስቲያን ወይዕቀባ ለሀገሪትነ ኢትዮጵያ ለዓለም ዓለም አሜን።",
-          "amharic": "የአባቶቻችን የሐዋርያት የቁርባን ምስጋና። የፀሎታቸው በረከት በጳጳሳቱ አለቃ በአባ ማትያስ በጳጳሳችን በአባ ጴጥሮስ በሁላችንም ላይ ይደር አገራችንን ኢትዮጵያን ይጠብቃት ለዘላለሙ አሜን።",
-          "english": "The Anaphora of our fathers the Apostles, may the blessing of their prayer be with our rulers and people, unto the ages of ages. Amen.",
+          "geez": "አኮቴተ ቁርባን ዘአበዊነ ሐዋርያት በረከተ ጸሎቶሙ የሀሉ ምስለ ርዕሰ ሊቃነ ጳጳሳቲነ አባ ዕገሌ ወምስለ ሊቀ ጳጳስነ አባ ዕገሌ ወምስለ ኵልነ ሕዝበ ክርስቲያን ወይዕቀባ ለሀገሪትነ ኢትዮጵያ ለዓለም ዓለም አሜን።",
+          "amharic": "የአባቶቻችን የሐዋርያት የቁርናን ምስጋና የጸሎታቸው በረከት በጳጳሳቱ አለቃነ በጳጳሳችን ዕገሌ በሁላችንም ላይ ይደር፣ አገራችንን ኢትዮጵያንም ይጠብቃት ለዘለዓለሙ አሜን፤",
+          "english": "The Anaphora of our fathers the Apostles, may the blessing of their prayers be with our patriarch ... and our archbishop ... and our country Ethiopia, and with the people, world without end. Amen.",
           "transliteration": ""
         },
         {
@@ -47,16 +47,16 @@
           "type": "prayer",
           "speaker": "priest",
           "geez": "አዕኵትዎ ለአምላክነ",
-          "amharic": "ፊጣሪያችንን አመስግኑት",
-          "english": "Give ye thanks unto our God.",
-          "transliteration": "A'ikwutiwo le'amlakine"
+          "amharic": "አምላካችንን አመስግኑት",
+          "english": "You give thanks not our God.",
+          "transliteration": "A'ikwutiwo le'Amlakine"
         },
         {
           "id": "ap-op-5",
           "type": "response",
           "speaker": "congregation",
           "geez": "ርቱዕ ይደሉ",
-          "amharic": "እውነት ነው ይገባዋል።",
+          "amharic": "እውነት ነው ይገባል።",
           "english": "It is right, it is just.",
           "transliteration": "Ritu'i yidelu"
         },
@@ -65,7 +65,7 @@
           "type": "prayer",
           "speaker": "priest",
           "geez": "አልዕሉ አልባቢክሙ",
-          "amharic": "ልቦናችሁ ሰማያዊ ነገር ያስብ።",
+          "amharic": "ልቡናችሁን ከፍ ከፍ አድርጉ፣",
           "english": "Lift up your hearts.",
           "transliteration": "Al'ilu albabeekimu"
         },
@@ -73,10 +73,10 @@
           "id": "ap-op-7",
           "type": "response",
           "speaker": "congregation",
-          "geez": "ብነ ኅበ እግዚአብሔር አምላክነ።",
-          "amharic": "በፈጣሪያችን በእግዚአብሔር ዘንድ ተስፋ አለን።",
+          "geez": "ብነ ኅበ እግዚአብሔር አምላክነ፣",
+          "amharic": "በአምላካችን በእግዚአብሔር ዘንድ አለን፣",
           "english": "We have lifted them up unto the Lord our God.",
-          "transliteration": "Bine habe Igzee'abihér amlakine."
+          "transliteration": "Bine habe Igzee'abihér Amlakine."
         }
       ]
     },
@@ -95,7 +95,7 @@
           "speaker": "congregation",
           "geez": "አቡነ ዘበሰማያት ይትቀደስ ስምከ ትምጻእ መንግሥትከ",
           "amharic": "አባታችን ሆይ! በሰማይ የምትኖር፣ ስምህ ይቀደስ፣ መንገሥትህ ትምጣ፣",
-          "english": "Our Father who art in heaven, hallowed be thy name, Thy kingdom come",
+          "english": "Our Father who art in heaven, hallowed be Thy name, Thy kingdom come",
           "transliteration": "Abune zebesemayat yitqedes simike timtsa'i mengistike"
         },
         {
@@ -123,14 +123,14 @@
           "geez": "ኢታብአነ እግዚኦ ውስተ መንሱት አላ አድኅነነ ወባልሐነ እምኵሉ እኩይ",
           "amharic": "አቤቱ ወደ ፈተና አታግባን፣ ከክፉ ሁሉ አድነን እንጂ፣",
           "english": "And lead us not into temptation but deliver us and rescue us from all evil;",
-          "transliteration": "eetabi'ane egzi'o weste mensut ala adihinene webalihane imkwulu iku'y"
+          "transliteration": "eetabi'ane Egzi'o weste mensut ala adihinene webalihane imkwulu iku'y"
         },
         {
           "id": "ap-lp-5",
           "type": "prayer",
           "speaker": "congregation",
           "geez": "እስመ ዚኣከ ይእቲ መንግሥት ኃይል ወስብሐት ለዓለመ ዓለም።",
-          "amharic": "መንግሥት ያንተ ናትና። ኃይል፣ ምስጋና ለዘለዓለሙ በእውነት።",
+          "amharic": "መንግሥት ያንተ ናትና ኃይል፣ ምስጋና ለዘለዓለሙ አሜን።",
           "english": "For Thine is the kingdom, the power and the glory for ever and ever.",
           "transliteration": "isme zee'ake yi'itee mengist hayl wesibihat le'alem alem."
         }
@@ -152,16 +152,16 @@
           "geez": "በሰላመ ቅዱስ ገብርኤል መልአክ ኦ እግዝእትየ ማርያም ሰላም ለኪ",
           "amharic": "እመቤታችን ቅድስት ድንግል ማርያም ሆይ በመልአኩ በቅዱስ ገብረኤል ሰላምታ ሰላም እልሻለሁ",
           "english": "O Holy Virgin Mary, in the peace of the Angel Gabriel, peace be unto Thee.",
-          "transliteration": "Beselame qidus gebriel mel'ak o egzi'etiye Mariyam selam leki"
+          "transliteration": "Beselame qidus Gebriel mel'ak o egzi'etiye Mariyam selam leki"
         },
         {
           "id": "ap-hm-2",
           "type": "prayer",
           "speaker": "congregation",
           "geez": "ድንግል በኅሊናኪ ወድንግል በሥጋኪ። እመ እግዚአብሔር ጸባዖት ሰላም ለኪ",
-          "amharic": "በሃሳብሽ ድንግል ነሽ በሥጋሽም ድንግል ነሽ። የአሸናፊ የእግዚአብሔር እናት ሆይ ሰላምታ ላንቺ ይገባል።",
+          "amharic": "በሃሳብሽ ድንግል ነሽ በሥጋሽም ድንግል ነሽ። የአሸናፊ የእግዚአብሔር እናት ሆይ ሰላምታ ላንቺ ይገባሻል።",
           "english": "Thou art virgin in spirit as well as in body. O Thou Mother of Perfect God peace be unto Thee.",
-          "transliteration": "dingil behilinaki wedingil besigaki eme egziabiheir tseba'ot selam leki"
+          "transliteration": "dingil behilinaki wedingil besigaki eme Egziabiheir tseba'ot selam leki"
         },
         {
           "id": "ap-hm-3",
@@ -179,7 +179,7 @@
           "geez": "ተፈሥሒ ፍሥሕት ኦ ምልእተ ጸጋ እግዚአብሔር ምስሌኪ።",
           "amharic": "ጸጋን የተመላሽ ሆይ ደስ ይበልሽ እግዚአብሔር ከአንቺ ጋር ነውና",
           "english": "Rejoice O Thou who art full of grace the Lord is with Thee.",
-          "transliteration": "tefesihi fisiht o meli'i'te tsega egziabihear misle'ki"
+          "transliteration": "tefesihi fisiht o meli'i'te tsega Egziabihear misle'ki"
         },
         {
           "id": "ap-hm-5",
@@ -214,18 +214,18 @@
           "id": "ap-pref-1",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "አቤቱ በተወደደ ልጅህ በጌታችን በኢየሱስ እናመሰግንሃለን በኋለኛው ዘመን የምክርህን አበጋዝ መድኃኒትና ቤዛ የሚሆን ልጅህን የሰደድህልን። ይህ ቃል ካንተ የተገኘ ነው በርሱም ሁሉን በፈቃድህ አደረግህ።",
-          "english": "We give Thee thanks, O Lord, in Thy beloved Son our Lord Jesus, Whom in the last days Thou sent unto us, Thy Son, the Saviour and Redeemer, the messenger of Thy counsel.",
+          "geez": "ነአኩተከ እግዚኦ በፍቁር ወልደከ እግዚእነ ኢየሱስ ዘበደኃሪ መዋዕል ፈኖከ ለነ ወልደከ መድኀነ ወመቤዝወ መልአከ ምክርከ፣ ",
+          "amharic": "አቤቱ በተወደደ ልጅህ በጌታችን በኢየሱስ ክርስቶስ እናመሰግንሃለን በኋለኛው ዘመን የምክርህን አበጋዝ መድኃኒትና ቤዛ የሚሆን ልጅህን የሰደድህልን። ",
+          "english": "We give Thee thanks, O Lord, in Your beloved Son our Lord Jesus, Whom in the last days You did send unto us, Your Son, the Savior and Redeemer, the messenger of Your counsel.",
           "transliteration": ""
         },
         {
           "id": "ap-pref-2",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "This Word is He, Who is from Thee, and through Whom Thou made all things according to Thy will.",
+          "geez": "ዝ ቃል እንተ እምኔከ ውእቱ ወቦቱ ኩሎ ገበርከ በፈቃድከ።",
+          "amharic": "ይህ ቃል ካንተ የተገኘ ነው በርሱም ሁሉን በፈቃድህ አደረግህ።",
+          "english": "This Word is He, Who is from You, and through Whom You did make all things according to Your will.",
           "transliteration": ""
         }
       ]
@@ -243,26 +243,26 @@
           "id": "ap-int-1",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "በአንተ ብፁዕ ወቅዱስ አባ ማትያስ፣ ወብፁዕ ሊቀ ጳጳስነ አባ ጴጥሮስ፣",
-          "amharic": "ብፁዕ ቅዱስ ስለሚሆን ስለ ርእሰ ሊቃነ ጳጳሳት ስለ አባ ማትያስ ብፁዕም ስለሚሆን ስለ አባ ጴጥሮስ በጸሎታቸውና",
-          "english": "For the sake of the blessed and holy Patriarch Abba and the blessed Archbishop Abba, while they yet give Thee thanks in their prayer and their supplications: Stephen the first martyr, Zacharias the priest and John the Baptist.",
-          "transliteration": "Beinte bitsu'i weqidus Abba Matyas webitsu'i leeqe papasine Abba Petros"
+          "geez": "በአንተ ብፁዕ ወቅዱስ አባ ዕገሌ ፣ ወብፁዕ ሊቀ ጳጳስነ አባ ዕገሌ፣ እንዘ የአኵቱከ በጸሎቶሙ ወበስእለቶሙ እስጢፋኖስ ቀዳሜ ሰማዕት፣ ዘካርያስ ካህን ወዮሐንስ መጥምቅ",
+          "amharic": "ብፁዕ ቅዱስ ስለሚሆን ስለ ርእሰ ሊቃነ ጳጳሳት ስለ አባ ዕገሌ ብፁዕም ስለሚሆን ስለ አባ ዕገሌ በጸሎታቸውና በልመናቸው ሲያመስግኑህ የሰማዕታት መጀመሪያ እስጢፋኖስ። ካህን ዘካርያስና መጥምቁ ዩሐንስ",
+          "english": "For the sake of the blessed and holy Patriarch Abba... and the blessed Archbishop Abba ..., while they yet give You thanks in their prayer and their supplications: Stephen the first martyr, Zacharias the priest and John the Baptist.",
+          "transliteration": "Beinte bitsu'i weqidus Abba ... webitsu'i leeqe papasine Abba ... inze ye'akwutuke betselotomu webes'iletomu Isteefanos qedame sema'it. Zekarias kahin weyohanis metmiq. "
         },
         {
           "id": "ap-int-2",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "እንዘ የአኵቱከ በጸሎቶሙ ወበስእለቶሙ እስጢፋኖስ ቀዳሜ ሰማዕት፣ ዘካርያስ ካህን ወዮሐንስ መጥምቅ",
-          "amharic": "በልመናቸው ሲያመስግኑህ የሰማዕታት መጀመሪያ እስጢፋኖስ። ካህን ዘካርያስና መጥምቁ ዩሐንስ",
+          "geez": "ወበእንተ ኵሎሙ ቅዱሳን ወሰማዕት እለ አዕረፉ በርትዕት ሃይማኖት፤ ማቴዎስ ወማርቆስ ሉቃስ ወዮሐንስ ፬ቱ ወንጌላዉያን፤ ማርያም ወላዲት አምላክ፤ ስምዖን ጴጥሮስ ወእንድርያስ ያዕቆብ ወዮሐንስ ፊልጳስ ወበርቱሎሚዎስ ቶማስ ወማቴዎስ ታዱዎስ ወናትናኤል ወያ ዕቆብ ወልደ አልፊዮስ ወማትያን ፲ወ፪ቱ ሐዋርያት፤ ወያዕቆብ ሐዋርያ እኁሁ ለእግዚእነ ኤጲስ ቆጶስ ዘኢየሩሳሌም ጳዉ ስ ወጢሞቴዎስ ሲላስ ወበርናባስ ቲቶ ፊልሞና ወቀሌምንጦስ ፸ቱ ወ፪ቱ አርድእት፤ ፭ቱ ፻ ቢጽ፫ቱ ፻ ፲ወ፰ቱ ርቱዓነ ሃይማኖት ፤ ጸሎተ ኵሎሙ ይብጽሐነሕ ወምስሌሆሙ ኪያነ ሐውጽ፤",
+          "amharic": "በሃይማኖት ስላረፉ  ስለ ቅዱሳናን ስለ ሰማዕታት ሁሉ፤ አራቱ ወንጌላውያን ማቴዎስና ማርቆስ ሉቃስና ዮሐንስ፤ አምላክን የወለደኽ ማርያም ጴጥሮስ የተባለም ስምዖን፤ እንዲርያስ ያዕቆብና ዮሐንስ፤ ፊሊጳስና በርተሎሚዎስ፤ ታዴዎስ ማቴዎስ፤ ናትናኤል ፤ የአልፍዎስ ልጅ ያዕቆብ ማትያስ ፡ ዐሥራ ሁሉቱ ሐዋርያት፤ የኢየሩሳሌሙ ኤጲስ ቆጶስ ጴጥሮስ ወንድም ሐዋርያ ያዕቆብ፤ ጳዉሎስ፤ ጢሙቴዎስ፤ ሲላስና በርናባስ ቲቶ ፊልሞና ቀሌምንጦስም ሰባ ሁሉቱ አርድእት አምስት መቶ ባልንጀሮቻቸው ሃይማኖታቸው የቀና ሃሰት ሦስት መቶ  አሥራ ስምንት  ሊቃውንት፣ የሁሉም ጸሎት ትድረሰን ከእነሱም ጋራ እኛን ጎብኝ።",
           "english": "And for the sake of all the saints and martyrs who have gone to their rest in faith: Matthew and Mark, Luke, and John, the four Evangelists; Mary the mother of God, Simon Peter and Andrew, James and John, Philip and Bartholomew, Thomas and Matthew, Thaddaeus and Nathanael, James the son of Alphaeus and Matthias, the twelve Apostles; and James the Apostle, brother of the Lord, Bishop of Jerusalem: Paul, Timothy, Silas, and Barnabas; Titus, Philemon, and Clement, the seventy-two disciples, the five hundred brethren, the three hundred and eighteen Orthodox; may the prayers of them all come unto us and visit us together with them.",
-          "transliteration": "inze ye'akwutuke betselotomu webes'iletomu Isteefanos qedame sema'it. Zekarias kahin weyohanis metmiq."
+          "transliteration": ""
         },
         {
           "id": "ap-int-3",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
+          "geez": "ወተዘከር እንተ ላዕሉ ኩሉ ዘሐዋርያት ቤተ ክርስቲያን በሰላማ ወበክቡር ደም እንተ በክርስቶስ ተጋብረ፤",
+          "amharic": "ከሁሉ በላይ የምትሆን የሐዋርያትንም ቤተክርስቲያን አስብ፤ በፍቅርዋ  በተደረገው በከበረ ደም፤\n",
           "english": "And remember Thou the peace of the universal apostolic church, which was made by Christ through His precious blood.",
           "transliteration": ""
         },
@@ -270,9 +270,9 @@
           "id": "ap-int-4",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
-          "english": "Remember, Thou, all the patriarchs, archbishops, bishops, priests, and deacons who keep straight the way of the true word.",
+          "geez": "ተዘከር ኵሎ ሊቃነ ጳጳሳት፤ ጳጳሳት ኤጲስቆጳሳት  ቀሳውስት ወዲያቆት እለ ያሬትዑ  ፍኖተ ቃል ዘበአማን",
+          "amharic": "በውነት የቃልን መንገድ የሚያቀኑ ሊቃነ ጳጳሳቱን ጳጳሳቱን ኤጲስቆጳሳቱን ቀሳውቱንና ዲያቆናቱንም ሁሉ አስብ ",
+          "english": "Remember, all the patriarchs, archbishops, bishops, priests, and deacons who keep straight the way of the true word.",
           "transliteration": ""
         },
         {
@@ -284,109 +284,109 @@
           "id": "ap-int-5",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "O holy Trinity, Father, Son, and Holy Spirit, bless Thy people, beloved Christians, with heavenly and earthly blessings.",
+          "geez": "ኦ ሥሱስ ቅዱስ አብ ወወልድ ወመንፈስ ቅዱስ ባርክ ዲበ ሕዝብከ ፍቁራን ክርስቶሳውያን በበረከተ ሰማያውያን ወምድራውያን፣",
+          "amharic": "ልዩ ሦስት የምት ሆን አብ ወልድ መንፈስ ቅዱስ ሆይ፣ የሚፋቀሩ የክርስቶስ ወገኖች የሚሆኑ ሕዝብህን በሰማያውያንና በምድራውያን በረከት ባርክ",
+          "english": "O Holy Trinity, Father, Son, and Holy Spirit, bless Thy people, beloved Christians, with blessings heavenly and earthly.",
           "transliteration": ""
         },
         {
           "id": "ap-int-6",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "And send upon us the grace of the Holy Spirit, and keep the doors of Thy holy church open unto us in mercy and in faith; and perfect unto us the faith of Thy holy Trinity unto our last breath.",
+          "geez": "ወፈኑ ሳዕሌነ ጸጋ መንፈስ ቅዱስ፤ ወረሲ ኅዋኅወ ቤተ ክርስቲያንክ ቅድሰት ርኅዋተ ለነ በምሕረት ወአሚን፣ ወፈጽም ለነ አሚነ ሥላሴከ ቅድሰት እስከ ደኃሪት እስትንፋስ፤\n",
+          "amharic": "በእኛ ላይም የመንፈስ ቅዱስን ጸጋ ላክ፣ የቅድስት ቤተ ክርስትያንህንም ደጆች በምሕረትና በሃይማኖት እንዲከፈቱ አድርግልን፣ እስክ መጨረሻዪቱ ሕቅታም ድረስ ልዩ ሦስትነት ህን ማመንን ፈጽምልን፤",
+          "english": "And send upon us the grace of the Holy Spirit, and keep the doors of Your holy church open unto us in mercy and in faith; and perfect unto us the faith of Thy Holy Trinity unto our last breath.",
           "transliteration": ""
         },
         {
           "id": "ap-int-7",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "O my Lord Jesus Christ, visit the sick of Thy people; heal them; and guide our fathers and our brethren who have journeyed, becoming strangers: bring them back to their dwelling places in peace and in health.",
+          "geez": "ኦ እግዚእየ ኢየሱስ ክርስቶስ ሐወጽ ሕሙማነ ሕዝብከ ፈውሶሙ፣ ወምርሆሙ ለአበዊነ፣ ወለ አኃዊነ እለሖሩ ወተእንገዱ፣ ወሚጦሙ ኀበ ማኅደሪሆሙ በሰላም ወበ ጥዒና፤",
+          "amharic": "ጌታዬ ኢየሱስ ክርስቶስ ሆይ የታመሙ ወገኖች ህን ጎብኝ፣ የሄዱትንና እንግዶች የሆኑትን አባቶቻችንን ወንድሞቻችንን መርተህ በሰላምና በጤና ወደ ቤታቸው መልሳቸው",
+          "english": "O my Lord Jesus Christ, visit the sick of Your people; heal them; and guide our fathers and our brethren who have gone forth and became strangers: bring them back to their dwelling places in peace and in health.",
           "transliteration": ""
         },
         {
           "id": "ap-int-8",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Bless the airs of heaven, and the rains and the fruits of the earth of this year, in accordance with Thy grace, and make joy and gladness prevail perpetually on the face of the earth.",
+          "geez": "ባርክ ነፍሳተ ሰማይ፣ ወዝናማተ ወፍሬያተ ምድር ዘዛቲ ዓመት በከመ ጸጋከ ወረሲ ፍግዓ ወተድላ ወተ ዲበ ገጻ ለምድር፣",
+          "amharic": "የሰማዩን ነፋስ ባርክ፣ ዝናሙንም በዚህች ዓመት የሚያፈራውን የምድሩን ፍሬ እንደ ቸርነትህ ባርክ፣ ዘወትር ተድላንና ደስታን አድርግ፣ ",
+          "english": "Bless the airs of heaven, and the rains and the fruits of the earth of this year, in accordance with Your grace, and make joy and gladness prevail perpetually on the face of the earth.",
           "transliteration": ""
         },
         {
           "id": "ap-int-9",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "And confirm for us Thy peace. Turn the hearts of mighty kings to deal kindly with us always.",
+          "geez": "ወአጽንዕ ለኒ ሰሳመከ ሚጥልበ ኃያላን ሰአሠ ንዮ ላዕሌነ በኵሉ ጊዜ",
+          "amharic": "ሰላምህንም አጽናልን፣ ሁል ጊዜ ለኛ በጎ ነገርን ሊያደርጉልን ጽኑዓን የሚሆኑ የኃያላኑን ልቡና መልስ፤",
+          "english": "And establish for us Your peace. Turn the hearts of mighty kings to deal kindly with us always.",
           "transliteration": ""
         },
         {
           "id": "ap-int-10",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Grant peace to the scholars of the church, who are continually gathered in Thy holy church; to all, to each by their several names, in the presence of powerful rulers, O our God, increase Thy peace.",
+          "geez": "ጸጉ ሰላሞመ ለሊቃዉንተ ቤተ ክርስቲያን እለ  ጉቡአን ዉስተ ቤተ ክርስቲያንከ ቅድስት ኵሎ ጊዜ፤ ለኵሎ ለለ፩ዱ በአስማቲሆሙ በቅድመ ኃያላን አምላክነ አንኅሎሙ",
+          "amharic": "በቅድስት ቤተ ክርስቲያንህ ሁልጊዜ ለሚሰበሰቡ ለቤተ ክርስትያን ሊቃውንት ፍቅርን ስጥ፣ ለሁሉም ለያንዳንዱ በየስማቸው ኃያላን በሚሆኑ ፊት ሰላምን አብዛላቸው",
+          "english": "Grant peace to the scholars of the church, who are continually gathered in Your holy church; to all, to each by their names, in the presence of powerful rulers, O our God, increase Your peace.",
           "transliteration": ""
         },
         {
           "id": "ap-int-11",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Rest the souls of our ancestors, both our brothers and sisters who have fallen asleep and gained their rest in the right faith.",
+          "geez": "ወአዕርፍ ነፍሳተ አበዊነ ወአኃዊነ ወአኅቲነ እለኖሙ ወአእረፉ በርትዕት  ሃይማኖት፤",
+          "amharic": "አምላካችን ሆይ፣ በቀናች ሃይማኖት ሆነው ያንቀላፉትንና ያረፉትን ያባቶቻችንንና የወንድሞቻችንን የእኅቶቻችንንም ነፍስ አሳርፍ፤",
+          "english": "Rest the souls of our brothers and sisters ancestors, who have fallen asleep and gained their rest in the right faith.",
           "transliteration": ""
         },
         {
           "id": "ap-int-12",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "And bless those who give gifts of incense, bread and wine, ointment and oil, decorations and reading books, and vessels for the sanctuary, that Christ our God may give them their reward in the heavenly Jerusalem.",
+          "geez": "ወባርክ ዲላ እለ ያስተነትኑ በዕጣን ወቁርባን ወወይን ወቀብዕ ወዘይት ወመንጥዋልዕ ወመጻሕፍተ ምንባባት ወንዋያተ መቅደስ ከመ ክርስቶስ አምላክነ ይዕሥዮሙ በኢየሩሳሌም ሰማያዊት፤",
+          "amharic": "አምላካችን ክርስቶስ በኢየሩሳሌም ሰማያዊት ዋጋቸውን ይከፍላቸው ዘንድ ዕጣንና ቁርባን፣ ወይንና ሜሮን ዘይትም መጋረጃም የንባብ መጻሕፍቶችን የቤተ መቅደስን ንዋያት በመስጠት የሚያገለግሉትንም ባርክ፤",
+          "english": "And bless those who give gifts of incense, bread and wine, ointment and lamp oil, hangings and reading books, and vessels for the sanctuary, that Christ our God may give them their reward in the heavenly Jerusalem.",
           "transliteration": ""
         },
         {
           "id": "ap-int-13",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "And all of them that are assembled with us to entreat for mercy, Christ our God have mercy upon them: and all them that give alms before Thine awful and terrifying throne, receive.",
+          "geez": "ወለኵሎሙ እለ ተጋብኡ ምስሌነ  ይኅሥሡ ምሕረት ክርስቶስ አምላክነ ተሣሃል ላዕሌሆሙ ወለኵሎሙ እለ አምጹኦ ምጽዋተ በቅድመ መንበርከ መፍርህ ወመደንግፅ ተወከፎሙ፤ ",
+          "amharic": "ይቅርታን ያገኙ ዘንድ ከእኛ ጋራ የተሰበሰቡትንም ሁሉ አምላካችን ክርስቶስ ሆይ ይቅር በላቸው፣ በሚያስፈራን በሚያስደነግጥ በመንበርህ ፊት ምጽዋትን ያመጡትንም ሁሉ ተቀበላቸው፣",
+          "english": "And all of them that are assembled with us to entreat for mercy, Christ our God have mercy upon them: and all them that give alms before Your awful and terrifying throne, receive.",
           "transliteration": ""
         },
         {
           "id": "ap-int-14",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "And comfort every straitened soul, they who are in chains, and they who are in exile or captivity.",
+          "geez": "ወእንኂ ለኵላ ነፍስ ዕፅብት ወእለ እሡራን በመዋቅሕት  ወእለ ሀለዉ ውስት ስደት ወፄዋዌ",
+          "amharic": "የተጨነቀችዪቱን ነፍስ ሁሉ አሳርፍ፣ በሰንሰለት የታሠሩትን በስደትና በምርኮ ያሉትንም፣",
+          "english": "And comfort every straitened soul, them that are in chains, and they who are in exile or captivity.",
           "transliteration": ""
         },
         {
           "id": "ap-int-15",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "And them that are held in bitter servitude, our God, deliver them in Thy mercy. And all of them that have entrusted it to us to remember them in our supplications to Thee O our Master Jesus Christ, remember them in Thy heavenly kingdom, and remember me, thy sinful servant.",
+          "geez": "ወእለ እኁዛን በቅኔ መሪር ሃን  አምላክነ   አድኅኖሙ  በምሕረትከ፤ ኦ ሊቅነ ኢየሱስ ክርስቶስ ለኵሎሙ እለ አዘዙነ  ከመ ንዝከሮሙ በጊዜ አስተብቁፆትነ ኅቤከ ተዘከሮሙ በመንግሥትከ ሰማያዊት፣ ወሊተኒ ለኃጥእ ገብርከ ተዘከረኒ ",
+          "amharic": "መሪር በሆነ አገዛዝ የተያዙትንም አምላካችን ሆይ በቸርነት ህ አድናቸው፣ መምህራችን ኢየሱስ ሆይ ወዳንተ በምንማልድበት ጊዜ እንድናስባቸው ያዘዙንን ሁሉ በሰማያዊት መንግሥትህ አስባቸው፣ ኃጥእ አገልጋይህን እኔንም አስበኝ፣",
+          "english": "And them that are held in bitter servitude, our God, deliver them in Your mercy. And all of them that have entrusted it to us to remember them in our supplications to You O our Master Jesus Christ, remember them in Your heavenly kingdom, and remember me, thy sinful servant.",
           "transliteration": ""
         },
         {
           "id": "ap-int-16",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "ኦ እግዚኦ አድኅን ሕዝበከ ወባርክ ርስተከ",
-          "amharic": "አቤቱ ሕዝብህን አድን ርስትህንም ባርክ።",
-          "english": "O Lord, save thy people and bless Thine inheritance, feed them and lift them up for ever.",
-          "transliteration": "O igzio adihin hizibike webarik risteke"
+          "geez": "ኦ እግዚኦ አድኅን ሕዝበከ ወባርክ ርስተከ፤ ረዓዮሙ ወአልዕሎሙ እስከ ለዓለም፤",
+          "amharic": "አቤቱ ሕዝብህን አድን ርስትህንም ባርክ ጠብቃቸው እስከ ዘለዓለምም ከፍ ከፍ አድርጋቸው፣",
+          "english": "O Lord, save Your people and bless Your inheritance, feed them and lift them up for ever.",
+          "transliteration": "O Igzio adihin hizibike webarik risteke, re'iyomu we'alilomu iske le'alem"
         }
       ]
     },
@@ -403,8 +403,8 @@
           "id": "ap-san-1",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
+          "geez": "መሐሮሙ እግዚኦ ወተሣሃሎሙ ለሊቃነ ጳጳሳት፤ ጳጳሳት ኤጲስቆጶሳት   ቀሳውስት ወዲያቆናት ወኵሎሙ ሕዝብ ክርስቲያን።",
+          "amharic": "አቤቱ የጳጳሳቱን አለቆች ጳጳሳቱንና ኤጲስቆጶሳቱን  ቀሳውስትና ዲያቆናቱን የክርስቲያንም ወገኖቸ ሁሉ ማራቸው፤ ይቅርም በላቸው።",
           "english": "Lord pity and have mercy upon the patriarchs, archbishops, bishops, priests, deacons and all the Christian people.",
           "transliteration": ""
         },
@@ -412,35 +412,35 @@
           "id": "ap-san-2",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "To these and to all grant rest to their souls, and have mercy upon them. Thy Son Whom Thou did send from heaven to the womb of a virgin, was conceived in her womb, and was made flesh and Thy Son became known by the Holy Spirit.",
+          "geez": "ለእሉኒ ወለኵሎሙ አዕርፍ ነፍሶሙ ወተሣሃሎሙ ዘፈኖከ እምሰማይ   ወልድከ ዉስት ማኅፀነ ድንግል ተፀውረ በከርሥ (ወልድቱ) ተዐውቀ እመንፈስ ቅዱስ፤ ",
+          "amharic": "የእሊህንም የሁሉንም ነፍሳቸውን አሳርፍ፤ ይቅርም በላቸው ልጅህን ከሰማይ ወደ ድንግል ማኅፀን የሰደድኸው በማኅፀን ተወሰነ ፤ ሥጋም ሆነ፤ ልጅህም (መወለዱም) በመንፈስ ቅዱስ ታወቀ ፤",
+          "english": "To these and to all grant rest to their souls, and have mercy upon them. Your Son Whom You did send from heaven to the womb of a virgin, was conceived in her womb, and was made flesh and Your Son became known by the Holy Spirit.",
           "transliteration": ""
         },
         {
           "id": "ap-san-3",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
-          "english": "Ye that are sitting, stand up.",
+          "geez": "እለ ትነብሩ ተንሥኡ",
+          "amharic": "የተቀመጣችሁ ተነሡ፤",
+          "english": "You that are sitting, stand up.",
           "transliteration": ""
         },
         {
           "id": "ap-san-4",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "There stand before Thee a thousand thousands and ten thousand times ten thousand, both the holy angels and archangels and Thy honourable beasts, each with six wings.",
+          "geez": "ለከ ለዘይቀውሙ ቅድሜከ እልፍ አእላፋት  ወትእልፊተ  አእላፋት ቅዱሳን  መላእክት ወሊቃነ መላእክት ወክቡራን እንስላከ እለ ፮ቱ ክነፊሆሙ ሱራፌል ወኪሩቤል፤",
+          "amharic": "አእላፈ አእላፋትና  ትእልፈተ አእላፋት  የሚሆኑ ቅዱሳን  መላእክት የመላእስክትም አለቆች ክንፋቸው ስድስት የሚሆን ክቡራን አርባዕቱ እንሰሳም ከፊትህ ለሚቆሙሉህ ለአንተ ፤",
+          "english": "There stand before You a thousand thousands and ten thousand times ten thousand, both the holy angels and archangels and Your honourable beasts, each with six wings.",
           "transliteration": ""
         },
         {
           "id": "ap-san-5",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
+          "geez": "ውስተ ጽባሕ ነጽሩ፤",
+          "amharic": "ወደ ምሥራቅ ተመልከቱ ፤",
           "english": "Look to the east.",
           "transliteration": ""
         },
@@ -448,8 +448,8 @@
           "id": "ap-san-6",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "በ፪ኤ ክነፊሆሙ ይከድኑ ገጾሙ፤ ወበ፪ኤ ክነፊሆሙ ይከድኑ እግሮሙ፤ ወበ፪ኤ (ክነፊሆሙ) ክነፍ ይሠሩ እምጽንፍ እስከ አጽናፈ ዓለም፤",
+          "amharic": "በሁለት ክንፋቸው ፊታቸውን ይሸፍናሉ፤ በሁለት ክንፋቸው እግራቸውን ይሸፍናሉ፤ በሁለት ክንፋቸው ከዳርቻ እስከ ዓለም ዳርቻ ይወዳሉ ።",
           "english": "With two of their wings they cover their face, with two of their wings they cover their feet, and with two of their wings they fly from end to end of the world.",
           "transliteration": ""
         },
@@ -457,8 +457,8 @@
           "id": "ap-san-7",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
+          "geez": "ንጽር",
+          "amharic": "እናስተውል ",
           "english": "Let us give heed.",
           "transliteration": ""
         },
@@ -466,37 +466,37 @@
           "id": "ap-san-8",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "And they all constantly hallow and praise Thee, with all them that hallow and praise Thee.",
+          "geez": "ወዘልፈ እንከ ኵሎሙ ከመ ኪያከ ይቄድሱ ወይዌድሱ ወምስለ ኵሎሙ እለ ይቄድሱከ ወይዌድሱከ፤",
+          "amharic": "ሁሉም ዘወትር አንተን ከሚቀድሱህና ከሚያመሰግኑህ ሁሉ ጋራ እንዲቀድሱና እንዲያም ስሙን፤",
+          "english": "And they all constantly hallow and praise You, with all them that hallow and praise You.",
           "transliteration": ""
         },
         {
           "id": "ap-san-9",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Receive also our hallowing which we utter unto Thee: Holy, holy, holy, perfect Lord of hosts.",
+          "geez": "ተወከፍ ዘበእነዊሃ ቅዳሴ እለ ዘንብለከ ቅዱስ ቅዱስ ቅዱስ እግዚአብሔር ጸባዖት ፍጹም፤",
+          "amharic": "ዳግመኛ ቅዱስ ቅዱስ ቅዱስ ፍጹም አሸናፊ እግዚአብሔር የምንልህን የኛንም ምስጋና ተቀበል፤",
+          "english": "Receive also our hallowing which we utter unto You: Holy, holy, holy, perfect Lord of hosts.",
           "transliteration": ""
         },
         {
           "id": "ap-san-10",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
-          "english": "Answer ye.",
+          "geez": "አውሥኡ ።",
+          "amharic": "ተሰጥዎውን መልሱ ።",
+          "english": "Answer you.",
           "transliteration": ""
         },
         {
           "id": "ap-san-11",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
-          "english": "Holy, holy, holy, perfect Lord of hosts, heaven and earth are full of the holiness of Thy glory.",
-          "transliteration": ""
+          "geez": "ቅዱስ ቅዱስ ቅዱስ እግዚአብሔር ጸባዖት ፍጹም ምሉዕ ሰማያት ወምድረ ቅድሳተ ስብሐቲከ፤",
+          "amharic": "ቅዱስ ቅዱስ ቅዱስ ፍጹም አሸናፊ እግዚአብሔር የሰማይና የምድር ምስጋና በሰማይና በምድር የመላ ነው።",
+          "english": "Holy, holy, holy, perfect Lord of hosts, heaven and earth are full of the holiness of Your glory.",
+          "transliteration": "Qidus qidus qidus Igzee'abhihér tseba'ot fitsum milu'l semayate wemidre qidisate sibhateeke"
         }
       ]
     },
@@ -513,19 +513,19 @@
           "id": "ap-psn-1",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Truly heaven and earth are full of the holiness of Thy glory, through our Lord, God, and Saviour Jesus Christ, Thy holy Son. He came and was born of a virgin that He might fulfil Thy will and make a people for Thee.",
+          "geez": "አማን መልዐ ሰማያት ወምድረ ቅድሳተ ስብሐቲከ፣ በእግዚእነ ወአምላክነ ወመድዐኒነ ኢየሱስ ክርስቶስ ቅዱስ ወልድከ መጽአ ወእም ድንግል ተወለደ ከመ ፈቃደከ ይፈጽም ወአሕዘበ ለከ ይግበር፤",
+          "amharic": "በእውነት ምስጋና በጌታችን በአምላካችንና በመድኃኒታችን በኢየሱስ ክርስቶስ በእውነት በሰማይና በምድር የመላ ቅዱስ ልጅህ መጣ ከድንግልም ተወለደ ፈቃድህን ይፈጽም ዘንድ ሕዝብህንም ላንተ ያደርግ ዘንድ ።",
+          "english": "Truly heaven and earth are full of the holiness of Your glory, through our Lord, God, and Savior Jesus Christ, Your holy Son. He came and was born of a virgin that He might fulfil Your will and make a people for You.",
           "transliteration": ""
         },
         {
           "id": "ap-psn-2",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
-          "english": "Remember us all in Thy kingdom; remember us, Lord, Master, in Thy kingdom; remember us, Lord, in Thy kingdom, as Thou remembered the thief on the right hand when Thou was on the tree of the holy cross.",
-          "transliteration": ""
+          "geez": "ተዘከረን እግዚኦ በውስተ መንግሥትከ፤ ተዘከረን እግዚኦ ሊቅ (በውስተ መንግሥትከ)፤ ተዘከረን እግዚኦ በውስተ መንግሥትከ፤ በከመ ተዘከርከ ለፈያታዊ ዘየማን እንዘ ሀሎከ ዲበ ዕፀ መስቀል ቅዱስ።",
+          "amharic": "አቤቱ በመንግሥትህ አስበን፤ ሊቅ ሆይ አቤቱ በመንግሥትህ አስበን፤ ቅዱስ በሚሆን በዕፀ መስቀል ላይ ሳለህ ፈያታዊ ዘየማንን እንዳ ሰብከው አቤቱ በመንግሥትህ አስበን ።",
+          "english": "Remember us all in Your kingdom; remember us, Lord, Master, in Your kingdom; remember us, Lord, in Your kingdom, as You remembered the thief on the right hand when You were on the tree of the holy cross.",
+          "transliteration": "Tezekerene Igzee'o bewiste mengistike, tezekerene Igzee'o Liq (bewiste mengistike), tezekerene Igzee'o bewiste mengistike, bekeme tezekerke lefiyatawi zeyiman inze haloke dibe its'e meskel qidus."
         }
       ]
     },
@@ -547,8 +547,8 @@
           "id": "ap-inst-1",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ሰፍሐ እደዊሁ ለሕማም፤ (ሐሚሞ) ከመ ሕሙማነ ያድኅን እለ ተአከለ በላዕሌሁ፤",
+          "amharic": "በርሱ ያመኑትን ሕሙማን ታም ያድን ዘንድ እጆቹን ለሕማም ዘረጋ፤",
           "english": "He stretched out His hands in the passion, suffering to save the sufferers that trust in Him.",
           "transliteration": ""
         },
@@ -556,8 +556,8 @@
           "id": "ap-inst-2",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ዘተውህበ በፈቃዱ ለሕማም ከመ ሞተ ይሠዓር ወማእስረ ለሰይጣን ይብትክ ወይኪድ ሲኦለ፤ ቅዱሳነ ይምራሕ ሥርዓተ ይትክል ወትንሣኤሁ ያዑቅ፤",
+          "amharic": "ሞትን ይሽር ዘንድ፤ የሰይጣንንም ማሰሪያ ይቆርጥ ዘንድ፤ ሲኦልንም ይረግጥ ዘንድ፤ ቅዱሳንን ይመራ ዘንድ፤ ሥርዓትን ይሠራ ዘንድ፤ ትንሣኤውንም ይገልዕ ዘንድ ለሕማም ተሰጠ፤\n",
           "english": "Who was delivered to the passion that He might destroy death, break the bonds of Satan, tread down hell, lead forth the saints, establish a covenant and make known His resurrection.",
           "transliteration": ""
         },
@@ -565,8 +565,8 @@
           "id": "ap-inst-3",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
+          "geez": "አንሥኡ እደዊ ክሙ ቀሳውስት፤",
+          "amharic": "ቀሳውስት እጆቻ ሁን አንሡ፤",
           "english": "Priests, raise up your hands.",
           "transliteration": ""
         },
@@ -574,8 +574,8 @@
           "id": "ap-inst-4",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "በይእተ ሌሊት እንተ ባቲ አመ ያገብዕዎ ነሥአ ኅብስተ በእደዊሁ ቅዱሳት ወብፁዓት እለ እንበለ ነውር፤",
+          "amharic": "እርሱን በያዙበት በሌሊያች ሌሊት ነውር በሌለባቸው ንዑዳት ክቡራ ት ብፁዓትም በሚሆኑት እጆቹ ኅብስቱን አንሥቶ ያዘ፤",
           "english": "In the same night in which they betrayed Him, He took bread in His holy, blessed and spotless hands.",
           "transliteration": ""
         },
@@ -588,18 +588,18 @@
           "id": "ap-inst-5",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "ነአምን ከመ ዝንቱ ውእቱ በአማን ነአምን፤",
+          "amharic": "ይህ እንደ ሆነ በእውነት እናምናለን ።",
           "english": "We believe that this is He, truly we believe.",
-          "transliteration": ""
+          "transliteration": "Ne'amin kemzintu wi'itu be'aman ne'amin"
         },
         {
           "id": "ap-inst-6",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "He looked up to heaven toward Thee, His Father, gave thanks, blessed and broke.",
+          "geez": "አንቃዕደወ ሰማየ ኀቤከ ኀበ አቡሁ አእኮተ፣ ባረከ፣ ወፈተተ፤\n\n",
+          "amharic": "ወደ አንተ ወደ አባቱ ወደ ሰማይ ቀና ብሎ አመሰገነ ባረከ ቆረሰ፤",
+          "english": "He looked up to heaven toward You, His Father, gave thanks, blessed and broke.",
           "transliteration": ""
         },
         {
@@ -611,8 +611,8 @@
           "id": "ap-inst-7",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ወወሀቦሙ ለእሊአሁ አርዳኢሁ ወይቤሎሙ ንሥኡ ብልዑ ዝንቱ ኅብስት ሥጋየ ውእቱ ለዘበእንቲአክሙ ይትፈተት ለኅድገተ ኃጢአት፤",
+          "amharic": "ለደቀ መዛሙርቱ ሰጣቸው፤ ንሡ ብሉ ይህ ኅብስት  ለኃጢአት ማስተሥሪያ ሊሆን ስለ እናንተ የሚፈተት ሥጋዬ ነው አላቸው ።",
           "english": "And He gave to His disciples and said unto them: Take, eat, this bread is truly My body which will be broken on your behalf for the remission of sin.",
           "transliteration": ""
         },
@@ -620,17 +620,17 @@
           "id": "ap-inst-8",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
-          "english": "Amen. Amen. Amen. We believe and confess, we glorify Thee, O our Lord and our God; that this is He we truly believe.",
-          "transliteration": ""
+          "geez": "አሜን አሜን አሜን ነአምን ወንትአመን፤ ንሴብሐከ ኦ እግዚእነ ወአምላክነ ከመ ዝንቱ ውእቱ በአማን ነአምን፤",
+          "amharic": "አሜን አሜን አሜን እናምናለን፤ እንታመናለንም፤ ጌታችንና አምላካችን ሆይ እናመሰግንሃለን፤ ይህ እርሱ እንደ ሆነ በእውነት እናምናለን ።",
+          "english": "Amen. Amen. Amen. We believe and confess, we glorify You, O our Lord and our God; that this is He we truly believe.",
+          "transliteration": "Amen amen amen: ne'amin wenit' amen nisebihake O Igzee'ine we'Amlakine keme zintu wi'itu be'aman ne'amin"
         },
         {
           "id": "ap-inst-9",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ወከማሁ ጽዋዐኒ አእኩቶ ባሪኮ ወቀዲሶ መጠዎሙ ለእሊአሁ አርዳኢሁ ወይቤሎሙ ንሥኡ ስተዩ ዝ ጽዋዕ  ደምየ ውእቱ ለዘበእንቲአክሙ ይትከዐው (ለቤዛ ብዙኃን) ለሥርየተ ኃጢአት፤\n\n",
+          "amharic": "እንዲሁም ጽዋውን አመስግኖ ባረከ፤ አክብሮ ለወገኖቹ ለደቀ መዛሙርቱ ሰጣቸው፤ ንሡ ጠጡ ይህ ጽዋ ለብዙ ሰዎች ቤዛ ሊሆን ስለ እናንተ የሚፈስ ደሜ ነው አላቸው፤\n",
           "english": "And likewise also the cup giving thanks, blessing it and hallowing it, He gave it to His disciples, and said unto them, take, drink; this cup is My blood which will be shed on your behalf as a propitiation for many.",
           "transliteration": ""
         },
@@ -643,17 +643,17 @@
           "id": "ap-inst-10",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
-          "english": "Amen. Amen. Amen. We believe and confess, we glorify Thee, O our Lord and our God, that this is He, we truly believe.",
-          "transliteration": ""
+          "geez": "አሜን አሜን አሜን ነአምን ወንትአመን፤ ንሴብሐከ ኦ እግዚእነ ወአምላክነ ከመ ዝንቱ ውእቱ በአማን ነአምን፤",
+          "amharic": "አሜን አሜን አሜን እናምናለን፤ እንታመናለንም ጌታችንና አምላካችን ሆይ፤ እናመስግንሃለን፤ ይህ እርሱ እንደ ሆነ በእውነት እናምናለን ።",
+          "english": "Amen. Amen. Amen. We believe and confess, we glorify You, O our Lord and our God, that this is He, we truly believe.",
+          "transliteration": "Amen amen amen: ne'amin wenit' amen nisebihake O Igzee'ine we'Amlakine keme zintu wi'itu be'aman ne'amin"
         },
         {
           "id": "ap-inst-11",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ወሶበ ትገብርዎ ለዝንቱ ተዘካረ ዚአየ ግበሩ፤",
+          "amharic": "ይህን በምታደርጉ ጊዜ የኔን መታሰቢያ አድርጉ ።",
           "english": "And as often as ye do this do it in remembrance of Me.",
           "transliteration": ""
         },
@@ -661,116 +661,10 @@
           "id": "ap-inst-12",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
-          "english": "We proclaim Thy death, Lord, and Thy holy resurrection; we believe in Thy ascension and Thy second advent. We glorify Thee, and confess Thee, we offer our prayer unto Thee and supplicate Thee, O our Lord and our God.",
-          "transliteration": ""
-        }
-      ]
-    },
-    {
-      "id": "apostles-anamnesis",
-      "title": {
-        "english": "Anamnesis (Hymns of the Sacrifice)",
-        "geez": "ዝክረ ሞት",
-        "amharic": "ዝክረ ሞት",
-        "transliteration": ""
-      },
-      "blocks": [
-        {
-          "id": "ap-an-rubric",
-          "type": "rubric",
-          "english": "The following hymns are chanted during the Anamnesis (memorial of the Passion)."
-        },
-        {
-          "id": "ap-an-1",
-          "type": "prayer",
-          "speaker": "priest",
-          "geez": "እንዘ ቢዙሃን ንሕነ እምጽዖተ ዘመን ዘዚኣሁ ነአምን ሞቶ ወንሴፎ ትንሣኤሁ",
-          "amharic": "",
-          "english": "We await the hope of the age which is His, We believe in His death and hope for His resurrection",
-          "transliteration": "Inze bi'zuhan ni'hine im'tsota zemen ze'zee'ahu Ne'amin moto we'niseifo tinsa'iehu"
-        },
-        {
-          "id": "ap-an-2",
-          "type": "response",
-          "speaker": "congregation",
-          "geez": "ለእግዚእ ክርስቶስ ዘኢይትአተት ጸጋሁ መለያልየ ፩ደ ይረስየነ ምስሌሁ በአጽናፈ ዓለም ይጠባሕ ፩ዱ ሥጋሁ",
-          "amharic": "",
-          "english": "For the Lord Christ whose grace is unsearchable, may He unite us all as one with Him; in the ends of the earth may His one body be glorified",
-          "transliteration": "Le'igzee'i kristos ze'eeyit'atet tse'gahu Mele'yaliye aha'de yire'siyene misle'hu Be'ats'nafe alem yi'Tebah ahadu sigahu"
-        },
-        {
-          "id": "ap-an-3",
-          "type": "prayer",
-          "speaker": "priest",
-          "geez": "ኦ ክርስቶስ በግዐ መሥዋዕት ፩ዱ ካህነ ወንጌል ሥጋከ ለለጊዜ ይሠዋዕ በፈቃዱ",
-          "amharic": "",
-          "english": "O Christ, Thou art the one sacrificial Lamb; O Priest of the Gospel, Thy body is offered each time by His will",
-          "transliteration": "O kristos beg'a meswa'it ahadu Kahine wengiel si'gake lele'gize yisewa'i be'feqadu"
-        },
-        {
-          "id": "ap-an-4",
-          "type": "response",
-          "speaker": "congregation",
-          "geez": "ተዝካረ ሞትከ ባሕር ለልበ ጠቢባን ምዕላዱ ነፋሰ ጥዒና መንፈሳዊ ሶበ ይነፍሕ በዓውዱ ከመ ነበልባል ይትነሣእ ሞገዱ",
-          "amharic": "",
-          "english": "The memorial of Thy death is the sea for the hearts of the wise; when the healing breath of the Spirit blows in its season, its waves rise like a flame",
-          "transliteration": "Tez'kare motike bahir le'libe Te'biban mi'iladu Nefse Ti'eena menfesawi sobe yinefhi be'awdu Keme ne'belbal yitnesa'i mogedu"
-        },
-        {
-          "id": "ap-an-5",
-          "type": "prayer",
-          "speaker": "priest",
-          "geez": "ጊዜ ይሠዋዕ ኅብስተ ሥጋከ እምልክዐ ሥጋከ ፍሉጥ ወደምከ ወይን እምደመ ጠባይዕ ውሉጥ",
-          "amharic": "",
-          "english": "When the bread of Thy body is offered, cut off from Thy natural body, and Thy blood of wine poured out from Thy natural blood",
-          "transliteration": "Geeze yisewa hibiste sigake imelk'a sigake filu'Ti We'demike weyn imdeme Te'bayi wiluTi"
-        },
-        {
-          "id": "ap-an-6",
-          "type": "response",
-          "speaker": "congregation",
-          "geez": "ኢየሱስ ክርስቶስ ለሥርየተ ኀጢአት ሥሉጥ ንሕነሰ እግዚኦ በዓይነ ሃይማኖት ፍሉጥ ፍጹመ ሥጋዌከ ንሬኢ እምውስጥ",
-          "amharic": "",
-          "english": "Jesus Christ, the one who is swift to forgive sins; we, O Lord, with the pure eye of faith, behold Thy perfect incarnation from within",
-          "transliteration": "E'yesus Kristos le'sir'yete ha'Tee'ati silu'T Ni'hinese igzeeo be'ayne haymanot filu'Ti Fi'tsume siga'wieke ni'rie'ee imwisT"
-        },
-        {
-          "id": "ap-an-7",
-          "type": "prayer",
-          "speaker": "priest",
-          "geez": "አብርሃም ተመነየ ተፈሥሐ ወተነበየ ምሥጢረ ሞትከ ክርስቶስ አመ በበግዕ ርእየ",
-          "amharic": "",
-          "english": "Abraham desired and rejoiced and prophesied the mystery of Thy death, O Christ, when he saw the lamb",
-          "transliteration": "Abriham te'meneye te'fesiha wetene'beye misTee're motike kristos ame be'begi ri'iye"
-        },
-        {
-          "id": "ap-an-8",
-          "type": "response",
-          "speaker": "congregation",
-          "geez": "ብፁዓን ንሕነ ዘአፈድፈድናሁ ዕበየ እስመ ንሠውዓከ ለለእለቱ ወንጠብሐከ ዝየ ወበደምከ ነሐፅብ ጌጋየ",
-          "amharic": "",
-          "english": "Blessed are we who have multiplied His greatness, for we offer Thee daily and praise Thee here, and in Thy blood we wash away our sins",
-          "transliteration": "Bi'tsu'an nihine ze'afedfed'nahu I'beye Isme nise'wi'ake lele'iletu weniTe'bihake ziye webedemike neha'tsib gie'gaye"
-        },
-        {
-          "id": "ap-an-9",
-          "type": "prayer",
-          "speaker": "priest",
-          "geez": "ናሁ ማዕከሌነ ወማዕከሌከ ሥዩም ትእምርተ መሐላ ሥጋከ ወቀስተ ኪዳንከ ደም",
-          "amharic": "",
-          "english": "Behold, between us and Thee is set the sign of the oath, Thy body, and the bow of Thy covenant, Thy blood",
-          "transliteration": "Nahu Ma'ike'lene wema'ike'leke si'yumi Ti'imrete mehala sigake we'qeste ki'danike dem"
-        },
-        {
-          "id": "ap-an-10",
-          "type": "response",
-          "speaker": "congregation",
-          "geez": "ኢየሱስ ክርስቶስ መሥዋዕተ ሰላም በከመ ተገብረ ቀስተ ደመና አመ ተአይኅ ዓለም ዝናመ ጌጋይነ ይእፁ ጥብሕከ ልጓም",
-          "amharic": "",
-          "english": "Jesus Christ, the sacrifice of peace; as the rainbow appeared when the world was flooded, so may Thy sacrifice restrain the flood of our sins",
-          "transliteration": "E'yesus Kristos mes'wa'ite selam Bekeme te'gebre qeste demean ame te'ayhi alem Zi'name gie'ga'yine yi'itsu Ti'bihike li'gwam"
+          "geez": "ንዜኑ ሞተከ እግዚኦ ወትንሣኤከ ቅድስተ፤ ነአምን ዕርገተከ ወዳግመ ምጽአተከ ንሴብሐከ ወንትአምነከ ንስእለከ ወናስተበቍዕ ኦ እግዚእነ ወአምላክነ፤",
+          "amharic": "አቤቱ ሞትህን ቅድስት ትንሣኤህንም እንናነግራለን፤ ዕርገትህን ዳግመኛም መምጣትህን እናምናለን፤ እናመስግናለን እናምንሃለንም ጌታችንና አምላካችን፤ ሆይ እንለምንሃለን፤ እንማልድሃለንም ።",
+          "english": "We proclaim Your death, Lord, and Your holy resurrection; we believe in Your ascension and Your second advent. We glorify You, and confess You, we offer our prayer unto You and supplicate Thee, O our Lord and our God.",
+          "transliteration": "Nizenu moteke Igzee'o wetinsa'eke qidist ne'amin irgeteke wedagime misti'ateke nisebihake weniti'ameneke nis'ileke wenastabiqwu'ake O Igzee'ine we Amlakine"
         }
       ]
     },
@@ -787,17 +681,17 @@
           "id": "ap-epic-1",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Now, Lord, we remember Thy death and Thy resurrection. We confess Thee and we offer unto Thee this bread and this cup, giving thanks unto Thee; and thereby Thou has made us worthy of the joy, standing before Thee and ministering to Thee. We pray and beseech Thee, Lord, that Thou would send the Holy Spirit and power upon this bread and upon this cup.",
+          "geez": "ይእዜኒ እግዚኦ እንዘ ንዜክር ሞተከ ወትንሣኤከ፤ ንትአመነከ ወናቀርብ ለከ ዘንተ ኅብ ስተ  ወዘንተ ጽዋዐ እንዘ ነአኵተከ፤ ወቦቱ ረሰይከ ለነ ለተድላ ንቁም ቅድሜከ ወለከ ንትከሀን፤ ንስእለከ እግዚኦ ወናስተበቍዕከ ከመ ትፈኑ መንፈሰ ቅዱስ ወኃይለ ዲበ ዝንቱ ኅብስት ወላዕለ ዝንቱ ጽዋዕ",
+          "amharic": "አሁንም አቤቱ ሞትህንና ትንሣኤህን እናስባለን፤ እናምንሃለን፤ እያመሰገንህ ይህን ኅብስት ይህንም ጽዋ እናቀርብልሃለን፤ በፊትህ እንቆም ዘንድ አንተንም እናገለግል ዘንድ በርሱ ተድላን አደረግህልን፤ አቤቱ እንለምንሃለን፤ እንማልድሃለንም፤ በዚህ ኅብስት ላይ ቅዱስ መንፈስን ኃይልንም ታሳድር ዘንድ፤ በዚህም በጽዋው ላይ።",
+          "english": "Now, Lord, we remember Your death and Your resurrection. We confess You and we offer unto You this bread and this cup, giving thanks unto You; and thereby You have made us worthy of the joy, standing before You and ministering to You. We pray and beseech You, Lord, that You would send the Holy Spirit and power upon this bread and upon this cup.",
           "transliteration": ""
         },
         {
           "id": "ap-epic-2",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ይረስዮ ሥጋሁ ወደመ ለእግዚእነ ወአምላክነ ወመድኃኒነ ኢየሱስ ክርስቶስ ለዓለመ ዓለም",
+          "amharic": "የጌታችንና የአምላካችን የመድኃኒታችን የኢየሱስ ክርስቶስ ሥጋና ደም ያደርገው ዘንድ ለዘለዓለሙ።",
           "english": "May He make them the body and blood of our Lord, God, and Saviour Jesus Christ, unto the ages of ages.",
           "transliteration": ""
         },
@@ -810,17 +704,17 @@
           "id": "ap-epic-3",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "አሜን እግዚኦ መሐረነ፤ እግዚኦ መሐከነ፤ እግዚኦ ተሣሃለነ፤",
+          "amharic": "አሜን አቤቱ ማረን፤ አቤቱ ራራልን፤ አቤቱ ይቅር በለን ።",
           "english": "Amen. Lord have pity upon us, Lord spare us, Lord have mercy upon us.",
-          "transliteration": ""
+          "transliteration": "Amen; Igzee'o meharene Igzee'o mehakene, Igzee'o tesehalene"
         },
         {
           "id": "ap-epic-4",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
+          "geez": "በኵሉ ልብ ናስተበቍዖ ለእግዚአብሔር አምላክነ ኅብረተ መንፈስ ቅዱስ ሠናየ ከመ ይጸግወነ፤",
+          "amharic": "በፍጹም ልብ አምላካችንን እግዚአብሔርን እንማልደው፤ ያማረ የመንፈስ ቅዱስን አንድነት ይሰጠን ዘንድ ።",
           "english": "With all the heart let us beseech the Lord our God that He grant unto us the good communion of the Holy Spirit.",
           "transliteration": ""
         },
@@ -828,10 +722,10 @@
           "id": "ap-epic-5",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "በከመ ሀሎ ህልወ ወይሄሉ ለትውልደ ትውልድ ለዓለመ ዓለም፤",
+          "amharic": "በፊት እንደ ነበረ ለዘለዓለሙ ለልጅ ልጅ ይኖራል ።\n",
           "english": "As it was, is, and shall be unto generations of generations, and endless ages.",
-          "transliteration": ""
+          "transliteration": "Bekeme halo halide weyihelu letiwlide tiwlid le'aleme alem."
         },
         {
           "id": "ap-epic-5r",
@@ -842,28 +736,28 @@
           "id": "ap-epic-6",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Grant it together unto all them that take of it, that it may be unto them for sanctification and for filling with the Holy Spirit and for strengthening of the true faith, that they may hallow and praise Thee and Thy beloved Son Jesus Christ with the Holy Spirit.",
+          "geez": "ደሚረከ ተሀቦሙ ለኵሎሙ ለእለ ይነሥኡ እምኔሁ ይኩኖሙ ለቅናሳት ወለአምልዐተ መንፈስ ቅዱስ ወለአጽንፆ ሃይማኖት ዘበአማን ከመ ኪያከ ይቄድሱ ወይዌድሱ ወወልድከ ፍቁርከ ኢየሱስ ክርስቶስ ዘምስለ መንፈስ ቅዱስ",
+          "amharic": "ከርሱ ለሚቀበሉ ሁሉ አንድ አድርገህ ለንጽሕና መንፈስ ቅዱስንም ለመመላት እውነተኛውንም ሃይማኖት ለማጽናት ስጣቸው፤ አንተን ይቀድሱና ያመስግኑ ዘንድ ልጅህን ወዳጅህን ኢየሱስ ክርስቶስንም ከመንፈስ ቅዱስ ጋራ።",
+          "english": "Grant it together unto all them that take of it, that it may be unto them for sanctification and for filling with the Holy Spirit and for strengthening of the true faith, that they may hallow and praise You and Your beloved Son Jesus Christ with the Holy Spirit.",
           "transliteration": ""
         },
         {
           "id": "ap-epic-6r",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": " አሜን ።",
+          "amharic": " አሜን ።",
           "english": "Amen.",
-          "transliteration": ""
+          "transliteration": "Amen."
         },
         {
           "id": "ap-epic-7",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ሀበን ንኅብር በዘዚአከ መንፈስ ቅዱስ፤ ወፈውሰን በዝንቱ ጵርስፎራ ከመ ብከ ንሕየው ዘለኵሉ ዓለም ወለዓለመ ዓለም፤",
+          "amharic": "የአንተ በሚሆን በመንፈስ ቅዱስ አንድ እንሆን ዘንድ ስጠን፤ በዚህም ጵርስፎራ(በሥጋው በደሙ) አድነን፤ ለዓለሙ ሁሉ በምትሆን በአንተ ለዘለዓለሙ ሕያዋን እንሆን ዘንድ ።\n",
           "english": "Grant us to be united through Thy Holy Spirit, and heal us by this oblation that we may live in Thee for ever.",
-          "transliteration": ""
+          "transliteration": "Habene nihiber bezezee'ake Menfes Qidus. Wefewisene bezintu pirsifora keme bike nihiyew zelekwulu alem wele'aleme alem."
         },
         {
           "id": "ap-epic-7r",
@@ -874,24 +768,26 @@
           "id": "ap-epic-8",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ቡሩክ ስሙ ለእግዚአብሔር፤ ወቡሩክ ዘይመጽእ በስመ እግዚአብሔር፤ ወይትባረክ ስመ ስብሐቲሁ ለይኩን ለይኩን ቡሩክ ለይኩን፤\n",
+          "amharic": "እግዚአብሔር ስሙ ምስጉን ነው፤ በእግዚአብሔር ስም የሚመጣውም ምስጉን ነው፤ የጌትነቱ ስም ይባረክ፤ ይሁን ይሁን ይሁን የተመሰገነ ይሁን፤\n",
           "english": "Blessed be the Name of the Lord, and blessed be he that comes in the Name of the Lord, and let the Name of his glory be blessed. So be it. So be it. So be it blessed.",
-          "transliteration": ""
+          "transliteration": "Buruk simulated le\"Igzee'abiher weburuk zeyimets'i besime Igzee'abiher weyitbarek sime sibhateehu leyikun leyikun buruke leyikun"
         },
         {
           "id": "ap-epic-8r",
           "type": "rubric",
-          "english": "The people shall repeat his words."
+          "english": "The people shall repeat his words.",
+          "geez": "",
+          "amharic": ""
         },
         {
           "id": "ap-epic-9",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ፈኑ ጸጋ መንፈስ ቅዱስ ላዕሌነ፤",
+          "amharic": "የመንፈስ ቅዱስን ጸጋ ላክልን",
           "english": "Send the grace of the Holy Spirit upon us.",
-          "transliteration": ""
+          "transliteration": "Fenu tsega Menfes Qidus la'ilene"
         },
         {
           "id": "ap-epic-9r",
@@ -913,8 +809,8 @@
           "id": "ap-frac-1",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
+          "geez": "ተንሥኡ ለጸሎት",
+          "amharic": "ለጸሎት ተነሡ፣",
           "english": "Arise for prayer.",
           "transliteration": ""
         },
@@ -922,10 +818,10 @@
           "id": "ap-frac-2",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "እግዚኦ ተሣሃለነ፤",
+          "amharic": "አቤቱ ይቅር በለን።",
           "english": "Lord have mercy upon us.",
-          "transliteration": ""
+          "transliteration": "Igzee'o tesehalene"
         },
         {
           "id": "ap-frac-3",
@@ -949,8 +845,8 @@
           "id": "ap-frac-5",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ወካዕበ ናስተበቍዕ ዘኵሎ ይእኅዝ እግዚአብሔር አብ ለእግዚእ ወመድኃኒነ ኢየሱስ ክርስቶስ፤ ከመ የሀበን በበረከት ንንሣእ ዘእምቅዱስ ምሥጢር ጽንዓተ ለነ የሀበን፤ ወኢመነሂ እምውስቴትን ኢያርስሕ፤ አላ ለኵሎሙ ተድላሆሙ ይረሲ ለእለ ይትሜጠዉ ንሥአተ ቅዱስ ምሥጢር ዘሥጋሁ ወደሙ ለክርስቶስ ዘኵሉ ይእኀዝ እግዚአብሔር አምላክነ፤",
+          "amharic": "ዳግመኛም ሁሉን የሚይዝ የጌታችንና የመድኃኒታችን የኢየሱስ ክርስቶስን አባት እግዚአብሔርን እንማልዳለን፤ ከቅዱስ ምሥጢር በበረከት እንቀበል ዘንድ እን ሰጠን ለኛ መጽናትን ይስጠን፤ ከኛ ወገን ማንንም አያጉስቍል፤ የክርስቶስ ሥጋና ደም የሚሆን ቅዱስ ምሥጢርህን መቀበልን ለሚቀበሉ ሁሉ ተድላ ያድርጋላቸው እንጂ፤ ይኸውም ሁሉን የሚይዝ አምላካችን እግዚአብሔር ነው ።",
           "english": "And again we beseech the almighty God, the Father of our Lord, God, and Saviour Jesus Christ, to grant us to partake of this holy mystery with blessing, to grant to us confirmation and not to condemn any of us, but to make worthy all that partake of the holy mystery, of the body and blood of Christ. The almighty Lord is our God.",
           "transliteration": ""
         },
@@ -958,27 +854,27 @@
           "id": "ap-frac-6",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
-          "english": "Pray ye.",
+          "geez": "ጸልዩ",
+          "amharic": "ጸልዩ",
+          "english": "Pray.",
           "transliteration": ""
         },
         {
           "id": "ap-frac-7",
           "type": "response",
           "speaker": "congregation",
-          "geez": "አቡነ ዘበሰማያት ይትቀደስ ስምከ ትምጻእ መንግሥትከ ወይኩን ፈቃድከ በከመ በሰማይ ወበምድር። ሲሳየነ ዘለለ ዕለት ሀበነ ዮም። ወኅድግ ለነ አበሳነ ከመ ንሕነኒ ንኅድግ ለዘአበሰ ለነ። ኢታብአነ ውስተ መንሱት፡ አላ አድኅነነ እምዕኩይ፡ እስመ ዚኣከ ይእቲ መንግሥት ወኃይል ወስብሐት ለዓለም ዓለም።",
-          "amharic": "",
+          "geez": "አቡነ ዘበሰማያት ይትቀደስ ስምከ ትምጻእ መንግሥትከ ወይኩን ፈቃድከ በከመ በሰማይ ከማሁ ወበምድር ሲሳየነ ዘለለ ዕለት ሀበነ ዮም ወኅድግ ለነ አበሳነ ወጌጋየነ ከመ ንሕነኒ ንኅድግ ለዘአበሰ ለነ። ኢታብአነ ውስተ መንሱት፡ አላ አድኅነነ እምዕኩይ፡ እስመ ዚኣከ ይእቲ መንግሥት ወኃይል ወስብሐት ለዓለም ዓለም።",
+          "amharic": "አባታችን ሆይ፤ በሰማይ የምትኖር፤ ስምህ ይቀደስ፤ መንግሥትህ ትምጣ፤ ፈቃድህ በሰማይ እንደሆነ እንዲሁ በምድር ትሁን፤ የዕለት እንጀራችንን ስጠን ዛሬ፤ በደላችንንም ይቅር በለን፤ እኛ የበደሉንን ይቅር እንደምን አለ፤ ወደ ፈተናም አታግባን ከክፉ አድነን እንጂ፤ መንግሥት ያንተ ናትና፤ ኃይልም ምስጋናም ለዘለዓለሙ ።",
           "english": "Our Father, Who art in heaven, hallowed be Thy name, Thy kingdom come, Thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our debts as we forgive our debtors, and lead us lest we enter into temptation, but deliver us rescuing us from all evil: for Thine is the kingdom, the power and the glory for ever and ever.",
-          "transliteration": ""
+          "transliteration": "Abune zebesemayat yitqedes simike timtsa'i mengistike weyikun feqadike bekeme besemay kemahu bemidr. Seesayene zelele'iletine habene yom hidig lene abesane wegegayene keme nihinenee nihidig leze'abese lene. Eetabi'ane O Igzee'o wiste mensut ala adihinene webalihane imkwulu ikuy isme zeeyake yi'itee mengist hayl wesibihat le'alem alem."
         },
         {
           "id": "ap-frac-8",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Lord our almighty God, grant us to partake effectually of Thy holy mystery, and condemn none of us, but bless all in Christ, through Whom to Thee with Him and with the Holy Spirit be glory and dominion, both now and ever and unto the ages of ages. Amen.",
+          "geez": "እግዚአብሔር አምላክነ ዘኵሎ ትእኅዝ ንሥአተ ዘቅዱስ ምሥጢር ጽንአተ ለነ ተሀበነ ወኢመነሂ እምውስቴትን ኢታርስሕ፤ አላ ኵሎ ባርክ በክርስቶስ ዘቦቱ ለከ ምስሌሁ ወምስለ ቅዱስ መንፈስ ስብሐት ወእኂዝ ይእኀዜኒ ወዘልፈኒ ወለዓለመ ዓለም አሜን፤",
+          "amharic": "ሁሉን የምትይዝ አምላካችን እግዚአብሔር የቅዱስ ምሥጢርህን መቀበል ለኛ ጽንዕ አድርገህ ትስጠን ዘንድ ከእኛ ወገን ማንንም አታስቁል፤ በክርስቶስ ሁሉን ባርክ እንጂ፤ በርሱ ያለ ክብር ጽንዕ ለአንተ ይገባል፤ ክርሱ ጋራ፤ ከመንፈስ ቅዱስም ጋራ፤ ዛሬም ዘወትርም ለዘለዓለሙ አሜን ።",
+          "english": "Lord our almighty God, grant us to partake effectually of Your holy mystery, and condemn none of us, but bless all in Christ, through Whom to You with Him and with the Holy Spirit be glory and dominion, both now and ever and unto the ages of ages. Amen.",
           "transliteration": ""
         }
       ]
@@ -996,10 +892,10 @@
           "id": "ap-abs-1",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "በከመ ምሕረትከ አምላክነ ወአኮ በከመ አበሳነ ",
+          "amharic": "አምላካችን ሆይ እንደ ቸርነትህ ነው እንጂ እንደ ኃጢአታችን አይደለም፤ ",
           "english": "According to thy mercy, our God, and not according to our sins.",
-          "transliteration": ""
+          "transliteration": "Bekeme mihiretike Amlakine we'ako bekeme abesane."
         },
         {
           "id": "ap-abs-1r",
@@ -1010,28 +906,28 @@
           "id": "ap-abs-2",
           "type": "prayer",
           "speaker": "all",
-          "geez": "",
-          "amharic": "",
+          "geez": "ሠራዊተ መላእክቲሁ ለመድኅኔ ዓለም ዬ ዬ ዬ ይቀውሙ ቅድሜሁ ለመድኃኔ ዓለም  ።",
+          "amharic": "የመድኃኔ ዓለም  አገልጋዮች የሚሆኑት የመላእክት ሠራዊት ወዮ፤ ወዮ፤ ወዮ፤ በመድኃኔ ዓለም ፊት ይቆማሉ ።",
           "english": "The hosts of the angels of the Saviour of the World stand before the Saviour of the world.",
-          "transliteration": ""
+          "transliteration": "Seraweete mela'ikteehu lemedihane alem ye ye yiqewimu qidmehu lemedihane alem"
         },
         {
           "id": "ap-abs-3",
           "type": "prayer",
           "speaker": "all",
-          "geez": "",
-          "amharic": "",
+          "geez": "ወይኬልልዎ ለመድኅነ ዓለም ዬ ዬ ዬ ሥጋሁ ወደሙ ለመድኃኔ ዓለም ",
+          "amharic": "መድኃኔ ዓለምን ያመሰግኑታል፤ ወዮ፤ ወዮ፤ ወዮ፤ የመድኃኔ ዓለም ሥጋውና ደሙ ይህ ነው ።",
           "english": "And encircle the Saviour of the world, even the body and blood of the Saviour of the world.",
-          "transliteration": ""
+          "transliteration": "Weyikeliliwo lemedihane alem ye ye ye sigh wed emu lemedihane alem"
         },
         {
           "id": "ap-abs-4",
           "type": "prayer",
           "speaker": "all",
-          "geez": "",
-          "amharic": "",
+          "geez": "ወንብጻሕ ቅድመ ገጹ ለመድኃኔ ዓለም ዬ ዬ ዬ በአማን ዚአሁ ለክርስቶስ ንንኂ፤\n",
+          "amharic": "ወደ መድኃኔ ዓለም ፊት እንቅረብ፤ ወዮ፤ ወዮ፤ ወዮ፤ እርሱን በማመን ለክርስቶስ እንገዛለን፤",
           "english": "Let us draw nigh the face of the Saviour of the world. In the faith which is of Him let us submit ourselves to Christ.",
-          "transliteration": ""
+          "transliteration": "Wenibtsah qidme gets lemedihane alem ye ye ye beameene zee-ahu le Kirstos nigeni"
         },
         {
           "id": "ap-abs-5r",
@@ -1042,45 +938,45 @@
           "id": "ap-abs-5",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
-          "english": "Open ye the gates, princes.",
+          "geez": "አርኅዉ ኆኃተ  መኳንንት",
+          "amharic": "መኳንንት ደጆችን ክፈቱ ።",
+          "english": "Open you the gates, princes.",
           "transliteration": ""
         },
         {
           "id": "ap-abs-6",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "አድንኑ አርእስቲክሙ ቅድመ እግዚአብሔር አምላክነ",
-          "amharic": "በአምላካችን በእግዚአብሔር ፊት ራሳችሁን ዝቅ፣ ዝቅ አድርጉ",
-          "english": "Ye who are standing, bow your heads.",
-          "transliteration": "Adninu ar'isteekimu qidme igzee'abihér amlakine"
+          "geez": "እለ ትቀውሙ አትሐቱ ርእስክሙ፤",
+          "amharic": "የቆማችሁ ሰዎች ራሳ ሁን ዝቅ ዝቅ አድርጉ ።",
+          "english": "You who are standing, bow your heads.",
+          "transliteration": ""
         },
         {
           "id": "ap-abs-7",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Lord eternal, Who knows what is hidden and what is manifest, before Thee Thy people have bowed their heads, and unto Thee have subdued the stubborn hearts of their body; look from Thy worthy dwelling-place, bless them, men and women; incline Thine ear to them and hearken unto their prayer.",
+          "geez": "እግዚአብሔር ዘለዓለም ማእምር ዘኅቡእ ወዘገሃድ፤ ቅድሜከ አትሐቱ ርእሶሙ ሕዝብክ ወለከ  አግረሩ ቀፈተ ልብ ዘሥጋ ርእ ዘእምድልወ ማኅደ ርከ ባርክ ኪያሆሙ ወኪ ያሆን፤ አጽምዕ ሎሙ እዝንከ ወስምዖሙ ጸሎ ቶሙ፤",
+          "amharic": "የተሰወረውንና የተገለጠውን የምታውቅ ዘላዓለማዊ እግዚአብሔር ሆይ፤\nወገኖችህ በፊትህ ራሳቸውን ዝቅ ዝቅ አደረጉ፤ የሥጋ ልብናቸውንም አስገዙ፤ ከተዘጋጀ ማደሪያህ ሁነህ እይ፤ ወንዶችንም ሴቶችንም ባርክ፤ ጆሮህን ቀቅርላቸው ፤ ጸሎታቸውንም ስማቸው ።",
+          "english": "Lord eternal, Who knows what is hidden and what is manifest, before You Your people have bowed their heads, and unto You have subdued the stubborn hearts of their body; look from Your worthy dwelling-place, bless them, men and women; incline Your ear to them and hearken unto their prayer.",
           "transliteration": ""
         },
         {
           "id": "ap-abs-8",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Confirm them with the strength of Thy right hand, help them and protect them from evil affliction; be a guardian both to their bodies and to their souls; and increase to them, both men and women, Thy faith and the fear of Thy name,",
+          "geez": "ወአጽንዕ በኃይለ የማንከ ክድን ወርዳእ እምሕ መሜ እኩይ ዐቃቤ ሎሙኩን ለሥጋነኒ ወለነፍስሆሙ ወስክ ሎሙሂ ወሎንሂ ሃይማኖተከ ወፈሪሆተ ስምከ፤",
+          "amharic": "በቀኝህ ኃይል አጽናቸው፤ ከክፉ ምቀኝነት ሰውራቸው ርዳቸውም፤ ጠባቂ ሁናቸው፤ ለሥጋቸውም ለነፍሳቸውም ሃይምኖትህንና ስምህን መፍርትን ለሴቶችም ለወንዶችም ጨምራላቸው ።",
+          "english": "Establish them with the strength of Your right hand, help them and protect them from evil affliction; be a guardian both to their bodies and to their souls; and increase to them, both men and women, Your faith and the fear of Your name,",
           "transliteration": ""
         },
         {
           "id": "ap-abs-9",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "through Thine only-begotten Son, through Whom to Thee with Him and with the Holy Spirit be glory and dominion, both now and unto the ages of ages. Amen.",
+          "geez": "በ፩ዱ ወልድከ ዘቦቱ ለከ ምስሌሁ ወምስለ ቅዱስ መንፈስ ስብሐት ወእኂዝ ይእኀዜኒ ወዘለፈኒ ወለዓለመ ዓለም አሜን ።",
+          "amharic": "በአንድ ልጅህ በርሱ ያለ ክብር ጽንዕ ለአንተ ይገባል፤ ክርሱ ጋራ፤ ከመንፈስ ቅዱስም ጋራ፤ ዛሬም ዘወትርም ለዘለ ዓለሙ አሜን ።",
+          "english": "through Your only-begotten Son, through Whom to You with Him and with the Holy Spirit be glory and dominion, both now and unto the ages of ages. Amen.",
           "transliteration": ""
         }
       ]
@@ -1098,8 +994,8 @@
           "id": "ap-pen-1",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
+          "geez": "ስግዱ ለእግዚአብሔር በፍርሃት",
+          "amharic": "በፍርሃት ሁናችሁ ለእግዚአብሔር ስገዱ፤\n",
           "english": "Worship the Lord with fear.",
           "transliteration": ""
         },
@@ -1107,80 +1003,80 @@
           "id": "ap-pen-2",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
-          "english": "Before Thee, Lord, we worship, and Thee do we glorify.",
-          "transliteration": ""
+          "geez": "ቅድሜከ እግዚኦ ንሰግድ ወንሴብሐከ።",
+          "amharic": "አቤቱ በፊትህ እንሰግዳለን፤",
+          "english": "Before You, Lord, we worship, and You do we glorify.",
+          "transliteration": "Qidmeke Igzee'o nisegid wenisebihake"
         },
         {
           "id": "ap-pen-3",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "O Lord God, the Father almighty, Thou it is Who heals the wounds of our soul, body, and spirit,",
+          "geez": "እግዚእ እግዚኦ እግዚአብሔር አብ አኀዜ ኵሉ ዓለም፤ አንተ ውእቱ ዘትፈውስ ቍስለ ነፍስነ ወሥጋነ ወመንፈስነ፤",
+          "amharic": "አቤቱ ዓለሙን ሁሉ የያዝህ ጌታችን እግዚአብሔር አብ፤ የነፍሳችንና የሥጋችንን፤ የደመ  ነፍሳችንንም ቁስል የምታድን አንተ ነህ ።",
+          "english": "O Lord God, the Father almighty, it is You Who heals the wounds of our soul, body, and spirit,",
           "transliteration": ""
         },
         {
           "id": "ap-pen-4",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "because Thou has said, by the mouth of Thine only-begotten Son, our Lord, God, and Saviour Jesus Christ, that which He said to our father Peter, you are a rock, and upon this rock I will build My holy church, and the gates of hell shall not prevail against it; and unto you do I give the keys of the Kingdom of heaven; what you shall have bound on earth shall be bound in heaven, and what you shall have loosed on earth shall be loosed in heaven.",
+          "geez": "እስመ አንተ ትቤ በአፈ ዋሕድ ወልድከ እግዚእነ ወአምላክን ወመድኅኒነ ኢየሱስ ክርስቶስ ዘይቤሎ ለአቡነ ጴጥሮስ አንተ ኰኵሕ ወዲበ ዛቲ ኰኵሕ አሐንጽ ለቤተ ክርስቲያንየ ቅድስተ፤ ወኢይክልዋ አናቅጸ ሲኦል አማስኖታ፤ ወአን ቀልቅሎታ፤ ወለከ እሁበከ መራኁተ ዘመንግሥተ ሰማያት ዘአሥርከ በምድር ይኩን እሥረ በሰማያት፤ ወዘፈታሕከ በምድር ይኩን ፍቱሐ በሰማያት፤",
+          "amharic": "ባንድ ልጅህ በጌታችን በአምላካችንና በመድኅኒታችን በኢየሱስ ክርስቶስ አፍ ተናግረሃልና፤ ለአባታችን ለጴጥሮስ እንዲህ ብሎ የተናገረው አንተ መሠረት ነህ፤ በዚህም መሠረት ላይ ክብርት ቤተ ክርስቲያኔን እሠራታለሁ፤ የሲኦልም ደጆች ሊያጠፉ ትና ሊያናውዉት አይችሉም፤ ላንተም የመንግሥተ ሰማያትን መክፈቻ እሰጥሃለሁ፤ በምድር ያሠርኸው  በሰማይ የታሰረ ይሆን ዘንድ፤ በምድርም የፈታኸው በሰማይ የተፈታ ይሆን ዘንድ ።",
+          "english": "because You have said, by the mouth of Your only-begotten Son, our Lord, God, and Savior Jesus Christ, that which He said to our father Peter, you are a rock, and upon this rock I will build My holy church, and the gates of hell shall not prevail against it; and unto you do I give the keys of the Kingdom of heaven; what you shall have bound on earth shall be bound in heaven, and what you shall have loosed on earth shall be loosed in heaven.",
           "transliteration": ""
         },
         {
           "id": "ap-pen-5",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Let all Thy servants and Thy handmaids, according to their several names, be absolved and set free out of the mouth of the Holy Spirit, and out of the mouth of me also, Thy sinful and guilty servant, whether they have wrought wittingly or unwittingly.",
+          "geez": "ወይኩኑ ፍቱሐን ወግዑዛን ኵሎሙ አግብርቲከ ወአእማቲከ በበአስማቲሆሙ በአፉሁ ለመንፈስ ቅዱስ፤ ወበአፈ ዚአየኒ አነ ገብርከ ዕገሌ ኃጥእ ወአባሲ እምሂ በአእምሮ አው በኢያእምሮ ገብሩ፤",
+          "amharic": "ወንዶቹንም ሴቶቹም አገልጋዮችህ ሁሉ በየስማቸው የተፈቱ፤ ነጻም የወጡ ይሁኑ፤ በመንፈስ ቅዱስ ቃል ዘንድ በደለኛ በምሆን በእኔ በአልጋይህ እገሌ ቃል በማወቅ ወይም ባለማወቅ ቢሠሩ ።",
+          "english": "Let all Your servants and Your handmaids, according to their several names, be absolved and set free out of the mouth of the Holy Spirit, and out of the mouth of me also, Your sinful and guilty servant, whether they have wrought wittingly or unwittingly.",
           "transliteration": ""
         },
         {
           "id": "ap-pen-6",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Keep them, Lord, and defend them, thy servants, my fathers, brothers and sisters.",
+          "geez": "ዕቀቦሙ እግዚኦ ወተማኅፀኖሙ ለእለ አግብርቲከ አበውየ ወአኃውየ ወአኃትየ፤",
+          "amharic": "አቤቱ እሊህን አገልጋዮችህን አባቶቸንና ወንድሞቼን እኅቶቼንም አጽንተህ ጠብቃቸው ።",
+          "english": "Keep them, Lord, and defend them, Your servants, my fathers, brothers and sisters.",
           "transliteration": ""
         },
         {
           "id": "ap-pen-7",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "And also loose me, thy humble and sinful servant.",
+          "geez": "ወዓዲ ለትሕትና ዚአየኒ አነ ገብርከ ኃጥእ ወአባሲ ፍትሐኒ፤",
+          "amharic": "ዳግመኛም ኃጥእ በደለኛ የምሆን እኔንም ወራዳነቴን አይተህ ፍታኝ ።",
+          "english": "And also loose me, Your humble and sinful servant.",
           "transliteration": ""
         },
         {
           "id": "ap-pen-8",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Both absolve them and set them free: out of the mouth of the holy Trinity: the Father, Son, and Holy Spirit, and out of the mouth of me Thy sinful and unrighteous servant.",
+          "geez": "ወይኩኑ ፍቱሐን ወግዑዛን እምአፈ ሥሉስ ቅዱስ አብ ወወልድ ወመንፈስ ቅዱስ፤ ወእምአፈ ዚአየኒ አነ ገብርከ ኃጥእ ወአባሲ፤",
+          "amharic": "ልዩ ሦስት በሚሆኑ በአብና በወልድ በመንፈስ ቅዱስም ቃል የተፈቱ ነጻም የወጡ ይሁኑ፤ ኃጥእ በደለኛ በምሆን በኔም በአገልጋይህ ቃል ።",
+          "english": "And absolve them and set them free: out of the mouth of the Holy Trinity: the Father, Son, and Holy Spirit, and out of the mouth of me Your sinful and unrighteous servant.",
           "transliteration": ""
         },
         {
           "id": "ap-pen-9",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "O propitious, merciful and lover of man, Lord our God, that takes away the sin of the world, accept the penitence of Thy servants and Thy handmaids, and shine upon them with the light of everlasting life, and forgive them, Lord, all their sins; for Thou art good and the lover of man.",
+          "geez": "ኦ መሐሪ ወመስተሣህል ወመፍቀሬ ሰብእ እግዚአብሔር አምላክነ ዘታዐትት ኃጢአተ ዓለም ተወከፍ ንስሐሆሙ ለአብርቲከ ወለአእማቲከ ፤ ወአሥርቅ ላዕሌሆሙ ብርሃነ ሕይወት ዘለዓለም ወሥረይ ሎሙ እግዚኦ ኵሎ ኃጢአቶሙ እስመ ኄር አንተ ወመፍቀሬ ሰብእ ።",
+          "amharic": "መሐሪ ይቅር ባይ ሰውንም የምትወድ አምላካችን እግዚአብሔር ሆይ የዓለሙን ኃጢአት የምታጠፋ፤ የወንዶቹንና የሴቶቹን አገልጋዮችህን ንስሐቸውን ተቀበል፤ የዘላዓለም ድኅንነት የሚሆን ብርሃንንም ግለጽላቸው፤ አቤቱ ኃጢአታቸውንም ሁሉ ይቅር በላቸው፤ ቸር ሰውንም የምትወድ አንተ ነህና ።",
+          "english": "O pitiful, merciful and lover of man, Lord our God, that takes away the sin of the world, accept the penitence of Your servants and Your handmaids, and shine upon them with the light of everlasting life, and forgive them, Lord, all their sins; for You are good and the lover of man.",
           "transliteration": ""
         },
         {
           "id": "ap-pen-10",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ኦ እግዚአብሔር አምላክነ ወመመስተሣህል ርኁቀ መዓት ወብዙኅ ምሕረት ወጻድቅ ሥረይ ሊተ ኃጢአትየ፤",
+          "amharic": "ይቅር ባይ አምላካችን እግዚአብሔር ሆይ፤ መዓትህ የራቀ፤ ምሕረቱም የበዛ፤ እውነተኛም የምትሆን የኔን ኃጢአቴን አስተሥርይልኝ ።",
           "english": "O Lord our God, merciful, slow to anger, plenteous in mercy and righteous, forgive me my sins,",
           "transliteration": ""
         },
@@ -1188,18 +1084,18 @@
           "id": "ap-pen-11",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "and deliver all thy servants and handmaids from all transgression and curse. If we have transgressed against Thee, Lord, whether in our word, deed, or thought, release, remit, pardon and have mercy, for Thou art good and the lover of man, Lord our God.",
+          "geez": "ወለኵሎሙ አግብርቲከ ወአእማቲከ አድኅኖሙ እምኵሉ አበሳ ወመርገም፤\nለእመ አበስነ ለከ እግዚኦ እመሂ በቃልነ ወእመሂ በምግባርነ፤ ወእምሂ በሕሊናነ ኅድግ ወሥረይ ወአናሕሲ ወተሣሃል፤ እስመ ኄር አንተ ወመፍቀሬ ሰብእ እግዚአብሔር አምላክነ ።",
+          "amharic": "ወንዶችንና ሴቶችንም ባሮችህን ሁሉ ከበደልም ከመርገምም ሁሉ አድናቸው፤ በቃላችንም ቢሆን በሥራችንም ቢሆን፤ በኅሊናችንም ቢሆን አቤቱ አንተን ብንበድል ተውልን አስተሥርይልን አቃልልን ፤ ይቅርም በለን ።",
+          "english": "and deliver all Your servants and handmaids from all transgression and curse. If we have transgressed against You, Lord, whether in our word, deed, or thought, release, remit, pardon and have mercy, for You are good and the lover of man, Lord our God.",
           "transliteration": ""
         },
         {
           "id": "ap-pen-12",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "O Lord, absolve us and set us free, and absolve all Thy people, and absolve me Thy sinful servant.",
+          "geez": "ኦ እግዚኦ ረስየን ፍቱሐነ ወግዑዛነ ፤ ወለኵሎሙ ሕዝብክ ፍትሐሙ ወሊተኒ ለግዑዝ ገብርከ ፍትሐኒ፤",
+          "amharic": "አምላካችን እግዚአብሔር ሆይ አንተ ቸር ሰውን ወዳጅ ነህና፤ አቤቱ የተፈታን ነጻም የወጣን አድርገን፤ ወገኖችህንም ሁሉ ፍታቸው፤ ኃጢአ የምሆን እኔንም አገልጋይህን ፍታኝ ።",
+          "english": "O Lord, absolve us and set us free, and absolve all Your people, and absolve me Your sinful servant.",
           "transliteration": ""
         }
       ]
@@ -1222,27 +1118,27 @@
           "id": "ap-rem-1",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Remember, Lord, the honourable father, our Patriarch Abba and the blessed Archbishop Abba. Our God, keep them for us for many years and length of days in righteousness and peace.",
+          "geez": "ተዘክር እግዚኦ ለአብ ክቡር ሊቀ ጳጳሳት አባ ዕገሌ፤ ወብፁዕ ሊቀ ጳጳሳት አባ ዕገሌ፤ አምላክነ ዐቂበ ዕቀቦሙ ለነ ዓመታተ ብዙኀ ወመ ዋዕለ ነዊኀ በጽድቅ ወበ ሰላም፤",
+          "amharic": "ክቡር የሚሆን የጻዳሳቱ አለቃ አባ ዕገሌን አስበው፤ ብፁዕ የሚሆን አባ ዕገሌንም አስበው፤ አምላካችን ሆይ፤ ለብዙ ዘመናት ለረጅም ወራት በእውነትና በሰላም መጠበቅ ጠብቅልን ።",
+          "english": "Remember, Lord, the honorable father, our Patriarch Abba [...]and the blessed Archbishop Abba[...]. Our God, keep them for us for many years and length of days in righteousness and peace.",
           "transliteration": ""
         },
         {
           "id": "ap-rem-2",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Remember, Lord, all our civil authorities, and loose them from all the chains of sin which they have committed wittingly or unwittingly, quickly subdue their adversaries and enemies under their feet.",
+          "geez": "ተዘክር እግዚኦ ለሀገርትነ ኢትዮጵያ ወዕቀባ በጽድቅ ወበሰላም አግርር ፀራ ወጸላዕታ ፍጡነ፤",
+          "amharic": "አቤቱ ሀገራችንንም ኢትዮጵያ አስባት፤ የሚጣሏትን ጠላቶቿን ፈጥነህ አስገዛላት።",
+          "english": "Remember, Lord, our country Ethiopia. Subdue her adversaries and her enemies under feet speedily. ",
           "transliteration": ""
         },
         {
           "id": "ap-rem-3",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Remember, Lord, the patriarchs, archbishops, bishops, priests and deacons, anagnosts and singers, virgins and monks, widows and orphans, men and women, aged and children; and all Christian people that are standing in this holy church; strengthen them in the faith of Christ.",
+          "geez": "ተዘክር እግዚኦ ሊቃነ ጳጳሳት ጳጳሳት ኤጲስ ቆጳሳት ቀሳውስት ወዲያቆናተ አናጕንስጢሳውያነ ወመዘምራነ ደናግል ወመነኮሳተ ዕቤራተ ወዕጓለ ማውታ ዕደ ወአንስተ አዕሩገ ወሕፃናተ፤ ወኵሎሙ ሕዝበ ክርስቲያን እለ ሀለዉ ወቆሙ ውስተ ዛቲ ቤተ ክርስቲያን ቅድስት አጽንዖሙ በሃይማናተ ክርስቶስ፤",
+          "amharic": "የጻዳሳቱን አለቆች ጳጳሳትንና ኤጲስ ቆጳሳቱን፤ ቀሳውስቱንና ዲያቆናቱን፤ አናጉንስጢሳውያንን፤ መዘምራ ን፤ ደናግሉንና መነኮሳቱን፤ ባልቴቶችንና አባት እናት የማቱባቸውን፤ ወንዶቹንና ሽማፍሌዎቹንና ልጆቹን፤ ክብርት በምትሆን በዚህች ቤተ ክርስቲያን ያሉትን፤ የቆሙትንም የክርስቲያንን ወገኖች ሁሉ ክርስቶስን በማመን አጽናቸው ።",
+          "english": "Remember, Lord, the patriarchs, archbishops, bishops, priests and deacons, anagunsts (readers) and singers, virgins and monks, widows and orphans, men and women, aged and children; and all Christian people that are standing in this holy church; strengthen them in the faith of Christ.",
           "transliteration": ""
         },
         {
@@ -1254,8 +1150,8 @@
           "id": "ap-rem-4",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ተዘከሮሙ እግዚኦ ለኵሎሙ አበዊነ ወአኀዊነ ወአኀቲነ እለ ኖሙ ወአዕረፉ በርትዕተ ሃይማኖት ወድምር ነጻሲቲሆሙ ውስተ ሕፅነ አብርሃም ይስሐቅ ወያዕቆብ፤",
+          "amharic": "አቤቱ በቀናች ሃይማኖት ሁነው የሞቱትንና ያረፉትን አባቶቻችንንና ወንድሞቻችንን እኅቶቻች ንንም ሁሉ አስባቸው፤ ነፍሶቻቸውንም በአብርሃምና በይስሐቅ በያዕቆብም አጠገብ አኑር ።",
           "english": "Remember, Lord, all our fathers, brothers and sisters that are asleep and resting in the orthodox faith, and lay their souls in the bosom of Abraham, Isaac and Jacob.",
           "transliteration": ""
         },
@@ -1263,8 +1159,8 @@
           "id": "ap-rem-5",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ወለነኒ አድኅነነ እምኵሉ አበሳ ወመርገም ወእምኵሉ ጌጋይ ወእምኵሉ ክሕደት ወእምኵሉ መሐላ በሐሰት ወእምኵሉ ግዘት ወእምተደምሮ በዕልወት ወርኵሰ ምስለ ዓላውያን ወአረማውያን፤",
+          "amharic": "እኛንም ከኃጢአት ሁሉ፤ ከመርገምም ከበደልም ሁሉ፤ ከክህደትም ሁሉ፤ በሐሰትም ከመማል ሁሉ፤ ከመገዘትም ሁሉ አድነን፤ በህደትና በርኵስት ከዓላውያንና ከአረማውያን ጋራ አንድ ከመሆን አድነን ።",
           "english": "And as for us, deliver us from every transgression and curse and from all wickedness and from all rebellion and from all false swearing and from all anathemas and from all perjury and from mingling with heretics and gentiles in error and defilement.",
           "transliteration": ""
         },
@@ -1272,8 +1168,8 @@
           "id": "ap-rem-6",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ጸግወን እግዚኦ ጥበበ ወኃይለ ልብ ወልቡና ወአእምሮ፤ ከመ ንርሐቅ ወንጕይ እንክ እስከ ለዘ ለዓለም እምኵሉ ምግባራቲሁ ለሰይጣን ዘያሜክር፤",
+          "amharic": "አቤቱ ጥበብንና ኃይልን፤ ልብንና ልቡናን ዕውቀትንም ስጠን፤ እንግዲህ ከሚፈታተነን ከሰይጣን ሥራ ሁሉ እስከ ዘለ ዓለሙ እንርቅ እንሽሽም ዘንድ ።",
           "english": "Grant us, Lord, wisdom, power, reason, understanding and knowledge, that we may depart and flee for evermore from all works of Satan, the tempter.",
           "transliteration": ""
         },
@@ -1281,9 +1177,9 @@
           "id": "ap-rem-7",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Grant us, Lord, to do Thy will and good pleasure at all times, and write our names in the book of life in the kingdom of heaven with all saints and martyrs, through Jesus Christ our Lord, through whom to Thee with Him and the Holy Spirit be glory and dominion, both now and ever and unto the ages of ages. Amen.",
+          "geez": "ሀበነ እግዚኦ ንግበር ፈቃደከ ወሥምረተከ በኵሉ ጊዜ፤ ወጸሐፍ አስማቲነ ውስተ መጽሐፈ ሕይወት በመንግሥተ ሰማያት ምስለ ኵሎሙ ቅዱሳነ ወሰማዕት በኢየሱስ ክርስቶስ እግዚእነ ፤ ዘቦቱ ለከ ምስሌሁ ወምስለ ቅዱስ መንፈስ ስብሐት ወእኂዝ ይእኀዜኒ ወዘለፈኒ ወለዓለመ ዓለም አሜን፤",
+          "amharic": "አቤቱ ሁልጊዜ ፈቃድህን ውድህንም እንሥራ ዘንድ ስጠን ፤ ስማችንንም በመንግ ሥተ ሰማያት በሕይወት መጽሐፍ ከቅዱሳንና ከሰማዕታት ሁሉ ጋራ ጻፍ ፤ በጌታችን በኢየሱስ ክርስቶስ ፤ በርሱ ያለ ክብር ጽንዕ ለአንተ ይገባል ፤ ክርሱ ጋራ ከመንፈስ ቅዱስም ጋራ ፤ ዛሬም ዘወትርም ለዘለዓለሙ አሜን ።",
+          "english": "Grant us, Lord, to do Your will and good pleasure at all times, and write our names in the book of life in the kingdom of heaven with all saints and martyrs, through Jesus Christ our Lord, through whom to You with Him and the Holy Spirit be glory and dominion, both now and ever and unto the ages of ages. Amen.",
           "transliteration": ""
         }
       ]
@@ -1301,8 +1197,8 @@
           "id": "ap-prec-1",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
+          "geez": "ነጽር ፤",
+          "amharic": "ተመልከት ።",
           "english": "Give heed.",
           "transliteration": ""
         },
@@ -1310,8 +1206,8 @@
           "id": "ap-prec-2",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": " ቅድሳት ለቅዱሳን",
+          "amharic": " ቅድሳት ለቅዱሳን",
           "english": "Holy things for the holy.",
           "transliteration": ""
         },
@@ -1319,10 +1215,10 @@
           "id": "ap-prec-3",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "፩ዱ አብ ቅዱስ፤ ፩ዱ ወልድ ቅዱስ፤ ፩ዱ ውእቱ መንፈስ ቅዱስ፤",
+          "amharic": "ቅዱስ አብ አንድ ነው፤ ቅዱስ ወልድም አንድ ነው ፤ መንፈስ ቅዱስም አንድ ነው ።",
           "english": "One is the holy Father, one is the holy Son, one is the Holy Spirit.",
-          "transliteration": ""
+          "transliteration": "Ahadu Ab Qidus, Ahadu Weld Qidus, Ahadu wi'itu Menfes Qidus"
         },
         {
           "id": "ap-prec-4",
@@ -1351,10 +1247,10 @@
           "id": "ap-prec-6",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "እግዚኦ መሐረነ ክርስቶስ\nእግዚኦ መሐረነ ክርስቶስ\nእግዚኦ መሐረነ ክርስቶስ\n",
+          "amharic": "አቤቱ ክርስቶስ ማረን\nአቤቱ ክርስቶስ ማረን\nአቤቱ ክርስቶስ ማረን\n",
           "english": "Lord, have compassion upon us, O Christ; Lord, have compassion upon us, O Christ; Lord, have compassion upon us, O Christ.",
-          "transliteration": ""
+          "transliteration": "Igzee'o Meharene Kristos,\nIgzee'o Meharene Kristos,\nIgzee'o Meharene Kristos"
         },
         {
           "id": "ap-prec-6b",
@@ -1365,9 +1261,9 @@
           "id": "ap-prec-7",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
-          "english": "Ye that are penitent bow your heads.",
+          "geez": "እለ ውስተ ንስሐ ሀሎክሙ አትሕቱ ርእስክሙ፤",
+          "amharic": "በንስሐ ውስጥ ያላችሁ ራሳችሁን ዝቅ ዝቅ አድርጉ ።",
+          "english": "You that are penitent bow your heads.",
           "transliteration": ""
         },
         {
@@ -1379,26 +1275,26 @@
           "id": "ap-prec-8",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Lord our God, look upon Thy people that are penitent, and according to Thy great mercy, have mercy upon them, and according to the multitude of Thy compassion blot out their iniquity, cover them and keep them from all evil.",
+          "geez": "እግዚአብሔር አምላክነ ነጽር ዲበ ሕዝብከ እለ ውስተ ንስሐ ሀለዉ፤ ወተሣሃሎሙ በከመ እበየ ሣህልከ ወበከመ ብዝኅ ምሕረትከ ደምስስ አበሳሆሙ፤ ክድኖሙ ወዕቀቦሙ እምኵሉ እኩይ፤\n",
+          "amharic": "አምላካችን እግዚአብሔር ሆይ በንስሐ ውስጥ ወዳሉት ወገኖችህ ተመልከት፤ እንደ ይቅርታህ ብዛት ይቅር በላቸው፤ እንደ ቸርነትህ ብዛት በደላቸውን አጥፋላቸው፤ ከክፉ ነገርም ሁሉ ጠብቃቸው ሰውራቸውም ።",
+          "english": "Lord our God, look upon Your people that are penitent, and according to Your great mercy, have mercy upon them, and according to the multitude of Your compassion blot out their iniquity, cover them and keep them from all evil.",
           "transliteration": ""
         },
         {
           "id": "ap-prec-9",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "And redeem their souls in peace, forgive their former works, join them with Thy holy church, through the grace and compassion of Thine only-begotten Son our Lord, God, and Saviour Jesus Christ, through Whom to Thee with Him and with the Holy Spirit be glory and dominion, both now and ever and unto the ages of ages. Amen.",
+          "geez": "ወቤዙ ነፍሳቲሆሙ በሰላም አንፂረክ ወቀዳሚ ምግባሮሙ፤ ደምሮሙ ውስተ ቤተ ክርስቲያንከ ቅድስት፤ በሞገሱ ወበምሕረቱ ለዋሕድ ወልድከ እግዚእነ ወአምላክነ ወመድኃኒነ ኢየሱስ ክርስቶስ፤ ዘቦቱ ለከ ምስሌሁ ወምስለ ቅዱስ መንፈስ ስብሐት ወእኂዝ ይእዜኒ ወዘለፈኒ ወለዓለመ ዓለም አሜን፤",
+          "amharic": "የቀደመ ሥራቸውን ይቅር ብለህ በሰላም ነፍሳቸውን አድን፤ ከቅድስት ቤት ክርስቲያንህ አንደ አድርጋቸው፤ ተቀዳሚ ተከታይ በሌለው በአንደ ልጅህ በጌታችን በመድኅኒታችንም በኢየሱስ ክርስቶስ በይቅርታውና በምሕረቱ ከቅድስት ቤት ክርስቲያንክ ጨምራቸው፤ በርሱ ያለ ክብር ጽንዕ ለአንተ ይገባል፤ ክርሱ ጋራ ከመንፈስ ቅዱስም ጋራ፤ ዛሬም ዘወትርም ለዘለዓለሙ አሜን ።",
+          "english": "And redeem their souls in peace, forgive their former works, join them with Thy holy church, through the grace and compassion of Your only-begotten Son our Lord, God, and Savior Jesus Christ, through Whom to You with Him and with the Holy Spirit be glory and dominion, both now and ever and unto the ages of ages. Amen.",
           "transliteration": ""
         },
         {
           "id": "ap-prec-10",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
+          "geez": "ተንሥኡ ለጸሎት፤",
+          "amharic": "ለጸሎት ተነሡ",
           "english": "Arise for prayer.",
           "transliteration": ""
         },
@@ -1406,10 +1302,10 @@
           "id": "ap-prec-11",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "እግዚኦ ተሣሃለነ፤\n",
+          "amharic": "አቤቱ ይቅር በለን",
           "english": "Lord have mercy upon us.",
-          "transliteration": ""
+          "transliteration": "Igzee'o tesehalene."
         },
         {
           "id": "ap-prec-12",
@@ -1433,99 +1329,99 @@
           "id": "ap-prec-14",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "This is the true holy body of our Lord, God, and Saviour Jesus Christ, that is given for life, salvation, remission of sin unto them that receive of it in faith.",
+          "geez": "ሥጋ ቅዱስ ዘበአማን ዝ ውእቱ ዘእግዚእነ ወአምላክነ ወመድኃኒነ ኢየሱስ ክርስቶስ ዘይትወሀብ ለሕይወት ወለመድኃኒት ወለሥርየተ ኃጢአት ለእለ ይነሥኡ እምኔሁ በአሚን፤",
+          "amharic": "በእውነት ክቡር የሚሆን የጌታችንና የአምላካችን የመድኅኒታችን የኢየሱስ ክርስቶስ ሥጋ ይህ ነው፤ አምነው ክርሱ ለሚቀበሉ ሕይወትና መድኅኒት የነፍስም ማስተሥረያ ሊሆን የሚሰጥ፤",
+          "english": "This is the true Holy Body of our Lord, God, and Savior Jesus Christ, that is given for life, salvation, remission of sin unto them that receive of it in faith.",
           "transliteration": ""
         },
         {
           "id": "ap-prec-14r",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "አሜን ።",
+          "amharic": "አሜን ።",
           "english": "Amen.",
-          "transliteration": ""
+          "transliteration": "Amen"
         },
         {
           "id": "ap-prec-15",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "This is the true precious blood of our Lord, God, and Saviour Jesus Christ, which is given for life, salvation, and remission of sins into those who drink of it in faith.",
+          "geez": "ደም ክቡር ዘበአማን ዝ ውእቱ ዘእግዚእነ ወአምላክነ ወመድኃኒነ ኢየሱስ ክርስቶስ ዘይትወሀብ ለሕይወት ወለ መድኃኒት ወለሥርየተ ኃጢአት ለእለ ይትሜጠዉ እምኔሁ በአሚን፤\n",
+          "amharic": "በእውነት አምነው ከርሱ ለሚቀበሉ ሕይወትና መድኅኒት የኃጢአት ማስተሥረያ ይሆን ሊሆን የሚሰጥ የጌታችንና የአምላካችን የኢየሱስ ክርስቶስ ክቡር ደም ይህ ነው፤\n",
+          "english": "This is the true precious Blood of our Lord, God, and Savior Jesus Christ, which is given for life, salvation, and remission of sins into those who drink of it in faith.",
           "transliteration": ""
         },
         {
           "id": "ap-prec-15r",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "አሜን ።",
+          "amharic": "አሜን ።",
           "english": "Amen.",
-          "transliteration": ""
+          "transliteration": "Amen"
         },
         {
           "id": "ap-prec-16",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "For this is the body and blood of Emmanuel our very God.",
+          "geez": "እስመ ዝንቱ ውእቱ ሥጋሁ ወደሙ ለአማኑኤል አምላክነ ዘበአማን",
+          "amharic": "በእውነት የአምላካ ችን የአማኑኤል ሥጋውና ደሙ ይህ ነውና ፤",
+          "english": "For this is the Body and Blood of Emmanuel our very God.",
           "transliteration": ""
         },
         {
           "id": "ap-prec-16r",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "አሜን ።",
+          "amharic": "አሜን ።",
           "english": "Amen.",
-          "transliteration": ""
+          "transliteration": "Amen"
         },
         {
           "id": "ap-prec-17",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "I believe, I believe, I believe and I confess, unto my last breath, that this is the body and blood of our Lord, God, and Saviour Jesus Christ, which He took from the Lady of us all, the holy Mary of twofold virginity, and made it one with His godhead without mixture or confusion, without division or alteration; and He verily confessed with a good testimony in the days of Pontius Pilate, and this body He gave up for our sakes and for the life of us all.",
+          "geez": "አአምን አአምን አአምን ወእትአመን እስከ ደኃሪት እስትንፋስ ከመ ዝንቱ ውእቱ ሥጋሁ ወደሙ ለእግዚእነ ወአምላክነ ወመድኃኒነ ኢየሱስ ክርስቶስ ዘነሥአ እምእግዝእትነ ኵልነ ቅድስት ድንግል በ፪ ማርያም፤ ወረሰዮ ፩ዱ ምስለ መለኮቱ ዘእንበለ ቱስሕት ወኢትድምርት፤ ዘእንበለ ፍልጠት ወኢውላጤ ወኮነ ስምዕተ በስምዕ ሠናይ በመዋዕለ ጲላጦስ ጰንጤናዊ ወመጠዎ በእንቲአን ወበ እንተ ሕይወት ኵልነ፤\n",
+          "amharic": "አምናለሁ አምናለሁ አምናለሁ፤ እስከ መጨረሻዪቱም እስትንፋስ እታመናለሁ፤ በሁለት ወገን ድንግል ከሁላችን እመቤት ከቅድስት ማርያም የነሣው የጌታችንና የአምላካችን የመድኃኒታችን የኢየሱስ ክርስቶስ ሥጋው ደሙ ይህ እንደ ሆነ፤ ያለመቀላቀል ያለትድምርት፤ ያለ መለወጥና ያለ መለየት ከመለኮቱ ጋራ አንድ ያደረገው፤ በጴንጤናዊ ጲላጦስም ዘመን ባማረ ምስክርነት ምስክር የሆነ፤ ስለ እኛና ስለሁላችንም ሕይወት አሳለፎ የሰጠው፤",
+          "english": "I believe, I believe, I believe and I confess, unto my last breath, that this is the Body and Blood of our Lord, God, and Savior Jesus Christ, which He took from the Lady of us all, the holy Mary of twofold virginity, and made it one with His Godhead without mixture or confusion, without division or alteration; and He verily confessed with a good testimony in the days of Pontius Pilate, and this Body He gave up for our sakes and for the life of us all.",
           "transliteration": ""
         },
         {
           "id": "ap-prec-17r",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "አሜን ።",
+          "amharic": "አሜን ።",
           "english": "Amen.",
-          "transliteration": ""
+          "transliteration": "Amen"
         },
         {
           "id": "ap-prec-18",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "I believe, I believe, I believe and I confess that His godhead was not separated from His manhood, not for an hour nor for the twinkling of an eye, but He gave it up for our sakes for life, salvation, and remission of sin unto them that partake of it in faith.",
+          "geez": "አአምን አአምን አአምን ወእትአመን ከመ ኢተፈልጠ መለኮቱ እም ትስብእቱ ኢአሐተ ሰዓተ ወኢከመ ቅጽበተ ዓይን አላ መጠዎ በእንቲአን ለሕይወት ወለ መድኃኒት ወለሥርየየተ ኃጢአት ለእለ ይትሜጠዉ እምኔሁ በአሚን፤\n",
+          "amharic": "አምናለሁ አምናለሁ አምናለሁ፤ መለኮቱ ከሰውነቱ አንዲት ሰዓት እንኳ እንደ ዓይን ቅጽበት (ወይም የዓይን ጥቅሻ ያህል ስንኳ) እንዳልተለየም እታመናለሁ፤ ስለ እኛ ሰጠው እንጂ፤ ለሕይወትና ለመድኃኒት ለኃጢአትም ማስተሥረያ ሊሆን አምነው ለሚቀበሉ ስዎች ስለ እኛ አሳልፎ ሰጠው እንጂ፤\n",
+          "english": "I believe, I believe, I believe and I confess that His Godhead was not separated from His manhood, not for an hour nor for the twinkling of an eye, but He gave it up for our sakes for life, salvation, and remission of sin unto them that partake of it in faith.",
           "transliteration": ""
         },
         {
           "id": "ap-prec-18r",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "አሜን ።",
+          "amharic": "አሜን ።",
           "english": "Amen.",
-          "transliteration": ""
+          "transliteration": "Amen"
         },
         {
           "id": "ap-prec-19",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "I believe, I believe, I believe and I confess that this is the body and blood of our Lord, God, and Saviour Jesus Christ, and that to Him are rightly due honour and glory and adoration with His kind heavenly Father and the Holy Spirit, the life-giver, both now and ever and unto the ages of ages. Amen.",
+          "geez": "አአምን አአምን አአምን ወእትአመን ከመ ዝንቱ ውእቱ ሥጋሁ ወደሙ ለእግዚእነ ወአምላክነ ወመድኃኒነ ኢየሱስ ክርስቶስ፤ ዝ ውእቱ ዘሎቱ ይደሉ ክብር ወስብሐት ወስግደት ምስለ አቡሁ ኄር ሰማያዊ ወመንፈስ ቅዱስ ማሕያዊ ይእኀዜኒ ወዘለ ፈኒ ወለዓለመ ዓለም አሜን፤",
+          "amharic": "አምናለሁ አምናለሁ አምናለሁ፤ የጌታችንና የአምላካችን የመድኅኒታችን የኢየሱስ ክርስቶስ ሥጋው ደሙ ይህ እንደ ሆነ እታመናለሁ፤ ክብርና ምስጋና ስግደትም ቸር ለሚሆን ለሰማያዊ አባቱ ጋራ ማሕያዊ ለሚሆን ከመንፈስ ቅዱስ ጋራ የሚገባው ይህ ነው፤ ዛሬም ዘወትርም ለዘለ ዓለሙ አሜን ።",
+          "english": "I believe, I believe, I believe and I confess that this is the Body and Blood of our Lord, God, and Savior Jesus Christ, and that to Him are rightly due honor and glory and adoration with His kind heavenly Father and the Holy Spirit, the life-giver, both now and ever and unto the ages of ages. Amen.",
           "transliteration": ""
         }
       ]
@@ -1550,7 +1446,7 @@
           "speaker": "priest",
           "geez": "",
           "amharic": "",
-          "english": "Blessed be God, almighty Father, our God. And blessed be the only-begotten Son, our Lord and Saviour Jesus Christ. And blessed be the Holy Spirit the Paraclete, the comforter and cleanser of us all.",
+          "english": "Blessed be God, almighty Father, our God. And blessed be the only-begotten Son, our Lord and Savior Jesus Christ. And blessed be the Holy Spirit the Paraclete, the comforter and cleanser of us all.",
           "transliteration": ""
         },
         {
@@ -1562,35 +1458,35 @@
           "id": "ap-com-2",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Lord my God, behold the sacrifice of Thy Son's body, which pleases Thee. Through it blot out all my sins because Thine only-begotten Son died for me.",
+          "geez": "እግዚአብሔር አምላኪየ ናሁ ሥጋ ወልድከ መሥዋዕተ ዘያሠምረከ፤ ወቦ ዝንቱ አናሕሲ ሊተ ኵሉ ኃጢአትየ እስመ በእንቲአየ ሞተ ወልድከ ዋሕድ፤",
+          "amharic": "አምላኬ እግዚአብሔር ሆይ፤ ደስ የሚያሰኝህ መሥዋዕት የልጅህ ሥጋ እነሆ፤ በዚህም ኃጢአቴን ሁሉ አጥፋልኝ፤ ስለ እኔ አንድ ልጅህ ሙቷልና ።",
+          "english": "Lord my God, behold the sacrifice of Your Son's body, which pleases You. Through it blot out all my sins because Your only-begotten Son died for me.",
           "transliteration": ""
         },
         {
           "id": "ap-com-3",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "And behold the pure blood of Thy Messiah, which was shed for me upon Calvary, cries aloud in my stead. Grant that the testimony of this blood may be unto the forgiveness of me Thy servant.",
+          "geez": "ወናሁ ደም መሢህከ ንጹሕ ዘተክዕወ በእንቲ አየ በቀራንዮ ይኬልሕ ህየንቴየ፤ ዝንቱ ደም ነባቢ ይኩን ሥራዬ ኃጢአትየ ለገብርከ፤",
+          "amharic": "ስለእኔ በቀራንዮ የፈሰሰ ንጹሕ የሚሆን የመሢሕም ደም እነሆ ስለ እኔ ይጮኻል፤ ይህ የሚናገር ደም የኔን አገልጋይህን ኃጢአት የሚያስተሥርይ ይሁን ።",
+          "english": "And behold the pure blood of Your Messiah, which was shed for me upon Calvary, cries aloud in my stead. Grant that the testimony of this Blood may be unto the forgiveness of me Your servant.",
           "transliteration": ""
         },
         {
           "id": "ap-com-4",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "And accept my prayers for its sake, because thy beloved accepted the spear and the nails for my sake, and suffered to please Thee. But after I was saved, Satan returned to my heart and pierced me through with his darts. Grant me, Lord, Thy mercy, because he is a powerful accuser.",
+          "geez": "ወተወከፍ ስእለትየ በእንቲአሁ እስመ በእንቲአየ ኩናተ ወቅንዋተ ተወክፈ ፍቁርከ ወሐመ ከመ ያሥምርከ፤ ወእምድኅረ ድኅንኩ ገብአ ሰይጣን ውስተ ልብየ ወንደፈኒ በአሕጻው፤ ሀበኒ እግዚኦ ምሕረተከ እስመ መስተዋቅስ ጽኑ ውእቱ፤",
+          "amharic": "ስለ እንርሱም ልመናዬን ተቀበል፤ ወዳጅህ ስለ እኔ ጦርንና ቅንዋትን ተቀብሏልና፤ ደስ ያሰኝህም ዘንድ ታመመ፤ ከዳንሁም በኋላ ሰይጣን ወደ ልቡናዬ ተመልሶ በፍላፃዎቹ ወጋኝ፤ አቤቱ ምሕረትህን ስጠኝ፤ ጽኑ ከሳሽ ነውና ።",
+          "english": "And accept my prayers for its sake, because Your beloved accepted the spear and the nails for my sake, and suffered to please Thee. But after I was saved, Satan returned to my heart and pierced me through with his darts. Grant me, Lord, Your mercy, because he is a powerful accuser.",
           "transliteration": ""
         },
         {
           "id": "ap-com-5",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ወበሥንቀ ኃጢአት ቀተለኒ ተበቀል ሊተ እምደፋር ዘኢይጸግብ አስሕቶትየ እምሕይወትየ፤",
+          "amharic": "ኃጢአትንም ምክንያት (ስንቅ) አድርጎ ገደለኝ፤ እኔን ከሕይወቴ ማሳትን በቃኝ ከማይል ደፋር አድነኝ ።",
           "english": "And by the provision of sin he slew me. Avenge me of the audacious one who is not satisfied with my being led astray from my life.",
           "transliteration": ""
         },
@@ -1598,9 +1494,9 @@
           "id": "ap-com-6",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Thou, Lord, my King, God, Saviour bind up the wounds of soul and body of me Thy servant.",
+          "geez": "አንተ እግዚኦ ንጉሥየ ወአምላኪየ ወመድኃኒየ አጽምም ሊተ ቍስለ ነፍስየ ወሥጋየ ለገብርከ፤",
+          "amharic": "አቤቱ ንጉሤና አምላኬ መድኅኒቴም የምትሆን አንተ የእኔን የአገልጋይህን የነፍሴና የሥጋዬን ቁስል አድርቅልኝ ።",
+          "english": "You, Lord, my King, God, Savior bind up the wounds of soul and body of me Your servant.",
           "transliteration": ""
         },
         {
@@ -1612,33 +1508,34 @@
           "id": "ap-com-7",
           "type": "prayer",
           "speaker": "all",
-          "geez": "",
-          "amharic": "",
-          "english": "O my Lord Jesus Christ, it in no wise befits Thee to enter under the roof of my polluted house, for I have provoked Thee to wrath, for I have done evil in Thy sight, and through the transgression of Thy commandment have polluted my soul and body which Thou created after Thine image and likeness, yet in me dwells no good thing.",
+          "geez": "ኦ እግዚእየ ኢየሱስ ክርስቶስ አኮ ዘይደልወኒ ትባእ ታሕተ ጠፈረ ቤትየ ርኩስት እስመ አን አስተቄማዕኩከ፤ ወገበርኩ እኩየ በቅድሜከ ወአርኮስኩ ነፍስየ ወሥጋየ ዘፈጠርከ በአርአያ ወበአምሳሊከ በዐሊወ ትሕዛዝከ፤ ወአልብየ ምግባር ወኢምንትኒ፤",
+          "amharic": "አቤቱ ጌታዬ ኢየሱስ ክርስቶስ ሆይ ፤ ርኩስት ከሆነች ከቤቴ ጣራ በታች ትገባ ዘንድ የሚገባኝ አይደለሁንና ፤ እኔ አስዝኜሃለሁና ፤ በፊትህ ክፉ ሥራ ሠርቻለሁና ፤ በአርአያህና በአምሳልህ የፈጠርሃትን ነፍሴን ትዛዝህን በማፍረስ አሳድፌያሁና ፤ ሥራም ምንም ምን የለኝምና ።",
+          "english": "O my Lord Jesus Christ, it in no wise befits You to enter under the roof of my polluted house, for I have provoked You to wrath, for I have done evil in Your sight, and through the transgression of Your commandment have polluted my soul and body which You created after Your image and likeness, yet in me dwells no good thing.",
           "transliteration": ""
         },
         {
           "id": "ap-com-8",
           "type": "prayer",
           "speaker": "all",
-          "geez": "",
-          "amharic": "",
-          "english": "But for the sake of Thy plan, and Thine incarnation for my salvation, for the sake of thy precious cross and Thy life-giving death, for the sake of Thy resurrection on the third day, I pray thee and beseech Thee, O my Lord, that Thou would purge me from all guilt and curse, and from all sin and defilement.",
+          "geez": "ወባሕቱ በእንተ ተኬንዎትከ ወበእንተ ትስብእትከ በእንተ መድኃኒትየ በእንተ መስቀልከ ክቡር ወበእንተ ሞትከ ማሕይዊ ወበእንተ ትንሣኤከ በሣልስት ዕለት እስእለከ ወአስተበቍዐከ ኦ እግዚእየ ከመ ታንጽሐኒ እም ኵሉ አበሳ ወመርገም ወእምኵሉ ኃጢአት ወርኩስ ።",
+          "amharic": "ነገር ግን ስለ መፍጠርህና እኔን ለማዳን ሰው ስለ መሆንህ ፤ ስለ ክቡር መስቀልህ ስለ ሞትህ ፤ በሦስተኛው ቀን ስለ መነሣትህም ጌታዬ ሆይ ከበደልና ከመርገም ሁሉ ከኃጢአትና ከርኩሰትም ሁሉ ታነጻኝ ዘንድ እለምንሃለሁ ፤ እማልድሃለሁም ።",
+          "english": "But for the sake of Your plan, and Your incarnation for my salvation, for the sake of Your precious cross and Your life-giving death, for the sake of Your resurrection on the third day, I pray You and beseech You, O my Lord, that You would purge me from all guilt and curse, and from all sin and defilement.",
           "transliteration": ""
         },
         {
           "id": "ap-com-9",
           "type": "prayer",
           "speaker": "all",
-          "geez": "",
-          "amharic": "",
-          "english": "And when I have received Thy holy mystery, let it not be unto me for judgement nor for condemnation, but have compassion upon me and have mercy upon me; and through it grant me remission of my sin and life for my soul, O life of the world, through the petition of our Lady, the holy Mary His mother of twofold virginity, and of John the Baptist, and through the prayer of all the holy angels, all the martyrs, and righteous who have fought for the good, unto ages of ages. Amen.",
+          "geez": "ወሶበ እትሜጠዎ ለምሥጢረ ቅድሳቲከ ኢይኩነኒ ለቅስት ወኢለኵነኔ ፤ አላ መሐረኒ ወተሣሃለኒ ፤ ወሀበኒ ቦቱ ሥርየተ ኃጢአቲየ ወሕይወተ ነፍስየ ኦ ሕይወተ ዓለም በስእለታ ለእግዝእትነ ቅድስት ድንግል በ፪ ማርያም ወላዲትከ ወዮሐንስ መጥምቅ ፤ ወበጸሎቱ ኵሎሙ ቅዱሳን መላእክት ወኵሎሙ ሰማዕት ወጻድቃን መስተጋድላን ለሠናይ እስከ ለዓለም ድርስ አሜን ።",
+          "amharic": "የቅድስናህን ምሥጢር በተቀበልሁት ጊዜ ለወቀሳ ለመፈራረጃ አይሁን ፤ ማረኝ ይቅርም በለኝ እንጂ ፤ የዓለም ሕይወት ሆይ ፤ በርሱ ስለ ኃጢአቴ ሥርየት የነፍሴንም ሕይወት ስጠኝ እንጂ ፤ በሁለት ወገን ድንግል በምትሆን በወለደችህ እመቤታችን በቅድስት ማርያም በመልአክትም በሰማዕታትና  ለበጎ ነገር በሚጋደሉ  በጻድቃንም ሁሉ ፤ ስለ ዘለዓለሙ ድረስ አሜን ።",
+          "english": "And when I have received Your Holy mystery, let it not be unto me for judgement nor for condemnation, but have compassion upon me and have mercy upon me; and through it grant me remission of my sin and life for my soul, O life of the world, through the petition of our Lady, the holy Mary His mother of twofold virginity, and of John the Baptist, and through the prayer of all the holy angels, all the martyrs, and righteous who have fought for the good, unto ages of ages. Amen.",
           "transliteration": ""
         },
         {
           "id": "ap-com-9r",
           "type": "rubric",
-          "english": "The priest shall come out of the sanctuary and distribute the Holy Communion to the faithful in order. Then the men, then the women. But the babies who have already been baptized shall receive before the other faithful."
+          "english": "The priest shall come out of the sanctuary and distribute the Holy Communion to the faithful in order. Then the men, then the women. But the babies who have already been baptized shall receive before the other faithful.",
+          "geez": ""
         },
         {
           "id": "ap-com-10r",
@@ -1649,9 +1546,9 @@
           "id": "ap-com-10",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "O my Lord Jesus Christ, let not this Thy mystery be iniquity in me, rather let it be for the purifying of my soul and my body.",
+          "geez": "እግዚአብሔር አምላኪየ ናሁ ሥጋ ወልድከ መሥ ዋዕተ ዘይሄውድረከ፤ ወቦ ዝንቱ አናሕሲ ሊተ ኵሉ ኃጢአትየ እስመ በእንቲአየ ሞተ ወልድከ ዋሕድ፤",
+          "amharic": "\nአምላኬ እግዚአብሔር ሆይ፤ ደስ የሚያሰኝህ መሥዋዕ ት የልጅህ ሥጋ ይኸ፤ በዚህም ኃጢአ ቴን ሁሉ አ ጥፋልኝ፤ ስለ እኔ አንድ ልጅህ ሙቷልና ።",
+          "english": "O my Lord Jesus Christ, let not this Your mystery be iniquity in me, rather let it be for the purifying of my soul and my body.",
           "transliteration": ""
         },
         {
@@ -1668,17 +1565,17 @@
           "id": "ap-com-12",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "The bread of life which came down from heaven, the holy body of Christ.",
+          "geez": "ኅብስት ሕይወት ዘወረደ እምሰማያት ቅዱስ ሥጋሁ ለክርስቶስ ",
+          "amharic": "ከሰማይ የወረደ የሕይ ወት ኅብስት የክርስቶስ ክቡር ሥጋ ፤\n",
+          "english": "The Bread of Life which came down from heaven, the Holy Body of Christ.",
           "transliteration": ""
         },
         {
           "id": "ap-com-12b",
           "type": "response",
           "speaker": "all",
-          "geez": "",
-          "amharic": "",
+          "geez": "አሜን።",
+          "amharic": "አሜን።",
           "english": "Amen.",
           "transliteration": ""
         },
@@ -1686,18 +1583,18 @@
           "id": "ap-com-13",
           "type": "prayer",
           "speaker": "all",
-          "geez": "",
-          "amharic": "",
-          "english": "Holy, holy, holy Trinity ineffable, grant me to receive this body and His blood for life and not for condemnation. Grant me to bring forth fruit that shall be well-pleasing unto Thee, to the end that I may appear in Thy glory, and live unto Thee, doing Thy will.",
+          "geez": "ቅዱስ ቅዱስ ቅዱስ ሥሉስ ዘኢይትነገር ሀበኒ ከመ እንሣዕ ለሕይወት ዘንተ ሥጋ ወደመ ዘእንበለ ኵነኔ ፤ ሀበኒ እግበር ፍሬ ዘያሥምረከ ከመ አስተርኢ በስብሐቲከ ወአሕየው ለከ እንዘ እገብር ዘዚአከ ፈቃደ ።",
+          "amharic": "የማይነገር ቅዱስ ቅዱስ ቅዱስ ሥሉስ የምትሆን ይህን ሥጋና ደም ለሕይወት ሊሆነኝ ሳይፈረድብኝ እቀበል ዘንድ ስጠኝ ፤ በጌትነትህ እንድገለጽ ደስ የሚያሰኝህን ፍሬ እሠራ ዘንድ ስጠኝ፣ የአንተንም ፈቃድ እየሠራሁ እኖርልህ ዘንድ ስጠኝ",
+          "english": "Holy, holy, holy Trinity ineffable, grant me to receive this body and this blood for life and not for condemnation. Grant me to bring forth fruit that shall be well-pleasing unto You, to the end that I may appear in Your glory, and live unto Your, doing Your will.",
           "transliteration": ""
         },
         {
           "id": "ap-com-14",
           "type": "prayer",
           "speaker": "all",
-          "geez": "",
-          "amharic": "",
-          "english": "In faith I call upon Thee, Father, and call upon Thy Kingdom: hallowed, Lord, be Thy name upon us, for mighty art Thou, praised and glorious, and to Thee be glory, unto endless ages.",
+          "geez": "በተአምኖ እጼውዐከ አብ ወእጼዕወ መንግሥትከ ይትቀደስ እግዚእ ስምከ በላዕሌነ አስመ ኃያል አንተ እኩት ወስቡሕ ወለከ ስብሐት ለዓለመ ዓለም ።",
+          "amharic": "በማመን አባት ብዬ እጠራሃለሁ ፤ መንግሥትህንም እጠራለሁ ፤ አቤቱ ስምህ በኛ ላይ ይመስገን ፤ ምስጉን ክቡር አንተ ነህና ፤ ለአንተም ክብር ይገባሃል ለዘለዓለሙ ።",
+          "english": "In faith I call upon You, Father, and call upon Your Kingdom: hallowed, Lord, be Your name upon us, for mighty art You, praised and glorious, and to You be glory, unto endless ages.",
           "transliteration": ""
         },
         {
@@ -1709,9 +1606,9 @@
           "id": "ap-com-15",
           "type": "prayer",
           "speaker": "all",
-          "geez": "",
-          "amharic": "",
-          "english": "Fill my mouth with praise, my heart with joy, and my soul with gladness, fill me who have received of this divine mystery, O Thou Who became man for the salvation of man.",
+          "geez": "ምላዕ አፉየ ስብሐተ ወልብየ ሐሤተ ወነፍ ስየ ትፍሥሕተ ለዘተ መጠውኩ እምዝንቱ ምሥጢር አምላካዊ ዘኮነ ሰብአ በእስንተ መድኃኒተ ሰብእ ።",
+          "amharic": "ሰውን ለማዳን ሰው ከሆነ ከአምላካዊ ምሥጢር በተቀበልሁ በእኔ በአንደበቴ ምስጋናህን በልቡናዬ ሐሤትን በሰውነቴም ደስታን ምላ፤",
+          "english": "Fill my mouth with praise, my heart with joy, and my soul with gladness, fill me who have received of this divine mystery, O You Who became man for the salvation of man.",
           "transliteration": ""
         },
         {
@@ -1723,19 +1620,19 @@
           "id": "ap-com-16",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "This is the cup of life that came down from heaven; this is the precious blood of Christ.",
+          "geez": "ዝንቱ ጽዋዐ ሕይወት ዘወረደ እምሰማያት ክቡር ደሙ ለክርስቶስ ፤ ",
+          "amharic": "ይህ የሕይወት ጽዋ ከሰማይ የወረደ የክርስቶስ ክቡር ደም ነው ፤ ",
+          "english": "This is the cup of life that came down from heaven; this is the precious Blood of Christ.",
           "transliteration": ""
         },
         {
           "id": "ap-com-17",
           "type": "response",
           "speaker": "all",
-          "geez": "",
-          "amharic": "",
+          "geez": "አሜን ወአሜን።",
+          "amharic": "አሜን ወአሜን።",
           "english": "Amen and amen.",
-          "transliteration": ""
+          "transliteration": "Amen we amen."
         }
       ]
     },
@@ -1757,36 +1654,36 @@
           "id": "ap-pcom-1",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "O my Lord and my God Jesus Christ, behold I have received Thy holy Body and Thy precious Blood. May they be for the remission of my sins and the blotting out of my trespasses.",
+          "geez": "እግዚእየ ወአምላኪየ ኢየሱስ ክርስቶስ ናሁ ተመጠውኩ ሥጋከ ንጹሕ ወደመከ ክቡረ ይኩነኒ ለሥርየተ ኃጢአትየ ወለኀድገተ አበሳየ ።",
+          "amharic": "ጌታዬ አምላኬ ኢየሱስ ክርስቶስ ሆይ ንጹሕ ሥጋ ህንና ክቡር ደምህን እነሆ ተቀብያለሁ ፤ ለኃጢአት ማስተሥረያ ይሁነኝ ፤ ስለ በደሌም ሁሉ ።",
+          "english": "O my Lord and my God Jesus Christ, behold I have received Your holy Body and Your precious Blood. May they be for the remission of my sins and the blotting out of my trespasses.",
           "transliteration": ""
         },
         {
           "id": "ap-pcom-2",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "O only-begotten Son and lover of man, fill my mouth with Thy praise that I may praise Thy glory, for Thou art He Who once became man and declared Himself through His incarnation in order to save me for ever. Thou has redeemed me for ever for the sake of Thy holy Name.",
+          "geez": "ኦ ወልድ ዋሕድ ወመፍቀሬ ሰብእ ምላዕ አፉየ ስብሐቲከ ከመ እሰብሕ አኮቴተከ እስመ አንተ ቀዳሚ ዘተሰብእክ ወተሰባሕከ እስከ ለዓለም ዓለም ወአድኀንከኒ በእንተ ስምከ ቅዱስ ለዓለመ ዓለም ።",
+          "amharic": "ሰውን የምትወድ ወልድ ዋሕድ ሆይ ምስጋናህን በአንደበቴ ምላልኝ ፤ አመስግንህ ዘንድ አስቀድሞ ሰው የሆንህ አንተ ነህና ፤ እስከ ዘላዓለሙ ታድነኝ ዘንድ ነውና ስለ ቅዱስ ስምህም ለዘለ ዓለሙ አዳንኸኝ ።",
+          "english": "O only-begotten Son and lover of man, fill my mouth with Your praise that I may praise Your glory, for Your art He Who once became man and declared Himself through His incarnation in order to save me for ever. You have redeemed me for ever for the sake of Your holy Name.",
           "transliteration": ""
         },
         {
           "id": "ap-pcom-3",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Glory be to Thee, O my Lord and my God Jesus Christ, Who has granted me Thy Body and Thy Blood at the hand of Thy servant. I glorify thee and pray thee that I may be in the midst of Thy flock, and that accepting me, Thou will number me with Thy sheep.",
+          "geez": "ስብሐት ለከ ኦ እግዚእየ ወአምላኪየ ኢየሱስ ክርስቶስ ዘወሀብከኒ ዕሩፈ በእደ ዚአሁ ለገብርከ ዕገሌ እሴብሐከ ወእስእለከ ከመ እኩን ውስተ መርዔትከ ወከመትኆልቆኒ ምስለ አባግዒከ ወተወከፈኒ፤ ።",
+          "amharic": "ጌታዬ አምላኬ ኢየሱስ ክርስቶስ ሆይ ፤ ባገልጋይህ በእገሌ እጅ ሥጋህንና ደምህን አንድ አድርገህ ለሰጠኸኝ ለአንተ ምስጋና ይገባል ፤ አመስግንሃለሁ ፤ እማልድሃለሁም ፤ ከመንጋህ አንድ እሁን ዘንድ ፤ ከበጎችህም ትቆጥረኝ ዘንድ ተቀበለኝ ።",
+          "english": "Glory be to You, O my Lord and my God Jesus Christ, Who has granted me Your Body and Your Blood at the hand of Your servant. I glorify You and pray thee that I may be in the midst of Your flock, and that accepting me, You will number me with Your sheep.",
           "transliteration": ""
         },
         {
           "id": "ap-pcom-4",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "And now remember not my trespasses. I give thanks for Thy grace which has been granted unto me, and for Thy help which has been with me.",
+          "geez": "ይእዜኒ ኢትዘክር ሊተ አበሳየ አአኩቶ ለጸጋ ዚአከ ዘተውህበ ሊተ ወለርድኤት እንተ ኮነት ምስሌየ ።",
+          "amharic": "አሁንም ኃጢአቴን አትቁጠርብኝ ፤ ለእኔ የተሰጠችን ጸጋህን በእኔ ያለች ረድኤትህንም አመስግናለሁ ።",
+          "english": "And now remember not my trespasses. I give thanks for Your grace which has been granted unto me, and for Your help which has been with me.",
           "transliteration": ""
         },
         {
@@ -1798,9 +1695,9 @@
           "id": "ap-pcom-5",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
-          "english": "I will take the cup of life, and call upon the name of the Lord. Pray ye for us and for all Christians who ask us to mention them. Praise ye and sing in the peace and love of Jesus Christ.",
+          "geez": "እንዘ ይትሜጠው ጽዋዐ ፤ ጽዋዐ ሕይወት እትሜጠ ወስመ እግዚአብሔር እጼዕ ፤ ጸልዩ በእንቲአን ወበ እንተ ኵሎሙ ክርስቲያን እለ ይቤሉን ግበሩ ተዝካሮሙ በሰላም ወበ ፍቅር ኢየሱስ ክርስቶስ ሰብሑ ወዘምሩ ።",
+          "amharic": "የሕይወት ጽዋን እቀበላሁ ፤ የእግዚአብሔርንም ስም እጠራለሁ ፤ ስለ እኛና መታሰቢያቾውን አድርጉ ስላሉን ስለ ክርስቲያን ሁሉ ጸልዩ ፤ በሰላም በኢየሱስ ክርስቶስም ፍቅር አመስግኑ ዘምሩም ።",
+          "english": "I will take the cup of life, and call upon the name of the Lord. Pray you for us and for all Christians who ask us to mention them. Praise you and sing in the peace and love of Jesus Christ.",
           "transliteration": ""
         },
         {
@@ -1817,9 +1714,9 @@
           "id": "ap-pcom-7",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Those whom Thou has called, Lord, and hallowed, make happy with Thy call, confirm with Thy power, keep with Thy love, join in Thine everlasting kingdom through Christ, through Whom to Thee with Him and with the Holy Spirit be glory and dominion, both now and ever and unto the ages of ages. Amen.",
+          "geez": "እለ ጸዓዕከ እግዚእ ወእለ ቀደስከ ክፍል በጽዋዕክ ፤ ወአጽንዕ በኃይ ልክ ወዕቀብ በፍቅርክ ውስት ዘለዓለም መንግሥትህ በክርስቶስ ፤ ዘቦቱ ለስ ምስሌሁ ወምስለ መንፈስ ቅዱስ ስብሐት ወእኂዝ ይእኀዜኒ ወዘለፈኒ ወለ ዓለመ ዓለም አሜን ።",
+          "amharic": "አቤቱ የጠራሃቸውንም ያከበርሃቸውን በመጥራትህ አድላቸው ፤ በፍቅርህም ጠብቅ ፤ የዘላዓለም በሚሆን መንግሥትህም በክርስቶስ አንድ አድርግ፣ በርሱ ያለ ክብር ጽንዕ ለአንተ ይገባል ፤ ክርሱ ጋራ ከመንፈስ ቅዱስም ጋራ ፤ ዛሬም ዘወትርም ለዘለዓለሙ አሜን ።",
+          "english": "Those whom You have called, Lord, and hallowed, make happy with Your call, confirm with Your power, keep with Your love, join in Your everlasting kingdom through Christ, through Whom to You with Him and with the Holy Spirit be glory and dominion, both now and ever and unto the ages of ages. Amen.",
           "transliteration": ""
         },
         {
@@ -1831,26 +1728,26 @@
           "id": "ap-pcom-9",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "O eternal God, light of life, Thou has given, Lord, unto us Thy servants strength and protection, during the present days and nights, keeping all in peace. Bless them on this present day, and on those to come hereafter, through our Lord Jesus Christ, through Whom to Thee with Him and with the Holy Spirit be glory and dominion, both now and ever and unto the ages of ages. Amen.",
+          "geez": "እግዚአብሔር ዘለ ዓለም ብርሃነ ሕይወት ዘወሀብክነ እግዚኦ ለአግብርቲከ ጽንዐተ ወዕቅበተ በዘሀሎ ዕለታት ወለያልይ እንዘ ተዓቀብ በሰላም ፤ ባርክ በዘይእዜ መዋዕል ወበዘይመጽእ እምድኅር በእግዚእነ ኢየሱስ ክርስቶስ ፤ ዘቦቱ ለከ ምስሌሁ ወምስለ ቅዱስ መንፈስ ስብሐት ወእኂዝ ይእኀዜኒ ወዘለፈኒ ወለ ዓለመ ዓለም አሜን ።",
+          "amharic": "ለዘላዓለሙ የሕይወት ብርሃን የምትሆን አቤቱ ባለው መዓልትና ሌሊት ለኛ ለአገልጋዮች ህ በሰላም እየጠበቕ መጠበቅን ጽናትንም የሰጠኸን፣ በዛሬው ዕለት ኋላም በሚመጣው ዕለት በኢየሱስ ክርስቶስ ባርክ ፤ ክብር ጽንዕ ለአንተ ይገባል ፤ ክርሱ ጋራ ከመንፈስ ቅዱስም ጋራ ፤ ዛሬም ዘወትርም ለዘለዓለሙ አሜን ።",
+          "english": "O eternal God, light of life, You have given, Lord, unto us Your servants strength and protection, during the present days and nights, keeping all in peace. Bless them on this present day, and on those to come hereafter, through our Lord Jesus Christ, through Whom to You with Him and with the Holy Spirit be glory and dominion, both now and ever and unto the ages of ages. Amen.",
           "transliteration": ""
         },
         {
           "id": "ap-pcom-10",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
-          "english": "We thank God that we have partaken of His holy things; we pray and trust that which we have received may be healing for the life of the soul while we glorify the Lord our God.",
+          "geez": "ነአኵቶ ለእግዚአብሔር ቅዳሳቱ ነሣእን ከመ ለሕይወት ነፍስ ይኩነነ ፈውስ ዘተመጦነ ንስእል ወንትመሐፀን እንዘ ንሴብሕ ለእግዚአብሔር አምላክነ ።",
+          "amharic": "ቅድሳቱን ስለተቀበልን እግዚአብሔርን እናመሰግነዋለን፣ ለነፍሳችን አነዋወር መድኃኒት ይሆን ዘንድ የተቀበልን እኛ አምላካችንን እግዚአብሔርን እያመሰገንን እንለምናለን፣ አደራም እንላለን ።",
+          "english": "We thank God for that we have partaken of His holy things; we pray and trust that which we have received may be healing for the life of the soul while we glorify the Lord our God.",
           "transliteration": ""
         },
         {
           "id": "ap-pcom-11",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ስብሐተ እግዚአብሔር ይነግር አፉየ ወኵሉ ዘሥጋ ይባርክ ለስሙ ቅዱስ ለዓለም ወለዓለመ ዓለም ።\n",
+          "amharic": "አንደበቴ የእግዚአብሔርን ምስጋና ይናገራል ፤ የሥጋ ፍጥረትም ሁሉ ቅዱስ የሚሆን ስሙን ያመስግናል ለዘለዓለሙ ።",
           "english": "My mouth shall speak the praise of the Lord, and let all flesh bless His holy Name for ever and ever.",
           "transliteration": ""
         },
@@ -1858,10 +1755,10 @@
           "id": "ap-pcom-12",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "አቡነ ዘበሰማያት ኢታብአን እግዚእ ውስተ መንሱት።\n",
+          "amharic": "በሰማይ ያለህ አባታችን ሆይ አቤቱ ወደ ፈተና አታግባን ።",
           "english": "Our Father who art in heaven, lead us, Lord, that we may not enter into temptation.",
-          "transliteration": ""
+          "transliteration": "Abune zebesemayat itabiane Igzeeo' wiste mensut "
         }
       ]
     },
@@ -1878,8 +1775,8 @@
           "id": "ap-thk-1",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
+          "geez": "ተመጦነ እም ሥጋሁ ቅዱስ ወእምደሙ ክቡር ለክርስቶስ ።",
+          "amharic": "ከክርስቶስ ከቅዱስ ሥጋውና ከክቡር ደሙም ተቀብለን ።",
           "english": "We have received of the holy body and the precious blood of Christ.",
           "transliteration": ""
         },
@@ -1887,8 +1784,8 @@
           "id": "ap-thk-2",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ስብሐተ እግዚአብሔር ይነግር አፉየ ወኵሉ ዘሥጋ ይባርክ ለስሙ ቅዱስ ለዓለም ወለዓለመ ዓለም ።",
+          "amharic": "አንደበቴ የእግዚአብሔርን ምስጋና ይናገራል ፤ የሥጋ ፍጥረትም ሁሉ ቅዱስ የሚሆን ስሙን ያመስግናል ለዘለዓለሙ ።\n",
           "english": "My mouth shall speak the praise of the Lord, and let all flesh bless His holy name for ever and ever.",
           "transliteration": ""
         },
@@ -1896,17 +1793,17 @@
           "id": "ap-thk-3",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "አቡነ ዘበሰማያት ኢታብአነ እግዚኦ ውስተ መንሱት ።",
+          "amharic": "በሰማይ ያለህ አባታችን ሆይ አቤቱ ወደ ፈተና አታግባን ።",
           "english": "Our Father who art in heaven, lead us, Lord, that we may not enter into temptation.",
-          "transliteration": ""
+          "transliteration": "Abune zebesemayat itabiane Igzee'o wiste mensut "
         },
         {
           "id": "ap-thk-4",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
+          "geez": "ወናእኵቶ ይደልወነ ከመ ንሣተፍ ምሥጢረ ክቡረት ወቅ ስት ።",
+          "amharic": "ክብርት ቅድስት የምትሆን ምሥጢርን እንቀበል ዘንድ ልናመሰግነው ይገባናል።",
           "english": "And let us give thanks unto Him that makes us ready to communicate in the precious and holy mystery.",
           "transliteration": ""
         },
@@ -1914,8 +1811,8 @@
           "id": "ap-thk-5",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ስብሐተ እግዚአብሔር ይነግር አፉየ ወኵሉ ዘሥጋ ይባርክ ለስሙ ቅዱስ ለዓለም ወለዓለመ ዓለም ።",
+          "amharic": "አንደበቴ የእግዚአብሔርን ምስጋና ይናገራል ፤ የሥጋ ፍጥረትም ሁሉ ቅዱስ የሚሆን ስሙን ያመስግናል ለዘለዓለሙ ።",
           "english": "My mouth shall speak the praise of the Lord, and let all flesh bless His holy name for ever and ever.",
           "transliteration": ""
         },
@@ -1923,10 +1820,10 @@
           "id": "ap-thk-6",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "አቡነ ዘበሰማያት ኢታብአነ እግዚኦ ውስተ መንሱት።",
+          "amharic": "በሰማይ ያለህ አባታችን ሆይ ፤ አቤቱ ወደ ፈተና አታግባን ።",
           "english": "Our Father who art in heaven, lead us, Lord, that we may not enter into temptation.",
-          "transliteration": ""
+          "transliteration": "Abune zebesemayat itabiane Igzee'o wiste mensut "
         },
         {
           "id": "ap-thk-7r",
@@ -1937,44 +1834,44 @@
           "id": "ap-thk-7",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "I will extol Thee, my King and my God, and I will bless Thy name for ever and ever.",
+          "geez": "አሌዕለስ ንጉሥየ ወአምላኪየ ወእባርክ ለስምክ ለዓለም ወለዓለመ ዓለም ።",
+          "amharic": "ገዢዬና አምላኬ ከፍ ከፍ አደርግሃለሁ ፤ ለስምህም ምስጋናን አቀርባለሁ ፤ ለዘለዓለሙ ።\n",
+          "english": "I will extol You, my King and my God, and I will bless Your name for ever and ever.",
           "transliteration": ""
         },
         {
           "id": "ap-thk-8",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "አቡነ ዘበሰማያት ኢታብአነ እግዚኦ ውስተ መንሱት ።",
+          "amharic": "በሰማይ ያለህ አባታችን ሆይ ፤ አቤቱ ወደ ፈተና አታግባን ።",
           "english": "Our Father who art in heaven, lead us, Lord, that we may not enter into temptation.",
-          "transliteration": ""
+          "transliteration": "Abune zebesemayat itabiane Igzee'o wiste mensut "
         },
         {
           "id": "ap-thk-9",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Every day will I bless Thee, and I will praise Thy name for ever and ever.",
+          "geez": "ኵሎ አሚረ እባርከከ ወእሴብሕ ለስምከ ለዓለም ወለዓለመ ዓለም ።\n",
+          "amharic": "ቀኑን ሁሉ አመስግንሃለሁ ፤ ለስምህም ምስጋናን አቀርባለሁ ለዘለዓለሙ ።\n",
+          "english": "Every day will I bless You, and I will praise Your name for ever and ever.",
           "transliteration": ""
         },
         {
           "id": "ap-thk-10",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "አቡነ ዘበሰማያት ኢታብአነ እግዚኦ ውስተ መንሱት ።",
+          "amharic": "በሰማይ ያለህ አባታችን ሆይ ፤ አቤቱ ወደ ፈተና አታግባን ።",
           "english": "Our Father who art in heaven, lead us, Lord, that we may not enter into temptation.",
-          "transliteration": ""
+          "transliteration": "Abune zebesemayat itabiane Igzee'o wiste mensut "
         },
         {
           "id": "ap-thk-11",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ስብሐተ እግዚአብሔር ይነግር አፉየ ወኵሉ ዘሥጋ ይባርክ ለስሙ ቅዱስ ለዓለም ወለዓለመ ዓለም ።\n",
+          "amharic": "አንደበቴ የእግዚአብሔርን ምስጋና ይናገራል ፤ የሥጋ ፍጥረም ሁሉ ቅዱስ የሚሆን ስሙን ያመስግናል ለዘለዓለሙ ",
           "english": "My mouth shall speak the praise of the Lord, and let all flesh bless His holy name for ever and ever.",
           "transliteration": ""
         },
@@ -1982,10 +1879,10 @@
           "id": "ap-thk-12",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "አቡነ ዘበሰማያትያት ኢታብአነ እግዚኦ ውስተ መንሱት ።\n",
+          "amharic": "በሰማይ ያለህ አባታችን ሆይ ፤ አቤቱ ወደ ፈተና አታግባን ።",
           "english": "Our Father who art in heaven, lead us, Lord, that we may not enter into temptation.",
-          "transliteration": ""
+          "transliteration": "Abune zebesemayat itabiane Igzee'o wiste mensut "
         },
         {
           "id": "ap-thk-12r",
@@ -1996,8 +1893,8 @@
           "id": "ap-thk-13",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ወካዕበ ናስተበቍዕ ዘኵሎ ይእኅዝ እግዚአብሔር አብ ለእግዚእነ ወመድኃኒነ ኢየሱስ ክርስቶስ ።",
+          "amharic": "ዳግመኛም ሁሉን የሚይዝ የጌታችንና የመድኃኒታችን የኢየሱስ ክርስቶስን አባት እግዚአብሔርን እንማልዳለን ።",
           "english": "Again we offer our supplication to the almighty God, Father of the Lord and Saviour Jesus Christ.",
           "transliteration": ""
         },
@@ -2005,9 +1902,9 @@
           "id": "ap-thk-14",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "We give Thee thanks, for Thou has granted us to take of Thy holy mystery. Let it not be unto me an occasion of guilt nor of judgement, but for the renewal of soul, body and spirit; through Thine only-begotten Son through Whom to Thee with Him and with the Holy Spirit be glory, and dominion, both now and ever and unto the ages of ages. Amen.",
+          "geez": "ነአኵተከ እስመ ከፈልከነ ዘምቅዳስ ምሥጢርከ ኢይኩን ለርስሐት ወኢለኩነኔ አላ ለሐድሶ ነፍስ ወሥጋ ወመንፈስ በ፩ዱ ወልድከ ዘቦቱ ለከ ምስሌሁ ወምስለ ቅዱስ መንፈስ ስብሐት ወእኂዝ ይእኀዜኒ ወዘለፈኒ ወለዓለመ ዓለም አሜን ።",
+          "amharic": "ከቅድስት ምሥጢርህ እንቀበል ዘንድ አድለሕናልና እናመሰግናለን ፤ ለኃጢአት ወይም ለፍርድ አይሁን ፤ ነፍስና ሥጋ ነፍስን ለማደስ ይሁን እንጂ ፤ በአንድ ልጅህ  ፤ በርሱ ያለ ክብር ጽንዕ ለአንተ ይገባል ፤ ክርሱ ጋራ ከመንፈስ ቅዱስም ጋራ ፤ ዛሬም ዘወትርም ለዘለዓለሙ አሜን ።",
+          "english": "We give You thanks, for You have granted us to take of Your holy mystery. Let it not be unto me an occasion of guilt nor of judgement, but for the renewal of soul, body and spirit; through Your only-begotten Son through Whom to You with Him and with the Holy Spirit be glory, and dominion, both now and ever and unto the ages of ages. Amen.",
           "transliteration": ""
         },
         {
@@ -2024,8 +1921,8 @@
           "id": "ap-thk-16",
           "type": "prayer",
           "speaker": "all",
-          "geez": "",
-          "amharic": "",
+          "geez": "ሃሌ ሉያ ሃሌ ሉያ አቡነ ዘበሰማያት ይትቀደስ ስምከ ፤ ሥረይ ለነ ኵሎ አበሳነ ኢታብአን እግዚኦ ውስተ መንሱት እግዚኦ አድኅነነ እም ዕለት እኪት ወባልሐነ እም ኵሉ መንሱት ።",
+          "amharic": "ሃሌ ሉያ ሃሌ ሉያ በሰማይ ያለህ አባታችን ሆይ ስምህ ይቀደስ ፤ ኃጢአታችንን ሁሉ አስተሥርይልን ፤ አቤቱ ወደ ፈተና አታግባን ፤ ከክፉ ቀን አድነን ፤ ከፈተናም ሁሉ አድነን ።",
           "english": "Hallelujah hallelujah, our Father Who art in heaven, hallowed be thy Name, forgive us all our trespasses, lead us lest we fall into temptation; Lord deliver us from the evil day, and save us from every temptation.",
           "transliteration": ""
         }
@@ -2044,18 +1941,18 @@
           "id": "ap-pcon-1",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "O Lord, Thy holy undefiled mystery has been completed, which Thou gave us for power and salvation, a memorial of Thy death as Thou appointed.",
+          "geez": "መልዐት እግዚእ ምሥጢርክ ቅድስት እንተ ኢትማስን ዘወሀብክ ለነ ኃይለ ወመድኃኒትነ ተዝካረ ሞትከ ዘሀልዉ ምስሌክ ።",
+          "amharic": "አቤቱ የማታልፍ ቅድስት ምሥጢር ለሁሉ ተሰጠች ፤ ካንተ ጋራ ያለ የሞትህን መታሰቢያ ኃይልንና መድኃኒትን ለኛ የሰጠህን ።",
+          "english": "O Lord, Your holy undefiled mystery has been completed, which You gave us for power and salvation, a memorial of Your death as You appointed.",
           "transliteration": ""
         },
         {
           "id": "ap-pcon-2",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "And we have beheld the mystery of Thy holy resurrection. Let us be inheritors of life, and through it keep us in this hour and at all times, for Thou art a glorious King over all, our Lord, God, and Saviour Jesus Christ. Unto Thee we offer thanksgiving, majesty and honour, with Thy good heavenly Father, and with the Holy Spirit, the life giver, unto the ages of ages. Amen.",
+          "geez": "ወርኢነ ምሥጢረ ትንሣኤ ቅድስት ፤ ወአውርሰነ ሕይወት ወዕቀብ ቦቱ በዛቲ ሰዓት ወበኵሉ ጊዜ እስመ አንተ ንጉሥ ክቡር ላዕለ ኵሉ ፤ እግዚእነ ወአምላክነ ወመድኃኒነ ኢየሱስ ክርስቶስ ፤ ለከ ናዐርግ አኲቴት ዕበየ ወክብር ምስለ አቡከ ጌር ሰማያዊ ወምስለ መንፈስ ቅዱስ ማሕየዊ ለዓለመ ዓለም አሜን ።",
+          "amharic": "ክብርት የምትሆን የትንሣኤውንም ምሥጢር አየን ፤ በዚህች ሰዓት በየጊዜውም ሁሉ በርሱ ጠብቀን ፤ ጌታችንና አምላካችን መድኃኒታችን ኢየሱስ ክርስቶስ ሆይ ፤ በሁሉ ላይ የከበርህ ንጉሥ አንተ ነህና ፤ አላተ ምስጋናን ገናንንት ክብርንም እናቀርብልሃለን ፤ ሰማያዊ ከሚሆን ከአባትህ ጋራ ፤ ማሕየዊ ከሚሆን ከመንፈስ ቅዱስም ጋራ ለዘለ ዓለሙ አሜን ።",
+          "english": "And we have beheld the mystery of Your holy resurrection. Let us be inheritors of life, and through it keep us in this hour and at all times, for You art a glorious King over all, our Lord, God, and Savior Jesus Christ. Unto You we offer thanksgiving, majesty and honor, with Your good heavenly Father, and with the Holy Spirit, the life giver, unto the ages of ages. Amen.",
           "transliteration": ""
         },
         {
@@ -2067,27 +1964,27 @@
           "id": "ap-pcon-3",
           "type": "prayer",
           "speaker": "all",
-          "geez": "",
-          "amharic": "",
-          "english": "I pray unto Thee and ask Thee, my Lord God, and Good Shepherd, Who loved Thy flock so to give Thy life as a ransom for Thy sheep, that Thou may grant me Thy body as a meat indeed for righteousness, and Thy blood as drink indeed for everlasting life.",
+          "geez": "እጼሊ ኀቤከ ወእስእለክ እግዚእየ ወአምላኪየ ኖላዊ ኄር ዘአፍቀርከ መርዔተክ ወመጦከ ነፍስከ ቤዛ አባግዒከ ከመ ተሀበኒ ሥጋከ ወደመከ መብልዐጽድቅ ዘበአማን ወስቴ ሕይወት ዘለዓለም።",
+          "amharic": "አቤቱ ጌታዬ አምላኬ ወዳንተ እጸልያለሁ ፤ እለምንሃለሁም ፤ መንጋህን የወደድህ ቸር ጠባቂ ሆይ ፤ ለበጎችህ ቤዛ ሰውነትህን የሰጠህ ፤ የጽድቅ መብል የሚሆን ሥጋህን ለዘላዓለም መጠጥ የሚሆን ደምህን ትሰጠኝ ዘንድ ።",
+          "english": "I pray unto You and ask You, my Lord God, and Good Shepherd, Who loved Your flock so to give Your life as a ransom for Your sheep, that You may grant me You Body as a meat indeed for righteousness, and Your Blood as drink indeed for everlasting life.",
           "transliteration": ""
         },
         {
           "id": "ap-pcon-4",
           "type": "prayer",
           "speaker": "all",
-          "geez": "",
-          "amharic": "",
-          "english": "And further I pray Thee and beseech Thee, O my Lord, that this Thy body and blood which I have received shall neither be for my shame nor for the guilt of my soul and body, but let them give me life and health; and teach me Thy fear, and instruct me in Thy love, so that I may please Thee all the days of my life and glorify Thee without ceasing.",
+          "geez": "ወካዕበ እስእለክ ወአስተበቍዕክ ኦ እግዚእየ ከመ ኢይግዓዝ ወኢያ ርስሕ ነፍስየ ወሥጋ ዝንቱ ሥጋከ ወደምከ ዘንሣእኩ አላ ይኩነኒ ዘያሐይወኒ ወዘያጥዕየኒ ወዘያሌብወኒ ፈሪሃ ዚአከ ወዘይሜህረኒ አፍቅሮተክ ከመ  አድሉ ለከ በኵሉ መዋዕለ ሕይወትየ ወእሰብሐከ ዘእንበለ አጽርዖ ።",
+          "amharic": "ዳግመኛም ጌታዬ ሆይ ይህ የተቀበልሁት ሥጋህና ደምህ ለነፍሴና ለሥጋዬም ጥፋት ነውር እንዳይሆንብኝ ፤ እእማልድሃለሁ ፈጽሞ የሚያድነኝ አንተን መፍራትንም የሚያስረዳኝ ፍቅርህንም የሚያስተምረኝ ይሁን እንጂ፣ በሕይወቴ ዘመን ሁሉ ላንተ አደላ ዘንድ ያለማቋረጥም አመሰግንህ ዘንድ።",
+          "english": "And further I pray You and beseech You, O my Lord, that this Your body and blood which I have received shall neither be for my shame nor for the guilt of my soul and body, but let them give me life and health; and teach me Your fear, and instruct me in Your love, so that I may please You all the days of my life and glorify You without ceasing.",
           "transliteration": ""
         },
         {
           "id": "ap-pcon-5",
           "type": "prayer",
           "speaker": "all",
-          "geez": "",
-          "amharic": "",
-          "english": "O Lord, cleanse my soul and purify it also. So that it may be a sacrifice unto Thee, and dispose my heart that the Holy Spirit may live and dwell in it and fill it. Because I have accepted Thy body and blood in faith, and received them from the hands of Thy priests, and eaten them; for Thine is the glory unto endless ages. Amen.",
+          "geez": "ኦ እግዚእ አንጽሐ ለነፍስየ ወካዕበ አጽርያ ከመ ትኩን ለከ መሥዋዕተ ፤ ወረስዮ ለልብየ ወይኃደር ይሕየው ወይምላእ ላዕሌሁ መንፈስ ቅዱስ እስመ ሥጋከ ወደምከ ነሣእኩ በተአምኖ ወተመጠውኩ እምአደ ካህናቲከ ወበላዕኩ እስመ ለከ ስብሐት ለዓለመ ዓለም አሜን።",
+          "amharic": "አቤቱ ሰውነቴን አንጻት ፤ ላንተ መሥዋዕት ትሆን ዘንድ ዳግመኛም አጥራት ፤ ልቡናዬንም እንዲድን መንፈስ ቅዱስም በርሱ እንዲያደርብት እንዲመላበት አድርግ ፤ ሥጋህንና ደምህን አምኜ ተቀብያለሁና፣ ከካህናቱም እጅ ተቀብዬ በላሁ፣ ላንተ ምስጋና ይገባል፣ ለዘለ ዓለሙ አሜን ።",
+          "english": "O Lord, cleanse my soul and purify it also. So that it may be a sacrifice unto You, and dispose my heart that the Holy Spirit may live and dwell in it and fill it. Because I have accepted Your Body and Blood in faith, and received them from the hands of Your priests, and eaten them; for Yours is the glory unto endless ages. Amen.",
           "transliteration": ""
         }
       ]
@@ -2105,8 +2002,8 @@
           "id": "ap-dis-1",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
+          "geez": "በእንተ አኩቴት ናስተብቍዖ ከመ እግዚአብሔር በመጽሐፈ ሕይወት ይጽሐፍ ስእለተነ ፤ ወአምላክ ዘለዓለም ይዘክረን በምዕራፈ ቅዱሳን በበዚአሁ ብርሃን ።",
+          "amharic": "ስለ ማመስገናችን እናማልዳለን ፤ እግዚአብሔር በሕይወት መጽሐፍ ልመናችንን ይዕፉ ዘንድ ለዘላዓለሙ የሚኖር አምላክም በቅድሳኑ ማደሪያ በርሱ ብርሃን ያስበን ዘንድ ።",
           "english": "For the sake of our thank-offering we beseech God to write our prayers in the book of life, and for the eternal God to remember us in the dwelling-place of the saints in His light.",
           "transliteration": ""
         },
@@ -2114,8 +2011,8 @@
           "id": "ap-dis-2",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
+          "geez": "በእንተ እለ ተድኅሩ አበዊነ ወአኀዊነ ወአኃቲነ ናስተበቍዐ ከመ እግዚአብሔር ይጻግዎሙ ጽሒቀ ወይስተሐምም ለኩሉ፣ ወይሚጥ እምኔሆሙ ማእሠረ ዝንቱ ዓለም ወየሀቦሙ ግዕዘ ወፍቅረ አሚነ ወተስፋ ሠናየ በእንተ ሥጋሁ ወደሙ ለወልደ እግዚአብሔር ለዓለም ዓለም አሜን፣ ለይኩን ለይኩን።።",
+          "amharic": "ወደ ኂላ ስላሉ አባቶቻችንና ወንድሞቻችን ስለ እኅቶቻችንም እንማልዳለን ፤ እግዚአብሔር ትጋትን ይሰጣቸው ዘንድ ፤ ለሁሉም ያስብ ዘንድ ፤ የዚህን ዓለም ማሠሪያን ከነርሱ ይመልስ ዘንድ፣ ሥርዓትን ፍቅርንና ማመንን በጎ ተስፋንም ይሰጣቸው ዘንድ፣ ስለ እግዚአብሔር ልጅ ሥጋና ደም ለዘለዓለሙ አሜን፣ ይሁን ይሁን።።",
           "english": "On behalf of our fathers, brothers, and sisters, who have absented themselves, we beseech God to grant them diligence. Care for them all, deliver them from the bonds of this world and grant them a good nature, love, faith, and good hope through the body and blood of the Son of God, unto endless ages. Amen. So be it. So be it.",
           "transliteration": ""
         },
@@ -2128,71 +2025,71 @@
           "id": "ap-dis-3",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "O eternal God, light of life unquenchable, look upon Thy servants and handmaids, planting in their hearts the fear of Thy name, in order that they may bear fruit in blessing, and count them with those who have been given Thy body and blood.",
+          "geez": "እግዚአብሔር ዘለዓለም ብርሃን ሕይወት ዘኢይጠፍዕ ነጽሮሙ ለአግብርቲከ ወለአእማቲከ ወዝራዕ ውስተ ልቦሙ ፈሪሆተ ስምከ ይፍረዩ በበረከት ወጥሊቆሙ ምስለ እለ ተውህቦሙ ሥጋከ ወደምከ ።",
+          "amharic": "ዘላዓለሙ የማይጠፋ የሕይወት ብርሃን የምትሆን እግዚአብሔር ሆይ ፤ ወንዶችንና ሴቶችን አገል ጋዮችህን ተመልከታቸው ፤ ስምህን መፍራትንም በልባቸው ዝራ ፤ በረከትን ያፈሩ ዘንድ ፤ ሥጋህና ደምህ ከተሰጣቸውም ጋራ ቁጠራቸው ።",
+          "english": "O eternal God, light of life unquenchable, look upon Your servants and handmaids, planting in their hearts the fear of Your name, in order that they may bear fruit in blessing, and count them with those who have been given Your Body and Blood.",
           "transliteration": ""
         },
         {
           "id": "ap-dis-4",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "And let Thy hand rest upon them that have bowed their heads before Thee, Thy people, men and women, aged and children, virgins and monks, widows and orphans.",
+          "geez": "ወይኩን እዴክ ዘየኅድር ላዕሌሆሙ ዲበ እለ አትሐቱ አርእስቲሆሙ ቅድሜከ ሕዝብክ ዕድ ወአንስት አዕሩግ ወሕፃናት ደናግል ወመነኮሳት ዕቤራት ወዕጓለ ማውታ ።",
+          "amharic": "እጅህም በላያቸው የሚያድር ይሁን ፤ ራሳቸውን በፊትህ ዝቅ ዝቅ ባደረጉት ላይ በወንዶቹም በሴቶቹም በሽማግሎቸና በሕፃናቱ ፤ በደናግሉና በመነኮሳቱም ፤ በባልቴቶችና አባት እናት በሞተባቸው ላይ ።",
+          "english": "And let Your hand rest upon them that have bowed their heads before You, Your people, men and women, aged and children, virgins and monks, widows and orphans.",
           "transliteration": ""
         },
         {
           "id": "ap-dis-5",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "And join us also with them protect and help and confirm and strengthen us with the strength of Thine archangels; from all evil works keep us apart, and in all good works unite us.",
+          "geez": "ወኪያነኒ ደምር ህየ ወክድን ወርዳእ ወአጽንዕ ወኃይል በኃይለ ሊቃነ መልአክቲከ እም ኵሎ ምግባር እኩይ አግኅሠነ ወውስት ኵሉ ምግባር ሠናይ ደምረን ።",
+          "amharic": "እኛንም ከዚያ ጨምር፣ ሠውርና እርዳን አጽናን ፤ በመላእክት አለቆች ሃይል አበርታ ፤ ከክፉ ሥራ ሁሉ ለየን ፤ በጎውም ሥራ ሁሉ አንድ አድርገን ።",
+          "english": "And join us also with them protect and help and confirm and strengthen us with the strength of Your archangels; from all evil works keep us apart, and in all good works unite us.",
           "transliteration": ""
         },
         {
           "id": "ap-dis-6",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Through Thine only-begotten Son, through whom to Thee with Him and with the Holy Spirit be glory and dominion, both now and ever and unto ages of ages. Amen.",
+          "geez": "በ፩ዱ ወልድክ ዘቦቱ ለከ ምስሌሁ ወምስለ ቅዱስ መንፈስ ስብሐት ወእኂዝ ይእኀዜኒ ወዘልፈኒ ወለዓለመ ዓለም አሜን ።",
+          "amharic": "ባንድ ልጅህ በርሱ ያለ ክብር ጽንዕ ለአንተ ይገባል ፤ ክርሱ ጋራ ከመንፈስ ቅዱስም ጋራ ዛሬም ዘወትርም ለዘለዓለሙ አሜን ።",
+          "english": "Through Your only-begotten Son, through whom to Your with Him and with the Holy Spirit be glory and dominion, both now and ever and unto ages of ages. Amen.",
           "transliteration": ""
         },
         {
           "id": "ap-dis-7",
           "type": "prayer",
-          "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
-          "english": "And keep them in the right faith in glory and honour all the days of their life.",
+          "speaker": "priest",
+          "geez": "ወዕቀቦሙ በርትዕተ ሃይማኖት በስብሕት ወክብር በኵሉ መዋዕለ ሕይወቶሙ ።",
+          "amharic": "በሕይወታቸው ዘመን ሁሉ በቀ ናች ሃይማኖት በቤትህም በክብር ጠብቃቸው ።",
+          "english": "And keep them in the right faith in glory and honor all the days of their life.",
           "transliteration": ""
         },
         {
           "id": "ap-dis-8",
           "type": "prayer",
-          "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
+          "speaker": "priest",
+          "geez": "ወረስዮሙ ውስተ ፍቅር ወሰላም እንተ ትትሌዓል እምኵሉ ሕሊና ወእም ኩሉ ልቡና በስእለት ወበአስተብቍዖት እንተ ትገብር በእንቲአንነ እግዝእትነ ኵልነ ወላዲተ አምላክ ቅድስት ወንጽሕት ማርያም ፤ ወበ፬ቱ ዓበይት ብርሃናውያን ሚካኤል ወገብርኤል ሩፋኤል ወሱርያል ፤ ወበ፬ቱ እንስሳ እለ እንበለ ሥጋ ፤ ወበ፳ ወ፬ቱ ካህናት ሰማይ ።",
+          "amharic": "ከሕሊና ሁሉ ከልቡናም ሁሉ ከፍ ባለች በፍቅርና በሰላም ፍቅር አኑራቸ ው ፤ አምላክን የወለደች የሁላችን እመቤት ንጽሕት ቅድስት በምታደርገው ልመናና አማላጅነት ፤ ብርሃናውያን በሚሆኑ በአራቱ ታላላቆች በሚካኤልና በገብርኤል ፤ በሩፋኤልና በሱርያል ፤ ሥጋ በሌላቸው በአራቱ እንስሳም ፤ በሃያ አራቱም ካህናት ሰማይ ።",
           "english": "And make them to be in love and peace which passes all knowledge and all understanding, through the prayers and supplications of the Lady of us all, the mother of God, the holy and pure Mary, and the four great ones, full of light, Michael, Gabriel, Raphael and Sorial, and the four incorporeal creatures, and the twenty-four heavenly priests,",
           "transliteration": ""
         },
         {
           "id": "ap-dis-9",
           "type": "prayer",
-          "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
+          "speaker": "priest",
+          "geez": "ወአበዊነ ልዑላን ዝክር ቅዱሳን አብርሃም ይስሐቅ ወያዕቆብ አርእስተ አበው ፤ ወዮሐንስ መጥምቅ ፩ ወ፬፻ ወ፵፬ ሕፃናት ቅዱሳን ፤ ወአበዊነ ሊቃውንት ሐዋርያት ቅዱሳን ፤ ወቅዱስ ማርቆስ ሐዋርያ ወሰማዕት ወወንጌላዊ ፤ ፸ወ፪ አርድእት ፤ ፭ቱ ቢደ ፫፻፲፰ ወ፫ ርቱዐነ ሃይማኖት ፤ ፫ቱ ደቂቅ አናንያ ወአዛርያ ወሚሳኤል ፤ ወ፯ቱ ደቂቅ ቅዱሳን ።",
+          "amharic": "ቅዳሳን በሚሆኑ የስማቸው አጠራር ክፍ ባለው አለቆች በአበው አብርሃምና በይስሐቅ በያዕቆብም ፤ በመጥምቁ ዮሐንስም ፤ ቅዳሳን በሚሆኑ ሊቃውንት በአራት እልፍ ሺህ ሕፃናት ፤ ቅዳሳን በሚሆኑ ሊቃውንት በአባቶቻችን በሐዋርያት ፤ ሐዋርያና ስማዕት ወንጌላዊም በሚሆነው ማርቆስ ፤ በ፯ቱ አርድእት ፤ በአምስት መቶ ባልንጀሮች ሃይማኖታቸው በቀና በ፫፻፲፰ ሊቃውንት ፤ በ፫ቱ ደቂቅ በአናንያና በአዛርያም በሚሳኤልም ቅዳሳን በሚሆኑ በ፯ቱ ደቂቅ ።",
           "english": "and remember our great holy fathers Abraham, Isaac and Jacob, the patriarchs, and John the Baptist, and the hundred and forty four thousand holy babes, and our fathers the learned Apostles, and the holy Apostle Mark, martyr and evangelist, and the seventy-two disciples, and the five hundred brethren, and the three hundred and eighteen orthodox, and the three young men Hanania, Mishael and Azariah, and the seven holy young men.",
           "transliteration": ""
         },
         {
           "id": "ap-dis-10",
           "type": "prayer",
-          "speaker": "deacon",
-          "geez": "",
-          "amharic": "",
+          "speaker": "priest",
+          "geez": "ወቅዱስ እስጢፋኖስ ሊቀ ዲያቆናት ወቀዳሚ ሰማዕት ፤ ወቅዱስ ጊዮርጊስ ፤ ወቅዱስ ቴዎድሮስ ምሥራቃዊ ፤ ወቅዱስ በናድሌዎስ ፤ ወቅዱስ መርቆሬዎስ ፤ ወቅዱስ ማማስ ፤ ወቅዱስ አቡሊ ፤ ወቅዱስ ፊላጥዎስ ፤ ወቅዱስ መርምሕናም ፤ ወቅዱስ አባ ዲር ፤ ወቅዱስ ገላውዴዎስ ፤ ወቅዱስ ፋሲለደስ ፤ ወቅዱስ ፊቅጦር ፤ ወቅዱስ ሚናስ ፤\nወቅዱስ ቂርቆስ ወእሙ ኢየሉጣ ፤ ወኵሎሙ ሰማዕታት ወአባ ኖብ ድንግል ንዕል ወመስትጋድል ሰማዕት ዋሕድ ፤\nወእግዚእ አባ ዐቢይ ወጻድቅ አባ እንጦንስ ወአቡነ አባ ጳውሊ ፤ ወአቤዊነ ቅዱሳን ፫ቱ መቃርሳት ፤ ወአቡነ አባ ዮሐንስ ሐጺር ወጻድቅ አባ ቡላ ወአቡን አባ ብሶይ ፤ ወአቡነ አባ አሞን ፤ ወአቡነ አባ ዮሐንስ ከማ ፤ ወአቡነ አባ ጳንጠሊዎን ፤ ወአባ ሲኖዳ ፤ ወአቡነ አባ ብስንዳ ፤ ወአቡነ አባ ለትጹን ፤ ወአቡነ አባ ጳኩሚስ ፤ ወአቡነ አባ አበከረዙን ፤ ወአቡነ አባ በርሶማ ወአቡነ ቅዱሳን ሮሜውያን መክሲሞስ ወዶማቴዎስ ፤ ጽኑፅ ወቅዱስ አባ ሙሴ ፤ ፵ወ፱ቱ ሰማዕታት ወኵሎሙ ለባሲያን መስቀል ጻድቃን ወኄራን ወመልአክ ዘዕለት ቡርክት ፤\nበረከቶሙ ወጸጋ ረድኤቶሙ ወትንብልና ሣህሎሙ ወትረየሃሉ ምስለ ኵልነ ሕዝበ ክርስቲያን ለዓለመ ዓለም አሜን ።",
+          "amharic": "የዲያቆናት አለቃ የሰማዕታትም መጀመሪያ በሚሆን በቅዱስ እስጢፋኖስ ፤ በቅዱስ ጊዮርጊስም ፤ የምሥራቅ ሰው በሚሆን በቅዱስ ቴዎድሮስ ፤ በቅዱስ በናዲሌዎስ ፤ በቅዱስ መርቆሬዎስ ፤ በቅዱስ ማማስ ፤ በቅዱስ አቡሊ ፤ በቅዱስ ፊላጥዎስ ፤ በቅዱስ መርምሕናም ፤ በቅዱስ አባዲር ፤ በቅዱስ ገላውዴዎስም ፤ በቅዱስ ፋሲለደስ ፤ በቅዱስ ፊቅጦርም ፤ በቅዱስ ሚናስም ፤ በቅዱስ ቂርቆስ በናቱ በኢየሉጣም ፤ በሰማዕታትም ሁሉ ፤ የወልደ ድንግል ሰማዕታት ኃያል ተጋዳይና ድንግል በሚሆን አባ ኖብ ፤ ጌታና ጻድቅ አባት በሚሆን በደግ አባ እንጦንስም ፤ በአባታችን በአባ ጳውሊ ፤ በቅዱሳን አባቶቻችን በሥስቱ መቃርሳትም ፤ በአባታችን በአባ ዮሐንስ ሐጺር ፤ በጻድቁ አባ ቡላም ፤ በአባታችን በአባ ብሶይም ፤ በአባታችን በአባ አሞንም ፤ በአባቶቻችን በአባ ዮሐንስ ከማ ፤ በአባታችን በአባ ጳንጠሌዎንም ፤ በአባቶችን በአባ ሲኖዳም ፤ በአባ ብስንዳም ፤ በአባችን በአባ ለትጹንም ፤ በአባታችን በአባ ጳኩሚስ ፤ በአባችን በአባ አበከረዙንም ፤ በአባታችን በአባ በርሶማ ፤ በአባቶቻችን ቅዱሳን ሮሜውያን በመክሲሞስና  ፤ ጽኑዕ ቅዱስ በሚሆን በአባ ሙሴም ፤ በ፵ወ፱ቱ ሰማዕታት ፤ መስቀልን በለበሱ ደጋጎች በሚሆኑ በጻድቃንም ሁሉ ፤ በተባረከች በዚሁህች ቀን መልአክም ፤ በረከታቸውና የረድኤታቸውም ጸጋ የይቅርታቸውም ልመና ከሁላችን በሁላችን ላይ ይኑር ለዘለዓለሙ አሜን ።",
           "english": "And St. Stephen archdeacon and first martyr, Saints Georgeos, Theodore of the East, Banadlios, Marcorius, Mamas, Saints Aboli, Philataos, Marmihnam, Abadir, Galawdeos, Phasiladas, Saints Victor, Minas, Kirkos, and his mother Iyalota, and all the martyrs, and the virgin Abba Nob the brave who fought and was martyred for the sake of the Only-begotten. And the great father, lord and righteous Abba Antony, our father Paul, our holy fathers the three Macarii, our father Youhannes the short, the righteous Abba Baula, our father Beshoi, our father Amon, Abba Youhannes Kama, our father Pantaleon, our father Shenouda, our father Besenda, Abba Latsion, Abba Pachomius, our father Abakarzon, our father Barsoma, our holy Roman fathers Maximos and Domatios, the strong and holy Abba Moses, the forty-nine martyrs, and all who wear the cross, righteous and good, and the angel of this blessed day. Their blessing and the grace of their help and pleadings be always with our head of state. Amen.",
           "transliteration": ""
         },
@@ -2200,16 +2097,16 @@
           "id": "ap-dis-11",
           "type": "response",
           "speaker": "congregation",
-          "geez": "",
-          "amharic": "",
+          "geez": "ኦ ንጉሠ ሰላም ሰላማዊ ኢየሱስ ክርስቶስ ሰላምከ ሀብ ወአጽንዕ ለነ ሰላምከ ፤ ወሥረይ ለነ ኃጣዊአን ወረስየነ ድልዋነ ከመ ንሑር ወንእቱ ውስት አብያቲነ በሰላም ።",
+          "amharic": "የፍቅር ባለቤት የሰላም ንጉሥ ሰላማዊ ኢየሱስ ክርስቶስ ሆይ ፤ ሰላምህን ስጠን ፤ ሰላምህንም አጽናልን ፤ ኃጢአታችንንም ይቅር በለን ፤ በሰላም ወደ ቤታችን ሄደን እንገባ ዘንድ የበቃን አድርገን ።",
           "english": "O peaceful King of peace, Jesus Christ, grant us Thy peace and confirm us in Thy peace, and forgive us our sins, and make us worthy to leave and enter our homes in peace.",
-          "transliteration": ""
+          "transliteration": "O Niguse selam selamwi Iyesus Kristos selamike hab we'atsnie lene selamike wesireye lene hatawian weresiye dilwane keme nihiwir weniba'i wiste abiyatine beselam"
         },
         {
           "id": "ap-dis-12",
           "type": "prayer",
           "speaker": "deacon",
-          "geez": "አድንኑ አርእስቲክሙ ቅድመ እግዚአብሔር አምላክነ",
+          "geez": "አድንኑ አርእስቲክሙ ቅድመ እግዚአብሔር አምላክነ በእደ ገብሩ ካህን ከመ ይባርክሙ",
           "amharic": "በአምላካችን በእግዚአብሔር ፊት ራሳችሁን ዝቅ፣ ዝቅ አድርጉ አገልጋዩ በሚሆን በካህኑ እጅ ይባርካችሁ ዘንድ።",
           "english": "Bow your heads in front of the Lord our God, that He may bless you at the hand of His servant the priest.",
           "transliteration": "Adninu ar'isteekimu qidme igzee'abihér amlakine be'ide gebru kahin keme yibarikimu."
@@ -2232,33 +2129,24 @@
           "id": "ap-dis-14",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "ኦ እግዚኦ አድኅን ሕዝበከ ወባርክ ርስተከ",
-          "amharic": "አቤቱ ሕዝብህን አድን ርስትህንም ባርክ።",
-          "english": "O Lord, save Thy people and bless Thine inheritance. Feed them, lift them up for ever, and keep Thy church which Thou did purchase and ransom with the precious blood of Thine only-begotten Son, our Lord, God, and Saviour Jesus Christ,",
-          "transliteration": "O igzio adihin hizibike webarik risteke"
+          "geez": "ኦ እግዚኦ አድኅን ሕዝበከ ወባርክ ርስተከ ረዓዮሙ ወአልዕሎሙ እስከ ለዓለም፣ ወዕቀባ ለቤተ ክርስትያንከ ቅድስት እንተ አጥረይካ ወቤዘውካ በደሙ ክቡር ለዋሕድ ወልድከ እግዚእነ ወአምላክነ ወመድኃኒነ ኢየሱስ ክርስቶስ",
+          "amharic": "አቤቱ ሕዝብህን አድን ርስትህንም ባርክ። እስከ ዘለዓለሙ ጠብቃቸው፣ ከፍ ከፍም አድርጋቸው፣ በአንድ ልጅህ በጌታችን በኢየሱስ ክርስቶስ በክቡር ደሙ የዋጀሃት፣ ቤዛም የሆንካት ቅድርስ ቤተ ክርስቲያንህንም ጠብቃት፣",
+          "english": "O Lord, save Your people and bless Your inheritance. Feed them, lift them up for ever, and keep Your church which You did purchase and ransom with the precious blood of Thine only-begotten Son, our Lord, God, and Savior Jesus Christ,",
+          "transliteration": ""
         },
         {
           "id": "ap-dis-15",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "and which Thou hast called to be a dwelling place for kings and rulers, for pure kindred and holy people, you who have come and gathered and prayed in this holy church, and you who have eaten the holy body and drunk the precious blood of our Lord Jesus Christ. May He forgive your sins which you have committed wittingly or unwittingly. May He forgive you your past sins and keep you from future ones, for the sake of His body, the divine body, and for the sake of His blood, the blood of the covenant of Jesus Christ the Son of the Lord of hosts, and the Son of pure Mary, who has sealed the virginity of her conscience and body, unto the ages of ages. Amen.",
+          "geez": "ወጸዋዕክ ትኩን ማኅደር ለነገሥት ወለመኳንንት ለዘመድ ንጹሕወለ ሕዝብ ቅዱስ እለ መጽእ ክሙ ወእለ ተጋባእክሙ ወእለ ጸለይክሙ ውስት ዛቲ ቅድስት ቤት ክርስቲያን  በላዕክሙ ሥጋሁ ቅዱስ ወእለ ሰትይክሙ ደሞ ክብረ ለእግዚእነ ኢየሱስ ክርስቶስ ። ይሥረይ ለክሙ ኃጢአተክሙ ዘገበርክሙ እምሂ በአእምሮ አው በኢያእምሮ በዘኀለፈ ይምሀርክሙ ወበዘይመጽእ ይዕቀብክሙ በእንተ ሥጋሁ ሥጋ መለኮት ወበእንተ ደሙ ደመ ሕግ ወሥርዓት ኢየሱስ ክርስቶስ ወልደ እግዚአብሔር ጸባዖትወ ወወልደ ማርያም ንጽሕት በድንግልና ሕሊና ወበድንግልና ሥጋ ኅትምት ለዓለመ ዓለም አሜን ።",
+          "amharic": "ለነገሥታትና ለመኳንንት ፤ ለንጹሕ ወገንና ለሕዝብ ማደሪያ ትሆን ዘንድ ፤ የጠራኃትም ፤ በዚች ቅድስት ቤት ክርስቲያን መታችሁ ተሰብስባችሁ የጸለያችሁ ፤ የጌታችንን የክርስቶስን ቅዱስ ሥጋውን የበላችሁ ፤ ክቡር ደምንም የጠጣችሁ ። በማወቅ ወይም ባለማወቅ የሠራችሁትን ኃጢአቶችሁን ይቅር ይበላችሁ ፤ ሥጋ መለኮት ስለሚባል ሥጋው፣ የሕግና የሥርዓት ደም ስለሚሆን ደሙ የአሸናፊ የእግዚአብሔር ልጅ በደንጋሌ ሥጋ በድንጋሌ ሕሊናም ኅትምት የምትሆን የማርያም ልጅ ኢየሱስ ክርስቶስ ባለፈው ይቅር ይበላችሁ ፤ በሚመጣውም ይጠብቃችሁ ለዘለዓለሙ አሜን ።",
+          "english": "and which You have called to be a dwelling place for kings and rulers, for pure kindred and holy people, you who have come and gathered and prayed in this holy church, and you who have eaten the holy body and drunk the precious blood of our Lord Jesus Christ. May He forgive your sins which you have committed wittingly or unwittingly. May He forgive you your past sins and keep you from future ones, for the sake of His body, the divine body, and for the sake of His blood, the blood of the covenant of Jesus Christ the Son of the Lord of hosts, and the Son of pure Mary, who has sealed the virginity of her conscience and body, unto the ages of ages. Amen.",
           "transliteration": ""
         },
         {
           "id": "ap-dis-16r",
           "type": "rubric",
           "english": "At the end of the service he shall give benediction, and bless with his finger every one of the people, touching his forehead. But the priests he shall bless by clasping each other's right hand. And when he blesses the priests he shall say to each:"
-        },
-        {
-          "id": "ap-dis-16",
-          "type": "prayer",
-          "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "The power of our father Peter is with you.",
-          "transliteration": ""
         },
         {
           "id": "ap-dis-17",
@@ -2273,19 +2161,19 @@
           "id": "ap-dis-18",
           "type": "response",
           "speaker": "congregation",
-          "geez": "አሜን እግዚአብሔር ይባርከነ ለአግብርቲሁ በሰላም ሥርየተ ይኩነነ ዘተመጦነ ሥጋከ ወደመከ",
-          "amharic": "አሜን እግዚአብሔር እኛን አገልጋዮቹን በሰላም ይባርከን። የተቀበልነው ሥጋህና ደምህ ለሥርየት ይሁነን።",
-          "english": "And with your spirit. Amen. May God bless us, His servants, in peace. Remission be unto us who have received Thy body and Thy blood. Enable us by the Spirit to tread upon all the power of the enemy. We all hope for the blessing of Thy holy hand which is full of mercy. From all evil works keep us apart, and in all good works unite us.",
-          "transliteration": "Amén Igzee'abihér yibarikene le'agibiriteehu beselam siriyete yikunene zetemetone sigake wedemike"
+          "geez": "አሜን እግዚአብሔር ይባርከነ ለአግብርቲሁ በሰላም ሥርየተ ይኩነነ ዘተመጦነ ሥጋከ ወደመከ  አብሐነ በመንፈስ ንኪድ ኩሎ ኃይሎ ለጸላዒ በረከተ እዴከ ቅድስት እንተ ምልዕተ ምህረት፣ ኪያሃ ንሴፎ ኩልነ እምኩሎ ምግባረ እኩይ አግኅሠነ ወውስተ ኩሉ ምግባረ ሠናይ ደምረነ፣",
+          "amharic": "አሜን እግዚአብሔር እኛን አገልጋዮቹን በሰላም ይባርከን። የተቀበልነው ሥጋህና ደምህ ለሥርየት ይሁነን።የጠላትን ኃይል ሁሉ በመንፈስ እንረግጥ ዘንድ አሠልጥነን፣ ምሕረትን የተመላች ክብርት የሚት ሆን የእጅህን በረከት ሁላችን ተስፋ እናደርጋለን፣ ከክፉ ሥራ ሁሉ አርቀን፣ በበጎውም ሥራ ሁሉ አንድ አድርገን፤",
+          "english": "And with your spirit. Amen. May God bless us, His servants, in peace. Remission be unto us who have received Your body and Your blood. Enable us by the Spirit to tread upon all the power of the enemy. We all hope for the blessing of Your holy hand which is full of mercy. From all evil works keep us apart, and in all good works unite us.",
+          "transliteration": "Amén Igzee'abihér yibarikene le'agibiriteehu beselam siriyete yikunene zetemetone sigake wedemike abhane bemenfes nikid kulwo haylo le'tsela'i berekete ideke qidist inte mil'it mihiret kiyaha nisefo kuline im'kulwu ikuy aghi'sene we wiste kulwu misbare senay demirene"
         },
         {
           "id": "ap-dis-19",
           "type": "prayer",
           "speaker": "all",
-          "geez": "ኪያከ እግዚኦ ነአኵት ነሢአነ ጸጋ ዘእመንፈስ ቅዱስ።",
-          "amharic": "አቤቱ ከመንፈስ ቅዱስ የተገኘ ጸጋን ተቀበለን፤ አንተን እናመሰግንሃለን።",
+          "geez": "ቡርክ ዘወሀበነ ሥጋሁ ቅዱስ ወደሞ ክቡረ ጸጋ ነሥዕነ ወሕይወተ ረከብነ በኃይለ መስቀሉ ለኢየሱስ ክርስቶስ፣ ኪያከ እግዚኦ ነአኵት ነሢአነ ጸጋ ዘእመንፈስ ቅዱስ።",
+          "amharic": "ቅዱስ ሥጋውን ክቡር ደሙንም የሰጠን ብሩክ ነው፤ ጸጋን ተቀበልን፣ ድኅነትንም በኢየሱስ ክርስቶስ በመስቀሉ ኃይል አገኘን፣አቤቱ ከመንፈስ ቅዱስ የተገኘ ጸጋን ተቀበለን፤ አንተን እናመሰግንሃለን።",
           "english": "Blessed be He Who has given us His holy body and His precious blood. We have received grace and we have found life by the power of the cross of Jesus Christ. Unto Thee, Lord, do we give thanks, for we have received grace from the Holy Spirit.",
-          "transliteration": "Keeyake igzee'o ne'akwut nesee'ane tsega ze'iMenfes Qidus."
+          "transliteration": "Buruk zewe'habene qidus wedemo kibure tsega nesayne wehiywete rekebne be'hayle meskelu le Iyesus Kristos, keeyake Igzee'o ne'akwut nesee'ane tsega ze'iMenfes Qidus."
         },
         {
           "id": "ap-dis-20",
@@ -2310,35 +2198,35 @@
           "id": "ap-dis-22",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "Lord our God and creator, giver of good and food to all flesh, who grants blessing to Thy servants who fear Thy holy name, stretch forth Thy holy right hand today at this hour,",
+          "geez": "እግዚአብሔር አምላክነ ወፈጣሪነ ዘይሁብ ሠናይቶ ወሲሳየ ለኩሉ ዘሥጋ አንተ ውእቱ ዘት ሁብ በረከት ለአግብርቲከ ለእለ ይፈርሁ ስመከ ቅዱሰ ስፋሕ የማነከ ቅዱሰ ዮምኒ በዛቲ ሰዓት፣ ",
+          "amharic": "አምላካችን ፈጣሪያችን እግዚአብሔር ለሥጋዊ ሁሉ ቸርነትንና ምግብን የሚሰጥ ነው፣ ቅዱስ ስምህን ለሚፈሩ ባሮችህ በረከትን የምትሰጥ አንተ ነህ፣ ዛሬም በዚህች ሰዓት ቅዱስ ቀኝህን ዘርጋ፣",
+          "english": "Lord our God and Creator, giver of good and food to all flesh, who grants blessing to Your servants who fear Your holy name, stretch forth Your holy right hand today at this hour,",
           "transliteration": ""
         },
         {
           "id": "ap-dis-23",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "and bless this bread which is in my hand: let Thy blessing and goodness be upon it, let it also be to them who receive it, a medicine and a healing for the soul, power and strength of the body, and forgiveness of sin. This bread which Thou has given us is for Thy thanksgiving, so that we may glorify Thy kingdom, holy Trinity, Father, Son, and holy Spirit.",
+          "geez": "ወባርክ ዘንተ ኅብስተ በላዕለ እዴየ ወይኩን በረከትከ ወሠናይቲከ በላዕሌሁ፣ ወይኩን ዓዲ ለኩሉ ዘይነሥእ እምኔሁ መድኃኒተ ወፈውሰ ለነፍስ፣ ኅይለ ወጽንዐ ለሥጋ ወለ ሥርየተ ኃጢአት፣ ዘንተ ሲሳየ ዘወሀብከነ ለአኮቴተ ዚአከ ለመንግሥትከ ሥሉስ ቅዱስ አብ ወወልድ ወመንፈስ ቅዱስ፣",
+          "amharic": "በእኔ እጅ ላይ ይህን ኅብስት ባርክ፣ በረከትህና ቸርነትህ በላዩ ላይ ይሁን፣ ዳግመኛም ከርሱ ለሚቀበል ሁሉ ለነፍስ መድኃኒትና ፈውስ፣ ለሥጋም ኃይልና ጽንዕ፣ ለኃጢአትም ማስተሥረያ ይሁን፣ ይህን ኅብስት የሰጠኸን አንተን ለማመስገን ነው፣ ልዩ ሦስት አብ ወልድ መንፈስ ቅዱስ ሆይ መንግስትህንም እናመሰግን ዘንድ ነው።",
+          "english": "and bless this bread which is in my hand: let Your blessing and goodness be upon it, let it also be to them who receive it, a medicine and a healing for the soul, power and strength of the body, and forgiveness of sin. This bread which You have given us is for Your thanksgiving, so that we may glorify Your kingdom, Holy Trinity, Father, Son, and Holy Spirit.",
           "transliteration": ""
         },
         {
           "id": "ap-dis-24",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
-          "english": "O Lord, let Thy blessing be upon this bread, upon him who distributes it, upon them who receive it, and upon them who serve Thee in fear.",
+          "geez": "ኦ እግዚኦ በረከት ዚአከ ይኩን ላዕለ ዝንቱ ኅብስት ወላዕለ ዘይሁብ ወላዕለ ዘይነሥእ እምኔሁ ወላዕለ እለ ይትለአኩ በፈሪሆትከ፣ ",
+          "amharic": "አቤቱ ያንተ በረከት በዚህ ኅብስት ላይ በሚቀበለውም ላይ ከርሱ በሚቀበለውም ላይ፣ አንተን በመፍራት በሚያገለግሉም ላይ ይሁን፣ ",
+          "english": "O Lord, let Your blessing be upon this bread, upon him who distributes it, upon them who receive it, and upon them who serve You in fear.",
           "transliteration": ""
         },
         {
           "id": "ap-dis-25",
           "type": "prayer",
           "speaker": "priest",
-          "geez": "",
-          "amharic": "",
+          "geez": "ሰብሐት ለአብ ወወልድ ወመንፈስ ቅዱስ ይእዜኒ ወዘልፈኒ ወለዓለመ ዓለም አሜን።",
+          "amharic": "ለአብና ለወልድ ለመንፈስ ቅዱስም ምስጋና ይገባቸዋል፣ ዛሬም ዘወትርም ለዘለዓለሙ አሜን።",
           "english": "Glory be to the Father, Son, and Holy Spirit, both now and ever, and unto the ages of ages. Amen.",
           "transliteration": ""
         }
