@@ -344,6 +344,45 @@
     .modal-empty { padding: 30px; text-align: center; color: var(--muted); font-size: 12px; }
     .modal-hint { padding: 10px 16px 4px; font-size: 11px; color: var(--muted); }
 
+    /* ── Linked-blocks panel (propagate) ─────────────── */
+    .linked-panel {
+      border: 1px solid var(--accent-dim); background: var(--accent-dim);
+      border-radius: 6px; padding: 10px 12px; margin-bottom: 14px; font-size: 12px;
+    }
+    .linked-panel .lp-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .linked-panel .lp-count { color: var(--accent); font-weight: 600; }
+    .linked-panel .lp-actions { display: flex; gap: 6px; align-items: center; }
+    .linked-panel .lp-btn {
+      background: var(--surface2); border: 1px solid var(--border); color: var(--text);
+      font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 4px; cursor: pointer;
+    }
+    .linked-panel .lp-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+    .linked-panel .lp-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .linked-panel .lp-btn.primary { background: var(--accent); color: #000; border-color: var(--accent); }
+    .linked-panel .lp-list { margin-top: 8px; border-top: 1px solid var(--border); padding-top: 8px; max-height: 180px; overflow-y: auto; }
+    .linked-panel .lp-file { color: var(--accent); font-weight: 600; margin: 6px 0 2px; }
+    .linked-panel .lp-row {
+      display: flex; justify-content: space-between; gap: 8px; padding: 2px 0 2px 10px; color: var(--muted);
+    }
+    .linked-panel .lp-jump { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 11px; text-decoration: underline; }
+    .linked-panel .lp-jump:hover { color: var(--accent); }
+
+    /* ── Propagate modal field/target rows ───────────── */
+    .prop-section { padding: 12px 20px; border-bottom: 1px solid var(--border); }
+    .prop-section h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); margin-bottom: 8px; }
+    .prop-field-row { display: flex; align-items: baseline; gap: 8px; padding: 4px 0; font-size: 12px; }
+    .prop-field-row label.cb { display: flex; align-items: center; gap: 6px; min-width: 130px; color: var(--text); }
+    .prop-diff { font-size: 11px; color: var(--muted); overflow: hidden; }
+    .prop-diff .old { color: var(--danger); text-decoration: line-through; }
+    .prop-diff .new { color: var(--success); }
+    .prop-diff .same { color: var(--muted); font-style: italic; }
+    .prop-targets { max-height: 240px; overflow-y: auto; }
+    .prop-file-group { margin-bottom: 8px; }
+    .prop-file-head { display: flex; align-items: center; gap: 6px; font-weight: 600; color: var(--accent); font-size: 12px; }
+    .prop-block-row { display: flex; align-items: center; gap: 6px; padding: 2px 0 2px 22px; font-size: 12px; color: var(--muted); }
+    .prop-toolbar { display: flex; gap: 8px; margin-bottom: 8px; }
+    .prop-toolbar button { background: var(--surface2); border: 1px solid var(--border); color: var(--text); font-size: 11px; padding: 3px 8px; border-radius: 4px; cursor: pointer; }
+
     /* ── Toast ───────────────────────────────────────── */
     #toast {
       position: fixed; bottom: 18px; right: 18px;
@@ -522,6 +561,23 @@
   </div>
 </div>
 
+<!-- Propagate Edits Modal -->
+<div id="propagate-modal" class="modal-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="propagate-title">Propagate edit</h3>
+      <button class="modal-close" onclick="closePropagate()">&times;</button>
+    </div>
+    <div class="modal-body" style="padding:0;">
+      <div id="propagate-body"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-btn secondary" onclick="closePropagate()">Cancel</button>
+      <button class="modal-btn" id="prop-apply-btn" onclick="applyPropagate()">Apply</button>
+    </div>
+  </div>
+</div>
+
 <script>
 // ── Block-length thresholds (match data/scripts/lint_block_length.py) ─────────
 // Each language field on a prayer block should fit on one screen in presentation mode.
@@ -581,6 +637,13 @@ let allFilesCache = null;        // null = not loaded; {path: data} = loaded
 let allFilesLoading = false;
 let allBlocksIndex = [];         // [{block, file, secTitle}, ...]
 let allSectionsIndex = [];       // [{section, file, secTitle}, ...]
+
+// Linked blocks (propagate identical edits across anaphoras) state
+let linkedKey = null;     // currentFile:selSection:selBlock the snapshot belongs to
+let linkedSig = null;     // pre-edit signature of the selected block
+let linkedOrig = null;    // pre-edit field values {type,speaker,geez,...} for the diff
+let linkedMatches = [];   // [{file, sectionIdx, blockIdx, secTitle}, ...] identical blocks elsewhere
+let linkedExpanded = false; // Show ▾ toggle for the inline match list
 
 // ── Sidebar Collapse & Resize ──────────────────────────────────────────────────
 let sidebarCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
@@ -1492,10 +1555,355 @@ function insertSearchSection(idx) {
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
-    const modal = document.getElementById('common-blocks-modal');
-    if (modal && modal.classList.contains('visible')) closeCommonBlocks();
+    const pm = document.getElementById('propagate-modal');
+    if (pm && pm.classList.contains('visible')) { closePropagate(); return; }
   }
 });
+
+// ── Linked blocks: propagate identical edits across anaphoras ──────────────────
+const LINK_SIG_KEYS = ['type','speaker','geez','amharic','english','transliteration'];
+const LINK_LANG_KEYS = ['english','geez','amharic','transliteration'];
+const LINK_LANG_LABELS = { english: 'English', geez: "Geʼez", amharic: 'Amharic', transliteration: 'Transliteration' };
+
+function blockSignature(b) {
+  return LINK_SIG_KEYS.map(k => (b[k] == null ? '' : String(b[k]))).join('␟');
+}
+
+function currentBlock() {
+  if (!isLiturgical(fileData) || selSection == null || selBlock == null) return null;
+  const sec = fileData.sections[selSection];
+  return sec && sec.blocks ? sec.blocks[selBlock] : null;
+}
+
+// Snapshot the selected block's pre-edit signature + matches, once per block identity.
+function refreshLinkedMatches() {
+  const key = currentFile + ':' + selSection + ':' + selBlock;
+  if (key === linkedKey) return;                 // same block re-render — keep snapshot
+  linkedKey = key; linkedSig = null; linkedOrig = null; linkedMatches = []; linkedExpanded = false;
+  const b = currentBlock();
+  if (!b || b.type === 'placeholder' || b.type === 'reading') return;
+  const sig = blockSignature(b);
+  if (sig.replace(/␟/g, '') === '') return; // empty block — nothing to match
+  linkedSig = sig;
+  linkedOrig = {}; for (const k of LINK_SIG_KEYS) linkedOrig[k] = b[k];
+  if (allFilesCache === null) {                  // corpus not loaded yet
+    linkedKey = null;                            // force recompute once it lands
+    loadAllFilesForSearch().then(() => { if (allFilesCache !== null) renderEditor(); });
+    return;
+  }
+  for (const [file, data] of Object.entries(allFilesCache)) {
+    if (!data || !Array.isArray(data.sections)) continue;
+    data.sections.forEach((sec, si) => {
+      (sec.blocks || []).forEach((blk, bi) => {
+        if (file === currentFile && si === selSection && bi === selBlock) return; // skip self
+        if (blockSignature(blk) === linkedSig) {
+          linkedMatches.push({ file, sectionIdx: si, blockIdx: bi,
+            secTitle: (sec.title && (sec.title.english || sec.title.geez || sec.title.amharic)) || sec.id || '' });
+        }
+      });
+    });
+  }
+}
+
+// Inline panel shown at the top of the block editor.
+function linkedPanelHtml() {
+  if (!linkedSig || !linkedMatches.length) return '';
+  const fileCount = new Set(linkedMatches.map(m => m.file)).size;
+  const n = linkedMatches.length;
+  const changed = !!(currentBlock() && blockSignature(currentBlock()) !== linkedSig);
+  let list = '';
+  if (linkedExpanded) {
+    const byFile = {};
+    linkedMatches.forEach((m, i) => { (byFile[m.file] = byFile[m.file] || []).push({ m, i }); });
+    list = '<div class="lp-list">' + Object.keys(byFile).map(file => {
+      const base = file.split('/').pop().replace('.json', '');
+      const rows = byFile[file].map(({ m, i }) =>
+        '<div class="lp-row"><span>· ' + esc(m.secTitle) + ' · block ' + m.blockIdx + '</span>' +
+        '<button class="lp-jump" onclick="jumpToMatch(' + i + ')">jump →</button></div>'
+      ).join('');
+      return '<div class="lp-file">' + esc(base) + '</div>' + rows;
+    }).join('') + '</div>';
+  }
+  return '<div class="linked-panel">' +
+    '<div class="lp-head">' +
+      '<span class="lp-count">🔗 ' + n + ' identical block' + (n !== 1 ? 's' : '') +
+        ' in ' + fileCount + ' other file' + (fileCount !== 1 ? 's' : '') + '</span>' +
+      '<div class="lp-actions">' +
+        '<button class="lp-btn" onclick="toggleLinkedExpanded()">' + (linkedExpanded ? 'Hide' : 'Show ▾') + '</button>' +
+        '<button class="lp-btn primary" id="propagate-btn"' + (changed ? '' : ' disabled') +
+          ' onclick="openPropagate()">Propagate</button>' +
+      '</div>' +
+    '</div>' +
+    '<div style="color:var(--muted);margin-top:4px;font-size:11px;">' +
+      (changed ? 'Push your edit to these copies.' : 'Edit a field below, then Propagate to push the change to these copies.') +
+    '</div>' +
+    list +
+  '</div>';
+}
+
+function toggleLinkedExpanded() { linkedExpanded = !linkedExpanded; renderEditor(); }
+
+// Toggle the Propagate button without re-rendering the editor (preserves textarea focus).
+function updatePropagateBtn() {
+  const btn = document.getElementById('propagate-btn');
+  if (!btn) return;
+  const b = currentBlock();
+  btn.disabled = !(linkedSig && b && blockSignature(b) !== linkedSig);
+}
+
+async function jumpToMatch(i) {
+  const m = linkedMatches[i];
+  if (!m) return;
+  await selectFile(m.file);
+  if (!isLiturgical(fileData) || !fileData.sections[m.sectionIdx]) return;
+  selSection = m.sectionIdx;
+  selBlock = m.blockIdx;
+  selBlocks = new Set([m.blockIdx]);
+  renderSections();
+  renderBlocks();
+  renderEditor();
+}
+
+// ── Propagate modal ────────────────────────────────────────────────────────────
+function openPropagate() {
+  const b = currentBlock();
+  if (!linkedSig || !b || blockSignature(b) === linkedSig) {
+    toast('Edit a field first', 'err');
+    return;
+  }
+  renderPropagateModal();
+  document.getElementById('propagate-modal').classList.add('visible');
+}
+
+function closePropagate() {
+  document.getElementById('propagate-modal').classList.remove('visible');
+}
+
+function renderPropagateModal() {
+  const b = currentBlock();
+  const o = linkedOrig || {};
+  document.getElementById('propagate-title').textContent =
+    'Propagate to ' + linkedMatches.length + ' identical block' + (linkedMatches.length !== 1 ? 's' : '');
+
+  // Fields section — language rows + a combined type/speaker row. Changed = checked by default.
+  let fieldRows = LINK_LANG_KEYS.map(k => {
+    const oldV = o[k] == null ? '' : String(o[k]);
+    const newV = b[k] == null ? '' : String(b[k]);
+    const changed = oldV !== newV;
+    const diff = changed
+      ? '<span class="old">' + esc(oldV || '∅') + '</span> → <span class="new">' + esc(newV || '∅') + '</span>'
+      : '<span class="same">unchanged</span>';
+    return '<div class="prop-field-row">' +
+      '<label class="cb"><input type="checkbox" class="prop-field" data-key="' + k + '"' +
+        (changed ? ' checked' : '') + ' onchange="updatePropApplyLabel()"> ' + LINK_LANG_LABELS[k] + '</label>' +
+      '<span class="prop-diff">' + diff + '</span>' +
+    '</div>';
+  }).join('');
+
+  const tsChanged = (o.type !== b.type) || ((o.speaker || '') !== (b.speaker || ''));
+  const tsDiff = tsChanged
+    ? '<span class="old">' + esc((o.type || '') + (o.speaker ? ' / ' + o.speaker : '')) + '</span> → ' +
+      '<span class="new">' + esc((b.type || '') + (b.speaker ? ' / ' + b.speaker : '')) + '</span>'
+    : '<span class="same">unchanged</span>';
+  fieldRows += '<div class="prop-field-row">' +
+    '<label class="cb"><input type="checkbox" class="prop-field" data-key="__typespeaker"' +
+      (tsChanged ? ' checked' : '') + ' onchange="updatePropApplyLabel()"> Type / Speaker</label>' +
+    '<span class="prop-diff">' + tsDiff + '</span>' +
+  '</div>';
+
+  // Targets section — grouped by file, all checked by default.
+  const byFile = {};
+  linkedMatches.forEach((m, i) => { (byFile[m.file] = byFile[m.file] || []).push({ m, i }); });
+  const targetGroups = Object.keys(byFile).map(file => {
+    const base = file.split('/').pop().replace('.json', '');
+    const rows = byFile[file].map(({ m, i }) =>
+      '<div class="prop-block-row"><label class="cb"><input type="checkbox" class="prop-target" ' +
+        'data-file="' + esc(file) + '" value="' + i + '" checked onchange="updatePropApplyLabel()"> ' +
+        esc(m.secTitle) + ' · block ' + m.blockIdx + '</label></div>'
+    ).join('');
+    return '<div class="prop-file-group">' +
+      '<label class="prop-file-head"><input type="checkbox" checked ' +
+        'onchange="toggleFileTargets(this,\'' + esc(file).replace(/'/g, "\\'") + '\')"> ' + esc(base) + '</label>' +
+      rows +
+    '</div>';
+  }).join('');
+
+  document.getElementById('propagate-body').innerHTML =
+    '<div class="prop-section">' +
+      '<h4>Fields to propagate</h4>' + fieldRows +
+    '</div>' +
+    '<div class="prop-section">' +
+      '<h4>Targets</h4>' +
+      '<div class="prop-toolbar">' +
+        '<button onclick="selectAllTargets(true)">Select all</button>' +
+        '<button onclick="selectAllTargets(false)">Select none</button>' +
+      '</div>' +
+      '<div class="prop-targets">' + targetGroups + '</div>' +
+    '</div>' +
+    '<div class="prop-section" style="border-bottom:none;color:var(--muted);font-size:11px;">' +
+      (STATIC_MODE
+        ? 'You’ll get a single zip download with all modified files — unzip on top of <code>data/</code> and commit.'
+        : 'Changes will be written directly to disk via the local admin server.') +
+    '</div>';
+
+  updatePropApplyLabel();
+}
+
+function toggleFileTargets(headCb, file) {
+  document.querySelectorAll('.prop-target[data-file="' + file + '"]').forEach(cb => { cb.checked = headCb.checked; });
+  updatePropApplyLabel();
+}
+
+function selectAllTargets(on) {
+  document.querySelectorAll('#propagate-body .prop-target').forEach(cb => { cb.checked = on; });
+  document.querySelectorAll('.prop-file-head input').forEach(cb => { cb.checked = on; });
+  updatePropApplyLabel();
+}
+
+function selectedPropTargets() {
+  return Array.from(document.querySelectorAll('#propagate-body .prop-target:checked'))
+    .map(cb => linkedMatches[parseInt(cb.value, 10)]).filter(Boolean);
+}
+
+function selectedPropFields() {
+  return Array.from(document.querySelectorAll('#propagate-body .prop-field:checked')).map(cb => cb.dataset.key);
+}
+
+function updatePropApplyLabel() {
+  const btn = document.getElementById('prop-apply-btn');
+  if (!btn) return;
+  const targets = selectedPropTargets();
+  const fileCount = new Set(targets.map(t => t.file)).size + 1; // + current file
+  const verb = STATIC_MODE ? 'Download zip' : 'Apply';
+  btn.disabled = targets.length === 0 || selectedPropFields().length === 0;
+  btn.textContent = verb + ' (' + targets.length + ' block' + (targets.length !== 1 ? 's' : '') +
+    ', ' + fileCount + ' file' + (fileCount !== 1 ? 's' : '') + ')';
+}
+
+function applyFieldsTo(target, cur, keys) {
+  for (const k of keys) {
+    if (k === '__typespeaker') {
+      target.type = cur.type;
+      if (cur.speaker) target.speaker = cur.speaker; else delete target.speaker;
+    } else {
+      target[k] = (cur[k] == null ? '' : cur[k]);
+    }
+  }
+}
+
+async function applyPropagate() {
+  const b = currentBlock();
+  const keys = selectedPropFields();
+  const targets = selectedPropTargets();
+  if (!b || !keys.length || !targets.length) { toast('Nothing selected', 'err'); return; }
+
+  // Ensure the current file's in-memory edits are captured in the corpus cache.
+  if (allFilesCache) allFilesCache[currentFile] = fileData;
+
+  // Mutate every selected target block.
+  for (const t of targets) {
+    const data = allFilesCache && allFilesCache[t.file];
+    const tb = data && data.sections[t.sectionIdx] && data.sections[t.sectionIdx].blocks[t.blockIdx];
+    if (tb) applyFieldsTo(tb, b, keys);
+  }
+
+  const modifiedFiles = Array.from(new Set([currentFile, ...targets.map(t => t.file)]));
+  const serialize = (path) => JSON.stringify(allFilesCache[path], null, 2) + '\n';
+
+  try {
+    if (STATIC_MODE) {
+      const filesObj = {};
+      for (const f of modifiedFiles) filesObj[f] = serialize(f);
+      const blob = makeZipBlob(filesObj);
+      const stamp = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 12);
+      const base = (currentFile.split('/').pop() || 'file').replace('.json', '');
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'propagated-' + base + '-' + stamp + '.zip';
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      URL.revokeObjectURL(a.href);
+      for (const f of modifiedFiles) localStorage.removeItem('adminDraft_' + f);
+      dirty = false; updateStatus();
+      toast('Downloaded ' + a.download + ' — unzip into data/, then commit', 'ok');
+    } else {
+      for (const f of modifiedFiles) {
+        await apiFetch('PUT', '/api/file?path=' + encodeURIComponent(f), allFilesCache[f]);
+      }
+      dirty = false; updateStatus();
+      toast('Propagated to ' + targets.length + ' block' + (targets.length !== 1 ? 's' : '') +
+        ' across ' + modifiedFiles.length + ' files', 'ok');
+    }
+  } catch (e) {
+    toast('Propagate failed: ' + e.message, 'err');
+    return;
+  }
+
+  closePropagate();
+  // Re-snapshot so the panel survives the edit (targets now match the new content).
+  linkedKey = null;
+  refreshLinkedMatches();
+  renderBlocks();
+  renderEditor();
+}
+
+// ── Minimal store-mode (uncompressed) ZIP writer — no external dependency ───────
+function _crc32(bytes) {
+  let table = _crc32.t;
+  if (!table) {
+    table = _crc32.t = new Uint32Array(256);
+    for (let n = 0; n < 256; n++) {
+      let c = n;
+      for (let k = 0; k < 8; k++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+      table[n] = c >>> 0;
+    }
+  }
+  let crc = 0xFFFFFFFF;
+  for (let i = 0; i < bytes.length; i++) crc = (table[(crc ^ bytes[i]) & 0xFF] ^ (crc >>> 8)) >>> 0;
+  return (crc ^ 0xFFFFFFFF) >>> 0;
+}
+
+function makeZipBlob(filesObj) {
+  const enc = new TextEncoder();
+  const u16 = (a, v) => a.push(v & 0xFF, (v >>> 8) & 0xFF);
+  const u32 = (a, v) => a.push(v & 0xFF, (v >>> 8) & 0xFF, (v >>> 16) & 0xFF, (v >>> 24) & 0xFF);
+  const chunks = [];      // local headers + data, in order
+  const records = [];     // for the central directory
+  let offset = 0;
+
+  for (const name of Object.keys(filesObj)) {
+    const nameBytes = enc.encode(name);
+    const data = enc.encode(filesObj[name]);
+    const crc = _crc32(data);
+    const h = [];
+    u32(h, 0x04034b50); u16(h, 20); u16(h, 0x0800); u16(h, 0);      // sig, ver, flags(UTF-8), store
+    u16(h, 0); u16(h, 0x0021);                                       // mod time, mod date (1980-01-01)
+    u32(h, crc); u32(h, data.length); u32(h, data.length);          // crc, comp size, uncomp size
+    u16(h, nameBytes.length); u16(h, 0);                             // name len, extra len
+    const header = new Uint8Array(h);
+    chunks.push(header, nameBytes, data);
+    records.push({ nameBytes, crc, size: data.length, offset });
+    offset += header.length + nameBytes.length + data.length;
+  }
+
+  const central = [];
+  const cdStart = offset;
+  for (const r of records) {
+    u32(central, 0x02014b50); u16(central, 20); u16(central, 20); u16(central, 0x0800); u16(central, 0);
+    u16(central, 0); u16(central, 0x0021);
+    u32(central, r.crc); u32(central, r.size); u32(central, r.size);
+    u16(central, r.nameBytes.length); u16(central, 0); u16(central, 0);
+    u16(central, 0); u16(central, 0); u32(central, 0); u32(central, r.offset);
+    for (let i = 0; i < r.nameBytes.length; i++) central.push(r.nameBytes[i]);
+  }
+  const centralBytes = new Uint8Array(central);
+
+  const end = [];
+  u32(end, 0x06054b50); u16(end, 0); u16(end, 0);
+  u16(end, records.length); u16(end, records.length);
+  u32(end, centralBytes.length); u32(end, cdStart); u16(end, 0);
+
+  return new Blob(chunks.concat([centralBytes, new Uint8Array(end)]), { type: 'application/zip' });
+}
 
 function deleteBlock(idx) {
   if (!confirm('Delete this block?')) return;
@@ -1782,6 +2190,7 @@ function renderEditor() {
     }
 
     // Block selected — show full block editor
+    refreshLinkedMatches();
     const block = section.blocks[selBlock];
     const isInstr = block.type === 'heading' || block.type === 'rubric';
     const isPlaceholder = block.type === 'placeholder';
@@ -1854,6 +2263,7 @@ function renderEditor() {
 
     panel.innerHTML = '<div class="editor-inner">' +
       '<div class="editor-title">Edit Block</div>' +
+      linkedPanelHtml() +
       textField('ID', block.id, 'setBlock("id",this.value)') +
       '<div class="field-row">' +
         '<div class="field">' +
@@ -1875,13 +2285,14 @@ function renderEditor() {
 }
 
 // ── Update helpers (called inline from editor form) ────────────────────────────
-function setBlock(key, val)      { fileData.sections[selSection].blocks[selBlock][key] = val; markDirty(); }
+function setBlock(key, val)      { fileData.sections[selSection].blocks[selBlock][key] = val; markDirty(); updatePropagateBtn(); }
 function setBlockText(key, val)  {
   fileData.sections[selSection].blocks[selBlock][key] = val;
   markDirty();
   renderBlocks();
   renderSections();
   updateCurrentFileLint();
+  updatePropagateBtn();
 }
 function setSection(key, val)    { fileData.sections[selSection][key] = val; markDirty(); renderSections(); }
 function setSecTitle(lang, val)  { const s = fileData.sections[selSection]; if (!s.title) s.title = {}; s.title[lang] = val; markDirty(); renderSections(); }
