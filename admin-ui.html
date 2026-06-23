@@ -513,6 +513,7 @@
     </div>
     <div id="save-bar">
       <button class="btn btn-save" onclick="saveFile()">Save to Disk</button>
+      <button id="download-changes-btn" class="btn btn-ghost" onclick="downloadAllChanges()" title="Download every file changed this session as one zip" style="display:none">⬇ Download changes</button>
       <span id="save-hint"></span>
       <div style="margin-left:auto;display:flex;gap:6px;">
         <button id="prev-block-btn" class="btn btn-ghost" onclick="navigateBlock(-1)" title="Previous block" style="display:none">← Prev</button>
@@ -644,6 +645,10 @@ let linkedSig = null;     // pre-edit signature of the selected block
 let linkedOrig = null;    // pre-edit field values {type,speaker,geez,...} for the diff
 let linkedMatches = [];   // [{file, sectionIdx, blockIdx, secTitle}, ...] identical blocks elsewhere
 let linkedExpanded = false; // Show ▾ toggle for the inline match list
+
+// Pending propagated changes (STATIC_MODE): files edited via Propagate but not yet
+// downloaded. Persisted across reloads so a refresh won't lose them.
+let pendingFiles = new Set();
 
 // ── Sidebar Collapse & Resize ──────────────────────────────────────────────────
 let sidebarCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
@@ -788,10 +793,12 @@ async function init() {
     }
   }
   applyModeToUI();
+  loadPending();
   await loadAnaphoraDropdown();
   refreshLint();
   loadCommonBlocks();
   restoreLastPosition();
+  updateDownloadChangesBtn();
 }
 
 function applyModeToUI() {
@@ -1008,6 +1015,7 @@ function downloadCurrentFile() {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
   localStorage.removeItem('adminDraft_' + currentFile);
+  if (pendingFiles.has(currentFile)) { pendingFiles.delete(currentFile); savePending(); updateDownloadChangesBtn(); }
   dirty = false;
   updateStatus();
   toast('Downloaded ' + a.download + ' — email it to the maintainer', 'ok');
@@ -1353,6 +1361,12 @@ async function loadAllFilesForSearch() {
   if (currentFile && fileData) allFilesCache[currentFile] = fileData;
   for (const f of files) {
     if (allFilesCache[f]) continue;
+    // Prefer a persisted draft (pending propagated edits) over the on-disk file
+    // so refreshes don't lose un-downloaded changes.
+    const draft = localStorage.getItem('adminDraft_' + f);
+    if (draft) {
+      try { allFilesCache[f] = JSON.parse(draft); continue; } catch (e) { /* fall through */ }
+    }
     try {
       allFilesCache[f] = STATIC_MODE
         ? await fetchJson('data/' + f)
@@ -1742,7 +1756,7 @@ function renderPropagateModal() {
     '</div>' +
     '<div class="prop-section" style="border-bottom:none;color:var(--muted);font-size:11px;">' +
       (STATIC_MODE
-        ? 'You’ll get a single zip download with all modified files — unzip on top of <code>data/</code> and commit.'
+        ? 'Changes are applied and saved as drafts (kept across reloads). Use “⬇ Download changes” in the toolbar to export everything as one zip when you’re ready.'
         : 'Changes will be written directly to disk via the local admin server.') +
     '</div>';
 
@@ -1774,9 +1788,8 @@ function updatePropApplyLabel() {
   if (!btn) return;
   const targets = selectedPropTargets();
   const fileCount = new Set(targets.map(t => t.file)).size + 1; // + current file
-  const verb = STATIC_MODE ? 'Download zip' : 'Apply';
   btn.disabled = targets.length === 0 || selectedPropFields().length === 0;
-  btn.textContent = verb + ' (' + targets.length + ' block' + (targets.length !== 1 ? 's' : '') +
+  btn.textContent = 'Apply (' + targets.length + ' block' + (targets.length !== 1 ? 's' : '') +
     ', ' + fileCount + ' file' + (fileCount !== 1 ? 's' : '') + ')';
 }
 
@@ -1808,23 +1821,19 @@ async function applyPropagate() {
   }
 
   const modifiedFiles = Array.from(new Set([currentFile, ...targets.map(t => t.file)]));
-  const serialize = (path) => JSON.stringify(allFilesCache[path], null, 2) + '\n';
 
   try {
     if (STATIC_MODE) {
-      const filesObj = {};
-      for (const f of modifiedFiles) filesObj[f] = serialize(f);
-      const blob = makeZipBlob(filesObj);
-      const stamp = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 12);
-      const base = (currentFile.split('/').pop() || 'file').replace('.json', '');
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = 'propagated-' + base + '-' + stamp + '.zip';
-      document.body.appendChild(a); a.click(); document.body.removeChild(a);
-      URL.revokeObjectURL(a.href);
-      for (const f of modifiedFiles) localStorage.removeItem('adminDraft_' + f);
-      dirty = false; updateStatus();
-      toast('Downloaded ' + a.download + ' — unzip into data/, then commit', 'ok');
+      // Apply in-memory and persist as drafts — do NOT download. The user batches
+      // everything into one zip later via the "Download changes" button.
+      for (const f of modifiedFiles) {
+        try { localStorage.setItem('adminDraft_' + f, JSON.stringify(allFilesCache[f])); } catch (e) {}
+        pendingFiles.add(f);
+      }
+      savePending();
+      dirty = false; updateStatus(); updateDownloadChangesBtn();
+      toast('Applied to ' + targets.length + ' block' + (targets.length !== 1 ? 's' : '') +
+        ' — added to pending changes', 'ok');
     } else {
       for (const f of modifiedFiles) {
         await apiFetch('PUT', '/api/file?path=' + encodeURIComponent(f), allFilesCache[f]);
@@ -1844,6 +1853,65 @@ async function applyPropagate() {
   refreshLinkedMatches();
   renderBlocks();
   renderEditor();
+}
+
+// ── Pending changes (STATIC_MODE batched download) ─────────────────────────────
+function loadPending() {
+  try {
+    const raw = localStorage.getItem('adminPending');
+    pendingFiles = new Set(raw ? JSON.parse(raw) : []);
+  } catch (e) { pendingFiles = new Set(); }
+  // Drop entries whose draft has gone (e.g. cleared elsewhere).
+  for (const f of Array.from(pendingFiles)) {
+    if (!localStorage.getItem('adminDraft_' + f)) pendingFiles.delete(f);
+  }
+}
+
+function savePending() {
+  try { localStorage.setItem('adminPending', JSON.stringify(Array.from(pendingFiles))); } catch (e) {}
+}
+
+function updateDownloadChangesBtn() {
+  const btn = document.getElementById('download-changes-btn');
+  if (!btn) return;
+  const n = pendingFiles.size;
+  if (STATIC_MODE && n > 0) {
+    btn.style.display = '';
+    btn.textContent = '⬇ Download changes (' + n + ')';
+  } else {
+    btn.style.display = 'none';
+  }
+}
+
+function downloadAllChanges() {
+  if (!pendingFiles.size) { toast('No pending changes', 'err'); return; }
+  const filesObj = {};
+  for (const f of pendingFiles) {
+    let obj = null;
+    const draft = localStorage.getItem('adminDraft_' + f);
+    if (draft) { try { obj = JSON.parse(draft); } catch (e) {} }
+    if (!obj && allFilesCache && allFilesCache[f]) obj = allFilesCache[f];
+    if (!obj && f === currentFile) obj = fileData;
+    if (obj) filesObj[f] = JSON.stringify(obj, null, 2) + '\n';
+  }
+  const count = Object.keys(filesObj).length;
+  if (!count) { toast('Nothing to download', 'err'); return; }
+
+  const blob = makeZipBlob(filesObj);
+  const stamp = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 12);
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'qidase-changes-' + stamp + '.zip';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(a.href);
+
+  // Clear pending state now that it's exported.
+  for (const f of pendingFiles) localStorage.removeItem('adminDraft_' + f);
+  pendingFiles = new Set();
+  savePending();
+  dirty = false; updateStatus(); updateDownloadChangesBtn();
+  toast('Downloaded ' + a.download + ' (' + count + ' file' + (count !== 1 ? 's' : '') +
+    ') — unzip into data/, then commit', 'ok');
 }
 
 // ── Minimal store-mode (uncompressed) ZIP writer — no external dependency ───────
